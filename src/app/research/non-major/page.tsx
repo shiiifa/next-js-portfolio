@@ -1,5 +1,5 @@
-import { Column, Heading, Meta, Schema, Text, SmartLink, Card, Row } from "@once-ui-system/core";
-import { baseURL, about, person, research } from "@/resources";
+import { Column, Heading, Meta, Schema, Text, Card, Row } from "@once-ui-system/core";
+import { baseURL, about, person } from "@/resources";
 import Image from "next/image";
 
 export async function generateMetadata() {
