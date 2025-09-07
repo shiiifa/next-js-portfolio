@@ -1,4 +1,4 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work, Research } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -241,6 +241,13 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
+const research: Research = {
+  path: "/research",
+  label: "Research",
+  title: `Research – ${person.name}`,
+  description: `Research experiences and work by ${person.name}`,
+};
+
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
@@ -292,4 +299,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, research, gallery };
