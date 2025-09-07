@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Row, ToggleButton, Column, Text, SmartLink } from "@once-ui-system/core";
+import { projects } from "@/resources";
 
 export const ProjectsDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ export const ProjectsDropdown = () => {
       <ToggleButton
         prefixIcon="code"
         href="/projects"
-        label="Projects"
+        label={projects.label}
         selected={pathname.startsWith("/projects")}
         style={{ cursor: "pointer" }}
       />
