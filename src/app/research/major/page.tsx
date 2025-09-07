@@ -39,6 +39,13 @@ export default function MajorResearch() {
         </Text>
       </Column>
 
+      {/* Click to learn more text */}
+      <Column marginBottom="l" paddingX="l" align="center">
+        <Text variant="body-default-m" align="center" onBackground="neutral-weak">
+          Click the images to learn more!
+        </Text>
+      </Column>
+
       {/* Major Research Projects Grid */}
       <Column paddingX="l">
         <Row gap="l" wrap>
@@ -53,8 +60,8 @@ export default function MajorResearch() {
           >
             <div style={{ position: "relative", width: "100%", height: "150px" }}>
               <Image
-                src="/images/projects/project-01/cover-01.jpg"
-                alt="Accelerating Embedded Neural Network Inference"
+                src="/images/Vivado_Block_Design.png"
+                alt="Vivado Block Design - Accelerating Embedded Neural Network Inference"
                 fill
                 style={{ objectFit: "cover", borderRadius: "8px" }}
               />
@@ -78,7 +85,7 @@ export default function MajorResearch() {
           >
             <div style={{ position: "relative", width: "100%", height: "150px" }}>
               <Image
-                src="/images/projects/project-01/cover-02.jpg"
+                src="/images/IMG_0018.jpeg"
                 alt="On-Chip vs. Off-Chip FPGA Acceleration"
                 fill
                 style={{ objectFit: "cover", borderRadius: "8px" }}
@@ -103,7 +110,7 @@ export default function MajorResearch() {
           >
             <div style={{ position: "relative", width: "100%", height: "150px" }}>
               <Image
-                src="/images/projects/project-01/cover-03.jpg"
+                src="/images/IMG_3611.jpeg"
                 alt="Agentic AI for Energy Management"
                 fill
                 style={{ objectFit: "cover", borderRadius: "8px" }}
@@ -128,8 +135,8 @@ export default function MajorResearch() {
           >
             <div style={{ position: "relative", width: "100%", height: "150px" }}>
               <Image
-                src="/images/projects/project-01/cover-04.jpg"
-                alt="Wearable Technology and Productivity"
+                src="/images/rombo_image.jpg"
+                alt="Wearable Technology and Productivity - Image by Rombo"
                 fill
                 style={{ objectFit: "cover", borderRadius: "8px" }}
               />
