@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, blog, work, research, contact } from "@/resources";
+import { routes, display, person, about, blog, work, research, projects, contact } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import { ResearchDropdown } from "./ResearchDropdown";
+import { ProjectsDropdown } from "./ProjectsDropdown";
 import styles from "./Header.module.scss";
 
 type TimeDisplayProps = {
@@ -136,6 +137,16 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ResearchDropdown />
+                  </Row>
+                </>
+              )}
+              {routes["/projects"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ProjectsDropdown />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ProjectsDropdown />
                   </Row>
                 </>
               )}

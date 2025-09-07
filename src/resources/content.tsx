@@ -249,6 +249,13 @@ const research: Research = {
 };
 
 
+const projects: Contact = {
+  path: "/projects",
+  label: "Projects",
+  title: `Projects – ${person.name}`,
+  description: `Engineering and Computer Science projects by ${person.name}`,
+};
+
 const contact: Contact = {
   path: "/contact",
   label: "Contact",
@@ -256,4 +263,4 @@ const contact: Contact = {
   description: `Get in touch with ${person.name}`,
 };
 
-export { person, social, newsletter, home, about, blog, work, research, contact };
+export { person, social, newsletter, home, about, blog, work, research, projects, contact };
