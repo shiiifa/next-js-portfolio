@@ -42,32 +42,40 @@ export const ResearchDropdown = () => {
         >
           <Column padding="s" gap="xs">
             <SmartLink href="/research/major">
-              <Row
-                padding="s"
-                radius="s"
+              <div
                 style={{
+                  padding: "8px",
+                  borderRadius: "4px",
                   cursor: "pointer",
+                  transition: "background-color 0.2s ease",
                 }}
-                hover={{
-                  background: "var(--neutral-alpha-weak)",
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "var(--neutral-alpha-weak)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
                 <Text variant="body-default-s">Major Research</Text>
-              </Row>
+              </div>
             </SmartLink>
             <SmartLink href="/research/non-major">
-              <Row
-                padding="s"
-                radius="s"
+              <div
                 style={{
+                  padding: "8px",
+                  borderRadius: "4px",
                   cursor: "pointer",
+                  transition: "background-color 0.2s ease",
                 }}
-                hover={{
-                  background: "var(--neutral-alpha-weak)",
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "var(--neutral-alpha-weak)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
                 <Text variant="body-default-s">Non-Major Research</Text>
-              </Row>
+              </div>
             </SmartLink>
           </Column>
         </div>
