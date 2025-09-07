@@ -113,6 +113,24 @@ export default function Projects() {
         </Card>
       </Column>
 
+      {/* Beyond The Lab Section */}
+      <Column paddingX="l" gap="xl" marginBottom="xl">
+        <Card padding="l" radius="m" shadow="m">
+          <Column gap="m">
+            <Heading variant="heading-strong-l" align="center">Beyond The Lab</Heading>
+            <Text variant="body-default-m" align="center">
+              <strong>The Extras</strong>
+            </Text>
+            <Text variant="body-default-m" align="center">
+              When I'm not tackling research or engineering projects, you will find me engaged in a plethora of other endeavors. Leadership, public speaking, community service, writing, ...you name it.
+            </Text>
+            <Text variant="body-default-m" align="center" marginTop="m">
+              Here lies a more holistic representation of my world. Take a dive.
+            </Text>
+          </Column>
+        </Card>
+      </Column>
+
       {/* All Projects */}
       <Column paddingX="l" gap="xl">
         {projectList.map((project, index) => (
