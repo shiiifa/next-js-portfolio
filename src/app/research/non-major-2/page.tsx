@@ -6,6 +6,7 @@ export async function generateMetadata() {
     title: "Non-Major Research 2",
     description: "Additional research projects and coursework including club service, mathematical modeling, and data analysis.",
     path: "/research/non-major-2",
+    baseURL,
   });
 }
 
