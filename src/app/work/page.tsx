@@ -51,9 +51,17 @@ export default function Work() {
           padding="0"
           radius="m"
           shadow="m"
-          hover={{
-            shadow: "l",
-            scale: 1.02,
+          style={{
+            transition: "all 0.2s ease-in-out",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "scale(1.02)";
+            e.currentTarget.style.boxShadow = "var(--shadow-l)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "scale(1)";
+            e.currentTarget.style.boxShadow = "var(--shadow-m)";
           }}
         >
           <div style={{ position: "relative", width: "100%", height: "200px" }}>
@@ -92,9 +100,17 @@ export default function Work() {
           padding="0"
           radius="m"
           shadow="m"
-          hover={{
-            shadow: "l",
-            scale: 1.02,
+          style={{
+            transition: "all 0.2s ease-in-out",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "scale(1.02)";
+            e.currentTarget.style.boxShadow = "var(--shadow-l)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "scale(1)";
+            e.currentTarget.style.boxShadow = "var(--shadow-m)";
           }}
         >
           <div style={{ position: "relative", width: "100%", height: "200px" }}>
