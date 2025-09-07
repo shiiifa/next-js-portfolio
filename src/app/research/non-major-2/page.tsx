@@ -42,10 +42,14 @@ export default function NonMajorResearch2() {
     <Column maxWidth="m" paddingTop="24">
       <Schema
         as="webPage"
-        data={{
-          name: "Non-Major Research 2",
-          description: "Additional research projects and coursework including club service, mathematical modeling, and data analysis.",
-          url: `${baseURL}/research/non-major-2`,
+        baseURL={baseURL}
+        path="/research/non-major-2"
+        title={`Non-Major Research 2 – ${person.name}`}
+        description="Additional research projects and coursework including club service, mathematical modeling, and data analysis."
+        image={`/api/og/generate?title=${encodeURIComponent("Non-Major Research 2")}`}
+        author={{
+          name: person.name,
+          url: `${baseURL}${about.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
       />
