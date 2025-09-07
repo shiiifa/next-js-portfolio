@@ -11,7 +11,7 @@ export async function generateMetadata() {
 }
 
 export default function Projects() {
-  const projects = [
+  const projectList = [
     {
       id: "fpga-neural-networks",
       title: "Accelerating Embedded Neural Network Inference on FPGA Softcore Processors",
@@ -115,7 +115,7 @@ export default function Projects() {
 
       {/* All Projects */}
       <Column paddingX="l" gap="xl">
-        {projects.map((project, index) => (
+        {projectList.map((project, index) => (
           <Card
             key={index}
             as="a"
