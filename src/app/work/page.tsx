@@ -51,18 +51,6 @@ export default function Work() {
           padding="0"
           radius="m"
           shadow="m"
-          style={{
-            transition: "all 0.2s ease-in-out",
-            cursor: "pointer",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.02)";
-            e.currentTarget.style.boxShadow = "var(--shadow-l)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-            e.currentTarget.style.boxShadow = "var(--shadow-m)";
-          }}
         >
           <div style={{ position: "relative", width: "100%", height: "200px" }}>
             <Image
@@ -100,18 +88,6 @@ export default function Work() {
           padding="0"
           radius="m"
           shadow="m"
-          style={{
-            transition: "all 0.2s ease-in-out",
-            cursor: "pointer",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.02)";
-            e.currentTarget.style.boxShadow = "var(--shadow-l)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-            e.currentTarget.style.boxShadow = "var(--shadow-m)";
-          }}
         >
           <div style={{ position: "relative", width: "100%", height: "200px" }}>
             <Image
