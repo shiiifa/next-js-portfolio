@@ -13,28 +13,28 @@ export async function generateMetadata() {
 export default function ComputerScienceProjects() {
   const projects = [
     {
-      title: "Agentic AI Energy Management System",
-      type: "AI/ML Application",
+      title: "Curating a Network of Student-Developed Research Articles (ARM-y Students' Club)",
+      type: "Club Service",
       status: "Completed",
-      skills: "Python, LLMs, FastAPI, Streamlit, Azure OpenAI"
+      skills: "Creative Management, Article Editing"
     },
     {
-      title: "Mathematical Modeling Suite",
-      type: "Software Development",
+      title: "Developing a Mathematical Model for Stage-Structured Prey-Predator Relationships",
+      type: "Coursework",
       status: "Completed",
-      skills: "MATLAB, Python, Mathematical Modeling, Data Analysis"
+      skills: "Mathematical Modelling (MATLAB)"
     },
     {
-      title: "Web Development Portfolio",
-      type: "Full-Stack Development",
+      title: "Modelling & Analyzing the Traffic Flow Network of Ashesi University's Canteen with Linear Algebra",
+      type: "Coursework",
       status: "Completed",
-      skills: "Next.js, React, TypeScript, CSS, HTML"
+      skills: "Mathematical Modelling (MATLAB)"
     },
     {
-      title: "Data Collection & Analysis Platform",
-      type: "Data Science",
+      title: "Calculus-Driven Data Collection, Analysis & Recommendations for Target Campus Locations",
+      type: "Coursework",
       status: "Completed",
-      skills: "Arduino, Python, Geogebra, Statistical Analysis"
+      skills: "Arduino for Data Collection, Geogebra"
     }
   ];
 
@@ -60,7 +60,7 @@ export default function ComputerScienceProjects() {
           Computer Science Projects
         </Heading>
         <Text variant="body-default-l" align="center">
-          Software development, algorithms, and computational solutions that demonstrate programming expertise and technical innovation.
+          Additional research projects and coursework showcasing diverse academic and extracurricular experiences.
         </Text>
       </Column>
 
@@ -86,7 +86,7 @@ export default function ComputerScienceProjects() {
                 <strong>Status:</strong> {project.status}
               </Text>
               <Text variant="body-default-s" onBackground="neutral-weak">
-                <strong>Skills:</strong> {project.skills}
+                <strong>Relevant Skills:</strong> {project.skills}
               </Text>
             </Column>
           </Card>
