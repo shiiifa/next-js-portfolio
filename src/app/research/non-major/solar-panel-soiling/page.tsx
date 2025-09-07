@@ -34,13 +34,13 @@ export default function SolarPanelSoiling() {
           Estimating the Impact of Soiling on Solar Panels
         </Heading>
         <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="m">
-          <strong>Date:</strong> 2023
+          <strong>Date:</strong> Jan 2023 - May 2023
         </Text>
         <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="l">
-          <strong>Location:</strong> Ashesi Resourceful Engineering Lab (AREL)
+          <strong>Skills:</strong> Applied IoT, System Design, Laser Cutting
         </Text>
         <Text variant="body-default-l" align="center">
-          Collaborated with a team of research assistants on an embedded systems and IoT project aimed at generating mathematical models to estimate the impact of soiling on solar panels.
+          At the Ashesi Resourceful Engineering Lab (AREL), I collaborated with a team of research assistants on an embedded systems and IoT project aimed at generating mathematical models to estimate the impact of soiling on solar panels.
         </Text>
       </Column>
 
@@ -48,12 +48,15 @@ export default function SolarPanelSoiling() {
       <Column paddingX="l" gap="l">
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
-            <Heading variant="heading-strong-l">Project Overview</Heading>
+            <Heading variant="heading-strong-l">My Contributions</Heading>
             <Text variant="body-default-m">
-              At the Ashesi Resourceful Engineering Lab (AREL), I collaborated with a team of research assistants on an embedded systems and IoT project aimed at generating mathematical models to estimate the impact of soiling on solar panels.
+              <strong>System Design:</strong> Created a high-level schematic of the solar monitoring system as a shared visual reference for the research team.
             </Text>
             <Text variant="body-default-m">
-              This project focused on understanding how environmental factors like dust, dirt, and other contaminants affect solar panel efficiency, which is crucial for optimizing renewable energy systems in various climates and environments.
+              <strong>Hardware Development:</strong> Designed a portable shielding coupon to capture dust accumulation data without interfering with solar panel performance.
+            </Text>
+            <Text variant="body-default-m">
+              <strong>Industry Engagement:</strong> Communicated with external companies to gather product specifications and perform strategic comparisons to align with project requirements.
             </Text>
           </Column>
         </Card>
@@ -74,7 +77,7 @@ export default function SolarPanelSoiling() {
           <Column gap="m">
             <Heading variant="heading-strong-l">Learning Outcomes</Heading>
             <Text variant="body-default-m">
-              This project provided valuable experience in embedded systems development, IoT integration, and mathematical modeling for renewable energy applications. It also offered insights into collaborative research and the practical challenges of implementing sustainable energy solutions.
+              This experience strengthened my skills in embedded systems design, applied IoT, hardware prototyping, and research collaboration. The project provided valuable hands-on experience in developing practical solutions for renewable energy challenges while working effectively in a team environment.
             </Text>
           </Column>
         </Card>

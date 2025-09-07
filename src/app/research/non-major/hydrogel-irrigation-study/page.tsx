@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, SmartLink } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -34,13 +34,16 @@ export default function HydrogelIrrigationStudy() {
           A Comparative Study: The Effects of Different Hydrogel Shapes on Irrigation in Varying Soil Types
         </Heading>
         <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="m">
-          <strong>Date:</strong> 2023
+          <strong>Date:</strong> Nov 2023 - Dec 2023
+        </Text>
+        <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="m">
+          <strong>Skills:</strong> Statistical Analysis, Experimental Design
         </Text>
         <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="l">
-          <strong>Location:</strong> Statistics Final Class Project
+          <strong>Link:</strong> <SmartLink href="https://pdf.ac/N6DBfnygBi" target="_blank" rel="noopener noreferrer">Research Paper</SmartLink>
         </Text>
         <Text variant="body-default-l" align="center">
-          Investigated the use of superabsorbent PVA-borate hydrogels as a sustainable irrigation solution for urban agriculture.
+          For my statistics final class project, I investigated the use of superabsorbent PVA-borate hydrogels as a sustainable irrigation solution for urban agriculture.
         </Text>
       </Column>
 
@@ -48,33 +51,36 @@ export default function HydrogelIrrigationStudy() {
       <Column paddingX="l" gap="l">
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
-            <Heading variant="heading-strong-l">Project Overview</Heading>
+            <Heading variant="heading-strong-l">Experimental Design</Heading>
             <Text variant="body-default-m">
-              For my statistics final class project, I investigated the use of superabsorbent PVA-borate hydrogels as a sustainable irrigation solution for urban agriculture.
+              I conducted experiments across clayey, loamy, and sandy soils, testing how hydrogel shape and soil type affected water retention and release. Using ANOVA, correlation tests, and regression analysis, I evaluated whether different soil–shape combinations influenced irrigation efficiency.
             </Text>
             <Text variant="body-default-m">
-              This research focused on understanding how different hydrogel shapes affect water retention and distribution in various soil types, with the goal of optimizing irrigation systems for urban farming applications.
-            </Text>
-          </Column>
-        </Card>
-
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Research Methodology</Heading>
-            <Text variant="body-default-m">
-              The study involved testing different hydrogel shapes (spherical, cylindrical, and irregular) in various soil types to determine their effectiveness in water retention and distribution. Statistical analysis was used to evaluate the performance of each hydrogel configuration.
-            </Text>
-            <Text variant="body-default-m">
-              The research aimed to provide data-driven insights for optimizing hydrogel-based irrigation systems, particularly for urban agriculture where water efficiency is crucial.
+              This comprehensive experimental approach allowed for rigorous statistical analysis of the factors affecting hydrogel performance in different agricultural contexts.
             </Text>
           </Column>
         </Card>
 
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
-            <Heading variant="heading-strong-l">Sustainability Impact</Heading>
+            <Heading variant="heading-strong-l">Key Findings</Heading>
             <Text variant="body-default-m">
-              This project contributed to the development of more sustainable irrigation solutions for urban agriculture. By optimizing hydrogel shapes and configurations, the research aimed to reduce water waste and improve crop yields in urban farming environments.
+              The study found statistically significant differences in water release rates across soil types, with weaker associations for hydrogel shape, suggesting more research is needed for standardization.
+            </Text>
+            <Text variant="body-default-m">
+              These findings provide important insights for optimizing hydrogel-based irrigation systems and highlight the need for further research to develop standardized approaches for different soil conditions.
+            </Text>
+          </Column>
+        </Card>
+
+        <Card padding="l" radius="m" shadow="m">
+          <Column gap="m">
+            <Heading variant="heading-strong-l">Learning Outcomes</Heading>
+            <Text variant="body-default-m">
+              Beyond technical results, this project deepened my skills in experimental design, statistical inference, and applied data analysis, while reinforcing my passion for applying quantitative methods to real-world sustainability challenges.
+            </Text>
+            <Text variant="body-default-m">
+              This experience demonstrated the power of statistical analysis in addressing environmental and agricultural challenges, providing a foundation for future research in sustainable technologies.
             </Text>
           </Column>
         </Card>

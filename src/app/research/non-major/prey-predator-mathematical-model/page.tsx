@@ -34,13 +34,13 @@ export default function PreyPredatorMathematicalModel() {
           Developing a Mathematical Model for Stage-Structured Prey-Predator Relationships
         </Heading>
         <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="m">
-          <strong>Date:</strong> 2023
+          <strong>Date:</strong> Nov 2022 - Dec 2022
         </Text>
         <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="l">
-          <strong>Location:</strong> Differential Equations and Numerical Methods Course
+          <strong>Skills:</strong> Applied Mathematics, System Modeling, MATLAB
         </Text>
         <Text variant="body-default-l" align="center">
-          Collaborated on a project exploring stage-structured predator–prey systems using mathematical modeling techniques.
+          As part of my Differential Equations and Numerical Methods course, I collaborated on a project exploring stage-structured predator–prey systems.
         </Text>
       </Column>
 
@@ -48,33 +48,36 @@ export default function PreyPredatorMathematicalModel() {
       <Column paddingX="l" gap="l">
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
-            <Heading variant="heading-strong-l">Project Overview</Heading>
+            <Heading variant="heading-strong-l">Innovative Approach</Heading>
             <Text variant="body-default-m">
-              As part of my Differential Equations and Numerical Methods course, I collaborated on a project exploring stage-structured predator–prey systems.
+              Building on existing research, our team introduced stage structure within both predators and prey to better capture real-world ecological interactions. This approach provided a more realistic representation of ecological dynamics than traditional predator-prey models.
             </Text>
             <Text variant="body-default-m">
-              This project involved developing mathematical models that account for different life stages of both predator and prey species, providing a more realistic representation of ecological dynamics than traditional predator-prey models.
-            </Text>
-          </Column>
-        </Card>
-
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Mathematical Modeling</Heading>
-            <Text variant="body-default-m">
-              The project used differential equations to model the interactions between different life stages of predator and prey populations. This approach allowed for the analysis of how factors like maturation rates, mortality, and reproduction affect population dynamics.
-            </Text>
-            <Text variant="body-default-m">
-              By incorporating stage structure, the model provided insights into how different life stages of organisms interact and influence overall population stability and dynamics.
+              By accounting for different life stages of both predator and prey species, the model offered insights into how maturation rates, mortality, and reproduction affect population dynamics in complex ecosystems.
             </Text>
           </Column>
         </Card>
 
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
-            <Heading variant="heading-strong-l">Ecological Insights</Heading>
+            <Heading variant="heading-strong-l">Mathematical Analysis</Heading>
             <Text variant="body-default-m">
-              This project demonstrated the importance of considering life stage structure in ecological modeling. The mathematical models provided insights into population dynamics that could inform conservation strategies and ecosystem management approaches.
+              We analyzed how changes in key parameters influenced system stability and population dynamics, using differential equations and numerical simulations to model growth, harvesting, and oscillatory behaviors.
+            </Text>
+            <Text variant="body-default-m">
+              This comprehensive analysis provided insights into the complex interactions between different life stages of organisms and their influence on overall population stability and ecosystem dynamics.
+            </Text>
+          </Column>
+        </Card>
+
+        <Card padding="l" radius="m" shadow="m">
+          <Column gap="m">
+            <Heading variant="heading-strong-l">Learning Outcomes</Heading>
+            <Text variant="body-default-m">
+              This project strengthened my skills in applied mathematics, numerical analysis, and systems modeling, while showing how mathematical frameworks can offer insights into ecological sustainability and population management.
+            </Text>
+            <Text variant="body-default-m">
+              The experience demonstrated the power of mathematical modeling in understanding complex ecological systems and provided a foundation for applying quantitative methods to environmental and conservation challenges.
             </Text>
           </Column>
         </Card>
