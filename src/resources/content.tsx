@@ -255,4 +255,4 @@ const contact: Contact = {
   description: `Get in touch with ${person.name}`,
 };
 
-export { person, social, newsletter, home, about, blog, work, research, contact };
+export { person, social, newsletter, home, about, blog, work, contact };
