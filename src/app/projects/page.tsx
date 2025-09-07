@@ -32,11 +32,11 @@ export default function Projects() {
         <Heading marginBottom="l" variant="heading-strong-xl" align="center">
           Work – {person.name}
         </Heading>
-        <Text variant="body-default-l" align="center" style={{ fontStyle: "italic", marginBottom: "2rem" }}>
-          "For one person who is blessed with the power of invention, many will always be found who have the capacity of applying principles."
-        </Text>
-        <Text variant="body-default-s" align="center" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
-          — Charles Babbage, Father of the Computer
+        <Heading marginBottom="m" variant="heading-strong-l" align="center">
+          Project Catalogue
+        </Heading>
+        <Text variant="body-default-l" align="center">
+          In my first year of undergraduate studies, I switched from electrical to computer engineering. This was attributed to a newfound fascination for the interplay of both hardware and software tools towards engineering innovation. Thus, I have amassed several project experiences in both the engineering, and computer sciences.
         </Text>
       </Column>
 
