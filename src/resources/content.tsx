@@ -241,6 +241,13 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
+const research: Research = {
+  path: "/research",
+  label: "Research",
+  title: `Research – ${person.name}`,
+  description: `Research experiences and work by ${person.name}`,
+};
+
 
 const contact: Contact = {
   path: "/contact",
@@ -249,4 +256,4 @@ const contact: Contact = {
   description: `Get in touch with ${person.name}`,
 };
 
-export { person, social, newsletter, home, about, blog, work, contact };
+export { person, social, newsletter, home, about, blog, work, research, contact };
