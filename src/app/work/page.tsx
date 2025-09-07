@@ -1,5 +1,6 @@
-import { Column, Heading, Meta, Schema, Text, Row, SmartLink, Card, Image } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Row, SmartLink, Card } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -56,14 +57,14 @@ export default function Work() {
           }}
           transition="all"
         >
-          <Image
-            src="/images/projects/project-01/cover-01.jpg"
-            alt="Engineering Projects"
-            width={16}
-            height={9}
-            radius="m"
-            style={{ width: "100%", height: "200px", objectFit: "cover" }}
-          />
+          <div style={{ position: "relative", width: "100%", height: "200px" }}>
+            <Image
+              src="/images/projects/project-01/cover-01.jpg"
+              alt="Engineering Projects"
+              fill
+              style={{ objectFit: "cover", borderRadius: "8px" }}
+            />
+          </div>
           <Column padding="l" gap="s">
             <Heading variant="heading-strong-m">Engineering Projects</Heading>
             <Text variant="body-default-s" onBackground="neutral-weak">
@@ -98,14 +99,14 @@ export default function Work() {
           }}
           transition="all"
         >
-          <Image
-            src="/images/projects/project-01/cover-02.jpg"
-            alt="Computer Science Projects"
-            width={16}
-            height={9}
-            radius="m"
-            style={{ width: "100%", height: "200px", objectFit: "cover" }}
-          />
+          <div style={{ position: "relative", width: "100%", height: "200px" }}>
+            <Image
+              src="/images/projects/project-01/cover-02.jpg"
+              alt="Computer Science Projects"
+              fill
+              style={{ objectFit: "cover", borderRadius: "8px" }}
+            />
+          </div>
           <Column padding="l" gap="s">
             <Heading variant="heading-strong-m">Computer Science Projects</Heading>
             <Text variant="body-default-s" onBackground="neutral-weak">
