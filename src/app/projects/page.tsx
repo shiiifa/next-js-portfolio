@@ -32,6 +32,12 @@ export default function Projects() {
         <Heading marginBottom="l" variant="heading-strong-xl" align="center">
           Work – {person.name}
         </Heading>
+        <Text variant="body-default-l" align="center" style={{ fontStyle: "italic", marginBottom: "2rem" }}>
+          "For one person who is blessed with the power of invention, many will always be found who have the capacity of applying principles."
+        </Text>
+        <Text variant="body-default-s" align="center" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
+          — Charles Babbage, Father of the Computer
+        </Text>
       </Column>
 
       {/* Engineering Projects Section */}
