@@ -8,7 +8,6 @@ import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 import { routes, display, person, about, blog, research, projects, contact } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import { ResearchDropdown } from "./ResearchDropdown";
-import { ProjectsDropdown } from "./ProjectsDropdown";
 import styles from "./Header.module.scss";
 
 type TimeDisplayProps = {
@@ -124,10 +123,19 @@ export const Header = () => {
               {routes["/projects"] && (
                 <>
                   <Row s={{ hide: true }}>
-                    <ProjectsDropdown />
+                    <ToggleButton
+                      prefixIcon="code"
+                      href="/projects"
+                      label={projects.label}
+                      selected={pathname.startsWith("/projects")}
+                    />
                   </Row>
                   <Row hide s={{ hide: false }}>
-                    <ProjectsDropdown />
+                    <ToggleButton
+                      prefixIcon="code"
+                      href="/projects"
+                      selected={pathname.startsWith("/projects")}
+                    />
                   </Row>
                 </>
               )}
