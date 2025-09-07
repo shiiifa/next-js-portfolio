@@ -16,7 +16,7 @@ export default function NonMajorResearch() {
     {
       id: "solar-panel-soiling",
       title: "Estimating the Impact of Soiling on Solar Panels",
-      date: "2023",
+      date: "Jan 2023 - May 2023",
       location: "Ashesi Resourceful Engineering Lab (AREL)",
       summary: "Collaborated with a team of research assistants on an embedded systems and IoT project aimed at generating mathematical models to estimate the impact of soiling on solar panels.",
       image: "20230706_112627.jpg"
@@ -24,7 +24,7 @@ export default function NonMajorResearch() {
     {
       id: "depression-mathematical-model",
       title: "Developing a Novel Mathematical Model for Depression",
-      date: "2023",
+      date: "Nov 2023 - Dec 2023",
       location: "Independent Research Project",
       summary: "Developed a novel mathematical model of depression using differential equations to explore how populations transition between depression, remission, and recovery.",
       image: "Image 25-08-2025 at 7.45 PM.jpeg"
@@ -32,7 +32,7 @@ export default function NonMajorResearch() {
     {
       id: "hydrogel-irrigation-study",
       title: "A Comparative Study: The Effects of Different Hydrogel Shapes on Irrigation in Varying Soil Types",
-      date: "2023",
+      date: "Nov 2023 - Dec 2023",
       location: "Statistics Final Class Project",
       summary: "Investigated the use of superabsorbent PVA-borate hydrogels as a sustainable irrigation solution for urban agriculture.",
       image: "20230331_161915.jpg"
@@ -40,7 +40,7 @@ export default function NonMajorResearch() {
     {
       id: "prey-predator-mathematical-model",
       title: "Developing a Mathematical Model for Stage-Structured Prey-Predator Relationships",
-      date: "2023",
+      date: "Nov 2022 - Dec 2022",
       location: "Differential Equations and Numerical Methods Course",
       summary: "Collaborated on a project exploring stage-structured predator–prey systems using mathematical modeling techniques.",
       image: "Image 25-08-2025 at 10.33 PM.jpeg"

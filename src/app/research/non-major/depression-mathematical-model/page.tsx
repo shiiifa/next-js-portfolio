@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, SmartLink } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -34,13 +34,16 @@ export default function DepressionMathematicalModel() {
           Developing a Novel Mathematical Model for Depression
         </Heading>
         <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="m">
-          <strong>Date:</strong> 2023
+          <strong>Date:</strong> Nov 2023 - Dec 2023
+        </Text>
+        <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="m">
+          <strong>Skills:</strong> Mathematical Modelling, MATLAB
         </Text>
         <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="l">
-          <strong>Location:</strong> Independent Research Project
+          <strong>Link:</strong> <SmartLink href="https://pdf.ac/ZhuvNk6m" target="_blank" rel="noopener noreferrer">Slides from Presentation of Work</SmartLink>
         </Text>
         <Text variant="body-default-l" align="center">
-          Developed a novel mathematical model of depression using differential equations to explore how populations transition between depression, remission, and recovery.
+          As part of an independent research project, I developed a novel mathematical model of depression using differential equations to explore how populations transition between depression, remission, and recovery.
         </Text>
       </Column>
 
@@ -48,33 +51,33 @@ export default function DepressionMathematicalModel() {
       <Column paddingX="l" gap="l">
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
-            <Heading variant="heading-strong-l">Project Overview</Heading>
+            <Heading variant="heading-strong-l">Novel Approach</Heading>
             <Text variant="body-default-m">
-              As part of an independent research project, I developed a novel mathematical model of depression using differential equations to explore how populations transition between depression, remission, and recovery.
+              Unlike many existing models focused on biological markers, my approach considered depression at the population and experiential level, factoring in remission, relapse, treatment effects, and even the influence of individuals in remission on the wider community.
             </Text>
             <Text variant="body-default-m">
-              This interdisciplinary project combined mathematical modeling with mental health research to better understand the dynamics of depression at a population level.
+              This comprehensive approach provided a more holistic understanding of depression dynamics by incorporating social and community factors alongside individual experiences.
             </Text>
           </Column>
         </Card>
 
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
-            <Heading variant="heading-strong-l">Mathematical Approach</Heading>
+            <Heading variant="heading-strong-l">Personal and Academic Motivation</Heading>
+            <Text variant="body-default-m">
+              This work was both personal and academic: rooted in my interest in mental health and my conviction that mathematical models can illuminate human experiences often left to qualitative study. The model not only produced meaningful insights but also gave me the opportunity to merge applied mathematics with human-centered research, a theme I hope will shape my broader research journey.
+            </Text>
+          </Column>
+        </Card>
+
+        <Card padding="l" radius="m" shadow="m">
+          <Column gap="m">
+            <Heading variant="heading-strong-l">Technical Implementation</Heading>
             <Text variant="body-default-m">
               The model used differential equations to represent the transitions between different states of mental health: depression, remission, and recovery. This approach allowed for the analysis of population-level dynamics and the identification of key factors that influence these transitions.
             </Text>
             <Text variant="body-default-m">
               By modeling these transitions mathematically, the project aimed to provide insights into the complex dynamics of mental health at a population level, potentially informing public health strategies and interventions.
-            </Text>
-          </Column>
-        </Card>
-
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Research Impact</Heading>
-            <Text variant="body-default-m">
-              This project demonstrated the power of mathematical modeling in understanding complex social and health phenomena. It provided a quantitative framework for analyzing mental health dynamics and offered potential insights for public health policy and intervention strategies.
             </Text>
           </Column>
         </Card>
