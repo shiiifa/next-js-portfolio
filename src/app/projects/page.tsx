@@ -27,6 +27,20 @@ export default function Projects() {
       summary: "Constructed and benchmarked four distinct hardware configurations spanning both silicon-based microcontrollers and FPGA softcore processors to provide a rigorous evaluation of on-chip vs off-chip acceleration strategies."
     },
     {
+      id: "morse-code-decoder",
+      title: "Real-Time Morse Code Decoder as Embedded Neural Network",
+      date: "Sep 2024 - Dec 2024",
+      technologies: "TensorFlow, STM32F091RC, Xilinx Vivado, Vitis, MicroBlaze softcore processor, Embedded C",
+      summary: "Built a neural network–based decoder to translate real-time Morse button-press sequences (A–J + unclassified) into text, deployed on both an STM32F091RC microcontroller and a MicroBlaze/FPGA system. Achieved ~85% accuracy with full inference pipeline implementation in bare-metal C."
+    },
+    {
+      id: "automated-robotic-vehicle",
+      title: "Automated Robotic Vehicle",
+      date: "Dec 2024",
+      technologies: "Embedded C, Arm Cortex-M (STM32)",
+      summary: "Designed and implemented a remotely operated robotic vehicle using dual microcontrollers (STM32 M0 and STM32 M7) in register-level bare-metal C using UART-based communication. Integrated RTOS on the M7 for real-time task scheduling, ensuring efficient coordination of motion, speed regulation, and system monitoring."
+    },
+    {
       id: "agentic-ai-energy-management",
       title: "Agentic AI for Energy Management – Research Consulting with Schneider Electric",
       date: "May 2025 - Jul 2025",
@@ -34,11 +48,46 @@ export default function Projects() {
       summary: "Developed and evaluated an agentic AI co-pilot for sustainable energy operations, testing multiple agentic architectures and benchmarking their performance on complex sustainability queries."
     },
     {
+      id: "tennis-scoreboard",
+      title: "Tennis Scoreboard Digital System Design",
+      date: "July 2024",
+      technologies: "Digital Logic Design, Logism-Evolution, VHDL",
+      summary: "Designed and implemented a digital lawn tennis scoreboard system, progressing from logic-level design in Logisim to structural and behavioral VHDL implementations. The design incorporated score progression (Love–15–30–40), reversal via a decrement button, and a reset function, with outputs mapped to large 7-segment LED displays on an Artix-7 FPGA."
+    },
+    {
+      id: "16-bit-cpu",
+      title: "16-bit CPU in Logism-Evolution",
+      date: "Mar 2024 - May 2024",
+      technologies: "Logisim-Evolution, Digital Logic Design, Computer Architecture",
+      summary: "Collaborated in the design and implementation of a custom 16-bit CPU using Logisim-Evolution, incorporating key architectural components including an ALU (arithmetic + relational operations), register file, datapath, memory modules, and a micro-architected control unit."
+    },
+    {
+      id: "heartbeat-monitoring",
+      title: "Low-Cost Optical Heartbeat Monitoring System",
+      date: "Mar 2024 - May 2024",
+      technologies: "Analog Signal Processing, Electronic Instrumentation",
+      summary: "Co-developed a low-cost heartbeat monitoring device leveraging an infrared LED–phototransistor pair to detect pulse signals through light absorption and reflection. Designed a multi-stage signal conditioning chain with active high-pass and low-pass filters, DC offset removal, and high-gain amplification using LM324N op-amps."
+    },
+    {
       id: "wearable-technology-study",
       title: "Wearable Technology, Productivity and Information Overload: A Study & Concept Proposal",
       date: "Jan 2024 - Apr 2024",
       technologies: "Research Design, Literature Review, Needs Assessment (Interviews & Thematic analysis), Wearable Technology Concept Development",
       summary: "Explored how wearable technology can transform journaling into a seamless, productivity-enhancing experience through the NOTE-IT concept, a wearable device enabling instant, voice-based journaling."
+    },
+    {
+      id: "electronic-piano",
+      title: "Basic Electronic Piano",
+      date: "Apr 2023 - May 2023",
+      technologies: "Electromagnetism, NE555 Timer IC, RC circuits, Breadboarding",
+      summary: "Collaborated in a team to design and build a portable electronic piano replicating one octave (F5–F6) using a 555 Timer IC in astable mode as the oscillator. Engineered RC timing circuits to generate square-wave frequencies for specific notes, integrated pushbutton inputs for key selection, and output sound through a 4Ω speaker."
+    },
+    {
+      id: "4dof-robotic-arm",
+      title: "Arduino-Controlled 4DOF Robotic Arm",
+      date: "Mar 2022 - Jun 2022",
+      technologies: "Arduino, C/C++, SolidWorks, Proteus, 3D printing, Laser Cutting, Breadboarding",
+      summary: "Collaborated in a team to design and build a 4-DOF robotic arm showcased at Ashesi University's Engineering Exhibition. Programmed the control system in C/C++ on Arduino, enabling independent motion through dual joysticks and a potentiometer-operated claw. Applied the engineering design cycle, from ideation and CAD modeling in SolidWorks to prototyping with 3D printing, laser-cutting, and circuit integration."
     },
     {
       id: "curating-student-research-articles",
