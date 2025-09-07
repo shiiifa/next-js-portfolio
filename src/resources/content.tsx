@@ -32,11 +32,6 @@ const social: Social = [
     link: "https://www.linkedin.com/in/obed-babington",
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-  },
-  {
     name: "Email",
     icon: "email",
     link: "mailto:obed.babington@ashesi.edu.gh",
@@ -239,7 +234,7 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
+  label: "Projects",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
