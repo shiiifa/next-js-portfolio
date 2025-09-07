@@ -222,6 +222,12 @@ export interface Blog extends BasePageConfig {}
 export interface Work extends BasePageConfig {}
 
 /**
+ * Research page configuration.
+ * @description Configuration for the Research page, including metadata and navigation label.
+ */
+export interface Research extends BasePageConfig {}
+
+/**
  * Gallery page configuration.
  * @description Configuration for the Gallery page, including metadata, navigation label, and image list.
  */
