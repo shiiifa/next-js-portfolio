@@ -62,7 +62,7 @@ export default function MajorResearch() {
             <Column padding="l" gap="s">
               <Heading variant="heading-strong-s">Accelerating Embedded Neural Network Inference on FPGA Softcore Processors</Heading>
               <Text variant="body-default-s" onBackground="neutral-weak">
-                Tackling core challenges of embedded machine learning: achieving real-time performance without communication bottlenecks.
+                In this project, I tackled one of the core challenges of embedded machine learning: achieving real-time performance without the bottlenecks of external communication overhead.
               </Text>
             </Column>
           </Card>
@@ -87,7 +87,7 @@ export default function MajorResearch() {
             <Column padding="l" gap="s">
               <Heading variant="heading-strong-s">On-Chip vs. Off-Chip FPGA Acceleration for Embedded Neural Networks</Heading>
               <Text variant="body-default-s" onBackground="neutral-weak">
-                A broader systems-level question exploring acceleration strategies for embedded neural networks.
+                Whereas my complementary work focused on eliminating communication bottlenecks through an on-chip acceleration strategy, this project zoomed out to ask a broader systems-level question.
               </Text>
             </Column>
           </Card>
@@ -112,7 +112,7 @@ export default function MajorResearch() {
             <Column padding="l" gap="s">
               <Heading variant="heading-strong-s">Agentic AI for Energy Management – Research Consulting with Schneider Electric</Heading>
               <Text variant="body-default-s" onBackground="neutral-weak">
-                AMRE 2025 collaboration developing an agentic AI co-pilot for sustainable energy operations.
+                Through the 2025 Applied Methods & Research Experience (AMRE) program, I collaborated with Schneider Electric's Data Science team, to develop and evaluate an agentic AI co-pilot for sustainable energy operations.
               </Text>
             </Column>
           </Card>
@@ -137,7 +137,7 @@ export default function MajorResearch() {
             <Column padding="l" gap="s">
               <Heading variant="heading-strong-s">Wearable Technology, Productivity and Information Overload</Heading>
               <Text variant="body-default-s" onBackground="neutral-weak">
-                CaRINE Programme research exploring how wearable technology can enhance journaling and productivity.
+                As a Research Intern at Ashesi University's CaRINE Programme, I explored how wearable technology can transform the practice of journaling into a seamless, productivity-enhancing experience.
               </Text>
             </Column>
           </Card>
