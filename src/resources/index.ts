@@ -9,6 +9,7 @@ export {
   work,
   research,
   projects,
+  beyondTheLab,
   contact,
 } from "./content";
 
