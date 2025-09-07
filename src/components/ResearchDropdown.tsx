@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Row, ToggleButton, Column, Text } from "@once-ui-system/core";
+import { Row, ToggleButton, Column, Text, SmartLink } from "@once-ui-system/core";
 import { research } from "@/resources";
 
 export const ResearchDropdown = () => {
@@ -41,38 +41,34 @@ export const ResearchDropdown = () => {
           }}
         >
           <Column padding="s" gap="xs">
-            <Row
-              as="a"
-              href="/research/major"
-              padding="s"
-              radius="s"
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-                cursor: "pointer",
-              }}
-              hover={{
-                background: "var(--neutral-alpha-weak)",
-              }}
-            >
-              <Text variant="body-default-s">Major Research</Text>
-            </Row>
-            <Row
-              as="a"
-              href="/research/non-major"
-              padding="s"
-              radius="s"
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-                cursor: "pointer",
-              }}
-              hover={{
-                background: "var(--neutral-alpha-weak)",
-              }}
-            >
-              <Text variant="body-default-s">Non-Major Research</Text>
-            </Row>
+            <SmartLink href="/research/major">
+              <Row
+                padding="s"
+                radius="s"
+                style={{
+                  cursor: "pointer",
+                }}
+                hover={{
+                  background: "var(--neutral-alpha-weak)",
+                }}
+              >
+                <Text variant="body-default-s">Major Research</Text>
+              </Row>
+            </SmartLink>
+            <SmartLink href="/research/non-major">
+              <Row
+                padding="s"
+                radius="s"
+                style={{
+                  cursor: "pointer",
+                }}
+                hover={{
+                  background: "var(--neutral-alpha-weak)",
+                }}
+              >
+                <Text variant="body-default-s">Non-Major Research</Text>
+              </Row>
+            </SmartLink>
           </Column>
         </div>
       )}
