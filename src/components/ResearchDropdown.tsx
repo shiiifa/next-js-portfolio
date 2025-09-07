@@ -16,13 +16,24 @@ export const ResearchDropdown = () => {
       onMouseLeave={() => setIsOpen(false)}
     >
       {/* Main Research Button */}
-      <ToggleButton
-        prefixIcon="search"
-        href="/research"
-        label={research.label}
-        selected={pathname.startsWith("/research")}
-        style={{ cursor: "pointer" }}
-      />
+      <div
+        style={{
+          padding: "8px 12px",
+          borderRadius: "6px",
+          cursor: "pointer",
+          background: pathname.startsWith("/research") ? "var(--brand-background-weak)" : "transparent",
+          color: pathname.startsWith("/research") ? "var(--brand-on-background-strong)" : "var(--neutral-on-background-strong)",
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+          fontSize: "14px",
+          fontWeight: "500",
+          transition: "all 0.2s ease",
+        }}
+      >
+        <span>🔍</span>
+        <span>{research.label}</span>
+      </div>
       
       {/* Dropdown Menu */}
       {isOpen && (
