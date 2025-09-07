@@ -241,12 +241,6 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const research: Research = {
-  path: "/research",
-  label: "Research",
-  title: `Research – ${person.name}`,
-  description: `Research experiences and work by ${person.name}`,
-};
 
 const contact: Contact = {
   path: "/contact",
