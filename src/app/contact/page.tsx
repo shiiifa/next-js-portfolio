@@ -46,14 +46,14 @@ export default function Contact() {
           <Column gap="s">
             <Row gap="s" vertical="center">
               <Text variant="body-default-m" onBackground="neutral-weak">WhatsApp:</Text>
-              <SmartLink href="https://wa.me/233264741689" variant="body-default-m">
-                +233-26-474-1689
+              <SmartLink href="https://wa.me/233264741689">
+                <Text variant="body-default-m">+233-26-474-1689</Text>
               </SmartLink>
             </Row>
             <Row gap="s" vertical="center">
               <Text variant="body-default-m" onBackground="neutral-weak">Calls:</Text>
-              <SmartLink href="tel:+233540304620" variant="body-default-m">
-                +233-54-030-4620
+              <SmartLink href="tel:+233540304620">
+                <Text variant="body-default-m">+233-54-030-4620</Text>
               </SmartLink>
             </Row>
           </Column>
@@ -62,16 +62,16 @@ export default function Contact() {
         {/* Work Email Section */}
         <Column gap="m">
           <Heading variant="heading-strong-l">Work Email</Heading>
-          <SmartLink href="mailto:obed.babington@ashesi.edu.gh" variant="body-default-m">
-            obed.babington@ashesi.edu.gh
+          <SmartLink href="mailto:obed.babington@ashesi.edu.gh">
+            <Text variant="body-default-m">obed.babington@ashesi.edu.gh</Text>
           </SmartLink>
         </Column>
 
         {/* Personal Email Section */}
         <Column gap="m">
           <Heading variant="heading-strong-l">Personal Email</Heading>
-          <SmartLink href="mailto:obedalloteyb@gmail.com" variant="body-default-m">
-            obedalloteyb@gmail.com
+          <SmartLink href="mailto:obedalloteyb@gmail.com">
+            <Text variant="body-default-m">obedalloteyb@gmail.com</Text>
           </SmartLink>
         </Column>
       </Column>
