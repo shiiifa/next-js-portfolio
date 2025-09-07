@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, SmartLink } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -12,6 +12,41 @@ export async function generateMetadata() {
 }
 
 export default function NonMajorResearch() {
+  const projects = [
+    {
+      id: "solar-panel-soiling",
+      title: "Estimating the Impact of Soiling on Solar Panels",
+      date: "2023",
+      location: "Ashesi Resourceful Engineering Lab (AREL)",
+      summary: "Collaborated with a team of research assistants on an embedded systems and IoT project aimed at generating mathematical models to estimate the impact of soiling on solar panels.",
+      image: "20230706_112627.jpg"
+    },
+    {
+      id: "depression-mathematical-model",
+      title: "Developing a Novel Mathematical Model for Depression",
+      date: "2023",
+      location: "Independent Research Project",
+      summary: "Developed a novel mathematical model of depression using differential equations to explore how populations transition between depression, remission, and recovery.",
+      image: "Image 25-08-2025 at 7.45 PM.jpeg"
+    },
+    {
+      id: "hydrogel-irrigation-study",
+      title: "A Comparative Study: The Effects of Different Hydrogel Shapes on Irrigation in Varying Soil Types",
+      date: "2023",
+      location: "Statistics Final Class Project",
+      summary: "Investigated the use of superabsorbent PVA-borate hydrogels as a sustainable irrigation solution for urban agriculture.",
+      image: "20230331_161915.jpg"
+    },
+    {
+      id: "prey-predator-mathematical-model",
+      title: "Developing a Mathematical Model for Stage-Structured Prey-Predator Relationships",
+      date: "2023",
+      location: "Differential Equations and Numerical Methods Course",
+      summary: "Collaborated on a project exploring stage-structured predator–prey systems using mathematical modeling techniques.",
+      image: "Image 25-08-2025 at 10.33 PM.jpeg"
+    }
+  ];
+
   return (
     <Column maxWidth="m" paddingTop="24">
       <Schema
@@ -38,11 +73,39 @@ export default function NonMajorResearch() {
         </Text>
       </Column>
 
-      {/* Empty State */}
-      <Column paddingX="l" align="center">
-        <Text variant="body-default-m" onBackground="neutral-weak">
-          Content coming soon...
-        </Text>
+      {/* Non-Major Research Projects */}
+      <Column paddingX="l" gap="xl">
+        {projects.map((project, index) => (
+          <Card
+            key={index}
+            as="a"
+            href={`/research/non-major/${project.id}`}
+            padding="l"
+            radius="m"
+            shadow="m"
+            style={{ 
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              textDecoration: "none"
+            }}
+          >
+            <Column gap="m">
+              <Heading variant="heading-strong-l">{project.title}</Heading>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                <strong>Date:</strong> {project.date}
+              </Text>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                <strong>Location:</strong> {project.location}
+              </Text>
+              <Text variant="body-default-m" marginTop="m">
+                {project.summary}
+              </Text>
+              <Text variant="body-default-s" onBackground="neutral-weak" marginTop="m" style={{ fontStyle: "italic" }}>
+                Click to read more →
+              </Text>
+            </Column>
+          </Card>
+        ))}
       </Column>
     </Column>
   );
