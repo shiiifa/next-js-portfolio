@@ -1,6 +1,5 @@
-import { Column, Heading, Meta, Schema, Text, Row, SmartLink } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Row, SmartLink, Card, Image } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
-import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -40,9 +39,38 @@ export default function Work() {
         <Text marginBottom="m" variant="body-default-l">
           If it's stressful, but fun; keeps you up all night, but extremely rewarding, then it's probably an engineering project. I'm excited to share projects I've worked on with practical applications in embedded systems, signals processing, and much more!
         </Text>
-        <Text variant="body-default-m">
+        <Text marginBottom="l" variant="body-default-m">
           <SmartLink href="#engineering-projects">Explore my engineering projects here!</SmartLink>
         </Text>
+        
+        {/* Engineering Projects Tile */}
+        <Card
+          as="a"
+          href="#engineering-projects"
+          padding="0"
+          radius="m"
+          shadow="m"
+          hover={{
+            shadow: "l",
+            scale: 1.02,
+          }}
+          transition="all"
+        >
+          <Image
+            src="/images/projects/project-01/cover-01.jpg"
+            alt="Engineering Projects"
+            width={16}
+            height={9}
+            radius="m"
+            style={{ width: "100%", height: "200px", objectFit: "cover" }}
+          />
+          <Column padding="l" gap="s">
+            <Heading variant="heading-strong-m">Engineering Projects</Heading>
+            <Text variant="body-default-s" onBackground="neutral-weak">
+              Embedded systems, signals processing, and practical engineering solutions
+            </Text>
+          </Column>
+        </Card>
       </Column>
 
       {/* Computer Science Projects Section */}
@@ -53,12 +81,39 @@ export default function Work() {
         <Text marginBottom="m" variant="body-default-l">
           I've always been pulled towards logical, and algorithmic type thinking. Low-level programming in C++, C, and recently, VHDL, coupled with scientific programming in Python or MATLAB, have been my avenues for exercising this interest.
         </Text>
-        <Text variant="body-default-m">
+        <Text marginBottom="l" variant="body-default-m">
           <SmartLink href="#computer-science-projects">Explore my computer science projects here!</SmartLink>
         </Text>
+        
+        {/* Computer Science Projects Tile */}
+        <Card
+          as="a"
+          href="#computer-science-projects"
+          padding="0"
+          radius="m"
+          shadow="m"
+          hover={{
+            shadow: "l",
+            scale: 1.02,
+          }}
+          transition="all"
+        >
+          <Image
+            src="/images/projects/project-01/cover-02.jpg"
+            alt="Computer Science Projects"
+            width={16}
+            height={9}
+            radius="m"
+            style={{ width: "100%", height: "200px", objectFit: "cover" }}
+          />
+          <Column padding="l" gap="s">
+            <Heading variant="heading-strong-m">Computer Science Projects</Heading>
+            <Text variant="body-default-s" onBackground="neutral-weak">
+              Low-level programming, algorithms, and scientific computing
+            </Text>
+          </Column>
+        </Card>
       </Column>
-
-      <Projects />
     </Column>
   );
 }
