@@ -21,6 +21,7 @@ const routes: RoutesConfig = {
   "/about": true,
   "/research": true,
   "/projects": true,
+  "/beyond-the-lab": true,
   "/blog": true,
   "/contact": true,
 };

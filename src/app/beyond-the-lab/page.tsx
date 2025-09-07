@@ -1,0 +1,61 @@
+import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { baseURL, about, person, beyondTheLab } from "@/resources";
+
+export async function generateMetadata() {
+  return Meta.generate({
+    title: beyondTheLab.title,
+    description: beyondTheLab.description,
+    path: beyondTheLab.path,
+    baseURL,
+  });
+}
+
+export default function BeyondTheLab() {
+  return (
+    <Column maxWidth="m" paddingTop="24">
+      <Schema
+        as="webPage"
+        baseURL={baseURL}
+        path={beyondTheLab.path}
+        title={beyondTheLab.title}
+        description={beyondTheLab.description}
+        image={`/api/og/generate?title=${encodeURIComponent("Beyond The Lab")}`}
+        author={{
+          name: person.name,
+          url: `${baseURL}${about.path}`,
+          image: `${baseURL}${person.avatar}`,
+        }}
+      />
+
+      {/* Page Header */}
+      <Column marginBottom="xl" paddingX="l" align="center">
+        <Heading marginBottom="l" variant="heading-strong-xl" align="center">
+          Beyond The Lab
+        </Heading>
+        <Text variant="body-default-l" align="center">
+          <strong>The Extras</strong>
+        </Text>
+        <Text variant="body-default-l" align="center" marginTop="m">
+          When I'm not tackling research or engineering projects, you will find me engaged in a plethora of other endeavors. Leadership, public speaking, community service, writing, ...you name it.
+        </Text>
+        <Text variant="body-default-l" align="center" marginTop="m">
+          Here lies a more holistic representation of my world. Take a dive.
+        </Text>
+      </Column>
+
+      {/* Content Placeholder */}
+      <Column paddingX="l" gap="xl">
+        <Card padding="l" radius="m" shadow="m">
+          <Column gap="m" align="center">
+            <Heading variant="heading-strong-l" align="center">
+              Coming Soon
+            </Heading>
+            <Text variant="body-default-m" align="center">
+              This section will showcase my leadership experiences, public speaking engagements, community service work, writing projects, and other extracurricular activities.
+            </Text>
+          </Column>
+        </Card>
+      </Column>
+    </Column>
+  );
+}

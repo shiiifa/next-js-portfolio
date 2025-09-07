@@ -256,6 +256,13 @@ const projects: Contact = {
   description: `Engineering and Computer Science projects by ${person.name}`,
 };
 
+const beyondTheLab: Contact = {
+  path: "/beyond-the-lab",
+  label: "Beyond The Lab",
+  title: `Beyond The Lab – ${person.name}`,
+  description: `Leadership, public speaking, community service, writing, and more by ${person.name}`,
+};
+
 const contact: Contact = {
   path: "/contact",
   label: "Contact",
@@ -263,4 +270,4 @@ const contact: Contact = {
   description: `Get in touch with ${person.name}`,
 };
 
-export { person, social, newsletter, home, about, blog, work, research, projects, contact };
+export { person, social, newsletter, home, about, blog, work, research, projects, beyondTheLab, contact };
