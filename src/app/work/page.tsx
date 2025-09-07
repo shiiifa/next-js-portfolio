@@ -55,7 +55,6 @@ export default function Work() {
             shadow: "l",
             scale: 1.02,
           }}
-          transition="all"
         >
           <div style={{ position: "relative", width: "100%", height: "200px" }}>
             <Image
@@ -97,7 +96,6 @@ export default function Work() {
             shadow: "l",
             scale: 1.02,
           }}
-          transition="all"
         >
           <div style={{ position: "relative", width: "100%", height: "200px" }}>
             <Image
