@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, blog, work, research, projects, contact } from "@/resources";
+import { routes, display, person, about, blog, research, projects, contact } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import { ResearchDropdown } from "./ResearchDropdown";
 import { ProjectsDropdown } from "./ProjectsDropdown";
@@ -107,25 +107,6 @@ export const Header = () => {
                       prefixIcon="person"
                       href="/about"
                       selected={pathname === "/about"}
-                    />
-                  </Row>
-                </>
-              )}
-              {routes["/work"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="grid"
-                      href="/work"
-                      label={work.label}
-                      selected={pathname.startsWith("/work")}
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="grid"
-                      href="/work"
-                      selected={pathname.startsWith("/work")}
                     />
                   </Row>
                 </>
