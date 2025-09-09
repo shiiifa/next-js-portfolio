@@ -44,7 +44,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Shaping digital and embedded systems for intelligence at the edge</>,
   featured: {
     display: true,
     title: (
@@ -60,14 +60,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Obed, a research assistant at Ashesi University, blending ideas from hardware, software, and artificial intelligence to build future-ready systems.
     </>
   ),
 };
