@@ -89,41 +89,72 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Smart Technologies Lab, Ashesi University",
+        timeframe: "Aug 2025 – Present",
+        role: "Research Assistant",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Conducting research on embedded machine learning (TinyML) solutions for deploying AI models on resource-constrained microcontrollers and SoC for local applications.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Designing and implementing hardware acceleration strategies for neural network inference using FPGAs (Xilinx Artix-7, ZYNQ-7000) with custom accelerators and co-design methodologies involving softcore processors (MicroBlaze).
+          </>,
+          <>
+            Benchmarking performance across microcontrollers and FPGA-based accelerators, analyzing latency and energy efficiency trade-offs.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Schneider Electric Sustainability Business",
+        timeframe: "May 2025 – Jul 2025",
+        role: "Research Consultant (Intern)",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Through the AMRE Program at the College of Wooster, collaborated with a research team to design and prototype an Energy Management Co-Pilot using large language models (LLMs) and autonomous agent architectures, implementing the Model Context Protocol (MCP) in both single-client/server and multi-client/server architectures.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Developed an evaluation pipeline leveraging LlamaIndex's CorrectnessEvaluator to assess agent responses against ground-truth datasets across multiple query categories. This allowed benchmarking single-agent vs multi-agent system performance, analyzing trade-offs in accuracy, execution time, error rates, and orchestration overhead.
+          </>,
+          <>
+            Delivered a 35-minute final presentation to Schneider Electric's Sustainability Business team and co-authored a 66-page technical report documenting research findings, methodologies, and recommendations.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Smart Technologies Lab, Ashesi University",
+        timeframe: "May 2024 – Sep 2024",
+        role: "Undergraduate Research Assistant",
+        achievements: [
+          <>
+            Investigated hardware acceleration of neural network inference using a Xilinx Basys 3 Artix-7 FPGA in parallel communication with microcontroller units (MCUs).
+          </>,
+          <>
+            Interfaced the FPGA with both an 8-bit Arduino Uno and a 32-bit Freedom KL25Z MCU, analyzing the effect of MCU bit-width architecture on inference latency.
+          </>,
+          <>
+            Demonstrated up to 86% performance improvement in inference execution time across both MCU platforms through FPGA-based acceleration.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Swoove360",
+        timeframe: "Jun 2023 – Dec 2023",
+        role: "Telematics Engineer (Intern)",
+        achievements: [
+          <>
+            Contributed to the launch of Fleet360, a fleet management platform designed to optimize vehicle operations in Ghana.
+          </>,
+          <>
+            Configured and synchronized telematics devices with company servers and APIs, ensuring reliable real-time data streaming.
+          </>,
+          <>
+            Maintained and managed a ledger of SIM cards for device connectivity, supporting data integration with Swoove360's API endpoints.
+          </>,
+          <>
+            Authored and updated comprehensive telematics documentation, enhancing troubleshooting workflows and system optimization across engineering operations.
           </>,
         ],
         images: [],
@@ -135,12 +166,15 @@ const about: About = {
     title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Ashesi University",
+        description: (
+          <>
+            B.Sc. (Hons) Computer Engineering<br />
+            Cumulative GPA: 3.84/4.0<br />
+            2021–2025<br /><br />
+            Relevant Courses: Embedded Systems, Digital System Design, Internet of Things (IoT), Deep Learning, Circuits and Electronics, Data Structures and Algorithms, Object-Oriented Programming
+          </>
+        ),
       },
     ],
   },
