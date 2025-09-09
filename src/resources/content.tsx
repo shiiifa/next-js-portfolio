@@ -20,9 +20,14 @@ const social: Social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "Download CV",
-    icon: "download",
-    link: "/cv/Obed_Babington_CV.pdf",
+    name: "LinkedIn",
+    icon: "linkedin",
+    link: "https://www.linkedin.com/in/obed-babington",
+  },
+  {
+    name: "Email",
+    icon: "email",
+    link: "mailto:obed.babington@ashesi.edu.gh",
   },
 ];
 

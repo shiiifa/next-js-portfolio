@@ -130,46 +130,23 @@ export default function About() {
             <Heading className={styles.textAlign} variant="display-strong-l">
               {person.name}
             </Heading>
-            {social.length > 0 && (
-              <Row
-                className={styles.blockAlign}
-                paddingTop="20"
-                paddingBottom="8"
-                gap="8"
-                wrap
-                horizontal="center"
-                fitWidth
-                data-border="rounded"
-              >
-                {social.map(
-                  (item) =>
-                    item.link && (
-                      <React.Fragment key={item.name}>
-                        <Row s={{ hide: true }}>
-                          <Button
-                            key={item.name}
-                            href={item.link}
-                            prefixIcon={item.icon}
-                            label={item.name}
-                            size="s"
-                            weight="default"
-                            variant="secondary"
-                          />
-                        </Row>
-                        <Row hide s={{ hide: false }}>
-                          <IconButton
-                            size="l"
-                            key={`${item.name}-icon`}
-                            href={item.link}
-                            icon={item.icon}
-                            variant="secondary"
-                          />
-                        </Row>
-                      </React.Fragment>
-                    ),
-                )}
-              </Row>
-            )}
+            <Row
+              className={styles.blockAlign}
+              paddingTop="20"
+              paddingBottom="8"
+              gap="8"
+              horizontal="center"
+              fitWidth
+            >
+              <Button
+                href="/cv/Obed_Babington_CV.pdf"
+                prefixIcon="download"
+                label="Download CV"
+                size="s"
+                weight="default"
+                variant="secondary"
+              />
+            </Row>
           </Column>
 
           {about.intro.display && (
