@@ -32,7 +32,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Welcome to my world!</>,
+  headline: <>Shaping digital and embedded systems for intelligence at the edge</>,
   featured: {
     display: false,
     title: (
@@ -56,7 +56,7 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
+  title: `Welcome to my world!`,
   description: `Meet ${person.name}, ${person.role}`,
   tableOfContent: {
     display: true,
