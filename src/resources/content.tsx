@@ -79,8 +79,6 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Hello<br />
-        Welcome to my world!<br /><br />
         At my core, I'm marked by an intellectual curiosity, ambition, and a love for social connection.<br /><br />
         My current research interests lie in the development of embedded machine learning solutions for deploying AI models on edge devices. This includes the design and implementation of hardware acceleration strategies for neural network inference using FPGAs.
       </>
