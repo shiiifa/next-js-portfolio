@@ -47,9 +47,6 @@ export default function Research() {
         <Text marginBottom="m" variant="body-default-l">
           Research work closely aligned with my core research interests and carried out with a significant degree of faculty engagement.
         </Text>
-        <Text marginBottom="l" variant="body-default-m">
-          <SmartLink href="/research/major">Explore my major research work HERE!</SmartLink>
-        </Text>
         
         {/* Major Research Tile */}
         <Card
@@ -83,9 +80,6 @@ export default function Research() {
         </Heading>
         <Text marginBottom="m" variant="body-default-l">
           A mix of research experiences gathered through academic coursework and extra-curricular activity. While not tightly connected to my core research areas, I built some of my research foundations through them.
-        </Text>
-        <Text marginBottom="l" variant="body-default-m">
-          <SmartLink href="/research/non-major">Explore my non-major research work HERE!</SmartLink>
         </Text>
         
         {/* Non-Major Research Tile */}
