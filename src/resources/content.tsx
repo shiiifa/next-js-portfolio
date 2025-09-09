@@ -147,64 +147,26 @@ const about: About = {
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skills & Languages",
     skills: [
       {
-        title: "Figma",
+        title: "Hardware",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>ARM Cortex-M (STM32), FPGA (Xilinx Artix-7, ZYNQ-7000), Arduino, ESP32, Oscilloscopes, Signal Generators</>
         ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
-        title: "Next.js",
+        title: "Programming",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Embedded C, VHDL, Python, Java, MATLAB, C++, Assembly</>
         ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },  
+      },
+      {
+        title: "Tools",
+        description: (
+          <>Vivado, Vitis IDE, ModelSim, Logisim Evolution, Git/GitHub, Linux/UNIX, VS Code, Microsoft Office Suite, Notion</>
+        ),
+      },
     ],
   },
 };
