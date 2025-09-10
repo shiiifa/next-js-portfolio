@@ -1,0 +1,11 @@
+# Decimal to Binary, Octal, Hexadecimal
+ num = 45
+ print("Binary:", bin(num))
+ print("Octal:", oct(num))
+ print("Hexadecimal:", hex(num))
+ # Binary to Decimal
+ binary_num = "101101"
+ print("Decimal:", int(binary_num, 2))
+ # Hexadecimal to Decimal
+ hex_num = "2F"
+ print("Decimal:", int(hex_num, 16))
