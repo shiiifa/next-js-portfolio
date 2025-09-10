@@ -9,25 +9,13 @@
 .roadmapLine {
   position: absolute;
   left: 2rem;
-  top: 0;
-  bottom: 0;
-  width: 4px;
+  top: 2rem;
+  bottom: 2rem;
+  width: 3px;
   background: var(--brand-medium);
   border-radius: 2px;
-  z-index: 0;
+  z-index: 1;
   box-shadow: 0 0 8px rgba(var(--brand-medium-rgb), 0.3);
-  
-  &::before {
-    content: '';
-    position: absolute;
-    left: -1px;
-    top: 0;
-    bottom: 0;
-    width: 6px;
-    background: var(--brand-weak);
-    border-radius: 3px;
-    z-index: -1;
-  }
 }
 
 .experiencesContainer {
@@ -63,11 +51,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
   transition: all 0.3s ease;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-left: -2rem; // Center the icon on the line
+  margin-left: -1.5rem; // Position icon to the left of the line
 
   .experiencePoint:hover & {
     border-color: var(--brand-strong);
@@ -169,21 +157,18 @@
 @media (max-width: 768px) {
   .roadmapLine {
     left: 1.5rem;
-    width: 3px;
+    width: 2px;
   }
   
   .timelineIcon {
-    margin-left: -1.5rem;
+    margin-left: -1rem;
+    width: 3rem;
+    height: 3rem;
+    border-width: 2px;
   }
 
   .experiencePoint {
     gap: 1rem;
-  }
-
-  .timelineIcon {
-    width: 3rem;
-    height: 3rem;
-    border-width: 2px;
   }
 
   .experienceCard {
@@ -198,20 +183,17 @@
 
   .roadmapLine {
     left: 1rem;
-    width: 3px;
+    width: 2px;
   }
   
   .timelineIcon {
-    margin-left: -1rem;
+    margin-left: -0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-width: 2px;
   }
 
   .experiencePoint {
     gap: 0.5rem;
-  }
-
-  .timelineIcon {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-width: 2px;
   }
 }
