@@ -161,9 +161,7 @@ export default function About() {
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
                 {about.work.title}
               </Heading>
-              <Column fillWidth marginBottom="40">
-                <WorkRoadmap experiences={about.work.experiences} />
-              </Column>
+              <WorkRoadmap experiences={about.work.experiences} />
             </>
           )}
 

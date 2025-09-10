@@ -1,21 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
-import { Column, Row, Text } from "@once-ui-system/core";
-import { iconLibrary } from "@/resources";
-import styles from "./work-roadmap.module.scss";
+import { useState } from "react";
+import { Column, Row, Text, Heading } from "@once-ui-system/core";
+import { about } from "@/resources";
+import styles from "./WorkRoadmap.module.scss";
 
 interface WorkExperience {
   company: string;
   timeframe: string;
   role: string;
   achievements: React.ReactNode[];
-  images?: Array<{
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-  }>;
+  images?: any[];
 }
 
 interface WorkRoadmapProps {
@@ -27,63 +22,56 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
 
   return (
     <div className={styles.roadmapContainer}>
-      <div className={styles.horizontalTimeline}>
-        {/* Connecting Thread Line */}
-        <div className={styles.threadLine} />
-        
+      {/* Roadmap Line */}
+      <div className={styles.roadmapLine} />
+      
+      {/* Experience Points */}
+      <div className={styles.experiencesContainer}>
         {experiences.map((experience, index) => (
           <div
             key={`${experience.company}-${index}`}
-            className={`${styles.timelineItem} ${hoveredIndex === index ? styles.hovered : ""}`}
+            className={`${styles.experiencePoint} ${hoveredIndex === index ? styles.hovered : ''}`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
+            style={{
+              animationDelay: `${index * 0.2}s`,
+            }}
           >
-            {/* Date Above Circle */}
-            <div className={styles.dateContainer}>
-              <Text variant="body-default-xs" className={styles.dateText}>
-                {experience.timeframe}
-              </Text>
+            {/* Timeline Dot */}
+            <div className={styles.timelineDot}>
+              <div className={styles.innerDot} />
             </div>
-
-            {/* Circle Node */}
-            <div className={styles.circleNode}>
-              <div className={styles.circleInner}>
-                <div className={styles.circleIcon}>
-                  {iconLibrary.rocket({ size: 20 })}
-                </div>
-              </div>
-            </div>
-
-            {/* Work Experience Below Circle */}
-            <div className={styles.experienceContainer}>
-              <div className={styles.experienceCard}>
-                <Text variant="heading-strong-s" className={styles.companyName}>
-                  {experience.company}
-                </Text>
-                <Text variant="body-default-s" className={styles.role}>
+            
+            {/* Experience Card */}
+            <div className={`${styles.experienceCard} ${hoveredIndex === index ? styles.cardHovered : ''}`}>
+              <div className={styles.cardContent}>
+                <Row fillWidth horizontal="between" vertical="center" marginBottom="s">
+                  <Heading variant="heading-strong-m">{experience.company}</Heading>
+                  <Text variant="body-default-s" onBackground="neutral-weak">
+                    {experience.timeframe}
+                  </Text>
+                </Row>
+                
+                <Text 
+                  variant="body-default-s" 
+                  onBackground="brand-weak" 
+                  marginBottom="m"
+                  className={styles.role}
+                >
                   {experience.role}
                 </Text>
-
-                {/* Hover Details */}
-                <div className={`${styles.hoverDetails} ${hoveredIndex === index ? styles.visible : ""}`}>
-                  <Column gap="s">
-                    <Text variant="body-default-xs" className={styles.achievementsTitle}>
-                      Key Achievements:
+                
+                <Column gap="s" className={styles.achievements}>
+                  {experience.achievements.map((achievement, achievementIndex) => (
+                    <Text
+                      key={`${experience.company}-achievement-${achievementIndex}`}
+                      variant="body-default-s"
+                      className={styles.achievement}
+                    >
+                      {achievement}
                     </Text>
-                    <Column as="ul" gap="xs" className={styles.achievementsList}>
-                      {experience.achievements.map((achievement, achievementIndex) => (
-                        <Text
-                          key={achievementIndex}
-                          as="li"
-                          variant="body-default-xs"
-                          className={styles.achievementItem}
-                        >
-                          {achievement}
-                        </Text>
-                      ))}
-                    </Column>
-                  </Column>
-                </div>
+                  ))}
+                </Column>
               </div>
             </div>
           </div>
