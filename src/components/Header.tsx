@@ -61,7 +61,6 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="person"
                       href="/about"
                       label={about.label}
                       selected={pathname === "/about"}
@@ -69,7 +68,6 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="person"
                       href="/about"
                       selected={pathname === "/about"}
                     />
@@ -90,7 +88,6 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="code"
                       href="/projects"
                       label={projects.label}
                       selected={pathname.startsWith("/projects")}
@@ -98,7 +95,6 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="code"
                       href="/projects"
                       selected={pathname.startsWith("/projects")}
                     />
@@ -109,7 +105,6 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="star"
                       href="/beyond-the-lab"
                       label={beyondTheLab.label}
                       selected={pathname.startsWith("/beyond-the-lab")}
@@ -117,7 +112,6 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="star"
                       href="/beyond-the-lab"
                       selected={pathname.startsWith("/beyond-the-lab")}
                     />
@@ -128,7 +122,6 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="book"
                       href="/blog"
                       label={blog.label}
                       selected={pathname.startsWith("/blog")}
@@ -136,7 +129,6 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="book"
                       href="/blog"
                       selected={pathname.startsWith("/blog")}
                     />
@@ -147,7 +139,6 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="email"
                       href="/contact"
                       label={contact.label}
                       selected={pathname.startsWith("/contact")}
@@ -155,7 +146,6 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="email"
                       href="/contact"
                       selected={pathname.startsWith("/contact")}
                     />

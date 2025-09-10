@@ -17,7 +17,6 @@ export const ResearchDropdown = () => {
     >
       {/* Main Research Button */}
       <ToggleButton
-        prefixIcon="search"
         href="/research"
         label={research.label}
         selected={pathname.startsWith("/research")}
