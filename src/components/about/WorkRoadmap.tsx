@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Column, Row, Text, Heading } from "@once-ui-system/core";
+import { Column, Row, Text } from "@once-ui-system/core";
 import { iconLibrary } from "@/resources";
 import styles from "./work-roadmap.module.scss";
 
@@ -27,7 +27,10 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
 
   return (
     <div className={styles.roadmapContainer}>
-      <div className={styles.timeline}>
+      <div className={styles.horizontalTimeline}>
+        {/* Connecting Thread Line */}
+        <div className={styles.threadLine} />
+        
         {experiences.map((experience, index) => (
           <div
             key={`${experience.company}-${index}`}
@@ -35,44 +38,44 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            {/* Timeline Node */}
-            <div className={styles.timelineNode}>
-              <div className={styles.nodeInner}>
-                <div className={styles.nodeIcon}>
-                  {iconLibrary.rocket({ size: 16 })}
+            {/* Date Above Circle */}
+            <div className={styles.dateContainer}>
+              <Text variant="body-default-xs" className={styles.dateText}>
+                {experience.timeframe}
+              </Text>
+            </div>
+
+            {/* Circle Node */}
+            <div className={styles.circleNode}>
+              <div className={styles.circleInner}>
+                <div className={styles.circleIcon}>
+                  {iconLibrary.rocket({ size: 20 })}
                 </div>
               </div>
             </div>
 
-            {/* Timeline Content */}
-            <div className={styles.timelineContent}>
-              <div className={styles.contentCard}>
-                <Row fillWidth horizontal="between" vertical="start" marginBottom="s">
-                  <Column gap="xs">
-                    <Text variant="heading-strong-m" className={styles.companyName}>
-                      {experience.company}
-                    </Text>
-                    <Text variant="body-default-s" onBackground="brand-weak" className={styles.role}>
-                      {experience.role}
-                    </Text>
-                  </Column>
-                  <Text variant="body-default-xs" onBackground="neutral-weak" className={styles.timeframe}>
-                    {experience.timeframe}
-                  </Text>
-                </Row>
+            {/* Work Experience Below Circle */}
+            <div className={styles.experienceContainer}>
+              <div className={styles.experienceCard}>
+                <Text variant="heading-strong-s" className={styles.companyName}>
+                  {experience.company}
+                </Text>
+                <Text variant="body-default-s" className={styles.role}>
+                  {experience.role}
+                </Text>
 
                 {/* Hover Details */}
                 <div className={`${styles.hoverDetails} ${hoveredIndex === index ? styles.visible : ""}`}>
-                  <Column gap="m">
-                    <Text variant="body-default-s" onBackground="neutral-medium" className={styles.achievementsTitle}>
+                  <Column gap="s">
+                    <Text variant="body-default-xs" className={styles.achievementsTitle}>
                       Key Achievements:
                     </Text>
-                    <Column as="ul" gap="s" className={styles.achievementsList}>
+                    <Column as="ul" gap="xs" className={styles.achievementsList}>
                       {experience.achievements.map((achievement, achievementIndex) => (
                         <Text
                           key={achievementIndex}
                           as="li"
-                          variant="body-default-s"
+                          variant="body-default-xs"
                           className={styles.achievementItem}
                         >
                           {achievement}
@@ -83,11 +86,6 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
                 </div>
               </div>
             </div>
-
-            {/* Connecting Line */}
-            {index < experiences.length - 1 && (
-              <div className={styles.connectingLine} />
-            )}
           </div>
         ))}
       </div>
