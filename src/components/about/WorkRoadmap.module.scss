@@ -11,18 +11,11 @@
   left: 2rem;
   top: 0;
   bottom: 0;
-  width: 3px;
-  background: linear-gradient(
-    to bottom,
-    var(--brand-weak),
-    var(--brand-medium),
-    var(--brand-strong),
-    var(--brand-medium),
-    var(--brand-weak)
-  );
+  width: 4px;
+  background: var(--brand-medium);
   border-radius: 2px;
-  z-index: 1;
-  animation: lineGlow 3s ease-in-out infinite alternate;
+  z-index: 0;
+  box-shadow: 0 0 8px rgba(var(--brand-medium-rgb), 0.3);
   
   &::before {
     content: '';
@@ -30,37 +23,10 @@
     left: -1px;
     top: 0;
     bottom: 0;
-    width: 5px;
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--brand-weak-rgb), 0.1),
-      rgba(var(--brand-medium-rgb), 0.2),
-      rgba(var(--brand-strong-rgb), 0.3),
-      rgba(var(--brand-medium-rgb), 0.2),
-      rgba(var(--brand-weak-rgb), 0.1)
-    );
+    width: 6px;
+    background: var(--brand-weak);
     border-radius: 3px;
     z-index: -1;
-  }
-  
-  &::after {
-    content: '';
-    position: absolute;
-    left: -2px;
-    top: 0;
-    bottom: 0;
-    width: 7px;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgba(var(--brand-strong-rgb), 0.05),
-      rgba(var(--brand-strong-rgb), 0.1),
-      rgba(var(--brand-strong-rgb), 0.05),
-      transparent
-    );
-    border-radius: 4px;
-    z-index: -2;
-    animation: lineGlow 3s ease-in-out infinite alternate-reverse;
   }
 }
 
@@ -97,10 +63,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 2;
   transition: all 0.3s ease;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-left: -2rem; // Center the icon on the line
 
   .experiencePoint:hover & {
     border-color: var(--brand-strong);
@@ -197,22 +164,16 @@
   }
 }
 
-@keyframes lineGlow {
-  0% {
-    opacity: 0.6;
-    box-shadow: 0 0 5px rgba(var(--brand-medium-rgb), 0.3);
-  }
-  100% {
-    opacity: 1;
-    box-shadow: 0 0 15px rgba(var(--brand-strong-rgb), 0.4);
-  }
-}
 
 // Responsive design
 @media (max-width: 768px) {
   .roadmapLine {
     left: 1.5rem;
-    width: 2px;
+    width: 3px;
+  }
+  
+  .timelineIcon {
+    margin-left: -1.5rem;
   }
 
   .experiencePoint {
@@ -237,7 +198,11 @@
 
   .roadmapLine {
     left: 1rem;
-    width: 2px;
+    width: 3px;
+  }
+  
+  .timelineIcon {
+    margin-left: -1rem;
   }
 
   .experiencePoint {
