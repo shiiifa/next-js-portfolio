@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Column, Row, Text, Heading } from "@once-ui-system/core";
-import { about } from "@/resources";
+import { about, iconLibrary } from "@/resources";
 import styles from "./WorkRoadmap.module.scss";
 
 interface WorkExperience {
@@ -37,9 +37,9 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
               animationDelay: `${index * 0.2}s`,
             }}
           >
-            {/* Timeline Dot */}
-            <div className={styles.timelineDot}>
-              <div className={styles.innerDot} />
+            {/* Timeline Icon */}
+            <div className={styles.timelineIcon}>
+              {iconLibrary.briefcase({ size: 24, color: "var(--brand-medium)" })}
             </div>
             
             {/* Experience Card */}

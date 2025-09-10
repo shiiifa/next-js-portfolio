@@ -14,6 +14,7 @@ import {
   HiOutlineRocketLaunch,
   HiArrowDownTray,
   HiPhone,
+  HiBriefcase,
 } from "react-icons/hi2";
 
 import {
@@ -69,6 +70,7 @@ export const iconLibrary: Record<string, IconType> = {
   telegram: FaTelegram,
   phone: HiPhone,
   gmail: SiGmail,
+  briefcase: HiBriefcase,
 };
 
 export type IconLibrary = typeof iconLibrary;

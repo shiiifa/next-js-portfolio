@@ -87,12 +87,12 @@
   }
 }
 
-.timelineDot {
+.timelineIcon {
   position: relative;
   width: 4rem;
   height: 4rem;
   background: var(--page-background);
-  border: 4px solid var(--brand-medium);
+  border: 3px solid var(--brand-medium);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -102,45 +102,17 @@
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-  // Create a hole in the center for the line to pass through
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 6px;
-    height: 6px;
-    background: var(--brand-medium);
-    border-radius: 50%;
-    z-index: 1;
-  }
-
   .experiencePoint:hover & {
     border-color: var(--brand-strong);
     transform: scale(1.15);
     box-shadow: 0 0 25px rgba(var(--brand-strong-rgb), 0.4);
     
-    &::before {
-      background: var(--brand-strong);
-      transform: translate(-50%, -50%) scale(1.2);
+    svg {
+      color: var(--brand-strong) !important;
     }
   }
 }
 
-.innerDot {
-  width: 0.8rem;
-  height: 0.8rem;
-  background: var(--brand-medium);
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  z-index: 2;
-
-  .experiencePoint:hover & {
-    background: var(--brand-strong);
-    transform: scale(1.3);
-  }
-}
 
 .experienceCard {
   flex: 1;
@@ -203,15 +175,14 @@
 }
 
 .hovered {
-  .timelineDot {
+  .timelineIcon {
     border-color: var(--brand-strong);
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(var(--brand-strong-rgb), 0.3);
-  }
-
-  .innerDot {
-    background: var(--brand-strong);
-    transform: scale(1.2);
+    transform: scale(1.15);
+    box-shadow: 0 0 25px rgba(var(--brand-strong-rgb), 0.4);
+    
+    svg {
+      color: var(--brand-strong) !important;
+    }
   }
 }
 
@@ -248,10 +219,10 @@
     gap: 1rem;
   }
 
-  .timelineDot {
+  .timelineIcon {
     width: 3rem;
     height: 3rem;
-    border-width: 3px;
+    border-width: 2px;
   }
 
   .experienceCard {
@@ -273,14 +244,9 @@
     gap: 0.5rem;
   }
 
-  .timelineDot {
+  .timelineIcon {
     width: 2.5rem;
     height: 2.5rem;
     border-width: 2px;
-  }
-
-  .innerDot {
-    width: 0.6rem;
-    height: 0.6rem;
   }
 }
