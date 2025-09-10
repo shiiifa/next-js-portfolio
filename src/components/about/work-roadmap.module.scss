@@ -1,0 +1,239 @@
+.roadmapContainer {
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--brand-weak),
+    var(--brand-medium),
+    var(--brand-weak)
+  );
+  border-radius: 1px;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.timelineItem:hover {
+  transform: translateX(8px);
+}
+
+.timelineItem.hovered .timelineNode {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px var(--brand-alpha-medium);
+}
+
+.timelineNode {
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  background: var(--page-background);
+  border: 3px solid var(--brand-medium);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.nodeInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--brand-alpha-weak);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.nodeIcon {
+  color: var(--brand-medium);
+  transition: all 0.3s ease;
+}
+
+.timelineItem.hovered .nodeIcon {
+  color: var(--brand-strong);
+  transform: rotate(15deg);
+}
+
+.timelineContent {
+  margin-left: 1rem;
+  position: relative;
+}
+
+.contentCard {
+  background: var(--page-background);
+  border: 1px solid var(--neutral-alpha-weak);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px var(--neutral-alpha-weak);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.timelineItem:hover .contentCard {
+  border-color: var(--brand-alpha-medium);
+  box-shadow: 0 4px 16px var(--brand-alpha-weak);
+  transform: translateY(-2px);
+}
+
+.companyName {
+  color: var(--text-strong);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.role {
+  color: var(--brand-medium);
+  font-weight: 500;
+}
+
+.timeframe {
+  color: var(--neutral-medium);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.hoverDetails {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.hoverDetails.visible {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.achievementsTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--neutral-medium);
+}
+
+.achievementsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievementItem {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: var(--text-medium);
+}
+
+.achievementItem::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--brand-medium);
+  font-size: 0.75rem;
+  transform: rotate(90deg);
+}
+
+.connectingLine {
+  position: absolute;
+  left: -2rem;
+  top: 3.5rem;
+  width: 2px;
+  height: 3rem;
+  background: linear-gradient(
+    to bottom,
+    var(--brand-alpha-medium),
+    var(--brand-alpha-weak)
+  );
+  border-radius: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline::before {
+    left: 1rem;
+  }
+  
+  .timelineNode {
+    left: -1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .timelineContent {
+    margin-left: 0.5rem;
+  }
+  
+  .contentCard {
+    padding: 1rem;
+  }
+  
+  .timelineItem:hover {
+    transform: translateX(4px);
+  }
+}
+
+/* Animation for timeline items appearing */
+.timelineItem {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInFromLeft 0.6s ease forwards;
+}
+
+.timelineItem:nth-child(1) { animation-delay: 0.1s; }
+.timelineItem:nth-child(2) { animation-delay: 0.2s; }
+.timelineItem:nth-child(3) { animation-delay: 0.3s; }
+.timelineItem:nth-child(4) { animation-delay: 0.4s; }
+.timelineItem:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
