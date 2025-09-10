@@ -12,7 +12,13 @@
   top: 2rem;
   bottom: 2rem;
   width: 3px;
-  background: var(--brand-medium);
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--brand-medium) 0px,
+    var(--brand-medium) 8px,
+    transparent 8px,
+    transparent 16px
+  );
   border-radius: 2px;
   z-index: 1;
   box-shadow: 0 0 8px rgba(var(--brand-medium-rgb), 0.3);
@@ -158,6 +164,13 @@
   .roadmapLine {
     left: 1.5rem;
     width: 2px;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--brand-medium) 0px,
+      var(--brand-medium) 6px,
+      transparent 6px,
+      transparent 12px
+    );
   }
   
   .timelineIcon {
@@ -184,6 +197,13 @@
   .roadmapLine {
     left: 1rem;
     width: 2px;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--brand-medium) 0px,
+      var(--brand-medium) 6px,
+      transparent 6px,
+      transparent 12px
+    );
   }
   
   .timelineIcon {
