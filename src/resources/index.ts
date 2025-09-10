@@ -13,6 +13,8 @@ export {
   contact,
 } from "./content";
 
+export { iconLibrary } from "./icons";
+
 export {
   display,
   mailchimp,

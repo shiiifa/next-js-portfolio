@@ -1,5 +1,5 @@
 import { Column, Heading, Meta, Schema, Text, Row, SmartLink } from "@once-ui-system/core";
-import { baseURL, about, person, contact } from "@/resources";
+import { baseURL, about, person, contact, iconLibrary } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -40,40 +40,47 @@ export default function Contact() {
 
       {/* Contact Details */}
       <Column gap="xl" paddingX="l">
-        {/* Phone Section */}
-        <Column gap="m">
-          <Heading variant="heading-strong-l">Phone</Heading>
-          <Column gap="s">
-            <Row gap="s" vertical="center">
-              <Text variant="body-default-m" onBackground="neutral-weak">WhatsApp:</Text>
-              <SmartLink href="https://wa.me/233264741689">
-                <Text variant="body-default-m">+233-26-474-1689</Text>
-              </SmartLink>
-            </Row>
-            <Row gap="s" vertical="center">
-              <Text variant="body-default-m" onBackground="neutral-weak">Calls:</Text>
-              <SmartLink href="tel:+233540304620">
-                <Text variant="body-default-m">+233-54-030-4620</Text>
-              </SmartLink>
-            </Row>
+        <Row gap="xl" horizontal="center" vertical="center" wrap>
+          {/* WhatsApp */}
+          <Column gap="s" align="center">
+            <SmartLink href="https://wa.me/233264741689">
+              <Row gap="s" vertical="center" padding="m" background="neutral-alpha-weak" radius="m" style={{ cursor: "pointer" }}>
+                {iconLibrary.whatsapp({ size: 24, color: "#25D366" })}
+                <Text variant="body-default-m">WhatsApp</Text>
+              </Row>
+            </SmartLink>
           </Column>
-        </Column>
 
-        {/* Work Email Section */}
-        <Column gap="m">
-          <Heading variant="heading-strong-l">Work Email</Heading>
-          <SmartLink href="mailto:obed.babington@ashesi.edu.gh">
-            <Text variant="body-default-m">obed.babington@ashesi.edu.gh</Text>
-          </SmartLink>
-        </Column>
+          {/* Phone */}
+          <Column gap="s" align="center">
+            <SmartLink href="tel:+233540304620">
+              <Row gap="s" vertical="center" padding="m" background="neutral-alpha-weak" radius="m" style={{ cursor: "pointer" }}>
+                {iconLibrary.phone({ size: 24 })}
+                <Text variant="body-default-m">Phone</Text>
+              </Row>
+            </SmartLink>
+          </Column>
 
-        {/* Personal Email Section */}
-        <Column gap="m">
-          <Heading variant="heading-strong-l">Personal Email</Heading>
-          <SmartLink href="mailto:obedalloteyb@gmail.com">
-            <Text variant="body-default-m">obedalloteyb@gmail.com</Text>
-          </SmartLink>
-        </Column>
+          {/* Work Email */}
+          <Column gap="s" align="center">
+            <SmartLink href="mailto:obed.babington@ashesi.edu.gh">
+              <Row gap="s" vertical="center" padding="m" background="neutral-alpha-weak" radius="m" style={{ cursor: "pointer" }}>
+                {iconLibrary.email({ size: 24 })}
+                <Text variant="body-default-m">Work Email</Text>
+              </Row>
+            </SmartLink>
+          </Column>
+
+          {/* Personal Email */}
+          <Column gap="s" align="center">
+            <SmartLink href="mailto:obedalloteyb@gmail.com">
+              <Row gap="s" vertical="center" padding="m" background="neutral-alpha-weak" radius="m" style={{ cursor: "pointer" }}>
+                {iconLibrary.gmail({ size: 24, color: "#EA4335" })}
+                <Text variant="body-default-m">Gmail</Text>
+              </Row>
+            </SmartLink>
+          </Column>
+        </Row>
       </Column>
     </Column>
   );

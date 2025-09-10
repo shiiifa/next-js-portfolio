@@ -13,6 +13,7 @@ import {
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
   HiArrowDownTray,
+  HiPhone,
 } from "react-icons/hi2";
 
 import {
@@ -30,7 +31,7 @@ import {
   SiSupabase,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, FaGmail, } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -65,6 +66,8 @@ export const iconLibrary: Record<string, IconType> = {
   whatsapp: FaWhatsapp,
   reddit: FaReddit,
   telegram: FaTelegram,
+  phone: HiPhone,
+  gmail: FaGmail,
 };
 
 export type IconLibrary = typeof iconLibrary;
