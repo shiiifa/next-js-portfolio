@@ -56,6 +56,12 @@ export const Header = () => {
               {routes["/"] && (
                 <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               )}
+              {display.themeSwitcher && (
+                <>
+                  <Line background="neutral-alpha-medium" vert maxHeight="24" />
+                  <ThemeToggle />
+                </>
+              )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
               {routes["/about"] && (
                 <>
@@ -150,12 +156,6 @@ export const Header = () => {
                       selected={pathname.startsWith("/contact")}
                     />
                   </Row>
-                </>
-              )}
-              {display.themeSwitcher && (
-                <>
-                  <Line background="neutral-alpha-medium" vert maxHeight="24" />
-                  <ThemeToggle />
                 </>
               )}
             </Row>
