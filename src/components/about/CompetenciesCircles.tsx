@@ -7,7 +7,7 @@ import styles from "./CompetenciesCircles.module.scss";
 interface Competency {
   title: string;
   description?: React.ReactNode;
-  tags?: Array<{ name: string; icon: string }>;
+  tags?: Array<{ name: string; icon?: string }>;
 }
 
 interface CompetenciesCirclesProps {
