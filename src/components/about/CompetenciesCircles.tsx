@@ -28,37 +28,58 @@ const getCompetencyIcon = (title: string) => {
   return 'code'; // Default fallback
 };
 
+// Safe icon renderer
+const renderIcon = (iconName: string) => {
+  const IconComponent = iconLibrary[iconName as keyof typeof iconLibrary];
+  if (IconComponent) {
+    return IconComponent({ size: 32, color: "white" });
+  }
+  // Fallback to a simple div if icon doesn't exist
+  return <div style={{ width: 32, height: 32, background: 'white', borderRadius: '4px' }} />;
+};
+
 export default function CompetenciesCircles({ competencies }: CompetenciesCirclesProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  // Add safety check for competencies
+  if (!competencies || competencies.length === 0) {
+    return null;
+  }
 
   return (
     <div className={styles.competenciesContainer}>
       <Row gap="xl" horizontal="center" wrap>
-        {competencies.map((competency, index) => (
-          <div
-            key={`${competency.title}-${index}`}
-            className={styles.competencyItem}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            {/* Circle with Icon */}
-            <div className={`${styles.competencyCircle} ${hoveredIndex === index ? styles.hovered : ''}`}>
-              {iconLibrary[getCompetencyIcon(competency.title)]({ size: 32, color: "white" })}
-            </div>
-            
-            {/* Hover Tooltip */}
-            {hoveredIndex === index && (
-              <div className={styles.hoverTooltip}>
-                <Heading variant="heading-strong-s" align="center" marginBottom="s">
-                  {competency.title}
-                </Heading>
-                <Text variant="body-default-s" align="center" onBackground="neutral-weak">
-                  {competency.description || "No description available"}
-                </Text>
+        {competencies.map((competency, index) => {
+          if (!competency || !competency.title) {
+            return null;
+          }
+          
+          return (
+            <div
+              key={`${competency.title}-${index}`}
+              className={styles.competencyItem}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {/* Circle with Icon */}
+              <div className={`${styles.competencyCircle} ${hoveredIndex === index ? styles.hovered : ''}`}>
+                {renderIcon(getCompetencyIcon(competency.title))}
               </div>
-            )}
-          </div>
-        ))}
+              
+              {/* Hover Tooltip */}
+              {hoveredIndex === index && (
+                <div className={styles.hoverTooltip}>
+                  <Heading variant="heading-strong-s" align="center" marginBottom="s">
+                    {competency.title}
+                  </Heading>
+                  <Text variant="body-default-s" align="center" onBackground="neutral-weak">
+                    {competency.description || "No description available"}
+                  </Text>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </Row>
     </div>
   );
