@@ -22,8 +22,16 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
 
   return (
     <div className={styles.roadmapContainer}>
-      {/* Roadmap Line */}
-      <div className={styles.roadmapLine} />
+      {/* Journey Path SVG */}
+      <svg className={styles.journeyPath} viewBox="0 0 200 400" preserveAspectRatio="none">
+        <path
+          d="M 20 50 Q 40 100 20 150 Q 0 200 20 250 Q 40 300 20 350"
+          stroke="white"
+          strokeWidth="3"
+          fill="none"
+          strokeDasharray="8,4"
+        />
+      </svg>
       
       {/* Experience Points */}
       <div className={styles.experiencesContainer}>
@@ -37,10 +45,12 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
               animationDelay: `${index * 0.2}s`,
             }}
           >
-            {/* Timeline Icon */}
-            <div className={styles.timelineIcon}>
-              {iconLibrary.briefcase({ size: 24, color: "white" })}
-            </div>
+            {/* Timeline Icon - Only show on first experience */}
+            {index === 0 && (
+              <div className={styles.timelineIcon}>
+                {iconLibrary.briefcase({ size: 24, color: "white" })}
+              </div>
+            )}
             
             {/* Experience Card */}
             <div className={`${styles.experienceCard} ${hoveredIndex === index ? styles.cardHovered : ''}`}>
