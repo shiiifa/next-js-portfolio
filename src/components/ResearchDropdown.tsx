@@ -76,24 +76,6 @@ export const ResearchDropdown = () => {
                 <Text variant="body-default-s">Non-Major Research</Text>
               </div>
             </SmartLink>
-            <SmartLink href="/research/non-major-2">
-              <div
-                style={{
-                  padding: "8px",
-                  borderRadius: "4px",
-                  cursor: "pointer",
-                  transition: "background-color 0.2s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "var(--neutral-alpha-weak)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                }}
-              >
-                <Text variant="body-default-s">Non-Major Research 2</Text>
-              </div>
-            </SmartLink>
           </Column>
         </div>
       )}
