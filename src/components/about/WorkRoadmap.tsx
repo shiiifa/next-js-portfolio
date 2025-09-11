@@ -39,7 +39,7 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
           >
             {/* Timeline Icon */}
             <div className={styles.timelineIcon}>
-              {iconLibrary.briefcase({ size: 24, color: "var(--brand-medium)" })}
+              {iconLibrary.briefcase({ size: 24, color: "white" })}
             </div>
             
             {/* Experience Card */}

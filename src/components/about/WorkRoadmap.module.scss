@@ -11,17 +11,10 @@
   left: 2rem;
   top: 2rem;
   bottom: 2rem;
-  width: 3px;
-  background: repeating-linear-gradient(
-    to bottom,
-    var(--brand-medium) 0px,
-    var(--brand-medium) 8px,
-    transparent 8px,
-    transparent 16px
-  );
-  border-radius: 2px;
+  width: 2px;
+  background: white;
+  border-left: 2px dashed white;
   z-index: 1;
-  box-shadow: 0 0 8px rgba(var(--brand-medium-rgb), 0.3);
 }
 
 .experiencesContainer {
@@ -52,7 +45,7 @@
   width: 4rem;
   height: 4rem;
   background: var(--page-background);
-  border: 3px solid var(--brand-medium);
+  border: 3px solid white;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -61,7 +54,7 @@
   transition: all 0.3s ease;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-left: -1.5rem; // Position icon to the left of the line
+  margin-left: -2rem; // Center the icon on the line
 
   .experiencePoint:hover & {
     border-color: var(--brand-strong);
@@ -164,17 +157,12 @@
   .roadmapLine {
     left: 1.5rem;
     width: 2px;
-    background: repeating-linear-gradient(
-      to bottom,
-      var(--brand-medium) 0px,
-      var(--brand-medium) 6px,
-      transparent 6px,
-      transparent 12px
-    );
+    background: white;
+    border-left: 2px dashed white;
   }
   
   .timelineIcon {
-    margin-left: -1rem;
+    margin-left: -1.5rem;
     width: 3rem;
     height: 3rem;
     border-width: 2px;
@@ -197,17 +185,12 @@
   .roadmapLine {
     left: 1rem;
     width: 2px;
-    background: repeating-linear-gradient(
-      to bottom,
-      var(--brand-medium) 0px,
-      var(--brand-medium) 6px,
-      transparent 6px,
-      transparent 12px
-    );
+    background: white;
+    border-left: 2px dashed white;
   }
   
   .timelineIcon {
-    margin-left: -0.5rem;
+    margin-left: -1rem;
     width: 2.5rem;
     height: 2.5rem;
     border-width: 2px;
