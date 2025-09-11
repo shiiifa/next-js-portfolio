@@ -4,9 +4,11 @@
 }
 
 .competencyItem {
-  flex: 1;
-  min-width: 200px;
-  max-width: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
 .competencyCircle {
@@ -36,7 +38,7 @@
   }
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 12px 48px rgba(var(--brand-strong-rgb), 0.4);
 
     &::before {
@@ -46,32 +48,43 @@
   }
 }
 
-.circleText {
-  color: white;
-  font-size: 2rem;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  position: relative;
+.hovered {
+  transform: scale(1.1);
+  box-shadow: 0 12px 48px rgba(var(--brand-strong-rgb), 0.4);
+
+  &::before {
+    opacity: 1;
+    animation: shimmer 1.5s ease-in-out;
+  }
 }
 
-.textBox {
+.hoverTooltip {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--page-background);
   border: 1px solid var(--neutral-alpha-weak);
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  width: 100%;
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  max-width: 300px;
+  z-index: 10;
+  animation: fadeInUp 0.3s ease-out;
+  pointer-events: none;
 
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    border-color: var(--brand-alpha-medium);
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--page-background);
   }
 }
 
@@ -84,6 +97,17 @@
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 // Responsive design
 @media (max-width: 768px) {
   .competencyCircle {
@@ -91,18 +115,11 @@
     height: 100px;
   }
 
-  .circleText {
-    font-size: 1.5rem;
-  }
-
-  .textBox {
-    padding: 1rem;
-    min-height: 100px;
-  }
-
-  .competencyItem {
+  .hoverTooltip {
+    top: -100px;
     min-width: 180px;
     max-width: 250px;
+    padding: 1rem;
   }
 }
 
@@ -116,17 +133,10 @@
     height: 80px;
   }
 
-  .circleText {
-    font-size: 1.2rem;
-  }
-
-  .textBox {
-    padding: 0.8rem;
-    min-height: 80px;
-  }
-
-  .competencyItem {
+  .hoverTooltip {
+    top: -80px;
     min-width: 150px;
     max-width: 200px;
+    padding: 0.8rem;
   }
 }
