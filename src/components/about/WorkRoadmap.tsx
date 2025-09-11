@@ -45,12 +45,6 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
               animationDelay: `${index * 0.2}s`,
             }}
           >
-            {/* Timeline Icon - Only show on first experience */}
-            {index === 0 && (
-              <div className={styles.timelineIcon}>
-                {iconLibrary.briefcase({ size: 24, color: "white" })}
-              </div>
-            )}
             
             {/* Experience Card */}
             <div className={`${styles.experienceCard} ${hoveredIndex === index ? styles.cardHovered : ''}`}>
