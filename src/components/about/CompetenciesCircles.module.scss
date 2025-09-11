@@ -1,0 +1,132 @@
+.competenciesContainer {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.competencyItem {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.competencyCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-medium), var(--brand-strong));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(var(--brand-medium-rgb), 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 48px rgba(var(--brand-strong-rgb), 0.4);
+
+    &::before {
+      opacity: 1;
+      animation: shimmer 1.5s ease-in-out;
+    }
+  }
+}
+
+.circleText {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  position: relative;
+}
+
+.textBox {
+  background: var(--page-background);
+  border: 1px solid var(--neutral-alpha-weak);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border-color: var(--brand-alpha-medium);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .competencyCircle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circleText {
+    font-size: 1.5rem;
+  }
+
+  .textBox {
+    padding: 1rem;
+    min-height: 100px;
+  }
+
+  .competencyItem {
+    min-width: 180px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .competenciesContainer {
+    padding: 1rem 0;
+  }
+
+  .competencyCircle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circleText {
+    font-size: 1.2rem;
+  }
+
+  .textBox {
+    padding: 0.8rem;
+    min-height: 80px;
+  }
+
+  .competencyItem {
+    min-width: 150px;
+    max-width: 200px;
+  }
+}
