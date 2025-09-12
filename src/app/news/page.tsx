@@ -54,9 +54,26 @@ export default function NewsPage() {
       case 'education':
         return 'info-strong';
       case 'achievement':
-        return 'brand-medium';
+        return 'brand-strong';
       default:
         return 'neutral-strong';
+    }
+  };
+
+  const getTypeBackground = (type: string) => {
+    switch (type) {
+      case 'award':
+        return 'brand-alpha-weak';
+      case 'role':
+        return 'success-alpha-weak';
+      case 'conference':
+        return 'warning-alpha-weak';
+      case 'education':
+        return 'info-alpha-weak';
+      case 'achievement':
+        return 'brand-alpha-weak';
+      default:
+        return 'neutral-alpha-weak';
     }
   };
 
@@ -102,7 +119,7 @@ export default function NewsPage() {
             >
               <Row gap="12" align="center" wrap>
                 <Badge
-                  background={`${getTypeColor(item.type)}-alpha-weak`}
+                  background={getTypeBackground(item.type)}
                   onBackground={getTypeColor(item.type)}
                   textVariant="label-default-s"
                   paddingX="12"

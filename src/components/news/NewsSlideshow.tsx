@@ -64,9 +64,26 @@ export function NewsSlideshow({ items, maxItems = 3 }: NewsSlideshowProps) {
       case 'education':
         return 'info-strong';
       case 'achievement':
-        return 'brand-medium';
+        return 'brand-strong';
       default:
         return 'neutral-strong';
+    }
+  };
+
+  const getTypeBackground = (type: NewsItem['type']) => {
+    switch (type) {
+      case 'award':
+        return 'brand-alpha-weak';
+      case 'role':
+        return 'success-alpha-weak';
+      case 'conference':
+        return 'warning-alpha-weak';
+      case 'education':
+        return 'info-alpha-weak';
+      case 'achievement':
+        return 'brand-alpha-weak';
+      default:
+        return 'neutral-alpha-weak';
     }
   };
 
@@ -129,7 +146,7 @@ export function NewsSlideshow({ items, maxItems = 3 }: NewsSlideshowProps) {
       <Column gap="12" fillWidth>
         <Row gap="12" align="center" wrap>
           <Badge
-            background={`${getTypeColor(currentItem.type)}-alpha-weak`}
+            background={getTypeBackground(currentItem.type)}
             onBackground={getTypeColor(currentItem.type)}
             textVariant="label-default-xs"
             paddingX="8"
