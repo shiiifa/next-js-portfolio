@@ -1,4 +1,4 @@
-import { About, Blog, Contact, Home, Newsletter, Person, Social, Work, Research } from "@/types";
+import { About, Blog, Contact, Home, Newsletter, Person, Social, Work, Research, News, NewsItem } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -229,6 +229,47 @@ const research: Research = {
   description: `Research experiences and work by ${person.name}`,
 };
 
+const news: News = {
+  path: "/news",
+  label: "News",
+  title: `News – ${person.name}`,
+  description: `Latest updates and accomplishments from ${person.name}`,
+  items: [
+    {
+      id: "research-assistant-2025",
+      title: "Started as Research Assistant at Smart Technologies Lab",
+      description: "Conducting research on embedded machine learning solutions for deploying AI models on resource-constrained devices.",
+      date: "2025-08-01",
+      type: "role",
+      featured: true,
+    },
+    {
+      id: "schneider-electric-internship",
+      title: "Completed Research Consultant Internship at Schneider Electric",
+      description: "Designed and prototyped an Energy Management Co-Pilot using LLMs and autonomous agent architectures.",
+      date: "2025-07-31",
+      type: "achievement",
+      featured: true,
+    },
+    {
+      id: "fpga-acceleration-research",
+      title: "Published Research on FPGA-based Neural Network Acceleration",
+      description: "Demonstrated up to 86% performance improvement in inference execution time through FPGA-based acceleration.",
+      date: "2024-09-15",
+      type: "achievement",
+      featured: true,
+    },
+    {
+      id: "swoove360-telematics",
+      title: "Contributed to Fleet360 Platform Launch",
+      description: "Played a key role in launching a fleet management platform designed to optimize vehicle operations in Ghana.",
+      date: "2023-12-31",
+      type: "achievement",
+      featured: false,
+    },
+  ],
+};
+
 
 const projects: Contact = {
   path: "/projects",
@@ -251,4 +292,4 @@ const contact: Contact = {
   description: `Get in touch with ${person.name}`,
 };
 
-export { person, social, newsletter, home, about, blog, work, research, projects, beyondTheLab, contact };
+export { person, social, newsletter, home, about, blog, work, research, news, projects, beyondTheLab, contact };
