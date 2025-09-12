@@ -8,6 +8,7 @@ export {
   blog,
   work,
   research,
+  news,
   projects,
   beyondTheLab,
   contact,
