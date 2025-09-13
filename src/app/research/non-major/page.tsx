@@ -1,5 +1,6 @@
-import { Column, Heading, Meta, Schema, Text, Card, SmartLink } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, SmartLink, Row } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -48,7 +49,7 @@ export default function NonMajorResearch() {
   ];
 
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -75,37 +76,80 @@ export default function NonMajorResearch() {
 
       {/* Non-Major Research Projects */}
       <Column paddingX="l" gap="xl">
-        {projects.map((project, index) => (
-          <Card
-            key={index}
-            as="a"
-            href={`/research/non-major/${project.id}`}
-            padding="l"
-            radius="m"
-            shadow="m"
-            style={{ 
-              cursor: "pointer",
-              transition: "all 0.3s ease",
-              textDecoration: "none"
-            }}
-          >
-            <Column gap="m">
-              <Heading variant="heading-strong-l">{project.title}</Heading>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                <strong>Date:</strong> {project.date}
-              </Text>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                <strong>Location:</strong> {project.location}
-              </Text>
-              <Text variant="body-default-m" marginTop="m">
-                {project.summary}
-              </Text>
-              <Text variant="body-default-s" onBackground="neutral-weak" marginTop="m" style={{ fontStyle: "italic" }}>
-                Click to read more →
-              </Text>
-            </Column>
-          </Card>
-        ))}
+        {projects.map((project, index) => {
+          const isEven = index % 2 === 0;
+          const imagePath = `/images/research/non-major/${project.id}.png`;
+          
+          return (
+            <Card
+              key={index}
+              as="a"
+              href={`/research/non-major/${project.id}`}
+              padding="0"
+              radius="m"
+              shadow="m"
+              style={{ 
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                textDecoration: "none"
+              }}
+            >
+              <Row gap="0" vertical="stretch" s={{ direction: "column" }}>
+                {isEven && (
+                  <div style={{
+                    width: "200px",
+                    height: "200px",
+                    position: "relative",
+                    flexShrink: 0,
+                    alignSelf: "stretch"
+                  }}>
+                    <Image
+                      src={imagePath}
+                      alt={project.title}
+                      fill
+                      style={{
+                        objectFit: "cover"
+                      }}
+                    />
+                  </div>
+                )}
+                <Column padding="l" gap="m" flex={1}>
+                  <Heading variant="heading-strong-l">{project.title}</Heading>
+                  <Text variant="body-default-s" onBackground="neutral-weak">
+                    <strong>Date:</strong> {project.date}
+                  </Text>
+                  <Text variant="body-default-s" onBackground="neutral-weak">
+                    <strong>Location:</strong> {project.location}
+                  </Text>
+                  <Text variant="body-default-m" marginTop="m">
+                    {project.summary}
+                  </Text>
+                  <Text variant="body-default-s" onBackground="neutral-weak" marginTop="m" style={{ fontStyle: "italic" }}>
+                    Click to read more →
+                  </Text>
+                </Column>
+                {!isEven && (
+                  <div style={{
+                    width: "200px",
+                    height: "200px",
+                    position: "relative",
+                    flexShrink: 0,
+                    alignSelf: "stretch"
+                  }}>
+                    <Image
+                      src={imagePath}
+                      alt={project.title}
+                      fill
+                      style={{
+                        objectFit: "cover"
+                      }}
+                    />
+                  </div>
+                )}
+              </Row>
+            </Card>
+          );
+        })}
       </Column>
     </Column>
   );
