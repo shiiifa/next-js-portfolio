@@ -23,6 +23,7 @@ const routes: RoutesConfig = {
   "/projects": true,
   "/beyond-the-lab": true,
   "/blog": true,
+  "/news": true,
   "/contact": true,
 };
 

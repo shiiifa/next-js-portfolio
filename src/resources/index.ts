@@ -8,9 +8,9 @@ export {
   blog,
   work,
   research,
-  news,
   projects,
   beyondTheLab,
+  news,
   contact,
 } from "./content";
 
