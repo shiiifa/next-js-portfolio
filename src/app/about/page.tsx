@@ -121,7 +121,7 @@ export default function About() {
                 />
               </Row>
             )}
-                  <Heading className={styles.textAlign} variant="heading-strong-xl" align="center">
+                  <Heading className={styles.textAlign} variant="display-strong-s" align="center">
                     {person.name}
                   </Heading>
             <Row
