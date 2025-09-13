@@ -138,6 +138,8 @@ export default function MajorResearch() {
                 return '/images/research/fpga-acceleration-comparison_cover.png';
               case 'wearable-technology-study':
                 return '/images/research/wearable-technology-study_cover.png';
+              case 'agentic-ai-energy-management':
+                return '/images/research/majorresearch3.png';
               default:
                 return `/images/research/${projectId}_cover.png`;
             }
@@ -162,7 +164,6 @@ export default function MajorResearch() {
                 {isEven && (
                   <div style={{
                     width: "200px",
-                    height: "200px",
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch"
@@ -200,7 +201,6 @@ export default function MajorResearch() {
                 {!isEven && (
                   <div style={{
                     width: "200px",
-                    height: "200px",
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch"

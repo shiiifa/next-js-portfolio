@@ -29,12 +29,9 @@ export default function Blog() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">
-        {blog.title}
-      </Heading>
-      <Column fillWidth flex={1} gap="40" align="center">
-        <Heading variant="heading-strong-l" align="center" marginBottom="m">
-          Coming Soon
+      <Column fillWidth flex={1} gap="40" align="center" style={{ minHeight: "60vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <Heading variant="heading-strong-xl" align="center">
+          Coming soon!
         </Heading>
       </Column>
     </Column>
