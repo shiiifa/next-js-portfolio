@@ -15,27 +15,17 @@ interface CompetenciesCirclesProps {
   competencies: Competency[];
 }
 
-// Map competency titles to appropriate icons
-const getCompetencyIcon = (title: string) => {
+// Map competency titles to appropriate video files
+const getCompetencyVideo = (title: string) => {
   const titleLower = title.toLowerCase();
   if (titleLower.includes('hardware') || titleLower.includes('fpga') || titleLower.includes('embedded')) {
-    return 'code'; // Hardware/FPGA icon
+    return '/videos/1.mp4'; // Hardware video
   } else if (titleLower.includes('programming') || titleLower.includes('code')) {
-    return 'code'; // Programming icon
+    return '/videos/2.mp4'; // Programming video
   } else if (titleLower.includes('tools') || titleLower.includes('software')) {
-    return 'code'; // Tools icon
+    return '/videos/3.mp4'; // Tools video
   }
-  return 'code'; // Default fallback
-};
-
-// Safe icon renderer
-const renderIcon = (iconName: string) => {
-  const IconComponent = iconLibrary[iconName as keyof typeof iconLibrary];
-  if (IconComponent) {
-    return IconComponent({ size: 32, color: "white" });
-  }
-  // Fallback to a simple div if icon doesn't exist
-  return <div style={{ width: 32, height: 32, background: 'white', borderRadius: '4px' }} />;
+  return '/videos/1.mp4'; // Default fallback
 };
 
 export default function CompetenciesCircles({ competencies }: CompetenciesCirclesProps) {
@@ -61,22 +51,28 @@ export default function CompetenciesCircles({ competencies }: CompetenciesCircle
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Circle with Icon */}
+              {/* Circle with Video */}
               <div className={`${styles.competencyCircle} ${hoveredIndex === index ? styles.hovered : ''}`}>
-                {renderIcon(getCompetencyIcon(competency.title))}
+                <video
+                  className={styles.competencyVideo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src={getCompetencyVideo(competency.title)} type="video/mp4" />
+                </video>
               </div>
               
-              {/* Hover Tooltip */}
-              {hoveredIndex === index && (
-                <div className={styles.hoverTooltip}>
-                  <Heading variant="heading-strong-s" align="center" marginBottom="s">
-                    {competency.title}
-                  </Heading>
-                  <Text variant="body-default-s" align="center" onBackground="neutral-weak">
-                    {competency.description || "No description available"}
-                  </Text>
-                </div>
-              )}
+              {/* Text underneath the circle */}
+              <Column align="center" gap="s" marginTop="m">
+                <Heading variant="heading-strong-s" align="center">
+                  {competency.title}
+                </Heading>
+                <Text variant="body-default-s" align="center" onBackground="neutral-weak">
+                  {competency.description || "No description available"}
+                </Text>
+              </Column>
             </div>
           );
         })}

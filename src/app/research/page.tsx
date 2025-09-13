@@ -15,6 +15,20 @@ export async function generateMetadata() {
 export default function Research() {
   return (
     <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes fadeInPop {
+            0% {
+              opacity: 0;
+              transform: scale(0.8);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+        `
+      }} />
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -34,9 +48,40 @@ export default function Research() {
         <Heading marginBottom="l" variant="heading-strong-xl" align="center">
           Research Experiences
         </Heading>
-        <Text variant="body-default-l" align="center" style={{ fontStyle: "italic", fontSize: "1.1em", lineHeight: "1.6" }}>
-          "We voluntarily articulate our ignorance and deliberately throw it into the world, reaching for a catch. 'We' are researchers and that is what we do."
-        </Text>
+        <Row gap="l" vertical="center" align="center" maxWidth="l">
+          <div
+            style={{
+              position: "relative",
+              animation: "fadeInPop 1.5s ease-out forwards",
+              opacity: 0,
+              flex: 1
+            }}
+          >
+            <Image
+              src="/images/babbage.png"
+              alt="Charles Babbage"
+              width={120}
+              height={120}
+              style={{
+                objectFit: "cover",
+                borderRadius: "50%",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
+              }}
+            />
+          </div>
+          <div
+            style={{
+              position: "relative",
+              animation: "fadeInPop 1.5s ease-out 0.3s forwards",
+              opacity: 0,
+              flex: 2
+            }}
+          >
+            <Text variant="body-default-l" align="center" style={{ fontStyle: "italic", fontSize: "1.1em", lineHeight: "1.6" }}>
+              "We voluntarily articulate our ignorance and deliberately throw it into the world, reaching for a catch. 'We' are researchers and that is what we do."
+            </Text>
+          </div>
+        </Row>
       </Column>
 
       {/* Research Cards - Stacked */}
