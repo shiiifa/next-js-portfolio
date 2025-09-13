@@ -149,22 +149,76 @@ export default function Projects() {
         </Row>
       </Column>
       
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          @keyframes fadeInPop {
-            0% {
-              opacity: 0;
-              transform: scale(0.8);
-            }
-            100% {
-              opacity: 1;
-              transform: scale(1);
-            }
-          }
-        `
-      }} />
+       <style dangerouslySetInnerHTML={{
+         __html: `
+           @keyframes fadeInPop {
+             0% {
+               opacity: 0;
+               transform: scale(0.8);
+             }
+             100% {
+               opacity: 1;
+               transform: scale(1);
+             }
+           }
+           @keyframes fadeIn {
+             0% {
+               opacity: 0;
+             }
+             100% {
+               opacity: 1;
+             }
+           }
+         `
+       }} />
 
-      {/* Page Header */}
+       {/* Project Images */}
+       <Column paddingX="l" gap="l" marginBottom="xl" align="center">
+         <Row gap="l" vertical="center" align="center" maxWidth="l">
+           <div
+             style={{
+               position: "relative",
+               animation: "fadeIn 2s ease-out forwards",
+               opacity: 0,
+               flex: 1
+             }}
+           >
+             <Image
+               src="/images/projects/projects1.png"
+               alt="Projects Overview 1"
+               width={400}
+               height={300}
+               style={{ 
+                 objectFit: "cover",
+                 borderRadius: "8px",
+                 boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
+               }}
+             />
+           </div>
+           <div
+             style={{
+               position: "relative",
+               animation: "fadeIn 2s ease-out 0.3s forwards",
+               opacity: 0,
+               flex: 1
+             }}
+           >
+             <Image
+               src="/images/projects/projects2.png"
+               alt="Projects Overview 2"
+               width={400}
+               height={300}
+               style={{ 
+                 objectFit: "cover",
+                 borderRadius: "8px",
+                 boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
+               }}
+             />
+           </div>
+         </Row>
+       </Column>
+
+       {/* Page Header */}
       <Column marginBottom="xl" paddingX="l" align="center">
         <Heading marginBottom="m" variant="heading-strong-l" align="center">
           Project Catalogue
@@ -179,20 +233,20 @@ export default function Projects() {
         {projectList.map((project, index) => {
           const isEven = index % 2 === 0;
           // Map project images based on project ID
-          const imageMap = {
-            'morse-code-decoder': '/images/projects/morsecode.jpg',
-            'automated-robotic-vehicle': '/images/projects/robot.jpeg',
-            'tennis-scoreboard': '/images/projects/tennis.jpeg',
-            '16-bit-cpu': '/images/projects/logism.jpeg',
-            '32-bit-mips-processor': '/images/projects/mips.png',
-            'heartbeat-monitoring': '/images/projects/heartbeat.png',
-            'electronic-piano': '/images/projects/piano.jpeg',
-            '4dof-robotic-arm': '/images/projects/roboarm.jpeg',
-            'curating-student-research-articles': '/images/projects/logism.jpeg',
-            'mathematical-model-depression': '/images/projects/logism.jpeg',
-            'traffic-flow-analysis': '/images/projects/logism.jpeg',
-            'calculus-data-collection': '/images/projects/logism.jpeg'
-          };
+           const imageMap = {
+             'morse-code-decoder': '/images/projects/morsecode.jpg',
+             'automated-robotic-vehicle': '/images/projects/robot.jpeg',
+             'tennis-scoreboard': '/images/projects/tennis.jpeg',
+             '16-bit-cpu': '/images/projects/logism.jpeg',
+             '32-bit-mips-processor': '/images/projects/mips.png',
+             'heartbeat-monitoring': '/images/projects/heartbeat.png',
+             'electronic-piano': '/images/projects/piano.jpeg',
+             '4dof-robotic-arm': '/images/projects/roboarm.jpeg',
+             'curating-student-research-articles': '/images/projects/arm-y.jpg',
+             'mathematical-model-depression': '/images/projects/predatorprey.png',
+             'traffic-flow-analysis': '/images/projects/trafficflow.png',
+             'calculus-data-collection': '/images/projects/calculusdriven.png'
+           };
           const imagePath = imageMap[project.id as keyof typeof imageMap] || '/images/projects/logism.jpeg';
           
           return (

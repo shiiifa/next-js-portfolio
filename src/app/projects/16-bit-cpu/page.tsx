@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -37,6 +37,16 @@ export default function SixteenBitCPU() {
         <Text variant="body-default-l" align="center" onBackground="neutral-weak">
           <strong>Tools & Technologies:</strong> Logisim-Evolution, Digital Logic Design, Computer Architecture
         </Text>
+      </Column>
+
+      {/* Project Image */}
+      <Column marginBottom="xl" paddingX="l">
+        <Media 
+          aspectRatio="16 / 9" 
+          radius="m" 
+          alt="16-bit CPU in Logisim-Evolution" 
+          src="/images/projects/logism.jpeg" 
+        />
       </Column>
 
       <Column paddingX="l" gap="xl">

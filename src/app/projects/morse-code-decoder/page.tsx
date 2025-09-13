@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card, SmartLink } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, SmartLink, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -37,6 +37,16 @@ export default function MorseCodeDecoder() {
         <Text variant="body-default-l" align="center" onBackground="neutral-weak">
           <strong>Tools & Technologies:</strong> TensorFlow, STM32F091RC, Xilinx Vivado, Vitis, MicroBlaze softcore processor, Embedded C
         </Text>
+      </Column>
+
+      {/* Project Image */}
+      <Column marginBottom="xl" paddingX="l">
+        <Media 
+          aspectRatio="16 / 9" 
+          radius="m" 
+          alt="Morse Code Decoder Neural Network" 
+          src="/images/projects/morsecode.jpg" 
+        />
       </Column>
 
       <Column paddingX="l" gap="xl">

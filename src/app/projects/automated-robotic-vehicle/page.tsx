@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -39,7 +39,17 @@ export default function AutomatedRoboticVehicle() {
         </Text>
       </Column>
 
-      <Column paddingX="l" gap="xl">
+            {/* Project Image */}
+      <Column marginBottom="xl" paddingX="l">
+        <Media 
+          aspectRatio="16 / 9" 
+          radius="m" 
+          alt="Automated Robotic Vehicle" 
+          src="/images/projects/robot.jpeg" 
+        />
+      </Column>
+
+<Column paddingX="l" gap="xl">
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
             <Heading variant="heading-strong-l">Project Overview</Heading>
