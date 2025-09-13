@@ -210,14 +210,14 @@ export default function Projects() {
                 overflow: "hidden"
               }}
             >
-              <Row gap="0" vertical="center">
+              <Row gap="0" vertical="stretch">
                 {/* Image on left for even cards, right for odd cards */}
                 {isEven && (
                   <div style={{ 
                     width: "200px", 
-                    height: "200px", 
                     position: "relative",
-                    flexShrink: 0
+                    flexShrink: 0,
+                    alignSelf: "stretch"
                   }}>
                     <Image
                       src={imagePath}
@@ -249,9 +249,9 @@ export default function Projects() {
                 {!isEven && (
                   <div style={{ 
                     width: "200px", 
-                    height: "200px", 
                     position: "relative",
-                    flexShrink: 0
+                    flexShrink: 0,
+                    alignSelf: "stretch"
                   }}>
                     <Image
                       src={imagePath}
