@@ -47,24 +47,12 @@ export default function FPGANeuralNetworks() {
 
       {/* Project Images */}
       <Column paddingX="l" gap="l" marginBottom="xl">
-        <Row gap="l" vertical="center" align="center" maxWidth="l">
-          <div style={{ flex: 1 }}>
-            <Media
-              aspectRatio="16 / 9"
-              radius="m"
-              alt="FPGA Neural Networks Cover"
-              src="/images/research/fpga-neural-networks_cover.png"
-            />
-          </div>
-          <div style={{ flex: 1 }}>
-            <Media
-              aspectRatio="16 / 9"
-              radius="m"
-              alt="FPGA Neural Networks Detail"
-              src="/images/research/major/fpga-neural-networks.png"
-            />
-          </div>
-        </Row>
+        <Media
+          aspectRatio="16 / 9"
+          radius="m"
+          alt="FPGA Neural Networks"
+          src="/images/research/fpga_cover.jpg"
+        />
       </Column>
 
       {/* Project Content */}

@@ -47,24 +47,12 @@ export default function SolarPanelSoiling() {
 
       {/* Project Images */}
       <Column paddingX="l" gap="l" marginBottom="xl">
-        <Row gap="l" vertical="center" align="center" maxWidth="l">
-          <div style={{ flex: 1 }}>
-            <Media
-              aspectRatio="16 / 9"
-              radius="m"
-              alt="Solar Panel Soiling Cover"
-              src="/images/research/solar-panel-soiling_cover.avif"
-            />
-          </div>
-          <div style={{ flex: 1 }}>
-            <Media
-              aspectRatio="16 / 9"
-              radius="m"
-              alt="Solar Panel Soiling Detail"
-              src="/images/research/non-major/solar-panel-soiling.png"
-            />
-          </div>
-        </Row>
+        <Media
+          aspectRatio="16 / 9"
+          radius="m"
+          alt="Solar Panel Soiling"
+          src="/images/research/solar-panel-soiling_cover.avif"
+        />
       </Column>
 
       {/* Project Content */}

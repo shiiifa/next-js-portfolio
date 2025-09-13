@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card, SmartLink } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, SmartLink, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -13,7 +13,7 @@ export async function generateMetadata() {
 
 export default function HydrogelIrrigationStudy() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -45,6 +45,16 @@ export default function HydrogelIrrigationStudy() {
         <Text variant="body-default-l" align="center">
           For my statistics final class project, I investigated the use of superabsorbent PVA-borate hydrogels as a sustainable irrigation solution for urban agriculture.
         </Text>
+      </Column>
+
+      {/* Project Images */}
+      <Column paddingX="l" gap="l" marginBottom="xl">
+        <Media
+          aspectRatio="16 / 9"
+          radius="m"
+          alt="Hydrogel Irrigation Study"
+          src="/images/research/hydrogel-irrigation-study_cover.png"
+        />
       </Column>
 
       {/* Project Content */}

@@ -78,7 +78,22 @@ export default function NonMajorResearch() {
       <Column paddingX="l" gap="xl">
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
-          const imagePath = `/images/research/${project.id}_cover.png`;
+          // Use specific cover photos for projects that have them
+          const getCoverImage = (projectId: string) => {
+            switch (projectId) {
+              case 'solar-panel-soiling':
+                return '/images/research/solar-panel-soiling_cover.avif';
+              case 'depression-mathematical-model':
+                return '/images/research/depression-mathematical-model_cover.png';
+              case 'hydrogel-irrigation-study':
+                return '/images/research/hydrogel-irrigation-study_cover.png';
+              case 'prey-predator-mathematical-model':
+                return '/images/research/prey-predator-mathematical-model_cover.png';
+              default:
+                return `/images/research/${projectId}_cover.png`;
+            }
+          };
+          const imagePath = getCoverImage(project.id);
           
           return (
             <Card

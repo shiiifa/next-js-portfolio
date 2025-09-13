@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -13,7 +13,7 @@ export async function generateMetadata() {
 
 export default function WearableTechnologyStudy() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -42,6 +42,16 @@ export default function WearableTechnologyStudy() {
         <Text variant="body-default-l" align="center">
           As Research Intern at Ashesi University's CaRINE Programme, developed NOTE-IT concept for wearable voice-based journaling to address information overload and improve productivity through seamless thought capture.
         </Text>
+      </Column>
+
+      {/* Project Images */}
+      <Column paddingX="l" gap="l" marginBottom="xl">
+        <Media
+          aspectRatio="16 / 9"
+          radius="m"
+          alt="Wearable Technology Study"
+          src="/images/research/wearable-technology-study_cover.png"
+        />
       </Column>
 
       {/* Project Content */}
