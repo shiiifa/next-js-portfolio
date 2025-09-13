@@ -11,10 +11,10 @@ import {
   Meta,
   Line,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, routes, news } from "@/resources";
+import { home, about, person, baseURL, routes, accomplishments } from "@/resources";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
-import { NewsSlideshow } from "@/components";
+import { AccomplishmentsSlideshow } from "@/components";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -104,7 +104,7 @@ export default function Home() {
         <Projects range={[1, 1]} />
       </RevealFx>
       <RevealFx translateY="16" delay={0.8}>
-        <NewsSlideshow items={news.items} maxItems={3} />
+        <AccomplishmentsSlideshow accomplishments={accomplishments} />
       </RevealFx>
       {routes["/blog"] && (
         <Column fillWidth gap="24" marginBottom="l">
