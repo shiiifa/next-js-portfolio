@@ -142,8 +142,10 @@ export default function Projects() {
             </Text>
           </Column>
         </Row>
-        
-        <style jsx>{`
+      </Column>
+      
+      <style dangerouslySetInnerHTML={{
+        __html: `
           @keyframes uncrumple {
             0% {
               opacity: 0;
@@ -158,8 +160,8 @@ export default function Projects() {
               transform: scale(1) rotate(0deg) translateY(0px);
             }
           }
-        `}</style>
-      </Column>
+        `
+      }} />
 
       {/* Page Header */}
       <Column marginBottom="xl" paddingX="l" align="center">
