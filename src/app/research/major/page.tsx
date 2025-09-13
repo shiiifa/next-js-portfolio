@@ -84,7 +84,7 @@ export default function MajorResearch() {
       <Column paddingX="l" gap="xl">
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
-          const imagePath = `/images/research/major/${project.id}.png`;
+          const imagePath = `/images/research/${project.id}_cover.png`;
           
           return (
             <Card
