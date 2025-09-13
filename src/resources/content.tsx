@@ -1,4 +1,4 @@
-import { About, Blog, Contact, Home, Newsletter, Person, Social, Work, Research, News } from "@/types";
+import { About, Blog, Contact, Home, Newsletter, Person, Social, Work, Research } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -39,13 +39,13 @@ const home: Home = {
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Shaping digital and embedded systems for intelligence at the edge</>,
   featured: {
-    display: false,
+    display: true,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Latest News
         </Text>
       </Row>
     ),
@@ -251,41 +251,4 @@ const contact: Contact = {
   description: `Get in touch with ${person.name}`,
 };
 
-const news: News = {
-  display: true,
-  title: "Latest News",
-  items: [
-    {
-      title: "New Research Position",
-      description: "Excited to announce my new role as Research Assistant at Smart Technologies Lab, focusing on embedded machine learning solutions",
-      date: "Aug 2025",
-      type: "announcement",
-    },
-    {
-      title: "Award Recognition",
-      description: "Honored to receive the Computer Engineering Technical Excellence Award for my work on FPGA neural network acceleration",
-      date: "May 2025",
-      type: "achievement",
-    },
-    {
-      title: "Conference Presentation",
-      description: "Presented my research findings at the IEEE Embedded Systems Conference on hardware acceleration strategies",
-      date: "Jun 2025",
-      type: "milestone",
-    },
-    {
-      title: "Grad School Update",
-      description: "Thrilled to share that I've been accepted to Stanford University's Computer Science PhD program with full funding",
-      date: "Apr 2025",
-      type: "announcement",
-    },
-    {
-      title: "Research Publication",
-      description: "Our paper on FPGA-based neural network acceleration has been published in IEEE Transactions",
-      date: "Mar 2025",
-      type: "milestone",
-    },
-  ],
-};
-
-export { person, social, newsletter, home, about, blog, work, research, projects, beyondTheLab, contact, news };
+export { person, social, newsletter, home, about, blog, work, research, projects, beyondTheLab, contact };

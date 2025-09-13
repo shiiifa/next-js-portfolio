@@ -210,35 +210,6 @@ export interface Blog extends BasePageConfig {}
  */
 export interface Work extends BasePageConfig {}
 
-/**
- * News item configuration.
- * @description Configuration for individual news items.
- */
-export interface NewsItem {
-  /** Title of the news item */
-  title: string;
-  /** Description of the news item */
-  description: string;
-  /** Date of the news item */
-  date: string;
-  /** Type of news (announcement, update, achievement, etc.) */
-  type: "announcement" | "update" | "achievement" | "milestone" | "news";
-  /** Optional link to more details */
-  link?: string;
-}
-
-/**
- * News configuration.
- * @description Configuration for the news section.
- */
-export interface News {
-  /** Whether to display news */
-  display: boolean;
-  /** Title for the news section */
-  title: string;
-  /** List of news items */
-  items: NewsItem[];
-}
 
 /**
  * Research page configuration.
