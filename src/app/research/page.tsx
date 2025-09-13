@@ -39,68 +39,62 @@ export default function Research() {
         </Text>
       </Column>
 
-      {/* Research Cards - Side by Side */}
-      <Row gap="l" paddingX="l" marginBottom="xl" s={{ direction: "column" }}>
+      {/* Research Cards - Stacked */}
+      <Column gap="l" paddingX="l" marginBottom="xl">
         {/* Major Research Card */}
-        <Column flex={1}>
-          <Card
-            as="a"
-            href="/research/major"
-            padding="0"
-            radius="m"
-            shadow="m"
-            style={{ height: "100%" }}
-          >
-            <div style={{ position: "relative", width: "100%", height: "250px" }}>
-              <Image
-                src="/images/research/majorresearch3.png"
-                alt="Major Research"
-                fill
-                style={{ objectFit: "cover", borderRadius: "8px 8px 0 0" }}
-              />
-            </div>
-            <Column padding="l" gap="s" style={{ height: "100%" }}>
-              <Heading variant="heading-strong-m">Major Research</Heading>
-              <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="s">
-                Research work closely aligned with my core research interests and carried out with a significant degree of faculty engagement.
-              </Text>
-              <Text variant="body-default-xs" onBackground="neutral-weak">
-                Core research interests with significant faculty engagement
-              </Text>
-            </Column>
-          </Card>
-        </Column>
+        <Card
+          as="a"
+          href="/research/major"
+          padding="0"
+          radius="m"
+          shadow="m"
+        >
+          <div style={{ position: "relative", width: "100%", height: "400px" }}>
+            <Image
+              src="/images/research/majorresearch3.png"
+              alt="Major Research"
+              fill
+              style={{ objectFit: "cover", borderRadius: "8px 8px 0 0" }}
+            />
+          </div>
+          <Column padding="l" gap="s">
+            <Heading variant="heading-strong-m">Major Research</Heading>
+            <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="s">
+              Research work closely aligned with my core research interests and carried out with a significant degree of faculty engagement.
+            </Text>
+            <Text variant="body-default-xs" onBackground="neutral-weak">
+              Core research interests with significant faculty engagement
+            </Text>
+          </Column>
+        </Card>
 
         {/* Non-Major Research Card */}
-        <Column flex={1}>
-          <Card
-            as="a"
-            href="/research/non-major"
-            padding="0"
-            radius="m"
-            shadow="m"
-            style={{ height: "100%" }}
-          >
-            <div style={{ position: "relative", width: "100%", height: "250px" }}>
-              <Image
-                src="/images/research/nonmajor1.png"
-                alt="Non-Major Research"
-                fill
-                style={{ objectFit: "cover", borderRadius: "8px 8px 0 0" }}
-              />
-            </div>
-            <Column padding="l" gap="s" style={{ height: "100%" }}>
-              <Heading variant="heading-strong-m">Non-Major Research</Heading>
-              <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="s">
-                A mix of research experiences gathered through academic coursework and extra-curricular activity. While not tightly connected to my core research areas, I built some of my research foundations through them.
-              </Text>
-              <Text variant="body-default-xs" onBackground="neutral-weak">
-                Academic coursework and extra-curricular research experiences
-              </Text>
-            </Column>
-          </Card>
-        </Column>
-      </Row>
+        <Card
+          as="a"
+          href="/research/non-major"
+          padding="0"
+          radius="m"
+          shadow="m"
+        >
+          <div style={{ position: "relative", width: "100%", height: "400px" }}>
+            <Image
+              src="/images/research/nonmajor1.png"
+              alt="Non-Major Research"
+              fill
+              style={{ objectFit: "cover", borderRadius: "8px 8px 0 0" }}
+            />
+          </div>
+          <Column padding="l" gap="s">
+            <Heading variant="heading-strong-m">Non-Major Research</Heading>
+            <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="s">
+              A mix of research experiences gathered through academic coursework and extra-curricular activity. While not tightly connected to my core research areas, I built some of my research foundations through them.
+            </Text>
+            <Text variant="body-default-xs" onBackground="neutral-weak">
+              Academic coursework and extra-curricular research experiences
+            </Text>
+          </Column>
+        </Card>
+      </Column>
     </Column>
   );
 }
