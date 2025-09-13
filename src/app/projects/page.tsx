@@ -116,8 +116,8 @@ export default function Projects() {
       />
       
       {/* Page Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center" style={{ textTransform: "uppercase", fontWeight: "900" }}>
+      <Column marginBottom="l" paddingX="l" align="center">
+        <Heading marginBottom="l" variant="heading-strong-xl" align="center" style={{ fontWeight: "900" }}>
           Project Catalogue
         </Heading>
       </Column>
