@@ -169,35 +169,96 @@ export default function Projects() {
 
       {/* All Projects */}
       <Column paddingX="l" gap="xl">
-        {projectList.map((project, index) => (
-          <Card
-            key={index}
-            as="a"
-            href={`/projects/${project.id}`}
-            padding="l" 
-            radius="m" 
-            shadow="m"
-            style={{ 
-              cursor: "pointer",
-              transition: "all 0.3s ease",
-              textDecoration: "none"
-            }}
-          >
-            <Column gap="m">
-              <Heading variant="heading-strong-l">{project.title}</Heading>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                <strong>Date:</strong> {project.date}
-              </Text>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                <strong>Tools & Technologies:</strong> {project.technologies}
-              </Text>
-              <Text variant="body-default-m" marginTop="m">{project.summary}</Text>
-              <Text variant="body-default-s" onBackground="neutral-weak" marginTop="m" style={{ fontStyle: "italic" }}>
-                Click to read more →
-              </Text>
-            </Column>
-          </Card>
-        ))}
+        {projectList.map((project, index) => {
+          const isEven = index % 2 === 0;
+          // Map project images based on project ID
+          const imageMap = {
+            'morse-code-decoder': '/images/projects/morsecode.jpg',
+            'automated-robotic-vehicle': '/images/projects/robot.jpeg',
+            'tennis-scoreboard': '/images/projects/tennis.jpeg',
+            '16-bit-cpu': '/images/projects/mips.png',
+            'heartbeat-monitoring': '/images/projects/heartbeat.png',
+            'electronic-piano': '/images/projects/piano.jpeg',
+            '4dof-robotic-arm': '/images/projects/roboarm.jpeg',
+            'curating-student-research-articles': '/images/projects/logism.jpeg',
+            'mathematical-model-depression': '/images/projects/logism.jpeg',
+            'traffic-flow-analysis': '/images/projects/logism.jpeg',
+            'calculus-data-collection': '/images/projects/logism.jpeg'
+          };
+          const imagePath = imageMap[project.id as keyof typeof imageMap] || '/images/projects/logism.jpeg';
+          
+          return (
+            <Card
+              key={index}
+              as="a"
+              href={`/projects/${project.id}`}
+              padding="0" 
+              radius="m" 
+              shadow="m"
+              style={{ 
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                textDecoration: "none",
+                overflow: "hidden"
+              }}
+            >
+              <Row gap="0" vertical="stretch">
+                {/* Image on left for even cards, right for odd cards */}
+                {isEven && (
+                  <div style={{ 
+                    width: "200px", 
+                    height: "200px", 
+                    position: "relative",
+                    flexShrink: 0
+                  }}>
+                    <Image
+                      src={imagePath}
+                      alt={project.title}
+                      fill
+                      style={{ 
+                        objectFit: "cover"
+                      }}
+                    />
+                  </div>
+                )}
+                
+                {/* Content */}
+                <Column gap="m" padding="l" flex={1}>
+                  <Heading variant="heading-strong-l">{project.title}</Heading>
+                  <Text variant="body-default-s" onBackground="neutral-weak">
+                    <strong>Date:</strong> {project.date}
+                  </Text>
+                  <Text variant="body-default-s" onBackground="neutral-weak">
+                    <strong>Tools & Technologies:</strong> {project.technologies}
+                  </Text>
+                  <Text variant="body-default-m" marginTop="m">{project.summary}</Text>
+                  <Text variant="body-default-s" onBackground="neutral-weak" marginTop="m" style={{ fontStyle: "italic" }}>
+                    Click to read more →
+                  </Text>
+                </Column>
+                
+                {/* Image on right for odd cards */}
+                {!isEven && (
+                  <div style={{ 
+                    width: "200px", 
+                    height: "200px", 
+                    position: "relative",
+                    flexShrink: 0
+                  }}>
+                    <Image
+                      src={imagePath}
+                      alt={project.title}
+                      fill
+                      style={{ 
+                        objectFit: "cover"
+                      }}
+                    />
+                  </div>
+                )}
+              </Row>
+            </Card>
+          );
+        })}
       </Column>
     </Column>
   );
