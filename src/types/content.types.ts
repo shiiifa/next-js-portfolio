@@ -211,33 +211,33 @@ export interface Blog extends BasePageConfig {}
 export interface Work extends BasePageConfig {}
 
 /**
- * Accomplishment item configuration.
- * @description Configuration for individual accomplishments/achievements.
+ * News item configuration.
+ * @description Configuration for individual news items.
  */
-export interface Accomplishment {
-  /** Title of the accomplishment */
+export interface NewsItem {
+  /** Title of the news item */
   title: string;
-  /** Description of the accomplishment */
+  /** Description of the news item */
   description: string;
-  /** Date of the accomplishment */
+  /** Date of the news item */
   date: string;
-  /** Type of accomplishment (award, role, presentation, etc.) */
-  type: "award" | "role" | "presentation" | "admission" | "achievement";
+  /** Type of news (announcement, update, achievement, etc.) */
+  type: "announcement" | "update" | "achievement" | "milestone" | "news";
   /** Optional link to more details */
   link?: string;
 }
 
 /**
- * Accomplishments configuration.
- * @description Configuration for the accomplishments section.
+ * News configuration.
+ * @description Configuration for the news section.
  */
-export interface Accomplishments {
-  /** Whether to display accomplishments */
+export interface News {
+  /** Whether to display news */
   display: boolean;
-  /** Title for the accomplishments section */
+  /** Title for the news section */
   title: string;
-  /** List of accomplishments */
-  items: Accomplishment[];
+  /** List of news items */
+  items: NewsItem[];
 }
 
 /**

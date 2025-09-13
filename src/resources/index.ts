@@ -11,7 +11,7 @@ export {
   projects,
   beyondTheLab,
   contact,
-  accomplishments,
+  news,
 } from "./content";
 
 export { iconLibrary } from "./icons";
