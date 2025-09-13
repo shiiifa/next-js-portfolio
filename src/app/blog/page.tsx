@@ -38,9 +38,16 @@ export default function Blog() {
           <Row fillWidth paddingRight="64">
             <Line maxWidth={48} />
           </Row>
-          <Heading as="h2" variant="heading-strong-xl" marginLeft="l">
-            Latest News
-          </Heading>
+          <Row fillWidth vertical="center" gap="16">
+            <Heading as="h2" variant="heading-strong-xl" marginLeft="l">
+              Latest News
+            </Heading>
+            <Text variant="label-default-s" onBackground="brand-medium">
+              <a href="/blog/news" style={{ textDecoration: 'none', color: 'inherit' }}>
+                View all news →
+              </a>
+            </Text>
+          </Row>
           <Card
             background="neutral-alpha-weak"
             border="neutral-alpha-medium"
