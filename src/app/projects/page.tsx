@@ -114,22 +114,20 @@ export default function Projects() {
           <div
             style={{
               position: "relative",
-              animation: "uncrumple 2s ease-out forwards",
+              animation: "fadeInPop 1.5s ease-out forwards",
               transformOrigin: "center center",
               opacity: 0,
-              transform: "scale(0.8) rotate(-5deg)",
+              transform: "scale(0.8)",
             }}
           >
             <Image
               src="/images/whitehead.png"
               alt="Alfred Whitehead"
-              width={100}
-              height={100}
+              width={140}
+              height={140}
               style={{ 
-                borderRadius: "50%",
                 objectFit: "cover",
                 boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
-                border: "3px solid rgba(255, 255, 255, 0.2)"
               }}
             />
           </div>
@@ -146,18 +144,14 @@ export default function Projects() {
       
       <style dangerouslySetInnerHTML={{
         __html: `
-          @keyframes uncrumple {
+          @keyframes fadeInPop {
             0% {
               opacity: 0;
-              transform: scale(0.3) rotate(-15deg) translateY(20px);
-            }
-            50% {
-              opacity: 0.7;
-              transform: scale(0.9) rotate(-2deg) translateY(-5px);
+              transform: scale(0.8);
             }
             100% {
               opacity: 1;
-              transform: scale(1) rotate(0deg) translateY(0px);
+              transform: scale(1);
             }
           }
         `
