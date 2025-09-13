@@ -107,19 +107,6 @@ export default function Projects() {
         }}
       />
       
-      {/* Page Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-          Work – {person.name}
-        </Heading>
-        <Heading marginBottom="m" variant="heading-strong-l" align="center">
-          Project Catalogue
-        </Heading>
-        <Text variant="body-default-l" align="center">
-          In my first year of undergraduate studies, I switched from electrical to computer engineering. This was attributed to a newfound fascination for the interplay of both hardware and software tools towards engineering innovation. Thus, I have amassed several project experiences in both the engineering, and computer sciences.
-        </Text>
-      </Column>
-
       {/* Alfred Whitehead Quote */}
       <Column paddingX="l" gap="xl" marginBottom="xl">
         <Card padding="l" radius="m" shadow="m">
@@ -134,19 +121,13 @@ export default function Projects() {
         </Card>
       </Column>
 
-      {/* Beyond The Lab Header */}
+      {/* Page Header */}
       <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-          Beyond The Lab
+        <Heading marginBottom="m" variant="heading-strong-l" align="center">
+          Project Catalogue
         </Heading>
         <Text variant="body-default-l" align="center">
-          <strong>The Extras</strong>
-        </Text>
-        <Text variant="body-default-l" align="center" marginTop="m">
-          When I'm not tackling research or engineering projects, you will find me engaged in a plethora of other endeavors. Leadership, public speaking, community service, writing, ...you name it.
-        </Text>
-        <Text variant="body-default-l" align="center" marginTop="m">
-          Here lies a more holistic representation of my world. Take a dive.
+          In my first year of undergraduate studies, I switched from electrical to computer engineering. This was attributed to a newfound fascination for the interplay of both hardware and software tools towards engineering innovation. Thus, I have amassed several project experiences in both the engineering, and computer sciences.
         </Text>
       </Column>
 
