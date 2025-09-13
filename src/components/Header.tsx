@@ -7,6 +7,7 @@ import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 import { routes, display, about, blog, research, projects, beyondTheLab, contact } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import { ResearchDropdown } from "./ResearchDropdown";
+import { BlogDropdown } from "./BlogDropdown";
 import styles from "./Header.module.scss";
 
 
@@ -127,17 +128,10 @@ export const Header = () => {
               {routes["/blog"] && (
                 <>
                   <Row s={{ hide: true }}>
-                    <ToggleButton
-                      href="/blog"
-                      label={blog.label}
-                      selected={pathname.startsWith("/blog")}
-                    />
+                    <BlogDropdown />
                   </Row>
                   <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      href="/blog"
-                      selected={pathname.startsWith("/blog")}
-                    />
+                    <BlogDropdown />
                   </Row>
                 </>
               )}
