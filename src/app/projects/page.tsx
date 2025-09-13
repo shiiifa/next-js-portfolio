@@ -117,12 +117,9 @@ export default function Projects() {
       
       {/* Page Header */}
       <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center" style={{ textTransform: "uppercase" }}>
+        <Heading marginBottom="l" variant="display-strong-l" align="center" style={{ textTransform: "uppercase", fontWeight: "900" }}>
           Project Catalogue
         </Heading>
-        <Text variant="body-default-l" align="center">
-          In my first year of undergraduate studies, I switched from electrical to computer engineering. This was attributed to a newfound fascination for the interplay of both hardware and software tools towards engineering innovation. Thus, I have amassed several project experiences in both the engineering, and computer sciences.
-        </Text>
       </Column>
 
       {/* Alfred Whitehead Quote */}
@@ -157,6 +154,13 @@ export default function Projects() {
             </Text>
           </Column>
         </Row>
+      </Column>
+
+      {/* Project Description */}
+      <Column marginBottom="xl" paddingX="l" align="center">
+        <Text variant="body-default-l" align="center">
+          In my first year of undergraduate studies, I switched from electrical to computer engineering. This was attributed to a newfound fascination for the interplay of both hardware and software tools towards engineering innovation. Thus, I have amassed several project experiences in both the engineering, and computer sciences.
+        </Text>
       </Column>
       
       <style dangerouslySetInnerHTML={{
