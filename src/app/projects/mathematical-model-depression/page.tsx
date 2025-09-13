@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card, SmartLink } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, SmartLink, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -44,6 +44,16 @@ export default function MathematicalModelDepression() {
         <Text variant="body-default-l" align="center">
           Developed a novel mathematical model of depression using differential equations to explore how populations transition between depression, remission, and recovery, considering social and community factors.
         </Text>
+      </Column>
+
+      {/* Project Image */}
+      <Column marginBottom="xl" paddingX="l">
+        <Media 
+          aspectRatio="16 / 9" 
+          radius="m" 
+          alt="Mathematical Model for Depression" 
+          src="/images/projects/predatorprey.png" 
+        />
       </Column>
 
       {/* Project Content */}

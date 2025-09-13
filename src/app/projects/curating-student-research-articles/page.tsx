@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -41,6 +41,16 @@ export default function CuratingStudentResearchArticles() {
         <Text variant="body-default-l" align="center">
           Led the curation and editing of student research articles for the ARM-y Students' Club, developing content management and editorial skills while supporting academic research dissemination.
         </Text>
+      </Column>
+
+      {/* Project Image */}
+      <Column marginBottom="xl" paddingX="l">
+        <Media 
+          aspectRatio="16 / 9" 
+          radius="m" 
+          alt="ARM-y Students Club Research Articles" 
+          src="/images/projects/arm-y.jpg" 
+        />
       </Column>
 
       {/* Project Content */}
