@@ -42,6 +42,13 @@ export default function Projects() {
       summary: "Collaborated in the design and implementation of a custom 16-bit CPU using Logisim-Evolution, incorporating key architectural components including an ALU (arithmetic + relational operations), register file, datapath, memory modules, and a micro-architected control unit."
     },
     {
+      id: "32-bit-mips-processor",
+      title: "32-Bit Single-Cycle MIPS Processor Components in VHDL",
+      date: "Mar 2024 - May 2024",
+      technologies: "RTL Design & Verification, Hardware Simulation (ModelSim)",
+      summary: "Extended the design of a single-cycle CPU by implementing a 32-bit MIPS processor in VHDL, incorporating key modules including the ALU, register file, instruction memory, data memory, and control unit, each verified with dedicated testbenches and simulation waveforms. Implemented a subset of MIPS instructions (arithmetic, logical, branching, memory access, and jump operations) while ensuring correct datapath and control signal coordination."
+    },
+    {
       id: "heartbeat-monitoring",
       title: "Low-Cost Optical Heartbeat Monitoring System",
       date: "Mar 2024 - May 2024",
@@ -176,7 +183,8 @@ export default function Projects() {
             'morse-code-decoder': '/images/projects/morsecode.jpg',
             'automated-robotic-vehicle': '/images/projects/robot.jpeg',
             'tennis-scoreboard': '/images/projects/tennis.jpeg',
-            '16-bit-cpu': '/images/projects/mips.png',
+            '16-bit-cpu': '/images/projects/logism.jpeg',
+            '32-bit-mips-processor': '/images/projects/mips.png',
             'heartbeat-monitoring': '/images/projects/heartbeat.png',
             'electronic-piano': '/images/projects/piano.jpeg',
             '4dof-robotic-arm': '/images/projects/roboarm.jpeg',
@@ -202,7 +210,7 @@ export default function Projects() {
                 overflow: "hidden"
               }}
             >
-              <Row gap="0" vertical="stretch">
+              <Row gap="0" vertical="center">
                 {/* Image on left for even cards, right for odd cards */}
                 {isEven && (
                   <div style={{ 
