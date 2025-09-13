@@ -109,29 +109,56 @@ export default function Projects() {
       />
       
       {/* Alfred Whitehead Quote */}
-      <Column paddingX="l" gap="xl" marginBottom="xl">
-        <Card padding="l" radius="m" shadow="m">
-          <Row gap="m" vertical="center" align="center">
+      <Column paddingX="l" gap="xl" marginBottom="xl" align="center">
+        <Row gap="l" vertical="center" align="center" maxWidth="l">
+          <div
+            style={{
+              position: "relative",
+              animation: "uncrumple 2s ease-out forwards",
+              transformOrigin: "center center",
+              opacity: 0,
+              transform: "scale(0.8) rotate(-5deg)",
+            }}
+          >
             <Image
               src="/images/whitehead.png"
               alt="Alfred Whitehead"
-              width={60}
-              height={60}
+              width={100}
+              height={100}
               style={{ 
                 borderRadius: "50%",
-                objectFit: "cover"
+                objectFit: "cover",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+                border: "3px solid rgba(255, 255, 255, 0.2)"
               }}
             />
-            <Column gap="m" align="center" flex={1}>
-              <Text variant="body-default-l" align="center" style={{ fontStyle: "italic" }}>
-                "Civilization advances by extending the number of important operations which we can perform without thinking about them."
-              </Text>
-              <Text variant="body-default-s" align="center" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
-                — Alfred Whitehead, Creator of Process Philosophy
-              </Text>
-            </Column>
-          </Row>
-        </Card>
+          </div>
+          <Column gap="m" align="center" flex={1}>
+            <Text variant="body-default-l" align="center" style={{ fontStyle: "italic", lineHeight: "1.6" }}>
+              "Civilization advances by extending the number of important operations which we can perform without thinking about them."
+            </Text>
+            <Text variant="body-default-s" align="center" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
+              — Alfred Whitehead, Creator of Process Philosophy
+            </Text>
+          </Column>
+        </Row>
+        
+        <style jsx>{`
+          @keyframes uncrumple {
+            0% {
+              opacity: 0;
+              transform: scale(0.3) rotate(-15deg) translateY(20px);
+            }
+            50% {
+              opacity: 0.7;
+              transform: scale(0.9) rotate(-2deg) translateY(-5px);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1) rotate(0deg) translateY(0px);
+            }
+          }
+        `}</style>
       </Column>
 
       {/* Page Header */}
