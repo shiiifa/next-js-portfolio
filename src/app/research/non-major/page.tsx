@@ -113,7 +113,6 @@ export default function NonMajorResearch() {
                 {isEven && (
                   <div style={{
                     width: "200px",
-                    height: "200px",
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch"
@@ -146,7 +145,6 @@ export default function NonMajorResearch() {
                 {!isEven && (
                   <div style={{
                     width: "200px",
-                    height: "200px",
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch"

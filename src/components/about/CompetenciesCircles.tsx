@@ -64,11 +64,11 @@ export default function CompetenciesCircles({ competencies }: CompetenciesCircle
               </div>
               
               {/* Text underneath the circle */}
-              <Column align="center" gap="s" marginTop="m">
-                <Heading variant="heading-strong-s" align="center">
+              <Column align="center" gap="s" marginTop="m" style={{ textAlign: "center" }}>
+                <Heading variant="heading-strong-s" align="center" style={{ fontSize: "0.9rem", lineHeight: "1.2" }}>
                   {competency.title}
                 </Heading>
-                <Text variant="body-default-s" align="center" onBackground="neutral-weak">
+                <Text variant="body-default-s" align="center" onBackground="neutral-weak" style={{ fontSize: "0.8rem", lineHeight: "1.3" }}>
                   {competency.description || "No description available"}
                 </Text>
               </Column>
