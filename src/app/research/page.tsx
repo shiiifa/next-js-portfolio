@@ -58,7 +58,7 @@ export default function Research() {
             }}
           >
             <Image
-              src="/images/babbage.png"
+              src="/images/research/non-major/babbage.png"
               alt="Charles Babbage"
               width={120}
               height={120}

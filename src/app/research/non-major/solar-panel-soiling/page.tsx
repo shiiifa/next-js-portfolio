@@ -1,5 +1,6 @@
-import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, Media, Row } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -13,7 +14,7 @@ export async function generateMetadata() {
 
 export default function SolarPanelSoiling() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -42,6 +43,28 @@ export default function SolarPanelSoiling() {
         <Text variant="body-default-l" align="center">
           At the Ashesi Resourceful Engineering Lab (AREL), I collaborated with a team of research assistants on an embedded systems and IoT project aimed at generating mathematical models to estimate the impact of soiling on solar panels.
         </Text>
+      </Column>
+
+      {/* Project Images */}
+      <Column paddingX="l" gap="l" marginBottom="xl">
+        <Row gap="l" vertical="center" align="center" maxWidth="l">
+          <div style={{ flex: 1 }}>
+            <Media
+              aspectRatio="16 / 9"
+              radius="m"
+              alt="Solar Panel Soiling Cover"
+              src="/images/research/solar-panel-soiling_cover.avif"
+            />
+          </div>
+          <div style={{ flex: 1 }}>
+            <Media
+              aspectRatio="16 / 9"
+              radius="m"
+              alt="Solar Panel Soiling Detail"
+              src="/images/research/non-major/solar-panel-soiling.png"
+            />
+          </div>
+        </Row>
       </Column>
 
       {/* Project Content */}

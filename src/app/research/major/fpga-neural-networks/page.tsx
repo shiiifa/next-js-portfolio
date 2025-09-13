@@ -1,5 +1,6 @@
-import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, Media, Row } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -13,7 +14,7 @@ export async function generateMetadata() {
 
 export default function FPGANeuralNetworks() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -42,6 +43,28 @@ export default function FPGANeuralNetworks() {
         <Text variant="body-default-l" align="center">
           Designed a fully on-chip hardware-software co-design framework using FPGA-based softcore processor and custom VHDL acceleration modules. Achieved 420× speedup over baseline execution, earning the Technical Excellence Award in Computer Engineering.
         </Text>
+      </Column>
+
+      {/* Project Images */}
+      <Column paddingX="l" gap="l" marginBottom="xl">
+        <Row gap="l" vertical="center" align="center" maxWidth="l">
+          <div style={{ flex: 1 }}>
+            <Media
+              aspectRatio="16 / 9"
+              radius="m"
+              alt="FPGA Neural Networks Cover"
+              src="/images/research/fpga-neural-networks_cover.png"
+            />
+          </div>
+          <div style={{ flex: 1 }}>
+            <Media
+              aspectRatio="16 / 9"
+              radius="m"
+              alt="FPGA Neural Networks Detail"
+              src="/images/research/major/fpga-neural-networks.png"
+            />
+          </div>
+        </Row>
       </Column>
 
       {/* Project Content */}
