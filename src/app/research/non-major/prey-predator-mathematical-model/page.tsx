@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -13,7 +13,7 @@ export async function generateMetadata() {
 
 export default function PreyPredatorMathematicalModel() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -42,6 +42,16 @@ export default function PreyPredatorMathematicalModel() {
         <Text variant="body-default-l" align="center">
           As part of my Differential Equations and Numerical Methods course, I collaborated on a project exploring stage-structured predator–prey systems.
         </Text>
+      </Column>
+
+      {/* Project Images */}
+      <Column paddingX="l" gap="l" marginBottom="xl">
+        <Media
+          aspectRatio="16 / 9"
+          radius="m"
+          alt="Prey-Predator Mathematical Model"
+          src="/images/research/prey-predator-mathematical-model_cover.png"
+        />
       </Column>
 
       {/* Project Content */}

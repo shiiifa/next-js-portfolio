@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card, SmartLink } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, SmartLink, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -13,7 +13,7 @@ export async function generateMetadata() {
 
 export default function DepressionMathematicalModel() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -45,6 +45,16 @@ export default function DepressionMathematicalModel() {
         <Text variant="body-default-l" align="center">
           As part of an independent research project, I developed a novel mathematical model of depression using differential equations to explore how populations transition between depression, remission, and recovery.
         </Text>
+      </Column>
+
+      {/* Project Images */}
+      <Column paddingX="l" gap="l" marginBottom="xl">
+        <Media
+          aspectRatio="16 / 9"
+          radius="m"
+          alt="Depression Mathematical Model"
+          src="/images/research/depression-mathematical-model_cover.png"
+        />
       </Column>
 
       {/* Project Content */}

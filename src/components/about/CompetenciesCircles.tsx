@@ -38,8 +38,7 @@ export default function CompetenciesCircles({ competencies }: CompetenciesCircle
 
   return (
     <div className={styles.competenciesContainer}>
-      <Row gap="xl" horizontal="center" wrap>
-        {competencies.map((competency, index) => {
+      {competencies.map((competency, index) => {
           if (!competency || !competency.title) {
             return null;
           }
@@ -76,7 +75,6 @@ export default function CompetenciesCircles({ competencies }: CompetenciesCircle
             </div>
           );
         })}
-      </Row>
     </div>
   );
 }

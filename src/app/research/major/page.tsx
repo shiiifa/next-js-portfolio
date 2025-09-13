@@ -50,6 +50,20 @@ export default function MajorResearch() {
 
   return (
     <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes fadeInPop {
+            0% {
+              opacity: 0;
+              transform: scale(0.8);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+        `
+      }} />
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -69,14 +83,45 @@ export default function MajorResearch() {
         <Heading marginBottom="l" variant="heading-strong-xl" align="center">
           Major Research
         </Heading>
-        <Text variant="body-default-l" align="center" marginBottom="l">
+        <Row gap="l" vertical="center" align="center" maxWidth="l">
+          <div
+            style={{
+              position: "relative",
+              animation: "fadeInPop 1.5s ease-out forwards",
+              opacity: 0,
+              flex: 1
+            }}
+          >
+            <Image
+              src="/images/research/non-major/babbage.png"
+              alt="Charles Babbage"
+              width={120}
+              height={120}
+              style={{
+                objectFit: "cover",
+                borderRadius: "50%",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
+              }}
+            />
+          </div>
+          <div
+            style={{
+              position: "relative",
+              animation: "fadeInPop 1.5s ease-out 0.3s forwards",
+              opacity: 0,
+              flex: 2
+            }}
+          >
+            <Text variant="body-default-m" align="center" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
+              "For one person who is blessed with the power of invention, many will always be found who have the capacity of applying principles."
+            </Text>
+            <Text variant="body-default-s" align="center" onBackground="neutral-weak" marginTop="s">
+              — Charles Babbage, Father of the Computer
+            </Text>
+          </div>
+        </Row>
+        <Text variant="body-default-l" align="center" marginTop="l">
           Research work closely aligned with my core research interests and carried out with a significant degree of faculty engagement.
-        </Text>
-        <Text variant="body-default-m" align="center" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
-          "For one person who is blessed with the power of invention, many will always be found who have the capacity of applying principles."
-        </Text>
-        <Text variant="body-default-s" align="center" onBackground="neutral-weak" marginTop="s">
-          — Charles Babbage, Father of the Computer
         </Text>
       </Column>
 
@@ -84,7 +129,20 @@ export default function MajorResearch() {
       <Column paddingX="l" gap="xl">
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
-          const imagePath = `/images/research/${project.id}_cover.png`;
+          // Use specific cover photos for projects that have them
+          const getCoverImage = (projectId: string) => {
+            switch (projectId) {
+              case 'fpga-neural-networks':
+                return '/images/research/fpga_cover.jpg';
+              case 'fpga-acceleration-comparison':
+                return '/images/research/fpga-acceleration-comparison_cover.png';
+              case 'wearable-technology-study':
+                return '/images/research/wearable-technology-study_cover.png';
+              default:
+                return `/images/research/${projectId}_cover.png`;
+            }
+          };
+          const imagePath = getCoverImage(project.id);
           
           return (
             <Card
