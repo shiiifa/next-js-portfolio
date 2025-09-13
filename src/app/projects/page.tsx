@@ -115,6 +115,16 @@ export default function Projects() {
         }}
       />
       
+      {/* Page Header */}
+      <Column marginBottom="xl" paddingX="l" align="center">
+        <Heading marginBottom="l" variant="heading-strong-xl" align="center" style={{ textTransform: "uppercase" }}>
+          Project Catalogue
+        </Heading>
+        <Text variant="body-default-l" align="center">
+          In my first year of undergraduate studies, I switched from electrical to computer engineering. This was attributed to a newfound fascination for the interplay of both hardware and software tools towards engineering innovation. Thus, I have amassed several project experiences in both the engineering, and computer sciences.
+        </Text>
+      </Column>
+
       {/* Alfred Whitehead Quote */}
       <Column paddingX="l" gap="xl" marginBottom="xl" align="center">
         <Row gap="l" vertical="center" align="center" maxWidth="l">
@@ -149,83 +159,73 @@ export default function Projects() {
         </Row>
       </Column>
       
-       <style dangerouslySetInnerHTML={{
-         __html: `
-           @keyframes fadeInPop {
-             0% {
-               opacity: 0;
-               transform: scale(0.8);
-             }
-             100% {
-               opacity: 1;
-               transform: scale(1);
-             }
-           }
-           @keyframes fadeIn {
-             0% {
-               opacity: 0;
-             }
-             100% {
-               opacity: 1;
-             }
-           }
-         `
-       }} />
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes fadeInPop {
+            0% {
+              opacity: 0;
+              transform: scale(0.8);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+        `
+      }} />
 
-       {/* Project Images */}
-       <Column paddingX="l" gap="l" marginBottom="xl" align="center">
-         <Row gap="l" vertical="center" align="center" maxWidth="l">
-           <div
-             style={{
-               position: "relative",
-               animation: "fadeIn 2s ease-out forwards",
-               opacity: 0,
-               flex: 1
-             }}
-           >
-             <Image
-               src="/images/projects/projects1.png"
-               alt="Projects Overview 1"
-               width={400}
-               height={300}
-               style={{ 
-                 objectFit: "cover",
-                 borderRadius: "8px",
-                 boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
-               }}
-             />
-           </div>
-           <div
-             style={{
-               position: "relative",
-               animation: "fadeIn 2s ease-out 0.3s forwards",
-               opacity: 0,
-               flex: 1
-             }}
-           >
-             <Image
-               src="/images/projects/projects2.png"
-               alt="Projects Overview 2"
-               width={400}
-               height={300}
-               style={{ 
-                 objectFit: "cover",
-                 borderRadius: "8px",
-                 boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
-               }}
-             />
-           </div>
-         </Row>
-       </Column>
-
-       {/* Page Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="m" variant="heading-strong-l" align="center">
-          Project Catalogue
-        </Heading>
-        <Text variant="body-default-l" align="center">
-          In my first year of undergraduate studies, I switched from electrical to computer engineering. This was attributed to a newfound fascination for the interplay of both hardware and software tools towards engineering innovation. Thus, I have amassed several project experiences in both the engineering, and computer sciences.
-        </Text>
+      {/* Project Images */}
+      <Column paddingX="l" gap="l" marginBottom="xl" align="center">
+        <Row gap="l" vertical="center" align="center" maxWidth="l">
+          <div
+            style={{
+              position: "relative",
+              animation: "fadeIn 2s ease-out forwards",
+              opacity: 0,
+              flex: 1
+            }}
+          >
+            <Image
+              src="/images/projects/projects1.png"
+              alt="Projects Overview 1"
+              width={400}
+              height={300}
+              style={{ 
+                objectFit: "cover",
+                borderRadius: "8px",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
+              }}
+            />
+          </div>
+          <div
+            style={{
+              position: "relative",
+              animation: "fadeIn 2s ease-out 0.3s forwards",
+              opacity: 0,
+              flex: 1
+            }}
+          >
+            <Image
+              src="/images/projects/projects2.png"
+              alt="Projects Overview 2"
+              width={400}
+              height={300}
+              style={{ 
+                objectFit: "cover",
+                borderRadius: "8px",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
+              }}
+            />
+          </div>
+        </Row>
       </Column>
 
       {/* All Projects */}

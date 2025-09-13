@@ -22,8 +22,7 @@ export const Footer = () => {
         }}
       >
         <Text variant="body-default-s" onBackground="neutral-strong" align="center">
-          <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">Obed Allotey Babington</Text>
+          © {currentYear} | Obed Allotey Babington
         </Text>
         <Row gap="16">
           {social.map(
