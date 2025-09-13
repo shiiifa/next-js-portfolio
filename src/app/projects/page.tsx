@@ -1,5 +1,6 @@
-import { Column, Heading, Meta, Schema, Text, Card, SmartLink } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, SmartLink, Row } from "@once-ui-system/core";
 import { baseURL, about, person, projects } from "@/resources";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -110,14 +111,26 @@ export default function Projects() {
       {/* Alfred Whitehead Quote */}
       <Column paddingX="l" gap="xl" marginBottom="xl">
         <Card padding="l" radius="m" shadow="m">
-          <Column gap="m" align="center">
-            <Text variant="body-default-l" align="center" style={{ fontStyle: "italic" }}>
-              "Civilization advances by extending the number of important operations which we can perform without thinking about them."
-            </Text>
-            <Text variant="body-default-s" align="center" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
-              — Alfred Whitehead, Creator of Process Philosophy
-            </Text>
-          </Column>
+          <Row gap="m" vertical="center" align="center">
+            <Image
+              src="/images/whitehead.png"
+              alt="Alfred Whitehead"
+              width={60}
+              height={60}
+              style={{ 
+                borderRadius: "50%",
+                objectFit: "cover"
+              }}
+            />
+            <Column gap="m" align="center" flex={1}>
+              <Text variant="body-default-l" align="center" style={{ fontStyle: "italic" }}>
+                "Civilization advances by extending the number of important operations which we can perform without thinking about them."
+              </Text>
+              <Text variant="body-default-s" align="center" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
+                — Alfred Whitehead, Creator of Process Philosophy
+              </Text>
+            </Column>
+          </Row>
         </Card>
       </Column>
 
