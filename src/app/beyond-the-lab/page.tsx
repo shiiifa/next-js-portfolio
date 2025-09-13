@@ -12,7 +12,7 @@ export async function generateMetadata() {
 
 export default function BeyondTheLab() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -48,9 +48,6 @@ export default function BeyondTheLab() {
         <Heading variant="heading-strong-l" align="center" marginBottom="m">
           Coming Soon
         </Heading>
-        <Text variant="body-default-m" align="center">
-          This section will showcase my leadership experiences, public speaking engagements, community service work, writing projects, and other extracurricular activities.
-        </Text>
       </Column>
     </Column>
   );
