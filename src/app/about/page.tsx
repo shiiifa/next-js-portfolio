@@ -121,9 +121,9 @@ export default function About() {
                 />
               </Row>
             )}
-            <Heading className={styles.textAlign} variant="display-strong-l" align="center">
-              {person.name}
-            </Heading>
+                  <Heading className={styles.textAlign} variant="heading-strong-xl" align="center">
+                    {person.name}
+                  </Heading>
             <Row
               paddingTop="20"
               paddingBottom="8"
@@ -155,54 +155,77 @@ export default function About() {
             </Row>
           </Column>
 
-          {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
-              {about.intro.description}
-            </Column>
-          )}
-
-          {about.studies.display && (
-            <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
-                {about.studies.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
+          {/* GitHub-style Fork Visualization */}
+          <div className={styles.githubFork}>
+            {/* Main branch line */}
+            <div className={styles.mainBranch}></div>
+            
+            {about.intro.display && (
+              <div className={styles.forkItem}>
+                <div className={styles.forkNode}></div>
+                <div className={styles.forkContent}>
+                  <Heading as="h2" id={about.intro.title} variant="display-strong-s" marginBottom="m">
+                    {about.intro.title}
+                  </Heading>
+                  <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
+                    {about.intro.description}
                   </Column>
-                ))}
-              </Column>
-            </>
-          )}
+                </div>
+              </div>
+            )}
 
-          {about.work.display && (
-            <>
-              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
-                {about.work.title}
-              </Heading>
-              <WorkRoadmap experiences={about.work.experiences} />
-            </>
-          )}
+            {about.studies.display && (
+              <div className={styles.forkItem}>
+                <div className={styles.forkNode}></div>
+                <div className={styles.forkContent}>
+                  <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
+                    {about.studies.title}
+                  </Heading>
+                  <Column fillWidth gap="l" marginBottom="40">
+                    {about.studies.institutions.map((institution, index) => (
+                      <Column key={`${institution.name}-${index}`} fillWidth gap="4">
+                        <Text id={institution.name} variant="heading-strong-l">
+                          {institution.name}
+                        </Text>
+                        <Text variant="heading-default-xs" onBackground="neutral-weak">
+                          {institution.description}
+                        </Text>
+                      </Column>
+                    ))}
+                  </Column>
+                </div>
+              </div>
+            )}
 
-          {about.technical.display && (
-            <>
-              <Heading
-                as="h2"
-                id={about.technical.title}
-                variant="display-strong-s"
-                marginBottom="40"
-              >
-                {about.technical.title}
-              </Heading>
-              <CompetenciesCircles competencies={about.technical.skills} />
-            </>
-          )}
+            {about.work.display && (
+              <div className={styles.forkItem}>
+                <div className={styles.forkNode}></div>
+                <div className={styles.forkContent}>
+                  <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
+                    {about.work.title}
+                  </Heading>
+                  <WorkRoadmap experiences={about.work.experiences} />
+                </div>
+              </div>
+            )}
+
+            {about.technical.display && (
+              <div className={styles.forkItem}>
+                <div className={styles.forkNode}></div>
+                <div className={styles.forkContent}>
+                  <Heading
+                    as="h2"
+                    id={about.technical.title}
+                    variant="display-strong-s"
+                    marginBottom="40"
+                  >
+                    {about.technical.title}
+                  </Heading>
+                  <CompetenciesCircles competencies={about.technical.skills} />
+                </div>
+              </div>
+            )}
+          </div>
         </Column>
       </Row>
     </Column>
