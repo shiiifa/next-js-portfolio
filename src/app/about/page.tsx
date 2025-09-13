@@ -129,7 +129,7 @@ export default function About() {
                 />
               </Row>
             )}
-            <Heading className={styles.textAlign} variant="display-strong-l">
+            <Heading className={styles.textAlign} variant="display-strong-l" align="center">
               {person.name}
             </Heading>
             <Row
@@ -144,9 +144,21 @@ export default function About() {
                 href="/cv/Obed_Babington_CV.pdf"
                 prefixIcon="download"
                 label="Download CV"
-                size="s"
+                size="m"
                 weight="default"
                 variant="secondary"
+                style={{
+                  transition: "all 0.3s ease",
+                  boxShadow: "0 0 0 rgba(0, 0, 0, 0)",
+                }}
+                onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                  e.currentTarget.style.boxShadow = "0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3)";
+                  e.currentTarget.style.transform = "scale(1.05)";
+                }}
+                onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                  e.currentTarget.style.boxShadow = "0 0 0 rgba(0, 0, 0, 0)";
+                  e.currentTarget.style.transform = "scale(1)";
+                }}
               />
             </Row>
           </Column>

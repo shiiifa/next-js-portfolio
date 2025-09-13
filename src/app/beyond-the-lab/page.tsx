@@ -44,17 +44,13 @@ export default function BeyondTheLab() {
       </Column>
 
       {/* Content Placeholder */}
-      <Column paddingX="l" gap="xl">
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m" align="center">
-            <Heading variant="heading-strong-l" align="center">
-              Coming Soon
-            </Heading>
-            <Text variant="body-default-m" align="center">
-              This section will showcase my leadership experiences, public speaking engagements, community service work, writing projects, and other extracurricular activities.
-            </Text>
-          </Column>
-        </Card>
+      <Column paddingX="l" gap="xl" align="center">
+        <Heading variant="heading-strong-l" align="center" marginBottom="m">
+          Coming Soon
+        </Heading>
+        <Text variant="body-default-m" align="center">
+          This section will showcase my leadership experiences, public speaking engagements, community service work, writing projects, and other extracurricular activities.
+        </Text>
       </Column>
     </Column>
   );
