@@ -131,6 +131,7 @@ export default function About() {
               gap="8"
               horizontal="center"
               fitWidth
+              align="center"
             >
               <Button
                 href="/cv/Obed_Babington_CV.pdf"
