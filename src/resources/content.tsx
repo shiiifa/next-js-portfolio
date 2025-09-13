@@ -1,4 +1,4 @@
-import { About, Blog, Contact, Home, Newsletter, Person, Social, Work, Research, Accomplishments } from "@/types";
+import { About, Blog, Contact, Home, Newsletter, Person, Social, Work, Research, News } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -251,41 +251,41 @@ const contact: Contact = {
   description: `Get in touch with ${person.name}`,
 };
 
-const accomplishments: Accomplishments = {
+const news: News = {
   display: true,
-  title: "Recent Accomplishments",
+  title: "Latest News",
   items: [
     {
-      title: "Started New Research Role",
-      description: "Joined Smart Technologies Lab as Research Assistant focusing on embedded machine learning solutions",
+      title: "New Research Position",
+      description: "Excited to announce my new role as Research Assistant at Smart Technologies Lab, focusing on embedded machine learning solutions",
       date: "Aug 2025",
-      type: "role",
+      type: "announcement",
     },
     {
-      title: "Technical Excellence Award",
-      description: "Received Computer Engineering Technical Excellence Award for FPGA neural network acceleration research",
+      title: "Award Recognition",
+      description: "Honored to receive the Computer Engineering Technical Excellence Award for my work on FPGA neural network acceleration",
       date: "May 2025",
-      type: "award",
+      type: "achievement",
     },
     {
       title: "Conference Presentation",
-      description: "Presented research findings at IEEE Embedded Systems Conference on hardware acceleration strategies",
+      description: "Presented my research findings at the IEEE Embedded Systems Conference on hardware acceleration strategies",
       date: "Jun 2025",
-      type: "presentation",
+      type: "milestone",
     },
     {
-      title: "Grad School Admission",
-      description: "Accepted to Stanford University's Computer Science PhD program with full funding",
+      title: "Grad School Update",
+      description: "Thrilled to share that I've been accepted to Stanford University's Computer Science PhD program with full funding",
       date: "Apr 2025",
-      type: "admission",
+      type: "announcement",
     },
     {
       title: "Research Publication",
-      description: "Co-authored paper on FPGA-based neural network acceleration published in IEEE Transactions",
+      description: "Our paper on FPGA-based neural network acceleration has been published in IEEE Transactions",
       date: "Mar 2025",
-      type: "achievement",
+      type: "milestone",
     },
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, research, projects, beyondTheLab, contact, accomplishments };
+export { person, social, newsletter, home, about, blog, work, research, projects, beyondTheLab, contact, news };
