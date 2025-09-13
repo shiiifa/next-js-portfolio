@@ -1,16 +1,17 @@
 import {
   Column,
   Heading,
-  Text,
-  Row,
-  Badge,
-  Icon,
   Meta,
   Schema,
-  Line,
+  Text,
+  Card,
+  Row,
+  Icon,
+  Badge,
+  Button,
 } from "@once-ui-system/core";
 import { news, person, baseURL } from "@/resources";
-import { formatDate } from "@/utils/formatDate";
+import { NewsItem } from "@/types";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -21,62 +22,41 @@ export async function generateMetadata() {
   });
 }
 
-export default function NewsPage() {
-  const sortedNews = news.items.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+const getTypeIcon = (type: NewsItem['type']): string => {
+  switch (type) {
+    case 'award':
+      return 'trophy';
+    case 'role':
+      return 'briefcase';
+    case 'conference':
+      return 'presentation';
+    case 'achievement':
+      return 'star';
+    case 'education':
+      return 'academic-cap';
+    default:
+      return 'newspaper';
+  }
+};
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'award':
-        return 'trophy';
-      case 'role':
-        return 'briefcase';
-      case 'conference':
-        return 'presentation';
-      case 'education':
-        return 'academic-cap';
-      case 'achievement':
-        return 'star';
-      default:
-        return 'newspaper';
-    }
-  };
+const getTypeColor = (type: NewsItem['type']) => {
+  switch (type) {
+    case 'award':
+      return 'brand-strong' as const;
+    case 'role':
+      return 'brand-medium' as const;
+    case 'conference':
+      return 'brand-weak' as const;
+    case 'achievement':
+      return 'brand-medium' as const;
+    case 'education':
+      return 'neutral-strong' as const;
+    default:
+      return 'neutral-strong' as const;
+  }
+};
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'award':
-        return 'brand-strong';
-      case 'role':
-        return 'success-strong';
-      case 'conference':
-        return 'warning-strong';
-      case 'education':
-        return 'info-strong';
-      case 'achievement':
-        return 'brand-strong';
-      default:
-        return 'neutral-strong';
-    }
-  };
-
-  const getTypeBackground = (type: string) => {
-    switch (type) {
-      case 'award':
-        return 'brand-alpha-weak';
-      case 'role':
-        return 'success-alpha-weak';
-      case 'conference':
-        return 'warning-alpha-weak';
-      case 'education':
-        return 'info-alpha-weak';
-      case 'achievement':
-        return 'brand-alpha-weak';
-      default:
-        return 'neutral-alpha-weak';
-    }
-  };
-
+export default function News() {
   return (
     <Column maxWidth="m" paddingTop="24">
       <Schema
@@ -88,95 +68,70 @@ export default function NewsPage() {
         image={`/api/og/generate?title=${encodeURIComponent(news.title)}`}
         author={{
           name: person.name,
-          url: `${baseURL}/about`,
+          url: `${baseURL}/news`,
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      
-      <Column fillWidth gap="32">
-        <Column gap="16">
-          <Heading variant="heading-strong-xl" marginBottom="8">
-            {news.title}
-          </Heading>
-          <Text variant="body-default-l" onBackground="neutral-weak">
-            {news.description}
-          </Text>
-        </Column>
-
-        <Line maxWidth="40" />
-
-        <Column fillWidth gap="24">
-          {sortedNews.map((item, index) => (
-            <Column
-              key={item.id}
-              fillWidth
-              gap="16"
-              paddingY="24"
-              paddingX="20"
-              background="neutral-alpha-weak"
-              radius="l"
-              border="neutral-alpha-medium"
-            >
-              <Row gap="12" align="center" wrap>
-                <Badge
-                  background={getTypeBackground(item.type)}
-                  onBackground={getTypeColor(item.type)}
-                  textVariant="label-default-s"
-                  paddingX="12"
-                  paddingY="8"
-                >
-                  <Row gap="8" align="center">
-                    <Icon name={getTypeIcon(item.type)} size="xs" />
-                    {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
-                  </Row>
-                </Badge>
-                <Text variant="label-default-s" onBackground="neutral-medium">
-                  {formatDate(item.date)}
-                </Text>
-                {item.featured && (
+      <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">
+        {news.title}
+      </Heading>
+      <Column fillWidth flex={1} gap="24">
+        {news.items.map((item) => (
+          <Card
+            key={item.id}
+            fillWidth
+            padding="20"
+            background="neutral-alpha-weak"
+            border="neutral-alpha-weak"
+            radius="l"
+          >
+            <Row gap="16" align="start">
+              <Icon 
+                name={getTypeIcon(item.type)} 
+                size="m" 
+                onBackground={getTypeColor(item.type)}
+              />
+              <Column flex={1} gap="12">
+                <Row gap="12" align="center" wrap>
                   <Badge
-                    background="brand-alpha-weak"
-                    onBackground="brand-strong"
-                    textVariant="label-default-xs"
-                    paddingX="8"
+                    background="neutral-alpha-weak"
+                    onBackground={getTypeColor(item.type)}
+                    textVariant="label-default-s"
+                    paddingX="12"
                     paddingY="4"
                   >
-                    Featured
+                    {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
                   </Badge>
-                )}
-              </Row>
-
-              <Column gap="12">
+                  <Text variant="label-default-s" onBackground="neutral-medium">
+                    {new Date(item.date).toLocaleDateString('en-US', { 
+                      month: 'long', 
+                      day: 'numeric',
+                      year: 'numeric'
+                    })}
+                  </Text>
+                </Row>
                 <Heading variant="heading-strong-s" wrap="balance">
                   {item.title}
                 </Heading>
                 <Text variant="body-default-m" onBackground="neutral-weak" wrap="balance">
                   {item.description}
                 </Text>
+                {item.link && (
+                  <Column marginTop="8">
+                    <Button
+                      variant="secondary"
+                      size="s"
+                      href={item.link}
+                      arrowIcon
+                    >
+                      Learn more
+                    </Button>
+                  </Column>
+                )}
               </Column>
-
-              {item.link && (
-                <Row>
-                  <a
-                    href={item.link}
-                    style={{
-                      color: 'var(--color-brand-strong)',
-                      textDecoration: 'none',
-                      fontSize: '0.875rem',
-                      fontWeight: '500',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.5rem',
-                    }}
-                  >
-                    Read more
-                    <Icon name="arrow-right" size="xs" />
-                  </a>
-                </Row>
-              )}
-            </Column>
-          ))}
-        </Column>
+            </Row>
+          </Card>
+        ))}
       </Column>
     </Column>
   );

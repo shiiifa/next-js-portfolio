@@ -227,21 +227,19 @@ export interface NewsItem {
   title: string;
   /** Brief description of the news item */
   description: string;
-  /** Date when the news item occurred */
+  /** Date when the news was published */
   date: string;
   /** Type of news item (award, role, conference, etc.) */
-  type: 'award' | 'role' | 'conference' | 'education' | 'achievement' | 'other';
+  type: 'award' | 'role' | 'conference' | 'achievement' | 'education' | 'other';
   /** Optional link to more details */
   link?: string;
   /** Optional image for the news item */
   image?: string;
-  /** Whether this news item should be featured on the homepage */
-  featured: boolean;
 }
 
 /**
  * News page configuration.
- * @description Configuration for the News page, including metadata and navigation label.
+ * @description Configuration for the News page, including metadata and news items.
  */
 export interface News extends BasePageConfig {
   /** List of news items */
