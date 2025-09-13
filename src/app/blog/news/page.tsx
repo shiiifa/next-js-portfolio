@@ -101,7 +101,7 @@ export default function News() {
                 </Text>
               </Row>
               <Heading as="h3" variant="heading-strong-m">
-                🎓 Stanford University PhD Admission
+                Stanford University PhD Admission
               </Heading>
               <Text variant="body-default-s" onBackground="neutral-medium">
                 Thrilled to share that I've been accepted to Stanford University's Computer Science PhD program with full funding! This is a dream come true and represents the next major step in my academic journey.
@@ -127,7 +127,7 @@ export default function News() {
                 </Text>
               </Row>
               <Heading as="h3" variant="heading-strong-m">
-                🏆 Technical Excellence Award
+                Technical Excellence Award
               </Heading>
               <Text variant="body-default-s" onBackground="neutral-medium">
                 Honored to receive the Computer Engineering Technical Excellence Award for my work on FPGA neural network acceleration research. This recognition validates the impact of my research.
@@ -153,7 +153,7 @@ export default function News() {
                 </Text>
               </Row>
               <Heading as="h3" variant="heading-strong-m">
-                🎤 IEEE Conference Presentation
+                IEEE Conference Presentation
               </Heading>
               <Text variant="body-default-s" onBackground="neutral-medium">
                 Presented my research findings at the IEEE Embedded Systems Conference on hardware acceleration strategies. The presentation covered my work on FPGA-based neural network inference.
@@ -179,7 +179,7 @@ export default function News() {
                 </Text>
               </Row>
               <Heading as="h3" variant="heading-strong-m">
-                📚 IEEE Transactions Publication
+                IEEE Transactions Publication
               </Heading>
               <Text variant="body-default-s" onBackground="neutral-medium">
                 Our paper on FPGA-based neural network acceleration has been published in IEEE Transactions. This publication represents a significant milestone in my research career.
@@ -205,7 +205,7 @@ export default function News() {
                 </Text>
               </Row>
               <Heading as="h3" variant="heading-strong-m">
-                🔬 New Research Position
+                New Research Position
               </Heading>
               <Text variant="body-default-s" onBackground="neutral-medium">
                 Excited to announce my new role as Research Assistant at Smart Technologies Lab, focusing on embedded machine learning solutions. This position allows me to continue pushing the boundaries of AI deployment.
