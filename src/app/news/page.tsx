@@ -123,9 +123,9 @@ export default function NewsPage() {
                   onBackground={getTypeColor(item.type)}
                   textVariant="label-default-s"
                   paddingX="12"
-                  paddingY="6"
+                  paddingY="8"
                 >
-                  <Row gap="6" align="center">
+                  <Row gap="8" align="center">
                     <Icon name={getTypeIcon(item.type)} size="xs" />
                     {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
                   </Row>
