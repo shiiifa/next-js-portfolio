@@ -211,6 +211,36 @@ export interface Blog extends BasePageConfig {}
 export interface Work extends BasePageConfig {}
 
 /**
+ * Accomplishment item configuration.
+ * @description Configuration for individual accomplishments/achievements.
+ */
+export interface Accomplishment {
+  /** Title of the accomplishment */
+  title: string;
+  /** Description of the accomplishment */
+  description: string;
+  /** Date of the accomplishment */
+  date: string;
+  /** Type of accomplishment (award, role, presentation, etc.) */
+  type: "award" | "role" | "presentation" | "admission" | "achievement";
+  /** Optional link to more details */
+  link?: string;
+}
+
+/**
+ * Accomplishments configuration.
+ * @description Configuration for the accomplishments section.
+ */
+export interface Accomplishments {
+  /** Whether to display accomplishments */
+  display: boolean;
+  /** Title for the accomplishments section */
+  title: string;
+  /** List of accomplishments */
+  items: Accomplishment[];
+}
+
+/**
  * Research page configuration.
  * @description Configuration for the Research page, including metadata and navigation label.
  */
