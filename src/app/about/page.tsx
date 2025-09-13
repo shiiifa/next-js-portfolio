@@ -45,7 +45,7 @@ export default function About() {
     },
   ];
   return (
-    <Column maxWidth="m">
+    <Column maxWidth="m" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -125,13 +125,12 @@ export default function About() {
               {person.name}
             </Heading>
             <Row
-              className={styles.blockAlign}
               paddingTop="20"
               paddingBottom="8"
               gap="8"
               horizontal="center"
-              fitWidth
-              align="center"
+              vertical="center"
+              fillWidth
             >
               <Button
                 href="/cv/Obed_Babington_CV.pdf"

@@ -100,7 +100,7 @@ export default function Projects() {
   ];
 
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -117,7 +117,7 @@ export default function Projects() {
       
       {/* Page Header */}
       <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="display-strong-l" align="center" style={{ textTransform: "uppercase", fontWeight: "900" }}>
+        <Heading marginBottom="l" variant="heading-strong-xl" align="center" style={{ textTransform: "uppercase", fontWeight: "900" }}>
           Project Catalogue
         </Heading>
       </Column>
