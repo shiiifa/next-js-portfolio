@@ -10,8 +10,8 @@ export {
   research,
   projects,
   beyondTheLab,
-  news,
   contact,
+  accomplishments,
 } from "./content";
 
 export { iconLibrary } from "./icons";

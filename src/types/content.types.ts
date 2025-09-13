@@ -217,36 +217,6 @@ export interface Work extends BasePageConfig {}
 export interface Research extends BasePageConfig {}
 
 /**
- * News item configuration.
- * @description Configuration for individual news items like accomplishments, awards, etc.
- */
-export interface NewsItem {
-  /** Unique identifier for the news item */
-  id: string;
-  /** Title of the news item */
-  title: string;
-  /** Brief description of the news item */
-  description: string;
-  /** Date when the news was published */
-  date: string;
-  /** Type of news item (award, role, conference, etc.) */
-  type: 'award' | 'role' | 'conference' | 'achievement' | 'education' | 'other';
-  /** Optional link to more details */
-  link?: string;
-  /** Optional image for the news item */
-  image?: string;
-}
-
-/**
- * News page configuration.
- * @description Configuration for the News page, including metadata and news items.
- */
-export interface News extends BasePageConfig {
-  /** List of news items */
-  items: NewsItem[];
-}
-
-/**
  * Contact page configuration.
  * @description Configuration for the Contact page, including metadata and navigation label.
  */
