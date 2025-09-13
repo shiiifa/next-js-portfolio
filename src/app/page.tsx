@@ -103,9 +103,11 @@ export default function Home() {
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
-      <RevealFx translateY="16" delay={0.8}>
-        <AccomplishmentsSlideshow accomplishments={accomplishments} />
-      </RevealFx>
+      {accomplishments.display && (
+        <RevealFx translateY="16" delay={0.8}>
+          <AccomplishmentsSlideshow accomplishments={accomplishments.items} />
+        </RevealFx>
+      )}
       {routes["/blog"] && (
         <Column fillWidth gap="24" marginBottom="l">
           <Row fillWidth paddingRight="64">
