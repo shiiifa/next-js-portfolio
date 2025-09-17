@@ -26,7 +26,7 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
       <svg className={styles.journeyPath} viewBox="0 0 200 400" preserveAspectRatio="none">
         <path
           d="M 20 50 Q 40 100 20 150 Q 0 200 20 250 Q 40 300 20 350"
-          stroke="white"
+          className={styles.journeyPathLine}
           strokeWidth="3"
           fill="none"
           strokeDasharray="8,4"
