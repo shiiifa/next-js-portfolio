@@ -17,6 +17,11 @@
   transform: translateX(-50%);
 }
 
+.journeyPathLine {
+  stroke: var(--neutral-strong);
+  transition: stroke 0.3s ease;
+}
+
 .experiencesContainer {
   position: relative;
   display: flex;

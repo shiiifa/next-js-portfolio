@@ -53,7 +53,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Obed, a research assistant at Ashesi University, blending ideas from hardware, software, and artificial intelligence to build future-ready systems.
+      Hi, I'm Obed, a research assistant at Ashesi University, blending ideas from hardware, software, and artificial intelligence to build future-ready systems.
     </>
   ),
 };
