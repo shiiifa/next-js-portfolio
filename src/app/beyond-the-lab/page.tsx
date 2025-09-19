@@ -24,6 +24,18 @@ export default function BeyondTheLab() {
         "Led club engineering projects, notably an automated parking system. Responsibilities included conducting Arduino C coding workshops, introducing participants to GitHub for collaborative project development, and fostering algorithmic problem-solving skills. Additionally, I authored project documentation and problem design outlines.",
         "Crafted a vibrant network of student researchers in engineering and computer science, leading to the production of five diverse research articles, and pioneering a research culture within the ARM E(3)NGAGE student club."
       ]
+    },
+    {
+      id: "ashesi-research-club-president",
+      title: "President, Ashesi Research Club",
+      date: "2023 - 2024",
+      category: "Leadership",
+      summary: "Served as the first active president of the Ashesi Research Club to expand students' understanding of the research landscape and build their research skills.",
+      description: "Served as the first active president of the Ashesi Research Club to expand students' understanding of the research landscape and build their research skills to provide groundbreaking insights for developing innovative, industry-leading solutions for the continent.",
+      achievements: [
+        "Under the auspices of the provost's office, I co-oversaw the curation of the first-ever campus-wide research festival under the theme, \"Exploring New Horizons\" to celebrate student scholarship and innovation and ignite their passions for research and the opportunities it offers.",
+        "Directed the development of workshops, championed research-driven projects, and supported student-led research proposals, resulting in enhanced academic engagement and increased research output on campus."
+      ]
     }
   ];
 
@@ -109,9 +121,6 @@ export default function BeyondTheLab() {
                     alignItems: "center",
                     justifyContent: "center"
                   }}>
-                    <Text variant="body-default-s" onBackground="neutral-weak" align="center">
-                      Image Coming Soon
-                    </Text>
                   </div>
                 )}
                 
@@ -142,9 +151,6 @@ export default function BeyondTheLab() {
                     alignItems: "center",
                     justifyContent: "center"
                   }}>
-                    <Text variant="body-default-s" onBackground="neutral-weak" align="center">
-                      Image Coming Soon
-                    </Text>
                   </div>
                 )}
               </Row>
