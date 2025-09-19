@@ -60,9 +60,6 @@ export default function BeyondTheLab() {
         <Heading marginBottom="l" variant="heading-strong-xl" align="center">
           Beyond The Lab
         </Heading>
-        <Text variant="body-default-l" align="center">
-          <strong>The Extras</strong>
-        </Text>
         <Text variant="body-default-l" align="center" marginTop="m">
           When I'm not tackling research or engineering projects, you will find me engaged in a plethora of other endeavors. Leadership, public speaking, community service, writing, ...you name it.
         </Text>
@@ -86,9 +83,6 @@ export default function BeyondTheLab() {
 
       {/* Leadership Section */}
       <Column paddingX="l" gap="xl">
-        <Heading variant="heading-strong-l" align="center" marginBottom="l">
-          Leadership
-        </Heading>
         
         {leadershipList.map((item, index) => {
           const isEven = index % 2 === 0;
