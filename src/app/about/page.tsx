@@ -134,6 +134,7 @@ export default function About() {
             >
               <Button
                 href="/cv/Obed_Babington_CV.pdf"
+                target="_blank"
                 prefixIcon="download"
                 label="Download CV"
                 size="m"
