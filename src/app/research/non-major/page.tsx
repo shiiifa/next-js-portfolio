@@ -50,6 +50,31 @@ export default function NonMajorResearch() {
 
   return (
     <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+          
+          @media (max-width: 768px) {
+            .grid-container {
+              grid-template-columns: 1fr !important;
+              gap: 1rem !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .grid-container {
+              padding: 0 1rem !important;
+            }
+          }
+        `
+      }} />
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -74,10 +99,14 @@ export default function NonMajorResearch() {
         </Text>
       </Column>
 
-      {/* Non-Major Research Projects */}
-      <Column paddingX="l" gap="xl">
+      {/* Non-Major Research Projects - Grid Layout */}
+      <div className="grid-container" style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+        gap: "1.5rem",
+        padding: "0 1.5rem"
+      }}>
         {projects.map((project, index) => {
-          const isEven = index % 2 === 0;
           // Use specific cover photos for projects that have them
           const getCoverImage = (projectId: string) => {
             switch (projectId) {
@@ -106,64 +135,46 @@ export default function NonMajorResearch() {
               style={{ 
                 cursor: "pointer",
                 transition: "all 0.3s ease",
-                textDecoration: "none"
+                textDecoration: "none",
+                display: "flex",
+                flexDirection: "column"
               }}
             >
-              <Row gap="0" vertical="stretch" s={{ direction: "column" }}>
-                {isEven && (
-                  <div style={{
-                    width: "300px",
-                    position: "relative",
-                    flexShrink: 0,
-                    alignSelf: "stretch"
-                  }}>
-                    <Image
-                      src={imagePath}
-                      alt={project.title}
-                      fill
-                      style={{
-                        objectFit: "cover"
-                      }}
-                    />
-                  </div>
-                )}
-                <Column padding="l" gap="m" flex={1}>
-                  <Heading variant="heading-strong-l">{project.title}</Heading>
-                  <Text variant="body-default-s" onBackground="neutral-weak">
-                    <strong>Date:</strong> {project.date}
-                  </Text>
-                  <Text variant="body-default-s" onBackground="neutral-weak">
-                    <strong>Location:</strong> {project.location}
-                  </Text>
-                  <Text variant="body-default-m" marginTop="m">
-                    {project.summary}
-                  </Text>
-                  <Text variant="body-default-s" onBackground="neutral-weak" marginTop="m" style={{ fontStyle: "italic" }}>
-                    Click to read more →
-                  </Text>
-                </Column>
-                {!isEven && (
-                  <div style={{
-                    width: "300px",
-                    position: "relative",
-                    flexShrink: 0,
-                    alignSelf: "stretch"
-                  }}>
-                    <Image
-                      src={imagePath}
-                      alt={project.title}
-                      fill
-                      style={{
-                        objectFit: "cover"
-                      }}
-                    />
-                  </div>
-                )}
-              </Row>
+              {/* Square Image */}
+              <div style={{ 
+                position: "relative",
+                width: "100%",
+                height: "250px",
+                backgroundColor: "#f5f5f5"
+              }}>
+                <Image
+                  src={imagePath}
+                  alt={project.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              
+              {/* Content below image */}
+              <Column gap="s" padding="l">
+                <Heading variant="heading-strong-m">{project.title}</Heading>
+                <Text variant="body-default-xs" onBackground="neutral-weak">
+                  <strong>Date:</strong> {project.date}
+                </Text>
+                <Text variant="body-default-xs" onBackground="neutral-weak">
+                  <strong>Location:</strong> {project.location}
+                </Text>
+                <Text variant="body-default-s" marginTop="s">
+                  {project.summary}
+                </Text>
+                <Text variant="body-default-xs" onBackground="neutral-weak" marginTop="s" style={{ fontStyle: "italic" }}>
+                  Click to read more →
+                </Text>
+              </Column>
             </Card>
           );
         })}
-      </Column>
+      </div>
     </Column>
   );
 }
