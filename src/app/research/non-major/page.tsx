@@ -112,7 +112,7 @@ export default function NonMajorResearch() {
               <Row gap="0" vertical="stretch" s={{ direction: "column" }}>
                 {isEven && (
                   <div style={{
-                    width: "200px",
+                    width: "300px",
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch"
@@ -144,7 +144,7 @@ export default function NonMajorResearch() {
                 </Column>
                 {!isEven && (
                   <div style={{
-                    width: "200px",
+                    width: "300px",
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch"
