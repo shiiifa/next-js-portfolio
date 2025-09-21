@@ -41,16 +41,10 @@ export default function AftgonosiaServiceLearning() {
         </Text>
       </Row>
 
-      {/* Page Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
+      {/* Project Info */}
+      <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
-          Community Service Project
-        </Text>
-        <Heading marginBottom="m" variant="heading-strong-xl" align="center">
-          Aftgonosia - Career Development Initiative
-        </Heading>
-        <Text variant="body-default-l" align="center" onBackground="neutral-weak">
-          2024
+          Community Service Project • 2024
         </Text>
       </Column>
 

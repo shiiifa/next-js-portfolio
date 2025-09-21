@@ -41,16 +41,10 @@ export default function AutomaticSpeechRecognitionAsanteTwi() {
         </Text>
       </Row>
 
-      {/* Page Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
+      {/* Project Info */}
+      <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
-          Deep Learning Project
-        </Text>
-        <Heading marginBottom="m" variant="heading-strong-xl" align="center">
-          Automatic Speech Recognition System for Asante Twi
-        </Heading>
-        <Text variant="body-default-l" align="center" onBackground="neutral-weak">
-          Nov 2024 - Dec 2024
+          Deep Learning Project • Nov 2024 - Dec 2024
         </Text>
       </Column>
 

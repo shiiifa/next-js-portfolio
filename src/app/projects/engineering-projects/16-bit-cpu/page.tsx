@@ -39,15 +39,9 @@ export default function SixteenBitCPU() {
         </Text>
       </Column>
 
-      <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-          16-bit CPU in Logism-Evolution
-        </Heading>
-        <Text variant="body-default-l" align="center" onBackground="neutral-weak">
-          <strong>Date:</strong> Mar 2024 - May 2024
-        </Text>
-        <Text variant="body-default-l" align="center" onBackground="neutral-weak">
-          <strong>Tools & Technologies:</strong> Logisim-Evolution, Digital Logic Design, Computer Architecture
+      <Column marginBottom="l" paddingX="l" align="center">
+        <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
+          Digital Logic Design • Mar 2024 - May 2024
         </Text>
       </Column>
 

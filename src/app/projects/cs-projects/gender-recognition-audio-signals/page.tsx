@@ -41,16 +41,10 @@ export default function GenderRecognitionAudioSignals() {
         </Text>
       </Row>
 
-      {/* Page Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
+      {/* Project Info */}
+      <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
-          Signals and Systems Project
-        </Text>
-        <Heading marginBottom="m" variant="heading-strong-xl" align="center">
-          Gender Recognition from Audio Signals
-        </Heading>
-        <Text variant="body-default-l" align="center" onBackground="neutral-weak">
-          Mar 2024 - Apr 2024
+          Signals and Systems Project • Mar 2024 - Apr 2024
         </Text>
       </Column>
 

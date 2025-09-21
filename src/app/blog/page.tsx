@@ -30,9 +30,9 @@ export default function Blog() {
         }}
       />
       <Column fillWidth flex={1} gap="40" align="center" style={{ minHeight: "60vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <Heading variant="heading-strong-xl" align="center">
+        <Text variant="body-default-l" align="center">
           Coming soon!
-        </Heading>
+        </Text>
       </Column>
     </Column>
   );

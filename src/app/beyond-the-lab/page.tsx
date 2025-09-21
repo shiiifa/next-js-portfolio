@@ -112,10 +112,7 @@ export default function BeyondTheLab() {
       />
 
       {/* Page Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-          Beyond The Lab
-        </Heading>
+      <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-l" align="center" marginTop="m">
           When I'm not tackling research or engineering projects, you will find me engaged in a plethora of other endeavors. Leadership, public speaking, community service, writing, ...you name it.
         </Text>

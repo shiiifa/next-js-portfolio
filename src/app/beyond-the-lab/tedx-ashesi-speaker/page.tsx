@@ -41,16 +41,10 @@ export default function TedxAshesiSpeaker() {
         </Text>
       </Row>
 
-      {/* Page Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
+      {/* Project Info */}
+      <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
-          Public Speaking
-        </Text>
-        <Heading marginBottom="m" variant="heading-strong-xl" align="center">
-          TEDx Ashesi University Speaker
-        </Heading>
-        <Text variant="body-default-l" align="center" onBackground="neutral-weak">
-          2022
+          Public Speaking • 2022
         </Text>
       </Column>
 
