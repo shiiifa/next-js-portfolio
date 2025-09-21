@@ -27,10 +27,10 @@ export const ProjectsDropdown = () => {
       <Fade
         hide={!isOpen}
         position="absolute"
-        top="100%"
         left="0"
         marginTop="8"
         zIndex={10}
+        style={{ top: "100%" }}
       >
         <Row
           background="page"
