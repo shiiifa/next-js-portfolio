@@ -8,10 +8,7 @@ export default function Contact() {
     <Column maxWidth="m" paddingTop="24">
       
       {/* Contact Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-          Contact
-        </Heading>
+      <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-l" align="center">
           I'm best reached via email and WhatsApp. Chime in with a message and let's connect.
         </Text>

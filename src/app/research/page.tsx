@@ -57,10 +57,7 @@ export default function Research() {
       />
       
       {/* Research Experiences Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-          Research Experiences
-        </Heading>
+      <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-l" align="center" style={{ fontStyle: "italic", fontSize: "1.1em", lineHeight: "1.6" }}>
           "We voluntarily articulate our ignorance and deliberately throw it into the world, reaching for a catch. 'We' are researchers and that is what we do."
         </Text>

@@ -92,10 +92,7 @@ export default function MajorResearch() {
       />
       
       {/* Major Research Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-          Major Research
-        </Heading>
+      <Column marginBottom="l" paddingX="l" align="center">
         <Row gap="l" vertical="center" align="center" maxWidth="l">
           <div
             style={{

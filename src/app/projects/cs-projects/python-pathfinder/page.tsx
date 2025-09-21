@@ -41,16 +41,10 @@ export default function PythonPathfinder() {
         </Text>
       </Row>
 
-      {/* Page Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
+      {/* Project Info */}
+      <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
-          Algorithm Implementation Project
-        </Text>
-        <Heading marginBottom="m" variant="heading-strong-xl" align="center">
-          Python Pathfinder
-        </Heading>
-        <Text variant="body-default-l" align="center" onBackground="neutral-weak">
-          Nov 2022
+          Algorithm Implementation Project • Nov 2022
         </Text>
       </Column>
 

@@ -90,10 +90,7 @@ export default function NonMajorResearch() {
       />
       
       {/* Non-Major Research Header */}
-      <Column marginBottom="xl" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-          Non-Major Research
-        </Heading>
+      <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-l" align="center">
           A mix of research experiences gathered through academic coursework and extra-curricular activity. While not tightly connected to my core research areas, I built some of my research foundations through them.
         </Text>

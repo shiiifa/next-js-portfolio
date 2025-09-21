@@ -101,12 +101,6 @@ export default function Projects() {
         }}
       />
       
-      {/* Page Header */}
-      <Column marginBottom="l" paddingX="l" align="center">
-        <Heading marginBottom="l" variant="heading-strong-xl" align="center" style={{ fontWeight: "900" }}>
-          Project Catalogue
-        </Heading>
-      </Column>
 
       {/* Alfred Whitehead Quote */}
       <Column paddingX="l" gap="xl" marginBottom="xl" align="center">
