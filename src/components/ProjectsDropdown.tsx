@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-import { Fade, Row, ToggleButton } from "@once-ui-system/core";
+import { Row, ToggleButton } from "@once-ui-system/core";
 
 import { projects } from "@/resources";
 
@@ -24,35 +24,41 @@ export const ProjectsDropdown = () => {
         label={projects.label}
         selected={pathname.startsWith("/projects")}
       />
-      <Fade
-        hide={!isOpen}
-        position="absolute"
-        left="0"
-        marginTop="8"
-        zIndex={10}
-        style={{ top: "100%" }}
-      >
-        <Row
-          background="page"
-          border="neutral-alpha-weak"
-          radius="m"
-          shadow="l"
-          padding="8"
-          vertical="center"
-          gap="4"
+      {isOpen && (
+        <div
+          style={{
+            position: "absolute",
+            top: "100%",
+            left: "0",
+            marginTop: "8px",
+            zIndex: 10,
+            opacity: 1,
+            transform: "translateY(0)",
+            transition: "all 0.2s ease-in-out"
+          }}
         >
-          <ToggleButton
-            href="/projects/engineering-projects"
-            label="Engineering Projects"
-            selected={pathname.startsWith("/projects/engineering-projects")}
-          />
-          <ToggleButton
-            href="/projects/cs-projects"
-            label="CS Projects"
-            selected={pathname.startsWith("/projects/cs-projects")}
-          />
-        </Row>
-      </Fade>
+          <Row
+            background="page"
+            border="neutral-alpha-weak"
+            radius="m"
+            shadow="l"
+            padding="8"
+            vertical="center"
+            gap="4"
+          >
+            <ToggleButton
+              href="/projects/engineering-projects"
+              label="Engineering Projects"
+              selected={pathname.startsWith("/projects/engineering-projects")}
+            />
+            <ToggleButton
+              href="/projects/cs-projects"
+              label="CS Projects"
+              selected={pathname.startsWith("/projects/cs-projects")}
+            />
+          </Row>
+        </div>
+      )}
     </Row>
   );
 };
