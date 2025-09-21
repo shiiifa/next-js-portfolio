@@ -40,6 +40,20 @@ export default function BeyondTheLab() {
       ]
     },
     {
+      id: "army-students-club-curator",
+      title: "Curating a Network of Student-Developed Research Articles (ARM-y Students' Club)",
+      date: "2023",
+      category: "Creative Management",
+      summary: "Led the curation and editing of student research articles for the ARM-y Students' Club, developing content management and editorial skills while supporting academic research dissemination.",
+      description: "As part of the ARM-y Students' Club, I took on the role of curating and managing a network of student-developed research articles. This project involved developing editorial skills, content management strategies, and supporting the academic research community within the university.",
+      achievements: [
+        "Reviewed and selected high-quality student research articles for publication, ensuring academic rigor and relevance.",
+        "Edited and refined articles to meet publication standards, developing strong editorial and content management skills.",
+        "Developed content strategies and presentation approaches to enhance research dissemination within the university community.",
+        "Fostered collaboration among student researchers, building a supportive academic network."
+      ]
+    },
+    {
       id: "ashesi-research-club-president",
       title: "President, Ashesi Research Club",
       date: "2023 - 2024",
@@ -137,6 +151,14 @@ export default function BeyondTheLab() {
                         style={{ objectFit: "cover" }}
                       />
                     )}
+                    {item.id === "army-students-club-curator" && (
+                      <Image
+                        src="/images/projects/arm-y.jpg"
+                        alt={item.title}
+                        fill
+                        style={{ objectFit: "cover" }}
+                      />
+                    )}
                   </div>
                 )}
                 
@@ -170,6 +192,14 @@ export default function BeyondTheLab() {
                     {item.id === "tedx-ashesi-speaker" && (
                       <Image
                         src="/images/beyond-the-lab/tedx-ashesi-cover.jpg"
+                        alt={item.title}
+                        fill
+                        style={{ objectFit: "cover" }}
+                      />
+                    )}
+                    {item.id === "army-students-club-curator" && (
+                      <Image
+                        src="/images/projects/arm-y.jpg"
                         alt={item.title}
                         fill
                         style={{ objectFit: "cover" }}
