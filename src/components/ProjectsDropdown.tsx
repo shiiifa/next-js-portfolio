@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-import { Row, ToggleButton } from "@once-ui-system/core";
+import { Row, Column, ToggleButton } from "@once-ui-system/core";
 
 import { projects } from "@/resources";
 
@@ -37,26 +37,25 @@ export const ProjectsDropdown = () => {
             transition: "all 0.2s ease-in-out"
           }}
         >
-          <Row
-            background="page"
-            border="neutral-alpha-weak"
-            radius="m"
-            shadow="l"
-            padding="8"
-            vertical="center"
-            gap="4"
-          >
-            <ToggleButton
-              href="/projects/engineering-projects"
-              label="Engineering Projects"
-              selected={pathname.startsWith("/projects/engineering-projects")}
-            />
-            <ToggleButton
-              href="/projects/cs-projects"
-              label="CS Projects"
-              selected={pathname.startsWith("/projects/cs-projects")}
-            />
-          </Row>
+        <Column
+          background="page"
+          border="neutral-alpha-weak"
+          radius="m"
+          shadow="l"
+          padding="8"
+          gap="4"
+        >
+          <ToggleButton
+            href="/projects/engineering-projects"
+            label="Engineering Projects"
+            selected={pathname.startsWith("/projects/engineering-projects")}
+          />
+          <ToggleButton
+            href="/projects/cs-projects"
+            label="CS Projects"
+            selected={pathname.startsWith("/projects/cs-projects")}
+          />
+        </Column>
         </div>
       )}
     </Row>
