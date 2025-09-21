@@ -5,10 +5,10 @@ import { baseURL, about, person, contact, iconLibrary } from "@/resources";
 
 export default function Contact() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ minHeight: "100vh", justifyContent: "center", alignItems: "center" }}>
       
       {/* Contact Header */}
-      <Column marginBottom="l" paddingX="l" align="center">
+      <Column marginBottom="xl" paddingX="l" align="center">
         <Text variant="body-default-l" align="center">
           I'm best reached via email and WhatsApp. Chime in with a message and let's connect.
         </Text>

@@ -130,24 +130,18 @@ export default function PythonPathfinder() {
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
             <Heading variant="heading-strong-l">Key Achievements</Heading>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Implemented A* search algorithm with g-scores and h-scores optimization
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Designed interactive grid-based interface in Pygame for dynamic obstacle placement
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Created visual demonstration of path exploration and selection algorithms
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Developed user interface for defining start/end nodes and placing obstacles
-              </li>
-            </ul>
+            <Text variant="body-default-m">
+              Being a freshman at the time, this project stretched not just my algorithmic thinking ability, but my ability to actualize it through code. I developed the mantra that you don't understand an algorithm well enough until you have to implement it in a game!
+            </Text>
+            <Text variant="body-default-m">
+              This project demonstrated the power of visual learning and interactive programming, showing how complex algorithms can be made accessible and engaging through thoughtful user interface design.
+            </Text>
+            <Text variant="body-default-m">
+              <strong>Link to Report:</strong>{" "}
+              <Text as="a" href="https://www.pdffiller.com/s/6E715pN9l" target="_blank" style={{ color: "var(--brand-medium)", textDecoration: "underline" }}>
+                https://www.pdffiller.com/s/6E715pN9l
+              </Text>
+            </Text>
           </Column>
         </Card>
 
@@ -157,25 +151,6 @@ export default function PythonPathfinder() {
             <Heading variant="heading-strong-l">Technologies & Report</Heading>
             <Text variant="body-default-m">
               <strong>Tools & Technologies:</strong> Python, Object-Oriented Programming, Data Structures
-            </Text>
-            <Text variant="body-default-m">
-              <strong>Project Report:</strong>{" "}
-              <Text as="a" href="https://www.pdffiller.com/s/6E715pN9l" target="_blank" style={{ color: "var(--brand-medium)", textDecoration: "underline" }}>
-                View Project Report
-              </Text>
-            </Text>
-          </Column>
-        </Card>
-
-        {/* Learning Outcomes */}
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Learning Outcomes</Heading>
-            <Text variant="body-default-m">
-              Being a freshman at the time, this project stretched not just my algorithmic thinking ability, but my ability to actualize it through code. I developed the mantra that you don't understand an algorithm well enough until you have to implement it in a game!
-            </Text>
-            <Text variant="body-default-m">
-              This project demonstrated the power of visual learning and interactive programming, showing how complex algorithms can be made accessible and engaging through thoughtful user interface design.
             </Text>
           </Column>
         </Card>
