@@ -14,6 +14,20 @@ export async function generateMetadata() {
 export default function BeyondTheLab() {
   const leadershipList = [
     {
+      id: "tedx-ashesi-speaker",
+      title: "TEDx Ashesi University Speaker",
+      date: "2022",
+      category: "Public Speaking",
+      summary: "Delivered a TEDx talk on quantum physics and the role of wandering in the realm of the unknown, exploring the importance of self-expression in society.",
+      description: "Quantum Physics has always intrigued Obed and the exploration of the world beyond what meets the eye is something he is extremely passionate about. As an Electrical/Electronic Engineering student of Ashesi University, he believes that when the suppression of the willful expression of the self leads to the degradation of society. He loves to use every opportunity he can get to create meaning in people's lives through self-expression.",
+      achievements: [
+        "Delivered an inspiring TEDx talk that explored the intersection of quantum physics and personal expression, demonstrating the power of curiosity and intellectual wandering.",
+        "Addressed a diverse audience about the importance of maintaining authentic self-expression in society and its impact on collective progress.",
+        "Contributed to the TEDx Ashesi University community by sharing insights on navigating the unknown and finding meaning through exploration."
+      ],
+      youtubeVideoId: "l7cPJzOKZcE"
+    },
+    {
       id: "arm-engage-leadership",
       title: "Research & Innovation Lead, Arm(E³)NGAGE Ashesi Student Club",
       date: "2023 - 2024",
@@ -115,6 +129,14 @@ export default function BeyondTheLab() {
                     alignItems: "center",
                     justifyContent: "center"
                   }}>
+                    {item.id === "tedx-ashesi-speaker" && (
+                      <Image
+                        src="/images/beyond-the-lab/tedx-ashesi-cover.jpg"
+                        alt={item.title}
+                        fill
+                        style={{ objectFit: "cover" }}
+                      />
+                    )}
                   </div>
                 )}
                 
@@ -145,6 +167,14 @@ export default function BeyondTheLab() {
                     alignItems: "center",
                     justifyContent: "center"
                   }}>
+                    {item.id === "tedx-ashesi-speaker" && (
+                      <Image
+                        src="/images/beyond-the-lab/tedx-ashesi-cover.jpg"
+                        alt={item.title}
+                        fill
+                        style={{ objectFit: "cover" }}
+                      />
+                    )}
                   </div>
                 )}
               </Row>
