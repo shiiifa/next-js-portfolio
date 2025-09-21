@@ -130,36 +130,14 @@ export default function MSmilesSTEMCurriculum() {
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
             <Heading variant="heading-strong-l">Key Achievements</Heading>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Designed the STEM curriculum for the Smiles Launch at Christ Faith Foster Home in Accra, Ghana
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Guided students through hands-on design challenges to introduce them to design thinking principles
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Facilitated interactive teaching sessions emphasizing curiosity, creativity, and problem-solving
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Strengthened skills in curriculum design, research, and facilitation while deepening commitment to STEM education as a tool for empowerment
-              </li>
-            </ul>
-          </Column>
-        </Card>
-
-        {/* Impact & Learning */}
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Impact & Learning</Heading>
             <Text variant="body-default-m">
-              This experience not only strengthened my skills in curriculum design, research, and facilitation, but also deepened my commitment to using STEM education as a tool for empowerment and social change.
+              As a STEM Curriculum Design Associate with Smiles, a non-profit dedicated to the holistic development of orphans, I contributed to creating and implementing an engaging, research-driven STEM curriculum tailored for orphaned children. My role involved researching relevant topics, structuring lesson plans, and iteratively testing and refining content to ensure accessibility and long-term retention.
             </Text>
             <Text variant="body-default-m">
-              Working with orphaned children provided unique insights into the transformative power of education and the importance of creating inclusive, engaging learning environments that inspire curiosity and build confidence in students from diverse backgrounds.
+              I also facilitated interactive teaching sessions that emphasized curiosity, creativity, and problem-solving. Notably, I designed the STEM curriculum for the Smiles Launch at Christ Faith Foster Home in Accra, Ghana, where I guided students through a hands-on design challenge to introduce them to design thinking.
+            </Text>
+            <Text variant="body-default-m">
+              This experience not only strengthened my skills in curriculum design, research, and facilitation, but also deepened my commitment to using STEM education as a tool for empowerment and social change.
             </Text>
           </Column>
         </Card>

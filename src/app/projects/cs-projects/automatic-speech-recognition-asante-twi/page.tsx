@@ -112,24 +112,18 @@ export default function AutomaticSpeechRecognitionAsanteTwi() {
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
             <Heading variant="heading-strong-l">Key Achievements</Heading>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Built a sequence-to-sequence LSTM-based encoder–decoder model from scratch using MFCC features
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Achieved strong baseline performance with CER of 0.0714 and WER of 0.20 on curated test samples
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Deployed the model on Hugging Face Spaces for public interaction and testing
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Demonstrated the feasibility of deep learning for low-resource languages like Asante Twi
-              </li>
-            </ul>
+            <Text variant="body-default-m">
+              On curated test samples, the model achieved a CER of 0.0714 and WER of 0.20, demonstrating strong baseline performance. However, when tested on more diverse, real-world audio, performance dropped significantly (CER ≈ 0.61, WER ≈ 0.85), highlighting the limitations of data scarcity and the need for broader, domain-general Twi speech corpora.
+            </Text>
+            <Text variant="body-default-m">
+              Despite these challenges, the project proved that low-resource languages like Asante Twi can be modeled with deep learning, setting a foundation for future improvements through larger datasets or transfer learning.
+            </Text>
+            <Text variant="body-default-m">
+              <strong>Deployed Model Link:</strong>{" "}
+              <Text as="a" href="https://huggingface.co/spaces/sedemkofi/twi-transcription" target="_blank" style={{ color: "var(--brand-medium)", textDecoration: "underline" }}>
+                https://huggingface.co/spaces/sedemkofi/twi-transcription
+              </Text>
+            </Text>
           </Column>
         </Card>
 

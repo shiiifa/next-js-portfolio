@@ -130,31 +130,15 @@ export default function AftgonosiaServiceLearning() {
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
             <Heading variant="heading-strong-l">Key Achievements</Heading>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Created a two-phased intervention model: self-discovery through personality assessments and career development alignment
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Partnered with two junior high schools to facilitate interactive workshops with self-assessment tools based on the OCEAN framework
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Conducted group discussions and one-on-one guidance sessions to support student career exploration
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Enabled students to present their findings in team presentations, fostering confidence in articulating personal strengths and aspirations
-              </li>
-            </ul>
-          </Column>
-        </Card>
-
-        {/* Personal Impact */}
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Personal Impact & Learning</Heading>
+            <Text variant="body-default-m">
+              As part of a service–learning initiative, my team and I designed and implemented a project aimed at addressing the career-related anxieties and identity challenges faced by Ghanaian adolescents. Grounded in Erik Erikson's theory of psychosocial development, we recognized adolescence as a pivotal stage where identity formation intersects with career decision-making, often creating stress and uncertainty.
+            </Text>
+            <Text variant="body-default-m">
+              This challenge is heightened by socioeconomic disparities: students from lower-income backgrounds frequently lack access to the resources and mentorship that foster informed career exploration. To bridge this gap, we created a two-phased intervention model: first, guiding students in self-discovery through personality assessments and reflective exercises; second, supporting them in career development, aligning their strengths and values with possible career trajectories.
+            </Text>
+            <Text variant="body-default-m">
+              We partnered with two junior high schools, where we facilitated interactive workshops that included self-assessment tools (based on the OCEAN framework), group discussions, and one-on-one guidance sessions. Students declared their findings in team presentations, fostering confidence in articulating personal strengths and aspirations.
+            </Text>
             <Text variant="body-default-m">
               My role combined facilitation and project design, drawing on my interest in human behavior to connect psychological insight with social impact. Collaborating with my peers, I also contributed to stakeholder management—coordinating with school administrators, adapting workshop materials to context, and collecting post-program feedback.
             </Text>

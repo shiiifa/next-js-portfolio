@@ -130,24 +130,18 @@ export default function GenderRecognitionAudioSignals() {
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
             <Heading variant="heading-strong-l">Key Achievements</Heading>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Implemented both threshold-based classifier (165 Hz cutoff) and MATLAB's pitch function for comparison
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Built interactive MATLAB App Designer GUI with audio upload, playback, and visualization
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Integrated modules for waveform visualization, FFT spectrum plotting, and real-time classification
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Demonstrated practical signal processing applications in speech recognition
-              </li>
-            </ul>
+            <Text variant="body-default-m">
+              The project not only deepened our collective grasp of signal processing in speech recognition, but also highlighted practical challenges such as sensitivity to pitch variations and background noise—sparking discussions on potential improvements like MFCC-based feature extraction or dataset-driven machine learning models.
+            </Text>
+            <Text variant="body-default-m">
+              This division of work allowed each team member to contribute across DSP implementation, GUI design, and testing, while reinforcing our understanding of concepts like filtering, sampling, and feature extraction.
+            </Text>
+            <Text variant="body-default-m">
+              <strong>Link to Report:</strong>{" "}
+              <Text as="a" href="https://www.pdffiller.com/s/t2Xg63DbB5" target="_blank" style={{ color: "var(--brand-medium)", textDecoration: "underline" }}>
+                https://www.pdffiller.com/s/t2Xg63DbB5
+              </Text>
+            </Text>
           </Column>
         </Card>
 
@@ -157,25 +151,6 @@ export default function GenderRecognitionAudioSignals() {
             <Heading variant="heading-strong-l">Technologies & Report</Heading>
             <Text variant="body-default-m">
               <strong>Tools & Technologies:</strong> MATLAB, App Designer, FFT, Butterworth Filter, Signal Processing, GUI Development
-            </Text>
-            <Text variant="body-default-m">
-              <strong>Project Report:</strong>{" "}
-              <Text as="a" href="https://www.pdffiller.com/s/t2Xg63DbB5" target="_blank" style={{ color: "var(--brand-medium)", textDecoration: "underline" }}>
-                View Project Report
-              </Text>
-            </Text>
-          </Column>
-        </Card>
-
-        {/* Learning Outcomes */}
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Learning Outcomes</Heading>
-            <Text variant="body-default-m">
-              The project not only deepened our collective grasp of signal processing in speech recognition, but also highlighted practical challenges such as sensitivity to pitch variations and background noise—sparking discussions on potential improvements like MFCC-based feature extraction or dataset-driven machine learning models.
-            </Text>
-            <Text variant="body-default-m">
-              This division of work allowed each team member to contribute across DSP implementation, GUI design, and testing, while reinforcing our understanding of concepts like filtering, sampling, and feature extraction.
             </Text>
           </Column>
         </Card>
