@@ -64,6 +64,34 @@ export default function BeyondTheLab() {
         "Under the auspices of the provost's office, I co-oversaw the curation of the first-ever campus-wide research festival under the theme, \"Exploring New Horizons\" to celebrate student scholarship and innovation and ignite their passions for research and the opportunities it offers.",
         "Directed the development of workshops, championed research-driven projects, and supported student-led research proposals, resulting in enhanced academic engagement and increased research output on campus."
       ]
+    },
+    {
+      id: "aftgonosia-service-learning",
+      title: "Aftgonosia - Career Development Initiative",
+      date: "2024",
+      category: "Community Service",
+      summary: "Designed and implemented a service-learning project addressing career-related anxieties and identity challenges faced by Ghanaian adolescents through self-discovery and career development workshops.",
+      description: "As part of a service–learning initiative, my team and I designed and implemented a project aimed at addressing the career-related anxieties and identity challenges faced by Ghanaian adolescents. Grounded in Erik Erikson's theory of psychosocial development, we recognized adolescence as a pivotal stage where identity formation intersects with career decision-making, often creating stress and uncertainty.",
+      achievements: [
+        "Created a two-phased intervention model: self-discovery through personality assessments and career development alignment",
+        "Partnered with two junior high schools to facilitate interactive workshops with self-assessment tools based on the OCEAN framework",
+        "Conducted group discussions and one-on-one guidance sessions to support student career exploration",
+        "Enabled students to present their findings in team presentations, fostering confidence in articulating personal strengths and aspirations"
+      ]
+    },
+    {
+      id: "msmiles-stem-curriculum",
+      title: "MSmiles - STEM Curriculum Design",
+      date: "2022",
+      category: "Education & Mentorship",
+      summary: "Contributed to creating and implementing an engaging, research-driven STEM curriculum tailored for orphaned children as a STEM Curriculum Design Associate with Smiles non-profit.",
+      description: "As a STEM Curriculum Design Associate with Smiles, a non-profit dedicated to the holistic development of orphans, I contributed to creating and implementing an engaging, research-driven STEM curriculum tailored for orphaned children. My role involved researching relevant topics, structuring lesson plans, and iteratively testing and refining content to ensure accessibility and long-term retention.",
+      achievements: [
+        "Designed the STEM curriculum for the Smiles Launch at Christ Faith Foster Home in Accra, Ghana",
+        "Guided students through hands-on design challenges to introduce them to design thinking principles",
+        "Facilitated interactive teaching sessions emphasizing curiosity, creativity, and problem-solving",
+        "Strengthened skills in curriculum design, research, and facilitation while deepening commitment to STEM education as a tool for empowerment"
+      ]
     }
   ];
 
@@ -164,6 +192,30 @@ export default function BeyondTheLab() {
               {item.id === "army-students-club-curator" && (
                 <Image
                   src="/images/projects/arm-y.jpg"
+                  alt={item.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              )}
+              {item.id === "aftgonosia-service-learning" && (
+                <Image
+                  src="/images/beyond-the-lab/aftgonosia.jpg"
+                  alt={item.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              )}
+              {item.id === "msmiles-stem-curriculum" && (
+                <Image
+                  src="/images/beyond-the-lab/msmiles.jpg"
+                  alt={item.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              )}
+              {!["tedx-ashesi-speaker", "army-students-club-curator", "aftgonosia-service-learning", "msmiles-stem-curriculum"].includes(item.id) && (
+                <Image
+                  src="/images/beyond-the-lab/default.jpg"
                   alt={item.title}
                   fill
                   style={{ objectFit: "cover" }}

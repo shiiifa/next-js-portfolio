@@ -148,8 +148,8 @@ export default function AutomaticSpeechRecognitionAsanteTwi() {
             </Text>
             <Text variant="body-default-m">
               <strong>Deployed Model:</strong>{" "}
-              <Text as="a" href="https://huggingface.co/spaces/sedemkofi/twi-transcription" target="_blank" style={{ color: "var(--brand-medium)", textDecoration: "none" }}>
-                https://huggingface.co/spaces/sedemkofi/twi-transcription
+              <Text as="a" href="https://huggingface.co/spaces/sedemkofi/twi-transcription" target="_blank" style={{ color: "var(--brand-medium)", textDecoration: "underline" }}>
+                Try the Live Demo on Hugging Face Spaces
               </Text>
             </Text>
           </Column>

@@ -30,6 +30,42 @@ export default function CSProjects() {
         url: "https://huggingface.co/spaces/sedemkofi/twi-transcription",
         text: "Deployed Model on Hugging Face"
       }
+    },
+    {
+      id: "gender-recognition-audio-signals",
+      title: "Gender Recognition from Audio Signals",
+      date: "Mar 2024 - Apr 2024",
+      technologies: "MATLAB, App Designer, FFT, Butterworth Filter, Signal Processing, GUI Development",
+      summary: "Developed a gender recognition system from audio signals using MATLAB and digital signal processing techniques, featuring interactive GUI and dual classification approaches.",
+      description: "As part of a team project in Signals and Systems, we developed a gender recognition system from audio signals using MATLAB and digital signal processing techniques. Together, we designed a pipeline that began with audio acquisition and filtering using a Butterworth filter, followed by feature extraction through FFT to isolate fundamental frequencies for classification.",
+      achievements: [
+        "Implemented both threshold-based classifier (165 Hz cutoff) and MATLAB's pitch function for comparison",
+        "Built interactive MATLAB App Designer GUI with audio upload, playback, and visualization",
+        "Integrated modules for waveform visualization, FFT spectrum plotting, and real-time classification",
+        "Demonstrated practical signal processing applications in speech recognition"
+      ],
+      link: {
+        url: "https://www.pdffiller.com/s/t2Xg63DbB5",
+        text: "View Project Report"
+      }
+    },
+    {
+      id: "python-pathfinder",
+      title: "Python Pathfinder",
+      date: "Nov 2022",
+      technologies: "Python, Object-Oriented Programming, Data Structures",
+      summary: "Co-developed Python PathFinder, a program that computes the shortest path between two points using the A* search algorithm with interactive Pygame visualization.",
+      description: "In a three-member team, I co-developed Python PathFinder, a program that computes the shortest path between two points while navigating obstacles. We implemented the A* search algorithm, combining g-scores (path cost) and h-scores (Manhattan distance heuristic), and optimized traversal using priority queues.",
+      achievements: [
+        "Implemented A* search algorithm with g-scores and h-scores optimization",
+        "Designed interactive grid-based interface in Pygame for dynamic obstacle placement",
+        "Created visual demonstration of path exploration and selection algorithms",
+        "Developed user interface for defining start/end nodes and placing obstacles"
+      ],
+      link: {
+        url: "https://www.pdffiller.com/s/6E715pN9l",
+        text: "View Project Report"
+      }
     }
   ];
 
@@ -100,7 +136,7 @@ export default function CSProjects() {
       {/* CS Projects - Grid Layout */}
       <div className="grid-container" style={{
         display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
+        gridTemplateColumns: "repeat(3, 1fr)",
         gap: "1.5rem",
         padding: "0 1.5rem"
       }}>
