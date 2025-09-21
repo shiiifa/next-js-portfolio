@@ -125,7 +125,7 @@ export default function BeyondTheLab() {
       {/* Leadership Section - Grid Layout */}
       <div className="grid-container" style={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+        gridTemplateColumns: "repeat(2, 1fr)",
         gap: "1.5rem",
         padding: "0 1.5rem"
       }}>
