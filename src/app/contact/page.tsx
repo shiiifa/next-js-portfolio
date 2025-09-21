@@ -5,7 +5,7 @@ import { baseURL, about, person, contact, iconLibrary } from "@/resources";
 
 export default function Contact() {
   return (
-    <Column maxWidth="m" paddingTop="24" style={{ minHeight: "100vh", justifyContent: "center", alignItems: "center" }}>
+    <Column maxWidth="m" paddingTop="24" style={{ minHeight: "100vh", justifyContent: "center", alignItems: "center", animation: "fadeIn 1s ease-out" }}>
       
       {/* Contact Header */}
       <Column marginBottom="xl" paddingX="l" align="center">
@@ -34,12 +34,12 @@ export default function Contact() {
                 boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)"
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "scale(1.1)";
+                e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
                 e.currentTarget.style.background = "var(--brand-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.15)";
+                e.currentTarget.style.boxShadow = "0 12px 40px rgba(0, 0, 0, 0.2)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
                 e.currentTarget.style.background = "var(--neutral-alpha-weak)";
                 e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.1)";
               }}
@@ -65,12 +65,12 @@ export default function Contact() {
                 boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)"
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "scale(1.1)";
+                e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
                 e.currentTarget.style.background = "var(--brand-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.15)";
+                e.currentTarget.style.boxShadow = "0 12px 40px rgba(0, 0, 0, 0.2)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
                 e.currentTarget.style.background = "var(--neutral-alpha-weak)";
                 e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.1)";
               }}
@@ -96,12 +96,12 @@ export default function Contact() {
                 boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)"
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "scale(1.1)";
+                e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
                 e.currentTarget.style.background = "var(--brand-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.15)";
+                e.currentTarget.style.boxShadow = "0 12px 40px rgba(0, 0, 0, 0.2)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
                 e.currentTarget.style.background = "var(--neutral-alpha-weak)";
                 e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.1)";
               }}
@@ -127,12 +127,12 @@ export default function Contact() {
                 boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)"
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "scale(1.1)";
+                e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
                 e.currentTarget.style.background = "var(--brand-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.15)";
+                e.currentTarget.style.boxShadow = "0 12px 40px rgba(0, 0, 0, 0.2)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
                 e.currentTarget.style.background = "var(--neutral-alpha-weak)";
                 e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.1)";
               }}
@@ -142,6 +142,19 @@ export default function Contact() {
           </SmartLink>
         </Row>
       </Column>
+
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+        `
+      }} />
     </Column>
   );
 }

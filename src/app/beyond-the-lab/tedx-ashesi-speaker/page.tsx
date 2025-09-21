@@ -91,27 +91,9 @@ export default function TedxAshesiSpeaker() {
         </Text>
 
         <Text variant="body-default-l">
-          As an Electrical/Electronic Engineering student of Ashesi University, I believe that when the suppression of the willful expression of the self leads to the degradation of society. I love to use every opportunity I can get to create meaning in people's lives through self-expression.
+          I believe that when the suppression of the willful expression of the self leads to the degradation of society. I love to use every opportunity I can get to create meaning in people's lives through self-expression.
         </Text>
 
-        {/* Achievements */}
-        <Column gap="m" marginTop="l">
-          <Heading variant="heading-strong-l">Key Highlights</Heading>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-              <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-              Delivered an inspiring TEDx talk that explored the intersection of quantum physics and personal expression, demonstrating the power of curiosity and intellectual wandering.
-            </li>
-            <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-              <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-              Addressed a diverse audience about the importance of maintaining authentic self-expression in society and its impact on collective progress.
-            </li>
-            <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-              <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-              Contributed to the TEDx Ashesi University community by sharing insights on navigating the unknown and finding meaning through exploration.
-            </li>
-          </ul>
-        </Column>
 
         {/* YouTube Video Embed */}
         <Column gap="m" marginTop="xl">
@@ -145,16 +127,6 @@ export default function TedxAshesiSpeaker() {
           </Text>
         </Column>
 
-        {/* TEDx Information */}
-        <Column gap="m" marginTop="l" padding="l" background="neutral-alpha-weak" radius="m">
-          <Heading variant="heading-strong-m">About TEDx</Heading>
-          <Text variant="body-default-m">
-            TEDx events are independently organized TED-like experiences that bring people together to share ideas worth spreading. Learn more at{" "}
-            <Text as="a" href="https://www.ted.com/tedx" target="_blank" style={{ color: "var(--brand-medium)", textDecoration: "none" }}>
-              https://www.ted.com/tedx
-            </Text>
-          </Text>
-        </Column>
       </Column>
 
       <style dangerouslySetInnerHTML={{

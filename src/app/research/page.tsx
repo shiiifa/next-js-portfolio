@@ -97,11 +97,8 @@ export default function Research() {
           </div>
           <Column gap="s" padding="l">
             <Heading variant="heading-strong-m">Major Research</Heading>
-            <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="s">
+            <Text variant="body-default-s" onBackground="neutral-weak">
               Research work closely aligned with my core research interests and carried out with a significant degree of faculty engagement.
-            </Text>
-            <Text variant="body-default-xs" onBackground="neutral-weak">
-              Core research interests with significant faculty engagement
             </Text>
           </Column>
         </Card>
@@ -132,11 +129,8 @@ export default function Research() {
           </div>
           <Column gap="s" padding="l">
             <Heading variant="heading-strong-m">Non-Major Research</Heading>
-            <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="s">
+            <Text variant="body-default-s" onBackground="neutral-weak">
               A mix of research experiences gathered through academic coursework and extra-curricular activity. While not tightly connected to my core research areas, I built some of my research foundations through them.
-            </Text>
-            <Text variant="body-default-xs" onBackground="neutral-weak">
-              Academic coursework and extra-curricular research experiences
             </Text>
           </Column>
         </Card>
