@@ -70,13 +70,6 @@ export default function Projects() {
       summary: "Collaborated in a team to design and build a 4-DOF robotic arm showcased at Ashesi University's Engineering Exhibition. Programmed the control system in C/C++ on Arduino, enabling independent motion through dual joysticks and a potentiometer-operated claw. Applied the engineering design cycle, from ideation and CAD modeling in SolidWorks to prototyping with 3D printing, laser-cutting, and circuit integration."
     },
     {
-      id: "mathematical-model-depression",
-      title: "Developing a Novel Mathematical Model for Depression",
-      date: "Nov 2023 - Dec 2023",
-      technologies: "Mathematical Modelling (MATLAB)",
-      summary: "Developed a novel mathematical model of depression using differential equations to explore how populations transition between depression, remission, and recovery, considering social and community factors."
-    },
-    {
       id: "traffic-flow-analysis",
       title: "Modelling & Analyzing the Traffic Flow Network of Ashesi University's Canteen with Linear Algebra",
       date: "2023",
@@ -240,7 +233,6 @@ export default function Projects() {
              'electronic-piano': '/images/projects/piano.jpeg',
              '4dof-robotic-arm': '/images/projects/roboarm.jpeg',
              'curating-student-research-articles': '/images/projects/arm-y.jpg',
-             'mathematical-model-depression': '/images/projects/predatorprey.png',
              'traffic-flow-analysis': '/images/projects/trafficflow.png',
              'calculus-data-collection': '/images/projects/calculusdriven.png'
            };
