@@ -257,7 +257,7 @@ export default function Projects() {
                 {/* Image on left for even cards, right for odd cards */}
                 {isEven && (
                   <div style={{ 
-                    width: "200px", 
+                    width: "300px", 
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch"
@@ -291,7 +291,7 @@ export default function Projects() {
                 {/* Image on right for odd cards */}
                 {!isEven && (
                   <div style={{ 
-                    width: "200px", 
+                    width: "300px", 
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch"

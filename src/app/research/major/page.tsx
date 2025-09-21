@@ -163,7 +163,7 @@ export default function MajorResearch() {
               <Row gap="0" vertical="stretch" s={{ direction: "column" }}>
                 {isEven && (
                   <div style={{
-                    width: "200px",
+                    width: "300px",
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch"
@@ -200,7 +200,7 @@ export default function MajorResearch() {
                 </Column>
                 {!isEven && (
                   <div style={{
-                    width: "200px",
+                    width: "300px",
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch"

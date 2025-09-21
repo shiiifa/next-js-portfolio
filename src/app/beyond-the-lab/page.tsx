@@ -106,6 +106,18 @@ export default function BeyondTheLab() {
               opacity: 1;
             }
           }
+          
+          @media (max-width: 768px) {
+            .card-image {
+              width: 250px !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .card-image {
+              width: 200px !important;
+            }
+          }
         `
       }} />
 
@@ -133,8 +145,8 @@ export default function BeyondTheLab() {
               <Row gap="0" vertical="stretch">
                 {/* Image on left for even cards, right for odd cards */}
                 {isEven && (
-                  <div style={{ 
-                    width: "200px", 
+                  <div className="card-image" style={{ 
+                    width: "300px", 
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch",
@@ -179,8 +191,8 @@ export default function BeyondTheLab() {
                 
                 {/* Image on right for odd cards */}
                 {!isEven && (
-                  <div style={{ 
-                    width: "200px", 
+                  <div className="card-image" style={{ 
+                    width: "300px", 
                     position: "relative",
                     flexShrink: 0,
                     alignSelf: "stretch",
