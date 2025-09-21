@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Obed",
   lastName: "Allotey Babington",
   name: `Obed Allotey Babington`,
-  role: "Design Engineer",
+  role: "Computer Engineering Student",
   avatar: "/images/obed_about.png",
   email: "obed.babington@ashesi.edu.gh",
 };
@@ -36,7 +36,7 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: "Obed Allotey Babington | Official Portfolio",
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  description: "Shaping digital and embedded systems for intelligence at the edge",
   headline: <>Shaping digital and embedded systems for intelligence at the edge</>,
   featured: {
     display: true,
