@@ -52,12 +52,14 @@ export default function NonMajorResearch() {
     <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <style dangerouslySetInnerHTML={{
         __html: `
-          @keyframes fadeIn {
+          @keyframes fadeInPop {
             0% {
               opacity: 0;
+              transform: scale(0.8);
             }
             100% {
               opacity: 1;
+              transform: scale(1);
             }
           }
           
@@ -91,7 +93,44 @@ export default function NonMajorResearch() {
       
       {/* Non-Major Research Header */}
       <Column marginBottom="l" paddingX="l" align="center">
-        <Text variant="body-default-l" align="center">
+        <Row gap="l" vertical="center" align="center" maxWidth="l">
+          <div
+            style={{
+              position: "relative",
+              animation: "fadeInPop 1.5s ease-out forwards",
+              opacity: 0,
+              flex: 1
+            }}
+          >
+            <Image
+              src="/images/research/non-major/kurtlewin.png"
+              alt="Kurt Lewin"
+              width={120}
+              height={120}
+              style={{
+                objectFit: "cover",
+                borderRadius: "50%",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
+              }}
+            />
+          </div>
+          <div
+            style={{
+              position: "relative",
+              animation: "fadeInPop 1.5s ease-out 0.3s forwards",
+              opacity: 0,
+              flex: 2
+            }}
+          >
+            <Text variant="body-default-m" align="center" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
+              "No research without action, no action without research."
+            </Text>
+            <Text variant="body-default-s" align="center" onBackground="neutral-weak" marginTop="s">
+              — Kurt Lewin, Founder of Social Psychology
+            </Text>
+          </div>
+        </Row>
+        <Text variant="body-default-l" align="center" marginTop="l">
           A mix of research experiences gathered through academic coursework and extra-curricular activity. While not tightly connected to my core research areas, I built some of my research foundations through them.
         </Text>
       </Column>
