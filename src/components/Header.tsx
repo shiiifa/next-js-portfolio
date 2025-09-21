@@ -8,6 +8,7 @@ import { routes, display, about, blog, research, projects, beyondTheLab, contact
 import { ThemeToggle } from "./ThemeToggle";
 import { ResearchDropdown } from "./ResearchDropdown";
 import { BlogDropdown } from "./BlogDropdown";
+import { ProjectsDropdown } from "./ProjectsDropdown";
 import styles from "./Header.module.scss";
 
 
@@ -94,17 +95,10 @@ export const Header = () => {
               {routes["/projects"] && (
                 <>
                   <Row s={{ hide: true }}>
-                    <ToggleButton
-                      href="/projects"
-                      label={projects.label}
-                      selected={pathname.startsWith("/projects")}
-                    />
+                    <ProjectsDropdown />
                   </Row>
                   <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      href="/projects"
-                      selected={pathname.startsWith("/projects")}
-                    />
+                    <ProjectsDropdown />
                   </Row>
                 </>
               )}

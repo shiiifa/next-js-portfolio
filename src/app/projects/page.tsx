@@ -231,79 +231,83 @@ export default function Projects() {
         </Row>
       </Column>
 
-      {/* All Projects - Grid Layout */}
+      {/* Project Categories - Grid Layout */}
       <div className="grid-container" style={{
         display: "grid",
         gridTemplateColumns: "repeat(2, 1fr)",
         gap: "1.5rem",
-        padding: "0 1.5rem"
+        padding: "0 1.5rem",
+        marginBottom: "2rem"
       }}>
-        {projectList.map((project, index) => {
-          // Map project images based on project ID
-          const imageMap = {
-            'morse-code-decoder': '/images/projects/morsecode.jpg',
-            'automated-robotic-vehicle': '/images/projects/robot.jpeg',
-            'tennis-scoreboard': '/images/projects/tennis.jpeg',
-            '16-bit-cpu': '/images/projects/logism.jpeg',
-            '32-bit-mips-processor': '/images/projects/mips.png',
-            'heartbeat-monitoring': '/images/projects/heartbeat.png',
-            'electronic-piano': '/images/projects/piano.jpeg',
-            '4dof-robotic-arm': '/images/projects/roboarm.jpeg',
-            'curating-student-research-articles': '/images/projects/arm-y.jpg',
-            'traffic-flow-analysis': '/images/projects/trafficflow.png',
-            'calculus-data-collection': '/images/projects/calculusdriven.png'
-          };
-          const imagePath = imageMap[project.id as keyof typeof imageMap] || '/images/projects/logism.jpeg';
-          
-          return (
-            <Card
-              key={index}
-              as="a"
-              href={`/projects/${project.id}`}
-              padding="0" 
-              radius="m" 
-              shadow="m"
-              style={{ 
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-                textDecoration: "none",
-                overflow: "hidden",
-                display: "flex",
-                flexDirection: "column"
-              }}
-            >
-              {/* Square Image */}
-              <div style={{ 
-                position: "relative",
-                width: "100%",
-                height: "250px",
-                backgroundColor: "#f5f5f5"
-              }}>
-                <Image
-                  src={imagePath}
-                  alt={project.title}
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              
-              {/* Content below image */}
-              <Column gap="s" padding="l">
-                <Heading variant="heading-strong-m">{project.title}</Heading>
-                <Text variant="body-default-xs" onBackground="neutral-weak">
-                  <strong>Date:</strong> {project.date}
-                </Text>
-                <Text variant="body-default-xs" onBackground="neutral-weak">
-                  <strong>Tools & Technologies:</strong> {project.technologies}
-                </Text>
-                <Text variant="body-default-s" marginTop="s">{project.summary}</Text>
-                <Text variant="body-default-xs" onBackground="neutral-weak" marginTop="s" style={{ fontStyle: "italic" }}>
-                  Click to read more →
-                </Text>
-              </Column>
-            </Card>
-          );
-        })}
+        {/* Engineering Projects Card */}
+        <Card
+          as="a"
+          href="/projects/engineering-projects"
+          padding="0"
+          radius="m"
+          shadow="m"
+          style={{ 
+            display: "flex",
+            flexDirection: "column",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            textDecoration: "none",
+            overflow: "hidden"
+          }}
+        >
+          <div style={{ position: "relative", width: "100%", height: "250px" }}>
+            <Image
+              src="/images/projects/roboarm.jpeg"
+              alt="Engineering Projects"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+          <Column gap="s" padding="l">
+            <Heading variant="heading-strong-m">Engineering Projects</Heading>
+            <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="s">
+              Hardware, embedded systems, and engineering projects showcasing practical applications of technology.
+            </Text>
+            <Text variant="body-default-xs" onBackground="neutral-weak">
+              Arduino, VHDL, FPGA, Hardware Design, Embedded Systems
+            </Text>
+          </Column>
+        </Card>
+
+        {/* CS Projects Card */}
+        <Card
+          as="a"
+          href="/projects/cs-projects"
+          padding="0"
+          radius="m"
+          shadow="m"
+          style={{ 
+            display: "flex",
+            flexDirection: "column",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            textDecoration: "none",
+            overflow: "hidden"
+          }}
+        >
+          <div style={{ position: "relative", width: "100%", height: "250px" }}>
+            <Image
+              src="/images/projects/speech-recognition.jpg"
+              alt="CS Projects"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+          <Column gap="s" padding="l">
+            <Heading variant="heading-strong-m">CS Projects</Heading>
+            <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="s">
+              Computer Science and Deep Learning projects exploring AI, machine learning, and natural language processing.
+            </Text>
+            <Text variant="body-default-xs" onBackground="neutral-weak">
+              Python, TensorFlow, Deep Learning, NLP, AI/ML
+            </Text>
+          </Column>
+        </Card>
       </div>
     </Column>
   );
