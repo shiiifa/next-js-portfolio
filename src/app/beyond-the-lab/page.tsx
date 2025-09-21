@@ -108,122 +108,86 @@ export default function BeyondTheLab() {
           }
           
           @media (max-width: 768px) {
-            .card-image {
-              width: 250px !important;
+            .grid-container {
+              grid-template-columns: 1fr !important;
+              gap: 1rem !important;
             }
           }
           
           @media (max-width: 480px) {
-            .card-image {
-              width: 200px !important;
+            .grid-container {
+              padding: 0 1rem !important;
             }
           }
         `
       }} />
 
-      {/* Leadership Section */}
-      <Column paddingX="l" gap="xl">
-        
-        {leadershipList.map((item, index) => {
-          const isEven = index % 2 === 0;
-          
-          return (
-            <Card
-              key={index}
-              as="a"
-              href={`/beyond-the-lab/${item.id}`}
-              padding="0" 
-              radius="m" 
-              shadow="m"
-              style={{ 
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-                textDecoration: "none",
-                overflow: "hidden"
-              }}
-            >
-              <Row gap="0" vertical="stretch">
-                {/* Image on left for even cards, right for odd cards */}
-                {isEven && (
-                  <div className="card-image" style={{ 
-                    width: "300px", 
-                    position: "relative",
-                    flexShrink: 0,
-                    alignSelf: "stretch",
-                    backgroundColor: "#f5f5f5",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center"
-                  }}>
-                    {item.id === "tedx-ashesi-speaker" && (
-                      <Image
-                        src="/images/beyond-the-lab/tedx-ashesi-cover.jpg"
-                        alt={item.title}
-                        fill
-                        style={{ objectFit: "cover" }}
-                      />
-                    )}
-                    {item.id === "army-students-club-curator" && (
-                      <Image
-                        src="/images/projects/arm-y.jpg"
-                        alt={item.title}
-                        fill
-                        style={{ objectFit: "cover" }}
-                      />
-                    )}
-                  </div>
-                )}
-                
-                {/* Content */}
-                <Column gap="m" padding="l" flex={1}>
-                  <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
-                    {item.category}
-                  </Text>
-                  <Heading variant="heading-strong-l">{item.title}</Heading>
-                  <Text variant="body-default-s" onBackground="neutral-weak">
-                    <strong>Duration:</strong> {item.date}
-                  </Text>
-                  <Text variant="body-default-m" marginTop="m">{item.summary}</Text>
-                  <Text variant="body-default-s" onBackground="neutral-weak" marginTop="m" style={{ fontStyle: "italic" }}>
-                    Click to read more →
-                  </Text>
-                </Column>
-                
-                {/* Image on right for odd cards */}
-                {!isEven && (
-                  <div className="card-image" style={{ 
-                    width: "300px", 
-                    position: "relative",
-                    flexShrink: 0,
-                    alignSelf: "stretch",
-                    backgroundColor: "#f5f5f5",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center"
-                  }}>
-                    {item.id === "tedx-ashesi-speaker" && (
-                      <Image
-                        src="/images/beyond-the-lab/tedx-ashesi-cover.jpg"
-                        alt={item.title}
-                        fill
-                        style={{ objectFit: "cover" }}
-                      />
-                    )}
-                    {item.id === "army-students-club-curator" && (
-                      <Image
-                        src="/images/projects/arm-y.jpg"
-                        alt={item.title}
-                        fill
-                        style={{ objectFit: "cover" }}
-                      />
-                    )}
-                  </div>
-                )}
-              </Row>
-            </Card>
-          );
-        })}
-      </Column>
+      {/* Leadership Section - Grid Layout */}
+      <div className="grid-container" style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+        gap: "1.5rem",
+        padding: "0 1.5rem"
+      }}>
+        {leadershipList.map((item, index) => (
+          <Card
+            key={index}
+            as="a"
+            href={`/beyond-the-lab/${item.id}`}
+            padding="0" 
+            radius="m" 
+            shadow="m"
+            style={{ 
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              textDecoration: "none",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column"
+            }}
+          >
+            {/* Square Image */}
+            <div style={{ 
+              position: "relative",
+              width: "100%",
+              height: "250px",
+              backgroundColor: "#f5f5f5"
+            }}>
+              {item.id === "tedx-ashesi-speaker" && (
+                <Image
+                  src="/images/beyond-the-lab/tedx-ashesi-cover.jpg"
+                  alt={item.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              )}
+              {item.id === "army-students-club-curator" && (
+                <Image
+                  src="/images/projects/arm-y.jpg"
+                  alt={item.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              )}
+            </div>
+            
+            {/* Content below image */}
+            <Column gap="s" padding="l">
+              <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
+                {item.category}
+              </Text>
+              <Heading variant="heading-strong-m">{item.title}</Heading>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                <strong>Duration:</strong> {item.date}
+              </Text>
+              <Text variant="body-default-s" marginTop="s">{item.summary}</Text>
+              <Text variant="body-default-xs" onBackground="neutral-weak" marginTop="s" style={{ fontStyle: "italic" }}>
+                Click to read more →
+              </Text>
+            </Column>
+          </Card>
+        ))}
+      </div>
     </Column>
   );
 }
