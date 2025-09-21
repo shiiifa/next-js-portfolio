@@ -70,13 +70,6 @@ export default function Projects() {
       summary: "Collaborated in a team to design and build a 4-DOF robotic arm showcased at Ashesi University's Engineering Exhibition. Programmed the control system in C/C++ on Arduino, enabling independent motion through dual joysticks and a potentiometer-operated claw. Applied the engineering design cycle, from ideation and CAD modeling in SolidWorks to prototyping with 3D printing, laser-cutting, and circuit integration."
     },
     {
-      id: "curating-student-research-articles",
-      title: "Curating a Network of Student-Developed Research Articles (ARM-y Students' Club)",
-      date: "2023",
-      technologies: "Creative Management, Article Editing",
-      summary: "Led the curation and editing of student research articles for the ARM-y Students' Club, developing content management and editorial skills while supporting academic research dissemination."
-    },
-    {
       id: "mathematical-model-depression",
       title: "Developing a Novel Mathematical Model for Depression",
       date: "Nov 2023 - Dec 2023",
