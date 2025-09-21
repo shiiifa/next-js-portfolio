@@ -165,9 +165,6 @@ export default function About() {
               <div className={styles.forkItem}>
                 <div className={styles.forkNode}></div>
                 <div className={styles.forkContent}>
-                  <Heading as="h2" id={about.intro.title} variant="display-strong-s" marginBottom="m">
-                    {about.intro.title}
-                  </Heading>
                   <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
                     {about.intro.description}
                   </Column>
