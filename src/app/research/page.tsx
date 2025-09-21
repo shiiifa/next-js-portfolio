@@ -27,6 +27,19 @@ export default function Research() {
               transform: scale(1);
             }
           }
+          
+          @media (max-width: 768px) {
+            .grid-container {
+              grid-template-columns: 1fr !important;
+              gap: 1rem !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .grid-container {
+              padding: 0 1rem !important;
+            }
+          }
         `
       }} />
       <Schema
@@ -53,8 +66,14 @@ export default function Research() {
         </Text>
       </Column>
 
-      {/* Research Cards - Stacked */}
-      <Column gap="l" paddingX="l" marginBottom="xl">
+      {/* Research Cards - Grid Layout */}
+      <div className="grid-container" style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gap: "1.5rem",
+        padding: "0 1.5rem",
+        marginBottom: "2rem"
+      }}>
         {/* Major Research Card */}
         <Card
           as="a"
@@ -62,16 +81,24 @@ export default function Research() {
           padding="0"
           radius="m"
           shadow="m"
+          style={{ 
+            display: "flex",
+            flexDirection: "column",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            textDecoration: "none",
+            overflow: "hidden"
+          }}
         >
-          <div style={{ position: "relative", width: "100%", height: "400px" }}>
+          <div style={{ position: "relative", width: "100%", height: "250px" }}>
             <Image
               src="/images/research/majorresearch3.png"
               alt="Major Research"
               fill
-              style={{ objectFit: "cover", borderRadius: "8px 8px 0 0" }}
+              style={{ objectFit: "cover" }}
             />
           </div>
-          <Column padding="l" gap="s">
+          <Column gap="s" padding="l">
             <Heading variant="heading-strong-m">Major Research</Heading>
             <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="s">
               Research work closely aligned with my core research interests and carried out with a significant degree of faculty engagement.
@@ -89,16 +116,24 @@ export default function Research() {
           padding="0"
           radius="m"
           shadow="m"
+          style={{ 
+            display: "flex",
+            flexDirection: "column",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            textDecoration: "none",
+            overflow: "hidden"
+          }}
         >
-          <div style={{ position: "relative", width: "100%", height: "400px" }}>
+          <div style={{ position: "relative", width: "100%", height: "250px" }}>
             <Image
               src="/images/research/nonmajor1.png"
               alt="Non-Major Research"
               fill
-              style={{ objectFit: "cover", borderRadius: "8px 8px 0 0" }}
+              style={{ objectFit: "cover" }}
             />
           </div>
-          <Column padding="l" gap="s">
+          <Column gap="s" padding="l">
             <Heading variant="heading-strong-m">Non-Major Research</Heading>
             <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="s">
               A mix of research experiences gathered through academic coursework and extra-curricular activity. While not tightly connected to my core research areas, I built some of my research foundations through them.
@@ -108,7 +143,7 @@ export default function Research() {
             </Text>
           </Column>
         </Card>
-      </Column>
+      </div>
     </Column>
   );
 }
