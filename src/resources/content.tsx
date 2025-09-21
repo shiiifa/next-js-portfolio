@@ -35,7 +35,7 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: "Obed Allotey Babington | Official Portfolio",
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Shaping digital and embedded systems for intelligence at the edge</>,
   featured: {
