@@ -114,7 +114,7 @@
 html, body {
   background:
     linear-gradient(180deg, rgba(16,185,129,0.18) 0%, rgba(5,7,13,0) 220px),
-    #03050a;
+    #000000;
 }
 
 @media (prefers-color-scheme: light) {
