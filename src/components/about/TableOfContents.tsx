@@ -38,7 +38,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
     <Column
       left="0"
       style={{
-        top: "58%",
+        top: "50%",
         transform: "translateY(-50%)",
         whiteSpace: "nowrap",
       }}
