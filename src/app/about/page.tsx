@@ -45,7 +45,7 @@ export default function About() {
     },
   ];
   return (
-    <Column maxWidth="m" className="fixed-header-spacing ai-gradient" style={{ animation: "fadeIn 1s ease-out" }}>
+    <Column maxWidth="m" className="fixed-header-spacing" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -78,14 +78,14 @@ export default function About() {
             position="sticky"
             top="64"
             s={{ position: "relative" }}
-            minWidth={192}
+            minWidth="160"
             paddingX="l"
             paddingBottom="xl"
             gap="m"
             flex={3}
             horizontal="center"
           >
-            <Avatar src={person.avatar} size="xl" style={{ width: 192, height: 192 }} />
+            <Avatar src={person.avatar} size="xl" />
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
