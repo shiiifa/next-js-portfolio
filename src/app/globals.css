@@ -15,7 +15,7 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url('/images/openslide.png');
+  background-image: url('/images/public/images/openslide.png');
   background-size: cover;
   background-position: 0% 50%;
   animation: heroSlide 18s linear infinite;
