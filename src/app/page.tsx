@@ -48,12 +48,12 @@ export default function Home() {
           <div className="hero-edge-fade" aria-hidden="true" />
           <div className="hero-foreground">
           <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
-            <Heading wrap="balance" variant="display-strong-l" style={{ fontWeight: 900 }}>
+            <Heading wrap="balance" variant="display-strong-l" style={{ fontWeight: 800 }}>
               {home.headline}
             </Heading>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl" style={{ fontWeight: 700 }}>
+            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl" style={{ fontWeight: 500 }}>
               {home.subline}
             </Text>
           </RevealFx>
