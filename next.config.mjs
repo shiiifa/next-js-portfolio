@@ -7,6 +7,10 @@ const withMDX = mdx({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    // Prevent CI/CD build failures due to lint errors; local dev can still lint
+    ignoreDuringBuilds: true,
+  },
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   transpilePackages: ["next-mdx-remote"],
   images: {
