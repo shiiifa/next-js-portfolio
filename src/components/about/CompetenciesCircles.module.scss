@@ -69,6 +69,10 @@
   transform: scale(1.8);
 }
 
+.toolsZoom {
+  transform: scale(2.2); /* extra zoom for tools video */
+}
+
 .hovered {
   transform: scale(1.1);
   box-shadow: 0 12px 48px rgba(var(--brand-strong-rgb), 0.4);

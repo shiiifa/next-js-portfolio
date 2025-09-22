@@ -28,6 +28,11 @@ const getCompetencyVideo = (title: string) => {
   return '/videos/vid1.mp4'; // Default fallback
 };
 
+const isToolsVideo = (title: string) => {
+  const t = title.toLowerCase();
+  return t.includes('tools') || t.includes('software');
+};
+
 export default function CompetenciesCircles({ competencies }: CompetenciesCirclesProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -53,7 +58,7 @@ export default function CompetenciesCircles({ competencies }: CompetenciesCircle
               {/* Circle with Video */}
               <div className={`${styles.competencyCircle} ${hoveredIndex === index ? styles.hovered : ''}`}>
                 <video
-                  className={styles.competencyVideo}
+                  className={`${styles.competencyVideo} ${isToolsVideo(competency.title) ? styles.toolsZoom : ''}`}
                   autoPlay
                   loop
                   muted
