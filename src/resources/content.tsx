@@ -206,8 +206,8 @@ const about: About = {
 
 const blog: Blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Blog - Obed Allotey Babington",
+  label: "Updates",
+  title: "Updates - Obed Allotey Babington",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
