@@ -97,7 +97,7 @@ export const Header = () => {
           </Row>
 
           {/* Right side - Empty for balance */}
-          <Row width="120px" />
+          <Row style={{ width: "120px" }} />
         </Row>
       </div>
     </>
