@@ -34,7 +34,7 @@ export const Header = () => {
           zIndex={10}
           fillWidth
           padding="12"
-          horizontal="space-between"
+          horizontal="between"
           background="page"
           border="neutral-alpha-weak"
         >
