@@ -42,7 +42,9 @@ export default function Home() {
         }}
       />
       <Column fillWidth horizontal="center" gap="m">
-        <Column maxWidth="s" horizontal="center" align="center">
+        <Column maxWidth="s" horizontal="center" align="center" style={{ position: "relative" }}>
+          {/* Sliding background image behind the main headline */}
+          <div className="hero-slider-bg" aria-hidden="true" />
           <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
