@@ -1,54 +1,105 @@
-/* :root {
-  /*
-  /* Example setup for custom colors */
-/* Generate at: https://once-ui.com/customize */
-/*
-  --scheme-brand-100: #08002f;
-  --scheme-brand-200:  #04025c;
-  --scheme-brand-300:  #1f398e;
-  --scheme-brand-400:  #3856ae;
-  --scheme-brand-500:  #5071cc;
-  --scheme-brand-600:  #6f94f1;
-  --scheme-brand-700:  #8db3ff;
-  --scheme-brand-800:  #b2dbff;
-  --scheme-brand-900:  #bfe8ff;
-  --scheme-brand-1000: #ccf6ff;
-  --scheme-brand-1100: #d2fcff;
-  --scheme-brand-1200: #d2fcff;
-  --scheme-brand-600-10: rgba(111,148,241,0.1);
-  --scheme-brand-600-30: rgba(111,148,241,0.3);
-  --scheme-brand-600-50: rgba(111,148,241,0.5);
+:root {
+  /* Carbon + Lime (Light) */
+  --scheme-brand-100: #0a0f1a;   /* deep anchor for gradient math */
+  --scheme-brand-200: #0f172a;
+  --scheme-brand-300: #132032;
+  --scheme-brand-400: #1a283d;
+  --scheme-brand-500: #263447;
+  --scheme-brand-600: #2f3e52;
+  --scheme-brand-700: #3b495e;
+  --scheme-brand-800: #eaffd1;   /* lime tint high */
+  --scheme-brand-900: #f3ffe6;
+  --scheme-brand-1000: #f8fff2;
+  --scheme-brand-1100: #ffffff;
+  --scheme-brand-1200: #ffffff;
+  --scheme-brand-600-10: rgba(47,62,82,0.10);
+  --scheme-brand-600-30: rgba(47,62,82,0.30);
+  --scheme-brand-600-50: rgba(47,62,82,0.50);
 
-  --scheme-accent-100:  #030b10;
-  --scheme-accent-200:  #0d181d;
-  --scheme-accent-300:  #364248;
-  --scheme-accent-400:  #505d64;
-  --scheme-accent-500:  #69777e;
-  --scheme-accent-600:  #8a989f;
-  --scheme-accent-700:  #a8b7bf;
-  --scheme-accent-800:  #c8d7df;
-  --scheme-accent-900:  #d5e4ec;
-  --scheme-accent-1000: #e2f1f9;
-  --scheme-accent-1100: #e9f8ff;
-  --scheme-accent-1200: #efffff;
-  --scheme-accent-600-10: rgba(138,152,159,0.1);
-  --scheme-accent-600-30: rgba(138,152,159,0.3);
-  --scheme-accent-600-50: rgba(138,152,159,0.5);
+  /* Lime accent scale */
+  --scheme-accent-100:  #0c1008;
+  --scheme-accent-200:  #15200c;
+  --scheme-accent-300:  #1f310d;
+  --scheme-accent-400:  #2b4a0c;
+  --scheme-accent-500:  #3f6c0d;
+  --scheme-accent-600:  #65a30d;  /* light primary */
+  --scheme-accent-700:  #84cc16;
+  --scheme-accent-800:  #a3e635;
+  --scheme-accent-900:  #d9f99d;
+  --scheme-accent-1000: #ecfccb;
+  --scheme-accent-1100: #f3fce1;
+  --scheme-accent-1200: #fbfff0;
+  --scheme-accent-600-10: rgba(101,163,13,0.10);
+  --scheme-accent-600-30: rgba(101,163,13,0.30);
+  --scheme-accent-600-50: rgba(101,163,13,0.50);
 
-  --scheme-neutral-100:  #020b10;
-  --scheme-neutral-200:  #0b181d;
-  --scheme-neutral-300:  #344248;
-  --scheme-neutral-400:  #4f5d64;
-  --scheme-neutral-500:  #68777e;
-  --scheme-neutral-600:  #89989f;
-  --scheme-neutral-700:  #a7b7be;
-  --scheme-neutral-800:  #c7d7df;
-  --scheme-neutral-900:  #d4e4ec;
-  --scheme-neutral-1000: #e1f2f9;
-  --scheme-neutral-1100: #e7f8ff;
-  --scheme-neutral-1200: #eeffff;
-  --scheme-neutral-600-10: rgba(137,152,159,0.1);
-  --scheme-neutral-600-30: rgba(137,152,159,0.3);
-  --scheme-neutral-600-50: rgba(137,152,159,0.5);
-  /*
-}*/
+  /* Neutral slate for light */
+  --scheme-neutral-100:  #0b1220;
+  --scheme-neutral-200:  #111827;
+  --scheme-neutral-300:  #1f2937;
+  --scheme-neutral-400:  #374151;
+  --scheme-neutral-500:  #4b5563;
+  --scheme-neutral-600:  #6b7280;
+  --scheme-neutral-700:  #9ca3af;
+  --scheme-neutral-800:  #e5e7eb;
+  --scheme-neutral-900:  #f3f4f6;
+  --scheme-neutral-1000: #f8fafc;
+  --scheme-neutral-1100: #fcfdfd;
+  --scheme-neutral-1200: #ffffff;
+  --scheme-neutral-600-10: rgba(107,114,128,0.10);
+  --scheme-neutral-600-30: rgba(107,114,128,0.30);
+  --scheme-neutral-600-50: rgba(107,114,128,0.50);
+}
+
+[data-theme="dark"] {
+  /* Carbon + Lime (Dark) */
+  --scheme-brand-100: #05070b;
+  --scheme-brand-200: #080b12;
+  --scheme-brand-300: #0b0f16;
+  --scheme-brand-400: #0b1220;
+  --scheme-brand-500: #0f172a;
+  --scheme-brand-600: #111827;
+  --scheme-brand-700: #1f2937;
+  --scheme-brand-800: #2b3543;
+  --scheme-brand-900: #364150;
+  --scheme-brand-1000: #455064;
+  --scheme-brand-1100: #556179;
+  --scheme-brand-1200: #647289;
+  --scheme-brand-600-10: rgba(20,184,166,0.10);
+  --scheme-brand-600-30: rgba(20,184,166,0.30);
+  --scheme-brand-600-50: rgba(20,184,166,0.50);
+
+  /* Lime primary pops on dark */
+  --scheme-accent-100:  #0a0c05;
+  --scheme-accent-200:  #0c1106;
+  --scheme-accent-300:  #0f1607;
+  --scheme-accent-400:  #101b08;
+  --scheme-accent-500:  #122209;
+  --scheme-accent-600:  #84cc16; /* dark primary */
+  --scheme-accent-700:  #a3e635;
+  --scheme-accent-800:  #bef264;
+  --scheme-accent-900:  #d9f99d;
+  --scheme-accent-1000: #ecfccb;
+  --scheme-accent-1100: #f3fce1;
+  --scheme-accent-1200: #fbfff0;
+  --scheme-accent-600-10: rgba(132,204,22,0.10);
+  --scheme-accent-600-30: rgba(132,204,22,0.30);
+  --scheme-accent-600-50: rgba(132,204,22,0.50);
+
+  /* Neutral graphite for dark */
+  --scheme-neutral-100:  #0b0b0f;
+  --scheme-neutral-200:  #0b0f16;
+  --scheme-neutral-300:  #0b1220;
+  --scheme-neutral-400:  #111827;
+  --scheme-neutral-500:  #1f2937;
+  --scheme-neutral-600:  #2b3543;
+  --scheme-neutral-700:  #3b4656;
+  --scheme-neutral-800:  #4b5563;
+  --scheme-neutral-900:  #9ca3af;
+  --scheme-neutral-1000: #d1d5db;
+  --scheme-neutral-1100: #e5e7eb;
+  --scheme-neutral-1200: #f3f4f6;
+  --scheme-neutral-600-10: rgba(75,85,99,0.10);
+  --scheme-neutral-600-30: rgba(75,85,99,0.30);
+  --scheme-neutral-600-50: rgba(75,85,99,0.50);
+}

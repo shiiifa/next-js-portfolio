@@ -76,9 +76,9 @@ const fonts: FontsConfig = {
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
   theme: "system", // dark | light | system
-  neutral: "gray", // sand | gray | slate | custom
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  neutral: "slate", // sand | gray | slate | custom
+  brand: "custom", // using custom "Carbon + Lime" (see custom.css)
+  accent: "custom", // using custom emerald/green accent (see custom.css)
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
@@ -109,14 +109,15 @@ const effects: EffectsConfig = {
     radius: 100,
   },
   gradient: {
-    display: false,
-    opacity: 100,
+    display: true,
+    opacity: 80,
     x: 50,
-    y: 60,
-    width: 100,
-    height: 50,
+    y: 20,
+    width: 120,
+    height: 60,
     tilt: 0,
-    colorStart: "accent-background-strong",
+    // soft lime glow fading into page background for Carbon + Lime
+    colorStart: "brand-background-strong",
     colorEnd: "page-background",
   },
   dots: {
