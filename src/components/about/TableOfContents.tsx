@@ -52,9 +52,10 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
         .filter((section) => section.display)
         .map((section, sectionIndex) => (
           <Column key={sectionIndex} gap="8">
+            {/* connector first, then node to look connected */}
             <div className={styles.tocItem} onClick={() => scrollTo(section.title, 80)}>
-              <div className={styles.tocNode} />
               <div className={styles.tocConnector} />
+              <div className={styles.tocNode} />
               <Text className={styles.hover}>{section.title}</Text>
             </div>
             {about.tableOfContent.subItems && (
@@ -65,8 +66,8 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
                     className={styles.tocSubItem}
                     onClick={() => scrollTo(item, 80)}
                   >
-                    <div className={styles.tocSubNode} />
                     <div className={styles.tocSubConnector} />
+                    <div className={styles.tocSubNode} />
                     <Text className={styles.hover}>{item}</Text>
                   </div>
                 ))}

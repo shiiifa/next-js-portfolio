@@ -96,7 +96,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, #3b82f6, #1e40af);
+    background: linear-gradient(to bottom, #10b981, #059669);
     border-radius: 1px;
     opacity: 0.9;
 }
@@ -117,24 +117,26 @@
     position: relative;
     width: 10px;
     height: 10px;
-    background: #3b82f6;
-    border: 2px solid #ffffff;
+    background: #10b981;
+    border: 2px solid rgba(255,255,255,0.9);
     border-radius: 50%;
-    box-shadow: 0 0 0 2px #3b82f6;
+    box-shadow: 0 0 0 2px rgba(16,185,129,0.9);
     flex-shrink: 0;
 }
 
 .tocSubNode {
     width: 8px;
     height: 8px;
-    box-shadow: 0 0 0 1.5px #3b82f6;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1.5px rgba(16,185,129,0.9);
 }
 
 .tocConnector,
 .tocSubConnector {
     position: relative;
     height: 2px;
-    background: #3b82f6;
+    background: linear-gradient(to right, #10b981, #059669);
     flex-shrink: 0;
 }
 
