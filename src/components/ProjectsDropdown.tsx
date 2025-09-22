@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-
-import { Row, Column, ToggleButton } from "@once-ui-system/core";
-
+import { Row, ToggleButton, Column, Text, SmartLink } from "@once-ui-system/core";
 import { projects } from "@/resources";
 
 export const ProjectsDropdown = () => {
@@ -12,52 +10,75 @@ export const ProjectsDropdown = () => {
   const pathname = usePathname() ?? "";
 
   return (
-    <Row
-      vertical="center"
-      gap="4"
+    <div
+      style={{ position: "relative" }}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
-      style={{ position: "relative" }}
     >
+      {/* Main Projects Button */}
       <ToggleButton
         href="/projects"
         label={projects.label}
         selected={pathname.startsWith("/projects")}
+        style={{ cursor: "pointer" }}
       />
+      
+      {/* Dropdown Menu */}
       {isOpen && (
         <div
           style={{
             position: "absolute",
             top: "100%",
             left: "0",
-            marginTop: "8px",
-            zIndex: 10,
-            opacity: 1,
-            transform: "translateY(0)",
-            transition: "all 0.2s ease-in-out"
+            background: "var(--page-background)",
+            border: "1px solid var(--neutral-alpha-weak)",
+            borderRadius: "8px",
+            boxShadow: "var(--shadow-l)",
+            zIndex: 1000,
+            minWidth: "200px",
+            marginTop: "4px",
           }}
         >
-        <Column
-          background="page"
-          border="neutral-alpha-weak"
-          radius="m"
-          shadow="l"
-          padding="8"
-          gap="4"
-        >
-          <ToggleButton
-            href="/projects/engineering-projects"
-            label="Engineering Projects"
-            selected={pathname.startsWith("/projects/engineering-projects")}
-          />
-          <ToggleButton
-            href="/projects/cs-projects"
-            label="CS Projects"
-            selected={pathname.startsWith("/projects/cs-projects")}
-          />
-        </Column>
+          <Column padding="s" gap="xs">
+            <SmartLink href="/projects/engineering-projects">
+              <div
+                style={{
+                  padding: "8px",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                  transition: "background-color 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "var(--neutral-alpha-weak)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                }}
+              >
+                <Text variant="body-default-s">Engineering Projects</Text>
+              </div>
+            </SmartLink>
+            <SmartLink href="/projects/cs-projects">
+              <div
+                style={{
+                  padding: "8px",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                  transition: "background-color 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "var(--neutral-alpha-weak)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                }}
+              >
+                <Text variant="body-default-s">CS Projects</Text>
+              </div>
+            </SmartLink>
+          </Column>
         </div>
       )}
-    </Row>
+    </div>
   );
 };
