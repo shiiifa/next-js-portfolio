@@ -42,7 +42,7 @@ export default function Home() {
         }}
       />
       <Column fillWidth horizontal="center" gap="m">
-        <Column maxWidth="s" horizontal="center" align="center" style={{ position: "relative" }}>
+        <Column maxWidth="s" horizontal="center" align="center" style={{ position: "relative", overflow: "hidden" }}>
           {/* Sliding background image behind the main headline */}
           <div className="hero-slider-bg" aria-hidden="true" />
           <div className="hero-edge-fade" aria-hidden="true" />
