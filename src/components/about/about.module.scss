@@ -96,7 +96,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, #10b981, #059669);
+    background: linear-gradient(to bottom, #3b82f6, #1e40af);
     border-radius: 1px;
     opacity: 0.9;
 }
@@ -117,26 +117,24 @@
     position: relative;
     width: 10px;
     height: 10px;
-    background: #10b981;
-    border: 2px solid rgba(255,255,255,0.9);
+    background: #3b82f6;
+    border: 2px solid #ffffff;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px rgba(16,185,129,0.9);
+    box-shadow: 0 0 0 2px #3b82f6;
     flex-shrink: 0;
 }
 
 .tocSubNode {
     width: 8px;
     height: 8px;
-    background: #10b981;
-    border-radius: 50%;
-    box-shadow: 0 0 0 1.5px rgba(16,185,129,0.9);
+    box-shadow: 0 0 0 1.5px #3b82f6;
 }
 
 .tocConnector,
 .tocSubConnector {
     position: relative;
     height: 2px;
-    background: linear-gradient(to right, #10b981, #059669);
+    background: #3b82f6;
     flex-shrink: 0;
 }
 
@@ -145,5 +143,5 @@
 
 .tocItem:hover .tocNode,
 .tocSubItem:hover .tocSubNode {
-    filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.6));
+    filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.6));
 }
