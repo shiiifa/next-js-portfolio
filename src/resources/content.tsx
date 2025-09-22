@@ -33,7 +33,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/api/og/generate?title=Obed Allotey Babington | Official Portfolio",
   label: "Home",
   title: "Obed Allotey Babington | Official Portfolio",
   description: "Shaping digital and embedded systems for intelligence at the edge",
