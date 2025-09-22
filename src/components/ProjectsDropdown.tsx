@@ -55,7 +55,7 @@ export const ProjectsDropdown = () => {
                   e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
-                <Text variant="body-default-s">Engineering Projects</Text>
+                <Text variant="body-default-s" style={{ textAlign: "center" }}>Engineering Projects</Text>
               </div>
             </SmartLink>
             <SmartLink href="/projects/cs-projects">
@@ -73,7 +73,7 @@ export const ProjectsDropdown = () => {
                   e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
-                <Text variant="body-default-s">CS Projects</Text>
+                <Text variant="body-default-s" style={{ textAlign: "center" }}>CS Projects</Text>
               </div>
             </SmartLink>
           </Column>
