@@ -12,20 +12,21 @@
 /* Sliding hero background behind the homepage headline */
 .hero-slider-bg {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  /* extend behind the fixed header spacing so it touches the header line */
+  top: -80px;
+  height: calc(100% + 80px);
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
   z-index: 0;
   pointer-events: none;
   background-image: url('/images/public/images/openslide.png');
-  /* Slight zoom to remove top gap and improve framing */
+  /* slight zoom for edge-to-edge coverage while panning */
   background-size: 140% auto;
   background-repeat: no-repeat;
-  /* Shift image upward a bit so it fills the visible top area */
+  /* start slightly higher to showcase faces better */
   background-position: 0% 40%;
-  /* Smooth, slow, back-and-forth pan */
+  /* slow, alternating pan */
   animation: heroSlide 50s ease-in-out infinite alternate;
   will-change: background-position;
 }
