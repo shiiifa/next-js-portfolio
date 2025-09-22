@@ -13,19 +13,20 @@
 .hero-slider-bg {
   position: absolute;
   /* extend behind the fixed header spacing so it touches the header line */
-  top: -80px;
-  height: calc(100% + 80px);
+  top: -120px;
+  height: calc(100% + 120px);
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
   z-index: 0;
   pointer-events: none;
   background-image: url('/images/public/images/openslide.png');
-  /* slight zoom for edge-to-edge coverage while panning */
-  background-size: 140% auto;
+  /* show the whole image without cropping */
+  background-size: contain;
   background-repeat: no-repeat;
-  /* start slightly higher to showcase faces better */
-  background-position: 0% 40%;
+  /* anchor to the top edge to remove any top gap */
+  background-position: 0% top;
+  background-color: #0b0f13; /* fills any side gaps gracefully */
   /* slow, alternating pan */
   animation: heroSlide 50s ease-in-out infinite alternate;
   will-change: background-position;
@@ -37,8 +38,8 @@
 }
 
 @keyframes heroSlide {
-  0% { background-position: 0% 40%; }
-  100% { background-position: 100% 40%; }
+  0% { background-position: 0% top; }
+  100% { background-position: 100% top; }
 }
 
 .fade-in {
