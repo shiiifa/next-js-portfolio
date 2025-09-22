@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Column, Row, Text, Heading } from "@once-ui-system/core";
+import { Column, Row, Text, Heading, Icon } from "@once-ui-system/core";
 import { about, iconLibrary } from "@/resources";
 import styles from "./WorkRoadmap.module.scss";
 
@@ -19,6 +19,7 @@ interface WorkRoadmapProps {
 
 export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   return (
     <div className={styles.roadmapContainer}>
@@ -47,7 +48,10 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
           >
             
             {/* Experience Card */}
-            <div className={`${styles.experienceCard} ${hoveredIndex === index ? styles.cardHovered : ''}`}>
+            <div 
+              className={`${styles.experienceCard} ${hoveredIndex === index ? styles.cardHovered : ''} ${expandedIndex === index ? styles.expanded : ''}`}
+              onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+            >
               <div className={styles.cardContent}>
                 <Row fillWidth horizontal="between" vertical="center" marginBottom="s">
                   <Heading variant="heading-strong-m">{experience.company}</Heading>
@@ -56,16 +60,32 @@ export default function WorkRoadmap({ experiences }: WorkRoadmapProps) {
                   </Text>
                 </Row>
                 
-                <Text 
-                  variant="body-default-s" 
-                  onBackground="brand-weak" 
+                <Row 
+                  fillWidth 
+                  horizontal="between" 
+                  vertical="center" 
                   marginBottom="m"
-                  className={styles.role}
+                  className={styles.roleContainer}
                 >
-                  {experience.role}
-                </Text>
+                  <Text 
+                    variant="heading-strong-s" 
+                    onBackground="brand-medium" 
+                    className={styles.role}
+                  >
+                    {experience.role}
+                  </Text>
+                  <Icon 
+                    name={expandedIndex === index ? "chevronUp" : "chevronDown"} 
+                    size="s"
+                    onBackground="neutral-medium"
+                    className={styles.expandIcon}
+                  />
+                </Row>
                 
-                <Column gap="s" className={styles.achievements}>
+                <Column 
+                  gap="s" 
+                  className={`${styles.achievements} ${expandedIndex === index ? styles.expanded : ''}`}
+                >
                   {experience.achievements.map((achievement, achievementIndex) => (
                     <Text
                       key={`${experience.company}-achievement-${achievementIndex}`}

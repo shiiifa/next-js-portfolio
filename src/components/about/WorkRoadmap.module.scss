@@ -68,11 +68,17 @@
   max-width: 600px;
   position: relative;
   z-index: 2;
+  cursor: pointer;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     border-color: var(--brand-alpha-medium);
+  }
+
+  &.expanded {
+    border-color: var(--brand-alpha-medium);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -86,23 +92,45 @@
   width: 100%;
 }
 
+.roleContainer {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--brand-alpha-weak);
+  }
+}
+
 .role {
-  font-weight: 500;
-  color: var(--brand-medium);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--brand-strong);
+  letter-spacing: 0.025em;
+}
+
+.expandIcon {
+  transition: transform 0.3s ease;
 }
 
 .achievements {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: all 0.4s ease;
   opacity: 0;
   transform: translateY(-1rem);
+  
+  &.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Remove hover-based expansion since we now use click */
 .experiencePoint:hover .achievements {
-  max-height: 500px;
-  opacity: 1;
-  transform: translateY(0);
+  /* Keep hover styles but don't expand */
 }
 
 .achievement {
