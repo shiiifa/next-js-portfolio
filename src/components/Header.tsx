@@ -34,18 +34,16 @@ export const Header = () => {
           zIndex={10}
           fillWidth
           padding="12"
-          horizontal="center"
+          horizontal="space-between"
           background="page"
           border="neutral-alpha-weak"
         >
+          {/* Left side - Home and Theme Toggle */}
           <Row 
             gap="8" 
             vertical="center" 
             textVariant="body-default-s" 
             suppressHydrationWarning
-            style={{ maxWidth: "1200px" }}
-            fillWidth
-            horizontal="center"
           >
             {routes["/"] && (
               <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
@@ -57,9 +55,16 @@ export const Header = () => {
                 <ThemeToggle />
               </>
             )}
-            
-            <Line background="neutral-alpha-medium" vert maxHeight="24" />
-            
+          </Row>
+
+          {/* Center - Main Navigation */}
+          <Row 
+            gap="8" 
+            vertical="center" 
+            textVariant="body-default-s" 
+            suppressHydrationWarning
+            horizontal="center"
+          >
             {routes["/about"] && (
               <ToggleButton
                 href="/about"
@@ -90,6 +95,9 @@ export const Header = () => {
               />
             )}
           </Row>
+
+          {/* Right side - Empty for balance */}
+          <Row width="120px" />
         </Row>
       </div>
     </>
