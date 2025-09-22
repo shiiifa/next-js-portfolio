@@ -26,7 +26,7 @@
   background-repeat: repeat-x;
   /* anchor to the top edge to remove any top gap */
   background-position: 0 top;
-  background-color: #0b0f13; /* fills any side gaps gracefully */
+  /* no background fill to avoid visible bands at edges */
   /* mask bottom edge to blend smoothly into page */
   -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
   mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
