@@ -47,6 +47,7 @@ export const ProjectsDropdown = () => {
                   borderRadius: "4px",
                   cursor: "pointer",
                   transition: "background-color 0.2s ease",
+                  textAlign: "center",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = "var(--neutral-alpha-weak)";
@@ -55,7 +56,7 @@ export const ProjectsDropdown = () => {
                   e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
-                <Text variant="body-default-s" style={{ textAlign: "center" }}>Engineering Projects</Text>
+                <Text variant="body-default-s">Engineering Projects</Text>
               </div>
             </SmartLink>
             <SmartLink href="/projects/cs-projects">
@@ -65,6 +66,7 @@ export const ProjectsDropdown = () => {
                   borderRadius: "4px",
                   cursor: "pointer",
                   transition: "background-color 0.2s ease",
+                  textAlign: "center",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = "var(--neutral-alpha-weak)";
@@ -73,7 +75,7 @@ export const ProjectsDropdown = () => {
                   e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
-                <Text variant="body-default-s" style={{ textAlign: "center" }}>CS Projects</Text>
+                <Text variant="body-default-s">CS Projects</Text>
               </div>
             </SmartLink>
           </Column>
