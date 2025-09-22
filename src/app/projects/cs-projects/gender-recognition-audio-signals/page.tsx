@@ -41,6 +41,11 @@ export default function GenderRecognitionAudioSignals() {
         </Text>
       </Row>
 
+      {/* Page Title */}
+      <Column marginBottom="l" paddingX="l" align="center">
+        <Heading variant="heading-strong-xl">Gender Recognition from Audio Signals</Heading>
+      </Column>
+
       {/* Project Info */}
       <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>

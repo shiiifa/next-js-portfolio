@@ -226,7 +226,7 @@ export default function Projects() {
       </Column>
 
       {/* Project Categories - Grid Layout */}
-      <div className="grid-container" style={{
+      <div className="grid-container mobile-grid" style={{
         display: "grid",
         gridTemplateColumns: "repeat(2, 1fr)",
         gap: "1.5rem",

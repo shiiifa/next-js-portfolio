@@ -41,6 +41,11 @@ export default function AftgonosiaServiceLearning() {
         </Text>
       </Row>
 
+      {/* Page Title */}
+      <Column marginBottom="l" paddingX="l" align="center">
+        <Heading variant="heading-strong-xl">Aftgonosia - Career Development Initiative</Heading>
+      </Column>
+
       {/* Project Info */}
       <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
@@ -79,74 +84,17 @@ export default function AftgonosiaServiceLearning() {
           This challenge is heightened by socioeconomic disparities: students from lower-income backgrounds frequently lack access to the resources and mentorship that foster informed career exploration. To bridge this gap, we created a two-phased intervention model: first, guiding students in self-discovery through personality assessments and reflective exercises; second, supporting them in career development, aligning their strengths and values with possible career trajectories.
         </Text>
 
-        {/* Project Approach */}
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Project Approach</Heading>
-            <Text variant="body-default-m">
-              <strong>Two-Phased Intervention Model:</strong> Created a structured approach combining self-discovery and career development phases to address identity formation and career decision-making challenges.
-            </Text>
-            <Text variant="body-default-m">
-              <strong>School Partnerships:</strong> Partnered with two junior high schools to facilitate interactive workshops and provide direct support to students.
-            </Text>
-            <Text variant="body-default-m">
-              <strong>Personality Assessment Integration:</strong> Incorporated self-assessment tools based on the OCEAN framework to help students understand their strengths and preferences.
-            </Text>
-            <Text variant="body-default-m">
-              <strong>Reflective Learning:</strong> Designed reflective exercises to help students connect their personal values and aspirations with potential career paths.
-            </Text>
-          </Column>
-        </Card>
+        <Text variant="body-default-l">
+          We partnered with two junior high schools, where we facilitated interactive workshops that included self-assessment tools (based on the OCEAN framework), group discussions, and one-on-one guidance sessions. Students declared their findings in team presentations, fostering confidence in articulating personal strengths and aspirations.
+        </Text>
 
-        {/* Workshop Implementation */}
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Workshop Implementation</Heading>
-            <Text variant="body-default-m">
-              The interactive workshops included comprehensive components:
-            </Text>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Self-assessment tools based on the OCEAN framework for personality evaluation
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Group discussions to explore career interests and aspirations collaboratively
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                One-on-one guidance sessions for personalized career exploration support
-              </li>
-              <li style={{ marginBottom: "1rem", paddingLeft: "1.5rem", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--brand-medium)", fontWeight: "bold" }}>•</span>
-                Team presentations where students declared their findings and aspirations
-              </li>
-            </ul>
-          </Column>
-        </Card>
+        <Text variant="body-default-l">
+          My role combined facilitation and project design, drawing on my interest in human behavior to connect psychological insight with social impact. Collaborating with my peers, I also contributed to stakeholder management—coordinating with school administrators, adapting workshop materials to context, and collecting post-program feedback.
+        </Text>
 
-        {/* Key Achievements */}
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Key Achievements</Heading>
-            <Text variant="body-default-m">
-              As part of a service–learning initiative, my team and I designed and implemented a project aimed at addressing the career-related anxieties and identity challenges faced by Ghanaian adolescents. Grounded in Erik Erikson's theory of psychosocial development, we recognized adolescence as a pivotal stage where identity formation intersects with career decision-making, often creating stress and uncertainty.
-            </Text>
-            <Text variant="body-default-m">
-              This challenge is heightened by socioeconomic disparities: students from lower-income backgrounds frequently lack access to the resources and mentorship that foster informed career exploration. To bridge this gap, we created a two-phased intervention model: first, guiding students in self-discovery through personality assessments and reflective exercises; second, supporting them in career development, aligning their strengths and values with possible career trajectories.
-            </Text>
-            <Text variant="body-default-m">
-              We partnered with two junior high schools, where we facilitated interactive workshops that included self-assessment tools (based on the OCEAN framework), group discussions, and one-on-one guidance sessions. Students declared their findings in team presentations, fostering confidence in articulating personal strengths and aspirations.
-            </Text>
-            <Text variant="body-default-m">
-              My role combined facilitation and project design, drawing on my interest in human behavior to connect psychological insight with social impact. Collaborating with my peers, I also contributed to stakeholder management—coordinating with school administrators, adapting workshop materials to context, and collecting post-program feedback.
-            </Text>
-            <Text variant="body-default-m">
-              Through this experience, I strengthened my skills in active listening, facilitation, and stakeholder engagement, while deepening my appreciation of how targeted interventions can empower young people to make more informed, fulfilling decisions about their futures.
-            </Text>
-          </Column>
-        </Card>
+        <Text variant="body-default-l">
+          Through this experience, I strengthened my skills in active listening, facilitation, and stakeholder engagement, while deepening my appreciation of how targeted interventions can empower young people to make more informed, fulfilling decisions about their futures.
+        </Text>
       </Column>
 
       <style dangerouslySetInnerHTML={{
