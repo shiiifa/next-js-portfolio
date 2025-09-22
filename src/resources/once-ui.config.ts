@@ -76,15 +76,15 @@ const fonts: FontsConfig = {
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
   theme: "system", // dark | light | system
-  neutral: "slate", // sand | gray | slate
-  brand: "green", // closest to Lime
-  accent: "emerald", // complementary green accent
-  solid: "contrast", // color | contrast
-  solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
-  surface: "translucent", // filled | translucent
-  transition: "all", // all | micro | macro
-  scaling: "100", // 90 | 95 | 100 | 105 | 110
+  neutral: "gray", // move away from blue-ish slate to neutral gray/black
+  brand: "green", // keep green brand
+  accent: "emerald",
+  solid: "contrast",
+  solidStyle: "flat",
+  border: "playful",
+  surface: "filled", // reduce translucency to get solid black feel
+  transition: "all",
+  scaling: "100",
 };
 
 const dataStyle: DataStyleConfig = {
@@ -109,22 +109,21 @@ const effects: EffectsConfig = {
     radius: 100,
   },
   gradient: {
-    display: true,
-    opacity: 80,
+    display: false, // disable blue/teal-ish header wash; stick to clean black
+    opacity: 0,
     x: 50,
     y: 20,
     width: 120,
     height: 60,
     tilt: 0,
-    // soft lime glow fading into page background for Carbon + Lime
-    colorStart: "brand-background-strong",
+    colorStart: "page-background",
     colorEnd: "page-background",
   },
   dots: {
-    display: true,
-    opacity: 40,
+    display: false,
+    opacity: 0,
     size: "2",
-    color: "brand-background-strong",
+    color: "neutral-background-strong",
   },
   grid: {
     display: false,

@@ -28,9 +28,9 @@
   background-position: 0 top;
   /* remove solid fill to avoid visible edge banding */
   background-color: transparent;
-  /* top and bottom fades for smoother blending */
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+  /* remove mask to avoid any dark band/box overlay */
+  -webkit-mask-image: none;
+  mask-image: none;
   /* slow, continuous horizontal scroll */
   animation: heroSlide 45s linear infinite;
   will-change: background-position;
@@ -142,8 +142,8 @@
     background-repeat: no-repeat, repeat-x;
     background-size: 100% 100%, auto 100%;
     background-position: 0 0, 0 top;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 88%, rgba(0,0,0,0) 100%);
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 88%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: none;
+            mask-image: none;
   }
   /* Light mode grid dots: use softer black instead of blue */
   .ai-gradient::after { display: none; }
