@@ -78,7 +78,7 @@ export default function About() {
             position="sticky"
             top="64"
             s={{ position: "relative" }}
-            minWidth="192"
+            minWidth="160"
             paddingX="l"
             paddingBottom="xl"
             gap="m"
