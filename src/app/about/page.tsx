@@ -71,12 +71,12 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Row fillWidth s={{ direction: "column" }} horizontal="center" vertical="center" style={{ minHeight: "60vh" }}>
+      <Row fillWidth s={{ direction: "column" }} horizontal="center" vertical="center" style={{ minHeight: "60vh", alignItems: "flex-start" }}>
         {about.avatar.display && (
           <Column
             className={styles.avatar}
             position="sticky"
-            top="64"
+            top="24"
             s={{ position: "relative" }}
             minWidth="160"
             paddingX="l"
@@ -85,7 +85,7 @@ export default function About() {
             flex={3}
             horizontal="center"
           >
-            <Avatar src={person.avatar} size="xl" />
+            <Avatar src={person.avatar} size="xl" radius="full" />
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
