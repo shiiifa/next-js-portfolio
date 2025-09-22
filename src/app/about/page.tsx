@@ -142,10 +142,12 @@ export default function About() {
                 variant="secondary"
                 style={{
                   transition: "all 0.3s ease",
-                  boxShadow: "0 0 0 rgba(0, 0, 0, 0)",
+                  boxShadow: "0 0 18px rgba(16,185,129,0.35), 0 0 36px rgba(16,185,129,0.25)",
+                  borderColor: "rgba(16,185,129,0.6)",
+                  color: "#eafff5",
                 }}
                 onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                  e.currentTarget.style.boxShadow = "0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3)";
+                  e.currentTarget.style.boxShadow = "0 0 20px rgba(16,185,129,0.55), 0 0 40px rgba(16,185,129,0.35)";
                   e.currentTarget.style.transform = "scale(1.05)";
                 }}
                 onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
