@@ -20,7 +20,7 @@
   width: 100vw;
   z-index: 0;
   pointer-events: none;
-  background-image: url('/images/public/images/openslide.png');
+  background-image: url('/images/public/images/hero/openslide.png');
   /* show the whole image without cropping and tile horizontally */
   background-size: auto 100%;
   background-repeat: repeat-x;
