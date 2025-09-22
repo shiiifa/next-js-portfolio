@@ -5,7 +5,7 @@ import { baseURL, about, person, contact, iconLibrary } from "@/resources";
 
 export default function Contact() {
   return (
-    <Column maxWidth="m" paddingTop="24" className="fixed-header-spacing" style={{ minHeight: "100vh", justifyContent: "center", alignItems: "center", animation: "fadeIn 1s ease-out" }}>
+    <Column maxWidth="m" className="fixed-header-spacing" style={{ minHeight: "calc(100vh - 120px)", justifyContent: "center", alignItems: "center", paddingTop: "60px", animation: "fadeIn 1s ease-out" }}>
       
       {/* Contact Header */}
       <Column marginBottom="xl" paddingX="l" align="center">

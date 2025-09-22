@@ -46,6 +46,7 @@ export default async function RootLayout({
       )}
     >
       <head>
+        <link rel="icon" href="/images/obed_about.png" type="image/png" />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
