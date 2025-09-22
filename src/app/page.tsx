@@ -27,7 +27,7 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center" className="mobile-padding fixed-header-spacing" style={{ animation: "fadeIn 1s ease-out" }}>
+    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center" className="mobile-padding fixed-header-spacing ai-gradient" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -42,7 +42,7 @@ export default function Home() {
         }}
       />
       <Column fillWidth horizontal="center" gap="m">
-        <Column maxWidth="s" horizontal="center" align="center" style={{ position: "relative", overflow: "hidden" }}>
+        <Column maxWidth="s" horizontal="center" align="center" style={{ position: "relative" }}>
           {/* Sliding background image behind the main headline */}
           <div className="hero-slider-bg" aria-hidden="true" />
           <div className="hero-edge-fade" aria-hidden="true" />

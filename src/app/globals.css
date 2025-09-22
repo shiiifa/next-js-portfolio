@@ -26,10 +26,15 @@
   background-repeat: repeat-x;
   /* anchor to the top edge to remove any top gap */
   background-position: 0 top;
-  /* no background fill to avoid visible bands at edges */
-  /* mask bottom edge to blend smoothly into page */
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  /* remove solid fill to avoid visible edge banding */
+  background-color: transparent;
+  /* smoother, longer bottom fade to blend into page */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  -webkit-mask-size: 100% 120%;
+  mask-size: 100% 120%;
+  -webkit-mask-position: top;
+  mask-position: top;
   /* slow, continuous horizontal scroll */
   animation: heroSlide 80s linear infinite;
   will-change: background-position;
