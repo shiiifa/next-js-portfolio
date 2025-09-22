@@ -78,14 +78,14 @@ export default function About() {
             position="sticky"
             top="64"
             s={{ position: "relative" }}
-            minWidth={176}
+            minWidth={192}
             paddingX="l"
             paddingBottom="xl"
             gap="m"
             flex={3}
             horizontal="center"
           >
-            <Avatar src={person.avatar} size="xl" style={{ width: 176, height: 176 }} />
+            <Avatar src={person.avatar} size="xl" style={{ width: 192, height: 192 }} />
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
