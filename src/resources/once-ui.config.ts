@@ -39,22 +39,22 @@ const protectedRoutes: ProtectedRoutesConfig = {
 };
 
 // Import and set font for each variant
-import { Manrope } from "next/font/google";
+import { Sora } from "next/font/google";
 import { JetBrains_Mono } from "next/font/google";
 
-const heading = Manrope({
+const heading = Sora({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
 });
 
-const body = Manrope({
+const body = Sora({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const label = Manrope({
+const label = Sora({
   variable: "--font-label",
   subsets: ["latin"],
   display: "swap",
