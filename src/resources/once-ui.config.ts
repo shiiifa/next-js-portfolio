@@ -76,9 +76,9 @@ const fonts: FontsConfig = {
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
   theme: "system", // dark | light | system
-  neutral: "slate", // sand | gray | slate | custom
-  brand: "custom", // using custom "Carbon + Lime" (see custom.css)
-  accent: "custom", // using custom emerald/green accent (see custom.css)
+  neutral: "slate", // sand | gray | slate
+  brand: "green", // closest to Lime
+  accent: "emerald", // complementary green accent
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
