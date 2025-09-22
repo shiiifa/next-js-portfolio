@@ -13,16 +13,17 @@
 .hero-slider-bg {
   position: absolute;
   inset: 0;
-  z-index: -1; /* ensure it sits behind the heading */
+  z-index: 0;
   pointer-events: none;
   background-image: url('/images/openslide.png');
   background-size: cover;
   background-position: 0% 50%;
-  opacity: 0.25;
-  filter: saturate(105%) contrast(105%) blur(0.5px);
-  mix-blend-mode: normal;
   animation: heroSlide 18s linear infinite;
-  border-radius: 16px;
+}
+
+.hero-foreground {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes heroSlide {
