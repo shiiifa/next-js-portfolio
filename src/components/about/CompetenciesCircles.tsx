@@ -19,13 +19,13 @@ interface CompetenciesCirclesProps {
 const getCompetencyVideo = (title: string) => {
   const titleLower = title.toLowerCase();
   if (titleLower.includes('hardware') || titleLower.includes('fpga') || titleLower.includes('embedded')) {
-    return '/videos/1.mp4'; // Hardware video
+    return '/videos/vid1.mp4'; // Hardware video (updated)
   } else if (titleLower.includes('programming') || titleLower.includes('code')) {
-    return '/videos/2.mp4'; // Programming video
+    return '/videos/vid2.mp4'; // Programming video (updated)
   } else if (titleLower.includes('tools') || titleLower.includes('software')) {
     return '/videos/3.mp4'; // Tools video
   }
-  return '/videos/1.mp4'; // Default fallback
+  return '/videos/vid1.mp4'; // Default fallback
 };
 
 export default function CompetenciesCircles({ competencies }: CompetenciesCirclesProps) {
