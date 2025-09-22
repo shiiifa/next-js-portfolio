@@ -75,7 +75,7 @@ export const MobileHeader = () => {
         >
           <Icon 
             name={isMenuOpen ? "close" : "menu"} 
-            size={24}
+            size="l"
             color="var(--text-on-page)"
           />
         </button>
