@@ -21,7 +21,8 @@ export const MobileHeader = () => {
     <>
       {/* Mobile Header */}
       <Row
-        position="sticky"
+        position="fixed"
+        top="0"
         as="header"
         zIndex={10}
         fillWidth
@@ -31,10 +32,6 @@ export const MobileHeader = () => {
         style={{
           boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
           backdropFilter: "blur(8px)",
-        }}
-        s={{
-          position: "fixed",
-          top: 0,
         }}
       >
         {/* Logo/Home Button */}

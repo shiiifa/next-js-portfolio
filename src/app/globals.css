@@ -13,6 +13,17 @@
   animation: fadeIn 1s ease-out;
 }
 
+/* Fixed header spacing */
+.fixed-header-spacing {
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .fixed-header-spacing {
+    padding-top: 80px;
+  }
+}
+
 /* Mobile-specific improvements */
 @media (max-width: 768px) {
   /* Better touch targets */
