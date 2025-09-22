@@ -20,10 +20,14 @@
   z-index: 0;
   pointer-events: none;
   background-image: url('/images/public/images/openslide.png');
-  background-size: cover;
+  /* Slight zoom to remove top gap and improve framing */
+  background-size: 140% auto;
   background-repeat: no-repeat;
-  background-position: 0% 50%;
-  animation: heroSlide 18s linear infinite;
+  /* Shift image upward a bit so it fills the visible top area */
+  background-position: 0% 40%;
+  /* Smooth, slow, back-and-forth pan */
+  animation: heroSlide 50s ease-in-out infinite alternate;
+  will-change: background-position;
 }
 
 .hero-foreground {
@@ -32,9 +36,8 @@
 }
 
 @keyframes heroSlide {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% { background-position: 0% 40%; }
+  100% { background-position: 100% 40%; }
 }
 
 .fade-in {
