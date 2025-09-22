@@ -41,6 +41,11 @@ export default function PythonPathfinder() {
         </Text>
       </Row>
 
+      {/* Page Title */}
+      <Column marginBottom="l" paddingX="l" align="center">
+        <Heading variant="heading-strong-xl">Python Pathfinder</Heading>
+      </Column>
+
       {/* Project Info */}
       <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>

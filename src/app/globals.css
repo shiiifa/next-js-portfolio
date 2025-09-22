@@ -12,3 +12,52 @@
 .fade-in {
   animation: fadeIn 1s ease-out;
 }
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Better touch targets */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improved text readability */
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Better spacing for mobile */
+  .mobile-padding {
+    padding: 16px;
+  }
+
+  /* Card improvements for mobile */
+  .mobile-card {
+    margin: 8px;
+    border-radius: 12px;
+  }
+
+  /* Grid improvements */
+  .mobile-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 16px !important;
+  }
+
+  /* Hide desktop-only elements */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* Show mobile-only elements */
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}

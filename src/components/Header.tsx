@@ -9,6 +9,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { ResearchDropdown } from "./ResearchDropdown";
 import { BlogDropdown } from "./BlogDropdown";
 import { ProjectsDropdown } from "./ProjectsDropdown";
+import { MobileHeader } from "./MobileHeader";
 import styles from "./Header.module.scss";
 
 
@@ -17,31 +18,38 @@ export const Header = () => {
 
   return (
     <>
-      <Fade s={{ hide: true }} fillWidth position="fixed" height="80" zIndex={9} />
-      <Fade
-        hide
-        s={{ hide: false }}
-        fillWidth
-        position="fixed"
-        bottom="0"
-        to="top"
-        height="80"
-        zIndex={9}
-      />
-      <Row
-        fitHeight
-        className={styles.position}
-        position="sticky"
-        as="header"
-        zIndex={9}
-        fillWidth
-        padding="8"
-        horizontal="center"
-        data-border="rounded"
-        s={{
-          position: "fixed",
-        }}
-      >
+      {/* Mobile Header */}
+      <div className="mobile-header">
+        <MobileHeader />
+      </div>
+
+      {/* Desktop Header */}
+      <div className="desktop-header">
+        <Fade s={{ hide: true }} fillWidth position="fixed" height="80" zIndex={9} />
+        <Fade
+          hide
+          s={{ hide: false }}
+          fillWidth
+          position="fixed"
+          bottom="0"
+          to="top"
+          height="80"
+          zIndex={9}
+        />
+        <Row
+          fitHeight
+          className={styles.position}
+          position="sticky"
+          as="header"
+          zIndex={9}
+          fillWidth
+          padding="8"
+          horizontal="center"
+          data-border="rounded"
+          s={{
+            position: "fixed",
+          }}
+        >
         <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
         </Row>
         <Row fillWidth horizontal="center">
@@ -160,6 +168,7 @@ export const Header = () => {
           </Flex>
         </Flex>
       </Row>
+      </div>
     </>
   );
 };

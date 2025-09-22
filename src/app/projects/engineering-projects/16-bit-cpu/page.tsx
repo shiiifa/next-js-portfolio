@@ -39,6 +39,11 @@ export default function SixteenBitCPU() {
         </Text>
       </Column>
 
+      {/* Page Title */}
+      <Column marginBottom="l" paddingX="l" align="center">
+        <Heading variant="heading-strong-xl">16-bit CPU in Logisim-Evolution</Heading>
+      </Column>
+
       <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
           Digital Logic Design • Mar 2024 - May 2024

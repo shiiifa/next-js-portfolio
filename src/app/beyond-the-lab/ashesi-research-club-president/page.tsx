@@ -1,26 +1,26 @@
-import { Column, Heading, Meta, Schema, Text, Row, Icon, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Row, Icon } from "@once-ui-system/core";
 import { baseURL, person } from "@/resources";
 import Image from "next/image";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: "MSmiles - STEM Curriculum Design - Obed Allotey Babington",
-    description: "Contributed to creating and implementing an engaging, research-driven STEM curriculum tailored for orphaned children as a STEM Curriculum Design Associate with Smiles non-profit.",
-    path: "/beyond-the-lab/msmiles-stem-curriculum",
+    title: "President, Ashesi Research Club - Obed Allotey Babington",
+    description: "Served as the first active president of the Ashesi Research Club to expand students' understanding of the research landscape and build their research skills.",
+    path: "/beyond-the-lab/ashesi-research-club-president",
     baseURL,
   });
 }
 
-export default function MSmilesSTEMCurriculum() {
+export default function AshesiResearchClubPresident() {
   return (
     <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
-        path="/beyond-the-lab/msmiles-stem-curriculum"
-        title="MSmiles - STEM Curriculum Design"
-        description="Contributed to creating and implementing an engaging, research-driven STEM curriculum tailored for orphaned children"
-        image={`/api/og/generate?title=${encodeURIComponent("MSmiles - STEM Curriculum Design")}`}
+        path="/beyond-the-lab/ashesi-research-club-president"
+        title="President, Ashesi Research Club"
+        description="Served as the first active president of the Ashesi Research Club to expand students' understanding of the research landscape"
+        image={`/api/og/generate?title=${encodeURIComponent("President, Ashesi Research Club")}`}
         author={{
           name: person.name,
           url: `${baseURL}/about`,
@@ -43,13 +43,13 @@ export default function MSmilesSTEMCurriculum() {
 
       {/* Page Title */}
       <Column marginBottom="l" paddingX="l" align="center">
-        <Heading variant="heading-strong-xl">MSmiles - STEM Curriculum Design</Heading>
+        <Heading variant="heading-strong-xl">President, Ashesi Research Club</Heading>
       </Column>
 
       {/* Project Info */}
       <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
-          Education & Mentorship • 2022
+          Leadership • 2023 - 2024
         </Text>
       </Column>
 
@@ -65,8 +65,8 @@ export default function MSmilesSTEMCurriculum() {
           boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
         }}>
           <Image
-            src="/images/beyond-the-lab/msmiles.jpg"
-            alt="MSmiles - STEM Curriculum Design"
+            src="/images/beyond-the-lab/default.jpg"
+            alt="President, Ashesi Research Club"
             fill
             style={{ objectFit: "cover" }}
             priority
@@ -77,11 +77,15 @@ export default function MSmilesSTEMCurriculum() {
       {/* Content */}
       <Column paddingX="l" gap="l">
         <Text variant="body-default-l">
-          As a STEM Curriculum Design Associate with Smiles, a non-profit dedicated to the holistic development of orphans, I contributed to creating and implementing an engaging, research-driven STEM curriculum tailored for orphaned children. My role involved researching relevant topics, structuring lesson plans, and iteratively testing and refining content to ensure accessibility and long-term retention. I also facilitated interactive teaching sessions that emphasized curiosity, creativity, and problem-solving.
+          Served as the first active president of the Ashesi Research Club to expand students' understanding of the research landscape and build their research skills to provide groundbreaking insights for developing innovative, industry-leading solutions for the continent.
         </Text>
 
         <Text variant="body-default-l">
-          Notably, I designed the STEM curriculum for the Smiles Launch at Christ Faith Foster Home in Accra, Ghana, where I guided students through a hands-on design challenge to introduce them to design thinking. This experience not only strengthened my skills in curriculum design, research, and facilitation, but also deepened my commitment to using STEM education as a tool for empowerment and social change.
+          Under the auspices of the provost's office, I co-oversaw the curation of the first-ever campus-wide research festival under the theme, "Exploring New Horizons" to celebrate student scholarship and innovation and ignite their passions for research and the opportunities it offers.
+        </Text>
+
+        <Text variant="body-default-l">
+          Directed the development of workshops, championed research-driven projects, and supported student-led research proposals, resulting in enhanced academic engagement and increased research output on campus.
         </Text>
       </Column>
 
