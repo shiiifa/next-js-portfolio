@@ -85,7 +85,7 @@ export default function About() {
             flex={3}
             horizontal="center"
           >
-            <Avatar src={person.avatar} size="xxl" />
+            <Avatar src={person.avatar} size="xl" />
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
