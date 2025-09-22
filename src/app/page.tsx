@@ -45,6 +45,7 @@ export default function Home() {
         <Column maxWidth="s" horizontal="center" align="center" style={{ position: "relative" }}>
           {/* Sliding background image behind the main headline */}
           <div className="hero-slider-bg" aria-hidden="true" />
+          <div className="hero-foreground">
           <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
@@ -78,6 +79,7 @@ export default function Home() {
               </Row>
             </Button>
           </RevealFx>
+          </div>
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
