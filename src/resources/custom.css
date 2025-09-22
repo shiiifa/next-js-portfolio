@@ -53,18 +53,19 @@
 
 [data-theme="dark"] {
   /* Carbon + Lime (Dark) */
-  --scheme-brand-100: #05070b;
-  --scheme-brand-200: #080b12;
-  --scheme-brand-300: #0b0f16;
-  --scheme-brand-400: #0b1220;
-  --scheme-brand-500: #0f172a;
-  --scheme-brand-600: #111827;
+  /* Darken brand blues toward near-black */
+  --scheme-brand-100: #000000;
+  --scheme-brand-200: #03050a;
+  --scheme-brand-300: #05070d;
+  --scheme-brand-400: #070a12;
+  --scheme-brand-500: #0a0f1a;
+  --scheme-brand-600: #0d1420;
   --scheme-brand-700: #1f2937;
-  --scheme-brand-800: #2b3543;
-  --scheme-brand-900: #364150;
-  --scheme-brand-1000: #455064;
-  --scheme-brand-1100: #556179;
-  --scheme-brand-1200: #647289;
+  --scheme-brand-800: #1b2431;
+  --scheme-brand-900: #202a37;
+  --scheme-brand-1000: #2a3443;
+  --scheme-brand-1100: #354052;
+  --scheme-brand-1200: #425065;
   --scheme-brand-600-10: rgba(20,184,166,0.10);
   --scheme-brand-600-30: rgba(20,184,166,0.30);
   --scheme-brand-600-50: rgba(20,184,166,0.50);
