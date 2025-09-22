@@ -42,7 +42,7 @@ export default function Home() {
         }}
       />
       <Column fillWidth horizontal="center" gap="m">
-        <Column maxWidth="s" horizontal="center" align="center" style={{ position: "relative" }}>
+        <Column maxWidth="s" horizontal="center" align="center" style={{ position: "relative", marginTop: "-16px" }}>
           {/* Sliding background image behind the main headline */}
           <div className="hero-slider-bg" aria-hidden="true" />
           <div className="hero-edge-fade" aria-hidden="true" />
@@ -57,7 +57,7 @@ export default function Home() {
               {home.subline}
             </Text>
           </RevealFx>
-          <RevealFx paddingTop="12" delay={0.4} horizontal="center" paddingLeft="12">
+          <RevealFx paddingTop="4" delay={0.4} horizontal="center" paddingLeft="12">
             <Button
               id="about"
               data-border="rounded"
@@ -66,6 +66,11 @@ export default function Home() {
               size="m"
               weight="default"
               arrowIcon
+              style={{
+                boxShadow: "0 0 18px rgba(16,185,129,0.35), 0 0 36px rgba(16,185,129,0.25)",
+                borderColor: "rgba(16,185,129,0.6)",
+                color: "#eafff5",
+              }}
             >
               <Row gap="8" vertical="center" paddingRight="4">
                 {about.avatar.display && (
