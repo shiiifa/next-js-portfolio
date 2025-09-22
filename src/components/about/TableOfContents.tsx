@@ -46,37 +46,29 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
       paddingLeft="24"
       gap="32"
       m={{ hide: true }}
+      className={styles.tocFork}
     >
       {structure
         .filter((section) => section.display)
         .map((section, sectionIndex) => (
-          <Column key={sectionIndex} gap="12">
-            <Flex
-              cursor="interactive"
-              className={styles.hover}
-              gap="8"
-              vertical="center"
-              onClick={() => scrollTo(section.title, 80)}
-            >
-              <Flex height="1" minWidth="16" background="neutral-strong"></Flex>
-              <Text>{section.title}</Text>
-            </Flex>
+          <Column key={sectionIndex} gap="8">
+            <div className={styles.tocItem} onClick={() => scrollTo(section.title, 80)}>
+              <div className={styles.tocNode} />
+              <div className={styles.tocConnector} />
+              <Text className={styles.hover}>{section.title}</Text>
+            </div>
             {about.tableOfContent.subItems && (
               <>
                 {section.items.map((item, itemIndex) => (
-                  <Flex
-                    l={{ hide: true }}
+                  <div
                     key={itemIndex}
-                    style={{ cursor: "pointer" }}
-                    className={styles.hover}
-                    gap="12"
-                    paddingLeft="24"
-                    vertical="center"
+                    className={styles.tocSubItem}
                     onClick={() => scrollTo(item, 80)}
                   >
-                    <Flex height="1" minWidth="8" background="neutral-strong"></Flex>
-                    <Text>{item}</Text>
-                  </Flex>
+                    <div className={styles.tocSubNode} />
+                    <div className={styles.tocSubConnector} />
+                    <Text className={styles.hover}>{item}</Text>
+                  </div>
                 ))}
               </>
             )}
