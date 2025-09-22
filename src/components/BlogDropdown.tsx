@@ -55,7 +55,7 @@ export const BlogDropdown = () => {
                   e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
-                <Text variant="body-default-s">Blog Posts</Text>
+                <Text variant="body-default-s" style={{ textAlign: "center" }}>Blog Posts</Text>
               </div>
             </SmartLink>
             <SmartLink href="/blog/news">
@@ -73,7 +73,7 @@ export const BlogDropdown = () => {
                   e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
-                <Text variant="body-default-s">News & Achievements</Text>
+                <Text variant="body-default-s" style={{ textAlign: "center" }}>News & Achievements</Text>
               </div>
             </SmartLink>
           </Column>

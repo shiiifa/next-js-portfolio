@@ -55,7 +55,7 @@ export const ResearchDropdown = () => {
                   e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
-                <Text variant="body-default-s">Major Research</Text>
+                <Text variant="body-default-s" style={{ textAlign: "center" }}>Major Research</Text>
               </div>
             </SmartLink>
             <SmartLink href="/research/non-major">
@@ -73,7 +73,7 @@ export const ResearchDropdown = () => {
                   e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
-                <Text variant="body-default-s">Non-Major Research</Text>
+                <Text variant="body-default-s" style={{ textAlign: "center" }}>Non-Major Research</Text>
               </div>
             </SmartLink>
           </Column>
