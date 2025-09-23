@@ -2,10 +2,9 @@
 
 import { usePathname } from "next/navigation";
 
-import { Line, Row, ToggleButton } from "@once-ui-system/core";
+import { Row, ToggleButton } from "@once-ui-system/core";
 
 import { routes, display, about, blog, research, projects, beyondTheLab, contact } from "@/resources";
-import { ThemeToggle } from "./ThemeToggle";
 import { ResearchDropdown } from "./ResearchDropdown";
 import { BlogDropdown } from "./BlogDropdown";
 import { ProjectsDropdown } from "./ProjectsDropdown";
@@ -38,7 +37,7 @@ export const Header = () => {
           background="page"
           border="neutral-alpha-weak"
         >
-          {/* Left side - Home and Theme Toggle */}
+          {/* Left side - Home */}
           <Row 
             gap="8" 
             vertical="center" 
@@ -49,12 +48,7 @@ export const Header = () => {
               <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
             )}
             
-            {display.themeSwitcher && (
-              <>
-                <Line background="neutral-alpha-medium" vert maxHeight="24" />
-                <ThemeToggle />
-              </>
-            )}
+            {/* Theme toggle removed for dark-only mode */}
           </Row>
 
           {/* Center - Main Navigation */}
