@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Column, Row, ToggleButton, Icon, Fade } from "@once-ui-system/core";
-import { routes, about, research, projects, beyondTheLab, blog, contact, display } from "@/resources";
-import { ThemeToggle } from "./ThemeToggle";
+import { routes, about, research, projects, beyondTheLab, blog, contact } from "@/resources";
 import { ResearchDropdown } from "./ResearchDropdown";
 import { BlogDropdown } from "./BlogDropdown";
 import { ProjectsDropdown } from "./ProjectsDropdown";
@@ -46,10 +45,7 @@ export const MobileHeader = () => {
         {/* Spacer */}
         <Row fillWidth />
 
-        {/* Theme Toggle */}
-        {routes["/"] && display.themeSwitcher && (
-          <ThemeToggle />
-        )}
+        {/* Theme toggle removed for dark-only mode */}
 
         {/* Hamburger Menu Button */}
         <button
