@@ -94,7 +94,7 @@ export default function About() {
             fillWidth
             minHeight="160"
             vertical="center"
-            marginBottom="32"
+            marginBottom="m"
           >
             {about.calendar.display && (
               <Row
@@ -160,7 +160,7 @@ export default function About() {
 
           {/* About content without fork visuals */}
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
+            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="m">
               {about.intro.description}
             </Column>
           )}
