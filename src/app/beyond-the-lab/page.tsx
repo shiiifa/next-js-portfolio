@@ -114,7 +114,7 @@ export default function BeyondTheLab() {
       {/* Page Header */}
       <Column marginBottom="l" paddingX="l" align="center">
         <Text variant="body-default-l" align="center" marginTop="m">
-          When I'm not tackling research or engineering projects, you will find me engaged in a plethora of other endeavors. Leadership, public speaking, community service, writing, you name it.
+          When I am not tackling research or engineering projects, you will find me engaged in a plethora of other endeavors. Leadership, public speaking, community service, writing, you name it.
         </Text>
         <Text variant="body-default-l" align="center" marginTop="m">
           Here lies a more holistic representation of my world. Take a dive.

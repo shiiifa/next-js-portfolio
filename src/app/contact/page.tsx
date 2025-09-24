@@ -10,7 +10,7 @@ export default function Contact() {
       {/* Contact Header */}
       <Column marginBottom="xl" paddingX="l" align="center">
         <Text variant="body-default-l" align="center">
-          I'm best reached via email and WhatsApp. Chime in with a message and let's connect.
+          I am best reached via email and WhatsApp. Chime in with a message and let us connect.
         </Text>
       </Column>
 

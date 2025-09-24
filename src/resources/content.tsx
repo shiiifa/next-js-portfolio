@@ -53,7 +53,7 @@ const home: Home = {
   },
   subline: (
     <>
-      Hi, I'm Obed, a research assistant at Ashesi University, blending ideas from hardware, software, and artificial intelligence to build future-ready systems.
+      Hi, I am Obed, a research assistant at Ashesi University, blending ideas from hardware, software, and artificial intelligence to build future-ready systems.
     </>
   ),
 };
@@ -79,7 +79,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        At my core, I'm marked by an intellectual curiosity, ambition, and a love for social connection.<br /><br />
+        At my core, I am marked by an intellectual curiosity, ambition, and a love for social connection.<br /><br />
         My current research interests lie in the development of embedded machine learning solutions for deploying AI models on edge devices. This includes the design and implementation of hardware acceleration strategies for neural network inference using FPGAs.
       </>
     ),

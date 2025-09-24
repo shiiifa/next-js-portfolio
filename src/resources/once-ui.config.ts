@@ -13,7 +13,7 @@ import {
 } from "@/types";
 import { home } from "./index";
 
-// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
+// IMPORTANT: Replace with your own domain address - it is used for SEO in meta tags and schema
 const baseURL: string = "https://obedbabington.vercel.app";
 
 const routes: RoutesConfig = {

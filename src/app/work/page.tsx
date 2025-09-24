@@ -35,7 +35,7 @@ export default function Work() {
           Engineering Projects
         </Heading>
         <Text marginBottom="m" variant="body-default-l">
-          If it's stressful, but fun; keeps you up all night, but extremely rewarding, then it's probably an engineering project. I'm excited to share projects I've worked on with practical applications in embedded systems, signals processing, and much more!
+          If it is stressful, but fun; keeps you up all night, but extremely rewarding, then it is probably an engineering project. I am excited to share projects I have worked on with practical applications in embedded systems, signals processing, and much more!
         </Text>
         <Text marginBottom="l" variant="body-default-m">
           <SmartLink href="#engineering-projects">Explore my engineering projects here!</SmartLink>
@@ -72,7 +72,7 @@ export default function Work() {
           Computer Science Projects
         </Heading>
         <Text marginBottom="m" variant="body-default-l">
-          I've always been pulled towards logical, and algorithmic type thinking. Low-level programming in C++, C, and recently, VHDL, coupled with scientific programming in Python or MATLAB, have been my avenues for exercising this interest.
+          I have always been pulled towards logical, and algorithmic type thinking. Low-level programming in C++, C, and recently, VHDL, coupled with scientific programming in Python or MATLAB, have been my avenues for exercising this interest.
         </Text>
         <Text marginBottom="l" variant="body-default-m">
           <SmartLink href="#computer-science-projects">Explore my computer science projects here!</SmartLink>
