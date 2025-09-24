@@ -59,18 +59,6 @@ export default function About() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      {about.tableOfContent.display && (
-        <Column
-          left="0"
-          style={{ top: "50%", transform: "translateY(-50%)" }}
-          position="fixed"
-          paddingLeft="24"
-          gap="32"
-          s={{ hide: true }}
-        >
-          <TableOfContents structure={structure} about={about} />
-        </Column>
-      )}
       <Row fillWidth s={{ direction: "column" }} horizontal="center" vertical="center" style={{ minHeight: "60vh", alignItems: "flex-start" }}>
         {about.avatar.display && (
           <Column
@@ -86,6 +74,15 @@ export default function About() {
             horizontal="center"
           >
             <Avatar src={person.avatar} size="xl" radius="full" />
+            {about.tableOfContent.display && (
+              <Column
+                gap="32"
+                s={{ hide: true }}
+                style={{ marginTop: "2rem" }}
+              >
+                <TableOfContents structure={structure} about={about} />
+              </Column>
+            )}
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
@@ -94,7 +91,7 @@ export default function About() {
             fillWidth
             minHeight="160"
             vertical="center"
-            marginBottom="m"
+            marginBottom="32"
           >
             {about.calendar.display && (
               <Row
@@ -160,7 +157,7 @@ export default function About() {
 
           {/* About content without fork visuals */}
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="m">
+            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
               {about.intro.description}
             </Column>
           )}
