@@ -58,9 +58,9 @@ export default function ArmyStudentsClubCurator() {
       <Column marginBottom="xl" align="center">
         <div style={{ 
           position: "relative", 
-          width: "100%", 
-          maxWidth: "600px", 
+          width: "min(100%, 720px)",
           height: "400px",
+          margin: "0 auto",
           borderRadius: "12px",
           overflow: "hidden",
           boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"

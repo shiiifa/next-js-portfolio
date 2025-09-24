@@ -97,24 +97,25 @@ export default function MajorResearch() {
       
       {/* Major Research Header */}
       <Column marginBottom="l" paddingX="l" align="center">
-        <Row gap="m" vertical="center" align="center" maxWidth="l" style={{ justifyContent: "center" }}>
+        <Row gap="s" vertical="center" align="center" maxWidth="l" style={{ justifyContent: "center" }}>
           <div
             style={{
               position: "relative",
               animation: "fadeInPop 1.5s ease-out forwards",
               opacity: 0,
-              flex: 1
+              flex: "0 0 auto"
             }}
           >
             <Image
               src="/images/research/non-major/babbage.png"
               alt="Charles Babbage"
-              width={120}
-              height={120}
+              width={104}
+              height={104}
               style={{
                 objectFit: "cover",
                 borderRadius: "50%",
-                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+                marginRight: "8px"
               }}
             />
           </div>
@@ -123,7 +124,8 @@ export default function MajorResearch() {
               position: "relative",
               animation: "fadeInPop 1.5s ease-out 0.3s forwards",
               opacity: 0,
-              flex: 2
+              flex: "0 1 auto",
+              minWidth: 0
             }}
           >
             <Text variant="body-default-m" align="center" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
