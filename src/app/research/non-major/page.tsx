@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Card, SmartLink, Row } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
+import { BackButton } from "@/components";
 import Image from "next/image";
 
 export async function generateMetadata() {
@@ -90,6 +91,9 @@ export default function NonMajorResearch() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+      
+      {/* Back Button */}
+      <BackButton href="/research" label="Back to Research" />
       
       {/* Non-Major Research Header */}
       <Column marginBottom="l" paddingX="l" align="center">

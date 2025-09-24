@@ -10,3 +10,4 @@ export { ThemeToggle } from "@/components/ThemeToggle";
 export { CustomMDX } from "@/components/mdx";
 export { BlogDropdown } from "@/components/BlogDropdown";
 export { ProjectsDropdown } from "@/components/ProjectsDropdown";
+export { BackButton } from "@/components/BackButton";

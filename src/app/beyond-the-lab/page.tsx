@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Card, Row } from "@once-ui-system/core";
 import { baseURL, about, person, beyondTheLab } from "@/resources";
+import { BackButton } from "@/components";
 import Image from "next/image";
 
 export async function generateMetadata() {
@@ -110,6 +111,9 @@ export default function BeyondTheLab() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+
+      {/* Back Button */}
+      <BackButton href="/" label="Back to Home" />
 
       {/* Page Header */}
       <Column marginBottom="l" paddingX="l" align="center">

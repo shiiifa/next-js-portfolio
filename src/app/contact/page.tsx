@@ -2,10 +2,14 @@
 
 import { Column, Heading, Text, Row, SmartLink } from "@once-ui-system/core";
 import { baseURL, about, person, contact, iconLibrary } from "@/resources";
+import { BackButton } from "@/components";
 
 export default function Contact() {
   return (
     <Column maxWidth="m" className="fixed-header-spacing" style={{ minHeight: "calc(100vh - 120px)", justifyContent: "center", alignItems: "center", paddingTop: "60px", animation: "fadeIn 1s ease-out" }}>
+      
+      {/* Back Button */}
+      <BackButton href="/" label="Back to Home" />
       
       {/* Contact Header */}
       <Column marginBottom="xl" paddingX="l" align="center">

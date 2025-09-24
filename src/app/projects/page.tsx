@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Card, SmartLink, Row } from "@once-ui-system/core";
 import { baseURL, about, person, projects } from "@/resources";
+import { BackButton } from "@/components";
 import Image from "next/image";
 
 export async function generateMetadata() {
@@ -101,6 +102,8 @@ export default function Projects() {
         }}
       />
       
+      {/* Back Button */}
+      <BackButton href="/" label="Back to Home" />
 
       {/* Alfred Whitehead Quote */}
       <Column paddingX="l" gap="xl" marginBottom="xl" align="center">
