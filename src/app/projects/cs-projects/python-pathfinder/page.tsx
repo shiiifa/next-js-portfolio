@@ -136,7 +136,7 @@ export default function PythonPathfinder() {
           <Column gap="m">
             <Heading variant="heading-strong-l">Key Achievements</Heading>
             <Text variant="body-default-m">
-              Being a freshman at the time, this project stretched not just my algorithmic thinking ability, but my ability to actualize it through code. I developed the mantra that you don't understand an algorithm well enough until you have to implement it in a game!
+              Being a freshman at the time, this project stretched not just my algorithmic thinking ability, but my ability to actualize it through code. I developed the mantra that you do not understand an algorithm well enough until you have to implement it in a game!
             </Text>
             <Text variant="body-default-m">
               This project demonstrated the power of visual learning and interactive programming, showing how complex algorithms can be made accessible and engaging through thoughtful user interface design.

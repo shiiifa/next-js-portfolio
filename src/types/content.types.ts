@@ -45,7 +45,7 @@ export type Social = Array<{
   /**
    * The link to the social platform
    *
-   * The link is not validated by code, make sure it's correct
+   * The link is not validated by code, make sure it is correct
    */
   link: string;
 }>;
