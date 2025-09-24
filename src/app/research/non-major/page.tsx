@@ -93,7 +93,7 @@ export default function NonMajorResearch() {
       
       {/* Non-Major Research Header */}
       <Column marginBottom="l" paddingX="l" align="center">
-        <Row gap="l" vertical="center" align="center" maxWidth="l">
+        <Row gap="m" vertical="center" align="center" maxWidth="l" style={{ justifyContent: "center" }}>
           <div
             style={{
               position: "relative",
