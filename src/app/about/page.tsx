@@ -201,6 +201,7 @@ export default function About() {
                 id={about.technical.title}
                 variant="display-strong-s"
                 marginBottom="40"
+                style={{ paddingLeft: "2rem" }}
               >
                 {about.technical.title}
               </Heading>
