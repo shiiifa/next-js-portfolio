@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Row, ToggleButton, Column, Text, SmartLink } from "@once-ui-system/core";
 import { projects } from "@/resources";
@@ -8,12 +8,27 @@ import { projects } from "@/resources";
 export const ProjectsDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname() ?? "";
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsOpen(false);
+    }, 150); // 150ms delay before closing
+  };
 
   return (
     <div
       style={{ position: "relative" }}
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {/* Main Projects Button */}
       <ToggleButton
@@ -38,6 +53,8 @@ export const ProjectsDropdown = () => {
             minWidth: "200px",
             marginTop: "4px",
           }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <Column padding="s" gap="xs">
             <SmartLink href="/projects/engineering-projects">

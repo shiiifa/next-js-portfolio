@@ -15,6 +15,7 @@ import {
   Row,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
+import { BackButton } from "@/components";
 import TableOfContents from "@/components/about/TableOfContents";
 import WorkRoadmap from "@/components/about/WorkRoadmap";
 import CompetenciesCircles from "@/components/about/CompetenciesCircles";
@@ -59,6 +60,10 @@ export default function About() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+      
+      {/* Back Button */}
+      <BackButton href="/" label="Back to Home" />
+      
       <Row fillWidth s={{ direction: "column" }} horizontal="center" vertical="center" style={{ minHeight: "60vh", alignItems: "flex-start" }}>
         {about.avatar.display && (
           <Column

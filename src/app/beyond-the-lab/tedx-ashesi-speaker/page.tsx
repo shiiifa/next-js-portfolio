@@ -96,7 +96,7 @@ export default function TedxAshesiSpeaker() {
         </Text>
 
         <Text variant="body-default-l">
-          I believe that the suppression of the willful expression of the self leads to the degradation of society. Thus, I love to use every opportunity I can get to create meaning…
+          I believe that the suppression of the willful expression of the self leads to the degradation of society. Thus, I love to use every opportunity I can get to create meaning.
         </Text>
 
 
