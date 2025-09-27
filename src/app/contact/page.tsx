@@ -19,51 +19,24 @@ export default function Contact() {
       </Column>
 
 
-      {/* Business Card Style Contact Info */}
+      {/* Contact Information */}
       <Column 
         marginTop="xl" 
         paddingX="l" 
         align="center"
-        style={{
-          background: "linear-gradient(135deg, var(--neutral-alpha-weak) 0%, var(--brand-alpha-weak) 100%)",
-          borderRadius: "20px",
-          padding: "32px",
-          maxWidth: "500px",
-          width: "100%",
-          boxShadow: "0 20px 60px rgba(0, 0, 0, 0.1), 0 8px 25px rgba(0, 0, 0, 0.05)",
-          border: "1px solid var(--neutral-alpha-medium)",
-          backdropFilter: "blur(10px)",
-          position: "relative",
-          overflow: "hidden"
-        }}
+        maxWidth="600px"
+        width="100%"
       >
-        {/* Decorative elements */}
-        <div style={{
-          position: "absolute",
-          top: "-50px",
-          right: "-50px",
-          width: "100px",
-          height: "100px",
-          background: "var(--brand-alpha-weak)",
-          borderRadius: "50%",
-          opacity: 0.1
-        }} />
-        <div style={{
-          position: "absolute",
-          bottom: "-30px",
-          left: "-30px",
-          width: "60px",
-          height: "60px",
-          background: "var(--brand-medium)",
-          borderRadius: "50%",
-          opacity: 0.1
-        }} />
-        
-        <Text variant="heading-strong-m" align="center" marginBottom="l" style={{ color: "var(--brand-strong)" }}>
+        <Text variant="heading-strong-m" align="center" marginBottom="l">
           Contact Information
         </Text>
         
-        <Column gap="l" align="center" style={{ position: "relative", zIndex: 1 }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: "16px",
+          width: "100%"
+        }}>
           {/* Phone */}
           <SmartLink href="tel:+233540304620">
             <Row gap="m" align="center" style={{ 
@@ -243,7 +216,7 @@ export default function Contact() {
               </Column>
             </Row>
           </SmartLink>
-        </Column>
+        </div>
       </Column>
 
       <style dangerouslySetInnerHTML={{
