@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Allotey Babington",
   name: `Obed Allotey Babington`,
   role: "Computer Engineering Student",
-  avatar: "/images/obedabout2.jpg",
+  avatar: "/images/obed_about.png",
   email: "obed.babington@ashesi.edu.gh",
 };
 

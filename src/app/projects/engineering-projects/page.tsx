@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Card, Row } from "@once-ui-system/core";
 import { baseURL, person } from "@/resources";
+import { BackButton } from "@/components";
 import Image from "next/image";
 
 export async function generateMetadata() {
@@ -128,16 +129,7 @@ export default function EngineeringProjects() {
       />
 
       {/* Back Button */}
-      <Row marginBottom="l" align="center" gap="s">
-        <Text 
-          as="a" 
-          href="/projects" 
-          variant="body-default-s"
-          style={{ textDecoration: "none", color: "var(--neutral-weak)" }}
-        >
-          ← Back to Projects
-        </Text>
-      </Row>
+      <BackButton href="/projects" label="Back to Projects" />
 
       {/* Page Header */}
       <Column marginBottom="xl" paddingX="l" align="center">

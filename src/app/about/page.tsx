@@ -123,7 +123,7 @@ export default function About() {
                 />
               </Row>
             )}
-                  <Heading className={styles.textAlign} variant="display-strong-s" align="center">
+                  <Heading className={styles.textAlign} variant="display-strong-s" align="center" style={{ animation: "fadeIn 1s ease-out 0.3s both" }}>
                     {person.name}
                   </Heading>
             <Row
@@ -162,7 +162,7 @@ export default function About() {
 
           {/* About content without fork visuals */}
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
+            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl" style={{ animation: "fadeIn 1s ease-out 0.6s both" }}>
               {about.intro.description}
             </Column>
           )}
