@@ -28,21 +28,25 @@ export default function Contact() {
       >
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gap: "16px",
-          width: "100%"
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "20px",
+          width: "100%",
+          alignItems: "stretch"
         }}>
           {/* Phone */}
           <SmartLink href="tel:+233540304620">
             <Row gap="m" align="center" style={{ 
               width: "100%", 
-              minHeight: "80px",
-              padding: "16px",
+              height: "100px",
+              padding: "20px",
               borderRadius: "12px",
               background: "var(--neutral-alpha-weak)",
               transition: "all 0.3s ease",
               cursor: "pointer",
-              border: "1px solid var(--neutral-alpha-medium)"
+              border: "1px solid var(--neutral-alpha-medium)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start"
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-2px)";
@@ -62,7 +66,7 @@ export default function Contact() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                minWidth: "48px",
+                width: "48px",
                 height: "48px"
               }}>
                 {iconLibrary.phone({ size: 24, color: "var(--brand-strong)" })}
@@ -82,13 +86,16 @@ export default function Contact() {
           <SmartLink href="https://wa.me/233264741689">
             <Row gap="m" align="center" style={{ 
               width: "100%", 
-              minHeight: "80px",
-              padding: "16px",
+              height: "100px",
+              padding: "20px",
               borderRadius: "12px",
               background: "var(--neutral-alpha-weak)",
               transition: "all 0.3s ease",
               cursor: "pointer",
-              border: "1px solid var(--neutral-alpha-medium)"
+              border: "1px solid var(--neutral-alpha-medium)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start"
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-2px)";
@@ -108,7 +115,7 @@ export default function Contact() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                minWidth: "48px",
+                width: "48px",
                 height: "48px"
               }}>
                 {iconLibrary.whatsapp({ size: 24, color: "var(--brand-strong)" })}
@@ -128,13 +135,16 @@ export default function Contact() {
           <SmartLink href="mailto:obed.babington@ashesi.edu.gh">
             <Row gap="m" align="center" style={{ 
               width: "100%", 
-              minHeight: "80px",
-              padding: "16px",
+              height: "100px",
+              padding: "20px",
               borderRadius: "12px",
               background: "var(--neutral-alpha-weak)",
               transition: "all 0.3s ease",
               cursor: "pointer",
-              border: "1px solid var(--neutral-alpha-medium)"
+              border: "1px solid var(--neutral-alpha-medium)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start"
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-2px)";
@@ -154,7 +164,7 @@ export default function Contact() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                minWidth: "48px",
+                width: "48px",
                 height: "48px"
               }}>
                 {iconLibrary.email({ size: 24, color: "var(--brand-strong)" })}
@@ -174,13 +184,16 @@ export default function Contact() {
           <SmartLink href="mailto:obedalloteyb@gmail.com">
             <Row gap="m" align="center" style={{ 
               width: "100%", 
-              minHeight: "80px",
-              padding: "16px",
+              height: "100px",
+              padding: "20px",
               borderRadius: "12px",
               background: "var(--neutral-alpha-weak)",
               transition: "all 0.3s ease",
               cursor: "pointer",
-              border: "1px solid var(--neutral-alpha-medium)"
+              border: "1px solid var(--neutral-alpha-medium)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start"
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-2px)";
@@ -200,7 +213,7 @@ export default function Contact() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                minWidth: "48px",
+                width: "48px",
                 height: "48px"
               }}>
                 {iconLibrary.gmail({ size: 24, color: "var(--brand-strong)" })}
