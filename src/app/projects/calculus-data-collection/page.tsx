@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
+import { BackButton } from "@/components";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -13,6 +14,9 @@ export async function generateMetadata() {
 export default function CalculusDataCollection() {
   return (
     <Column maxWidth="m" paddingTop="24">
+      {/* Back Button */}
+      <BackButton href="/projects" label="Back to Projects" />
+      
       <Schema
         as="webPage"
         baseURL={baseURL}

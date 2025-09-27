@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Card, Media, Row } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
+import { BackButton } from "@/components";
 import Image from "next/image";
 
 export async function generateMetadata() {
@@ -15,6 +16,9 @@ export async function generateMetadata() {
 export default function FPGANeuralNetworks() {
   return (
     <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
+      {/* Back Button */}
+      <BackButton href="/research/major" label="Back to Major Research" />
+      
       <Schema
         as="webPage"
         baseURL={baseURL}
