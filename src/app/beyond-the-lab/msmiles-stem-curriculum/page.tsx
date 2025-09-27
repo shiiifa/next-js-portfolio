@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Row, Icon, Card } from "@once-ui-system/core";
 import { baseURL, person } from "@/resources";
+import { BackButton } from "@/components";
 import Image from "next/image";
 
 export async function generateMetadata() {
@@ -14,6 +15,9 @@ export async function generateMetadata() {
 export default function MSmilesSTEMCurriculum() {
   return (
     <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
+      {/* Back Button */}
+      <BackButton href="/beyond-the-lab" label="Back to Beyond The Lab" />
+      
       <Schema
         as="webPage"
         baseURL={baseURL}

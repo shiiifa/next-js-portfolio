@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Card, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
+import { BackButton } from "@/components";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -14,6 +15,9 @@ export async function generateMetadata() {
 export default function PreyPredatorMathematicalModel() {
   return (
     <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
+      {/* Back Button */}
+      <BackButton href="/research/non-major" label="Back to Non-Major Research" />
+      
       <Schema
         as="webPage"
         baseURL={baseURL}

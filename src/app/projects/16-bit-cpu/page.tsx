@@ -14,6 +14,9 @@ export async function generateMetadata() {
 export default function SixteenBitCPU() {
   return (
     <Column maxWidth="m" paddingTop="24" style={{ position: "relative" }}>
+      {/* Back Button */}
+      <BackButton href="/projects" label="Back to Projects" />
+      
       <Schema
         as="webPage"
         baseURL={baseURL}

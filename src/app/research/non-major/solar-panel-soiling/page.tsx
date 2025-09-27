@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Card, Media, Row } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
+import { BackButton } from "@/components";
 import Image from "next/image";
 
 export async function generateMetadata() {
@@ -15,6 +16,9 @@ export async function generateMetadata() {
 export default function SolarPanelSoiling() {
   return (
     <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
+      {/* Back Button */}
+      <BackButton href="/research/non-major" label="Back to Non-Major Research" />
+      
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -41,7 +45,7 @@ export default function SolarPanelSoiling() {
           <strong>Skills:</strong> Applied IoT, System Design, Laser Cutting
         </Text>
         <Text variant="body-default-l" align="center">
-          At the Ashesi Resourceful Engineering Lab (AREL), I collaborated with a team of research assistants on an embedded systems and IoT project aimed at generating mathematical models to estimate the impact of soiling on solar panels.
+          Through the Ashesi Resourceful Engineering Lab (AREL), I collaborated with a team of research assistants on an embedded systems and IoT project aimed at generating mathematical models to estimate the impact of soiling on solar panels.
         </Text>
       </Column>
 
