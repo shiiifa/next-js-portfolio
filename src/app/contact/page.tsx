@@ -36,6 +36,7 @@ export default function Contact() {
           <SmartLink href="tel:+233540304620">
             <Row gap="m" align="center" style={{ 
               width: "100%", 
+              minHeight: "80px",
               padding: "16px",
               borderRadius: "12px",
               background: "var(--neutral-alpha-weak)",
@@ -81,6 +82,7 @@ export default function Contact() {
           <SmartLink href="https://wa.me/233264741689">
             <Row gap="m" align="center" style={{ 
               width: "100%", 
+              minHeight: "80px",
               padding: "16px",
               borderRadius: "12px",
               background: "var(--neutral-alpha-weak)",
@@ -126,6 +128,7 @@ export default function Contact() {
           <SmartLink href="mailto:obed.babington@ashesi.edu.gh">
             <Row gap="m" align="center" style={{ 
               width: "100%", 
+              minHeight: "80px",
               padding: "16px",
               borderRadius: "12px",
               background: "var(--neutral-alpha-weak)",
@@ -171,6 +174,7 @@ export default function Contact() {
           <SmartLink href="mailto:obedalloteyb@gmail.com">
             <Row gap="m" align="center" style={{ 
               width: "100%", 
+              minHeight: "80px",
               padding: "16px",
               borderRadius: "12px",
               background: "var(--neutral-alpha-weak)",
