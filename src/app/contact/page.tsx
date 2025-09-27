@@ -147,6 +147,137 @@ export default function Contact() {
         </Row>
       </Column>
 
+      {/* Business Card Style Contact Info */}
+      <Column 
+        marginTop="xl" 
+        paddingX="l" 
+        align="center"
+        style={{
+          background: "linear-gradient(135deg, var(--neutral-alpha-weak) 0%, var(--brand-alpha-weak) 100%)",
+          borderRadius: "20px",
+          padding: "32px",
+          maxWidth: "500px",
+          width: "100%",
+          boxShadow: "0 20px 60px rgba(0, 0, 0, 0.1), 0 8px 25px rgba(0, 0, 0, 0.05)",
+          border: "1px solid var(--neutral-alpha-medium)",
+          backdropFilter: "blur(10px)",
+          position: "relative",
+          overflow: "hidden"
+        }}
+      >
+        {/* Decorative elements */}
+        <div style={{
+          position: "absolute",
+          top: "-50px",
+          right: "-50px",
+          width: "100px",
+          height: "100px",
+          background: "var(--brand-alpha-weak)",
+          borderRadius: "50%",
+          opacity: 0.1
+        }} />
+        <div style={{
+          position: "absolute",
+          bottom: "-30px",
+          left: "-30px",
+          width: "60px",
+          height: "60px",
+          background: "var(--brand-medium)",
+          borderRadius: "50%",
+          opacity: 0.1
+        }} />
+        
+        <Text variant="heading-strong-m" align="center" marginBottom="l" style={{ color: "var(--brand-strong)" }}>
+          Contact Information
+        </Text>
+        
+        <Column gap="m" align="center" style={{ position: "relative", zIndex: 1 }}>
+          <Row gap="m" align="center" style={{ width: "100%" }}>
+            <div style={{ 
+              background: "var(--brand-alpha-medium)", 
+              borderRadius: "8px", 
+              padding: "8px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}>
+              {iconLibrary.phone({ size: 20, color: "var(--brand-strong)" })}
+            </div>
+            <Column>
+              <Text variant="body-default-xs" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
+                Phone
+              </Text>
+              <Text variant="body-default-s" style={{ fontFamily: "monospace" }}>
+                +233 540 304 620
+              </Text>
+            </Column>
+          </Row>
+
+          <Row gap="m" align="center" style={{ width: "100%" }}>
+            <div style={{ 
+              background: "var(--brand-alpha-medium)", 
+              borderRadius: "8px", 
+              padding: "8px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}>
+              {iconLibrary.whatsapp({ size: 20, color: "var(--brand-strong)" })}
+            </div>
+            <Column>
+              <Text variant="body-default-xs" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
+                WhatsApp
+              </Text>
+              <Text variant="body-default-s" style={{ fontFamily: "monospace" }}>
+                +233 264 741 689
+              </Text>
+            </Column>
+          </Row>
+
+          <Row gap="m" align="center" style={{ width: "100%" }}>
+            <div style={{ 
+              background: "var(--brand-alpha-medium)", 
+              borderRadius: "8px", 
+              padding: "8px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}>
+              {iconLibrary.email({ size: 20, color: "var(--brand-strong)" })}
+            </div>
+            <Column>
+              <Text variant="body-default-xs" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
+                Work Email
+              </Text>
+              <Text variant="body-default-s" style={{ fontFamily: "monospace", wordBreak: "break-all" }}>
+                obed.babington@ashesi.edu.gh
+              </Text>
+            </Column>
+          </Row>
+
+          <Row gap="m" align="center" style={{ width: "100%" }}>
+            <div style={{ 
+              background: "var(--brand-alpha-medium)", 
+              borderRadius: "8px", 
+              padding: "8px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}>
+              {iconLibrary.gmail({ size: 20, color: "var(--brand-strong)" })}
+            </div>
+            <Column>
+              <Text variant="body-default-xs" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
+                Personal Email
+              </Text>
+              <Text variant="body-default-s" style={{ fontFamily: "monospace", wordBreak: "break-all" }}>
+                obedalloteyb@gmail.com
+              </Text>
+            </Column>
+          </Row>
+        </Column>
+      </Column>
+
       <style dangerouslySetInnerHTML={{
         __html: `
           @keyframes fadeIn {
