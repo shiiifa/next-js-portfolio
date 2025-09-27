@@ -19,29 +19,20 @@ export const BackButton = ({ href, label }: BackButtonProps) => {
         left: "24px",
         zIndex: 10,
         cursor: "pointer",
-        transition: "all 0.2s ease",
         padding: "8px 12px",
         borderRadius: "8px",
         backgroundColor: "rgba(0, 0, 0, 0.1)",
         backdropFilter: "blur(8px)",
         border: "1px solid rgba(255, 255, 255, 0.1)"
       }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
-        e.currentTarget.style.transform = "translateX(-2px)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
-        e.currentTarget.style.transform = "translateX(0)";
-      }}
       as="a"
-      href={href}
+      {...({ href } as any)}
     >
       <Icon 
         name="arrowRight" 
         style={{ 
           transform: "rotate(180deg)",
-          transition: "transform 0.2s ease"
+          cursor: "pointer"
         }} 
       />
       <Text 
@@ -49,7 +40,8 @@ export const BackButton = ({ href, label }: BackButtonProps) => {
         style={{ 
           textDecoration: "none", 
           color: "var(--neutral-weak)",
-          fontWeight: "500"
+          fontWeight: "500",
+          cursor: "pointer"
         }}
       >
         {label}
