@@ -96,7 +96,7 @@ export default function MajorResearch() {
       <BackButton href="/research" label="Back to Research" />
       
       {/* Major Research Header */}
-      <Column marginBottom="l" paddingX="l" align="center">
+      <Column marginBottom="l" paddingX="l" align="center" style={{ marginTop: "60px" }}>
         <Row gap="s" vertical="center" align="center" maxWidth="l" style={{ justifyContent: "center" }}>
           <div
             style={{
