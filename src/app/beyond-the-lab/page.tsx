@@ -97,7 +97,7 @@ export default function BeyondTheLab() {
   ];
 
   return (
-    <Column maxWidth="m" paddingTop="24" className="fixed-header-spacing" style={{ animation: "fadeIn 1s ease-out" }}>
+    <Column maxWidth="m" paddingTop="24" className="fixed-header-spacing" style={{ animation: "fadeIn 1s ease-out", position: "relative" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}

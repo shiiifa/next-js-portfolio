@@ -6,7 +6,7 @@ import { BackButton } from "@/components";
 
 export default function Contact() {
   return (
-    <Column maxWidth="m" className="fixed-header-spacing" style={{ minHeight: "calc(100vh - 120px)", justifyContent: "center", alignItems: "center", paddingTop: "60px", animation: "fadeIn 1s ease-out" }}>
+    <Column maxWidth="m" className="fixed-header-spacing" style={{ minHeight: "calc(100vh - 120px)", justifyContent: "center", alignItems: "center", paddingTop: "60px", animation: "fadeIn 1s ease-out", position: "relative" }}>
       
       {/* Back Button */}
       <BackButton href="/" label="Back to Home" />

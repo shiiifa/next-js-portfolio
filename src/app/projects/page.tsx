@@ -87,7 +87,7 @@ export default function Projects() {
   ];
 
   return (
-    <Column maxWidth="m" paddingTop="24" className="fixed-header-spacing" style={{ animation: "fadeIn 1s ease-out" }}>
+    <Column maxWidth="m" paddingTop="24" className="fixed-header-spacing" style={{ animation: "fadeIn 1s ease-out", position: "relative" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -254,7 +254,7 @@ export default function Projects() {
         >
           <div style={{ position: "relative", width: "100%", height: "250px" }}>
             <Image
-              src="/images/projects/roboarm.jpeg"
+              src="/images/projects/project-01/cover-01.jpg"
               alt="Engineering Projects"
               fill
               style={{ objectFit: "cover" }}
@@ -289,7 +289,7 @@ export default function Projects() {
         >
           <div style={{ position: "relative", width: "100%", height: "250px" }}>
             <Image
-              src="/images/projects/speech-recognition.jpg"
+              src="/images/projects/project-01/cover-02.jpg"
               alt="CS Projects"
               fill
               style={{ objectFit: "cover" }}
