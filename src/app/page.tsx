@@ -3,7 +3,6 @@ import {
   Text,
   Button,
   Avatar,
-  RevealFx,
   Column,
   Badge,
   Row,
@@ -47,17 +46,13 @@ export default function Home() {
           <div className="hero-slider-bg" aria-hidden="true" />
           <div className="hero-edge-fade" aria-hidden="true" />
           <div className="hero-foreground">
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
-            <Heading wrap="balance" variant="display-strong-l" style={{ fontWeight: 800 }}>
-              {home.headline}
-            </Heading>
-          </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl" style={{ fontWeight: 500 }}>
-              {home.subline}
-            </Text>
-          </RevealFx>
-          <RevealFx paddingTop="4" delay={0.4} horizontal="center" paddingLeft="12">
+          <Heading wrap="balance" variant="display-strong-l" style={{ fontWeight: 800, animation: "fadeIn 1s ease-out" }}>
+            {home.headline}
+          </Heading>
+          <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl" style={{ fontWeight: 500, animation: "fadeIn 1s ease-out 0.3s both" }}>
+            {home.subline}
+          </Text>
+          <div style={{ paddingTop: "16px", animation: "fadeIn 1s ease-out 0.6s both" }}>
             <Button
               id="about"
               data-border="rounded"
@@ -84,7 +79,7 @@ export default function Home() {
                 {about.title}
               </Row>
             </Button>
-          </RevealFx>
+          </div>
           </div>
         </Column>
       </Column>

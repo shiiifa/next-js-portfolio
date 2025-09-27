@@ -21,6 +21,7 @@ import { Metadata } from "next";
 import React from "react";
 import { Posts } from "@/components/blog/Posts";
 import { ShareSection } from "@/components/blog/ShareSection";
+import { BackButton } from "@/components";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "blog", "posts"]);
@@ -74,7 +75,10 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
     <Row fillWidth>
       <Row maxWidth={12} m={{ hide: true }} />
       <Row fillWidth horizontal="center">
-        <Column as="section" maxWidth="m" horizontal="center" gap="l" paddingTop="24">
+        <Column as="section" maxWidth="m" horizontal="center" gap="l" paddingTop="24" style={{ position: "relative" }}>
+          {/* Back Button */}
+          <BackButton href="/blog" label="Back to Blog" />
+          
           <Schema
             as="blogPosting"
             baseURL={baseURL}
