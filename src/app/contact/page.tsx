@@ -21,15 +21,11 @@ export default function Contact() {
 
       {/* Contact Information */}
       <Column 
-        marginTop="xl" 
+        marginTop="l" 
         paddingX="l" 
         align="center"
-        style={{ maxWidth: "600px", width: "100%" }}
+        style={{ maxWidth: "800px", width: "100%" }}
       >
-        <Text variant="heading-strong-m" align="center" marginBottom="l">
-          Contact Information
-        </Text>
-        
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(2, 1fr)",
