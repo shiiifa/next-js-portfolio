@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
+import { BackButton } from "@/components";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -39,7 +40,10 @@ export default function NonMajorResearch2() {
   ];
 
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ position: "relative" }}>
+      {/* Back Button */}
+      <BackButton href="/research" label="Back to Research" />
+      
       <Schema
         as="webPage"
         baseURL={baseURL}

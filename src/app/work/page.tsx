@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Row, SmartLink, Card } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
+import { BackButton } from "@/components";
 import Image from "next/image";
 
 export async function generateMetadata() {
@@ -14,7 +15,10 @@ export async function generateMetadata() {
 
 export default function Work() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ position: "relative" }}>
+      {/* Back Button */}
+      <BackButton href="/" label="Back to Home" />
+      
       <Schema
         as="webPage"
         baseURL={baseURL}

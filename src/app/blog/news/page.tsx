@@ -1,5 +1,5 @@
 import { Column, Heading, Meta, Schema, Card, Text, Row, Line } from "@once-ui-system/core";
-import { Mailchimp } from "@/components";
+import { Mailchimp, BackButton } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { baseURL, blog, person } from "@/resources";
 
@@ -15,7 +15,10 @@ export async function generateMetadata() {
 
 export default function News() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ position: "relative" }}>
+      {/* Back Button */}
+      <BackButton href="/blog" label="Back to Blog" />
+      
       <Schema
         as="webPage"
         baseURL={baseURL}

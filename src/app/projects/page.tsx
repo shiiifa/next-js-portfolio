@@ -107,7 +107,7 @@ export default function Projects() {
 
       {/* Alfred Whitehead Quote */}
       <Column paddingX="l" gap="xl" marginBottom="xl" align="center">
-        <Row gap="l" vertical="center" align="center" maxWidth="l">
+        <Row gap="m" vertical="center" align="center" maxWidth="l">
           <div
             style={{
               position: "relative",

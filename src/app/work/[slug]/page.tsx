@@ -17,7 +17,7 @@ import {
 } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
-import { ScrollToHash, CustomMDX } from "@/components";
+import { ScrollToHash, CustomMDX, BackButton } from "@/components";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
 
@@ -74,7 +74,10 @@ export default async function Project({
     })) || [];
 
   return (
-    <Column as="section" maxWidth="m" horizontal="center" gap="l">
+    <Column as="section" maxWidth="m" horizontal="center" gap="l" style={{ position: "relative" }}>
+      {/* Back Button */}
+      <BackButton href="/work" label="Back to Work" />
+      
       <Schema
         as="blogPosting"
         baseURL={baseURL}
