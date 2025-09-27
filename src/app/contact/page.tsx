@@ -26,7 +26,7 @@ export default function Contact() {
         align="center"
         style={{ maxWidth: "800px", width: "100%" }}
       >
-        <div style={{
+        <div className="contact-grid" style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           gap: "20px",
@@ -34,7 +34,7 @@ export default function Contact() {
           alignItems: "stretch"
         }}>
           {/* Phone */}
-          <Row gap="m" align="center" style={{ 
+          <Row gap="m" align="center" className="contact-item" style={{ 
             width: "100%", 
             height: "100px",
             padding: "20px",
@@ -42,7 +42,7 @@ export default function Contact() {
             alignItems: "center",
             justifyContent: "flex-start"
           }}>
-              <div style={{ 
+              <div className="contact-icon" style={{ 
                 background: "var(--neutral-alpha-weak)", 
                 borderRadius: "10px", 
                 padding: "12px",
@@ -65,7 +65,7 @@ export default function Contact() {
           </Row>
 
           {/* WhatsApp */}
-          <Row gap="m" align="center" style={{ 
+          <Row gap="m" align="center" className="contact-item" style={{ 
             width: "100%", 
             height: "100px",
             padding: "20px",
@@ -73,7 +73,7 @@ export default function Contact() {
             alignItems: "center",
             justifyContent: "flex-start"
           }}>
-              <div style={{ 
+              <div className="contact-icon" style={{ 
                 background: "var(--neutral-alpha-weak)", 
                 borderRadius: "10px", 
                 padding: "12px",
@@ -96,7 +96,7 @@ export default function Contact() {
           </Row>
 
           {/* Work Email */}
-          <Row gap="m" align="center" style={{ 
+          <Row gap="m" align="center" className="contact-item" style={{ 
             width: "100%", 
             height: "100px",
             padding: "20px",
@@ -104,7 +104,7 @@ export default function Contact() {
             alignItems: "center",
             justifyContent: "flex-start"
           }}>
-              <div style={{ 
+              <div className="contact-icon" style={{ 
                 background: "var(--neutral-alpha-weak)", 
                 borderRadius: "10px", 
                 padding: "12px",
@@ -127,7 +127,7 @@ export default function Contact() {
           </Row>
 
           {/* Personal Email */}
-          <Row gap="m" align="center" style={{ 
+          <Row gap="m" align="center" className="contact-item" style={{ 
             width: "100%", 
             height: "100px",
             padding: "20px",
@@ -135,7 +135,7 @@ export default function Contact() {
             alignItems: "center",
             justifyContent: "flex-start"
           }}>
-              <div style={{ 
+              <div className="contact-icon" style={{ 
                 background: "var(--neutral-alpha-weak)", 
                 borderRadius: "10px", 
                 padding: "12px",
@@ -167,6 +167,117 @@ export default function Contact() {
             }
             100% {
               opacity: 1;
+            }
+          }
+
+          /* Desktop styles */
+          .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 100%;
+            align-items: stretch;
+          }
+
+          .contact-item {
+            width: 100%;
+            height: 100px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          }
+
+          .contact-icon {
+            background: var(--neutral-alpha-weak);
+            border-radius: 10px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+          }
+
+          .contact-icon svg {
+            width: 24px;
+            height: 24px;
+          }
+
+          /* Tablet styles */
+          @media (max-width: 768px) {
+            .contact-grid {
+              grid-template-columns: 1fr;
+              gap: 16px;
+              padding: 0 16px;
+            }
+
+            .contact-item {
+              height: 90px;
+              padding: 16px;
+            }
+
+            .contact-icon {
+              width: 44px;
+              height: 44px;
+              padding: 10px;
+            }
+
+            .contact-icon svg {
+              width: 22px;
+              height: 22px;
+            }
+          }
+
+          /* Mobile styles */
+          @media (max-width: 480px) {
+            .contact-grid {
+              gap: 12px;
+              padding: 0 12px;
+            }
+
+            .contact-item {
+              height: 80px;
+              padding: 12px;
+              flex-direction: column;
+              text-align: center;
+              justify-content: center;
+            }
+
+            .contact-icon {
+              width: 40px;
+              height: 40px;
+              padding: 8px;
+              margin-bottom: 8px;
+            }
+
+            .contact-icon svg {
+              width: 20px;
+              height: 20px;
+            }
+
+            .contact-item .column {
+              align-items: center;
+            }
+          }
+
+          /* Extra small mobile */
+          @media (max-width: 360px) {
+            .contact-item {
+              height: 70px;
+              padding: 10px;
+            }
+
+            .contact-icon {
+              width: 36px;
+              height: 36px;
+              padding: 6px;
+            }
+
+            .contact-icon svg {
+              width: 18px;
+              height: 18px;
             }
           }
         `
