@@ -106,7 +106,7 @@ export default function Projects() {
       <BackButton href="/" label="Back to Home" />
 
       {/* Alfred Whitehead Quote */}
-      <Column paddingX="l" gap="xl" marginBottom="xl" align="center">
+      <Column paddingX="l" gap="xl" marginBottom="xl" align="center" style={{ marginTop: "60px" }}>
         <Row gap="m" vertical="center" align="center" maxWidth="l">
           <div
             style={{

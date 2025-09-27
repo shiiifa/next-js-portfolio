@@ -12,18 +12,20 @@ export const BackButton = ({ href, label }: BackButtonProps) => {
     <Row 
       marginBottom="l" 
       align="center" 
-      gap="s"
+      justify="center"
       style={{
         position: "absolute",
         top: "24px",
         left: "24px",
         zIndex: 10,
         cursor: "pointer",
-        padding: "8px 12px",
+        padding: "8px",
         borderRadius: "8px",
         backgroundColor: "rgba(0, 0, 0, 0.1)",
         backdropFilter: "blur(8px)",
-        border: "1px solid rgba(255, 255, 255, 0.1)"
+        border: "1px solid rgba(255, 255, 255, 0.1)",
+        width: "40px",
+        height: "40px"
       }}
       as="a"
       {...({ href } as any)}
@@ -35,17 +37,6 @@ export const BackButton = ({ href, label }: BackButtonProps) => {
           cursor: "pointer"
         }} 
       />
-      <Text 
-        variant="body-default-s"
-        style={{ 
-          textDecoration: "none", 
-          color: "var(--neutral-weak)",
-          fontWeight: "500",
-          cursor: "pointer"
-        }}
-      >
-        {label}
-      </Text>
     </Row>
   );
 };
