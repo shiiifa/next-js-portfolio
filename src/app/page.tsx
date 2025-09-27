@@ -52,7 +52,7 @@ export default function Home() {
           <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl" style={{ fontWeight: 500, animation: "fadeIn 1s ease-out 0.3s both" }}>
             {home.subline}
           </Text>
-          <div style={{ paddingTop: "16px", animation: "fadeIn 1s ease-out 0.6s both" }}>
+          <div style={{ paddingTop: "16px", animation: "fadeIn 1s ease-out 0.6s both", display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Button
               id="about"
               data-border="rounded"
@@ -65,6 +65,7 @@ export default function Home() {
                 boxShadow: "0 0 18px rgba(16,185,129,0.35), 0 0 36px rgba(16,185,129,0.25)",
                 borderColor: "rgba(16,185,129,0.6)",
                 color: "#eafff5",
+                margin: "0 auto",
               }}
             >
               <Row gap="8" vertical="center" horizontal="center" paddingRight="4">
