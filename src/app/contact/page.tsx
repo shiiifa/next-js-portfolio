@@ -18,134 +18,6 @@ export default function Contact() {
         </Text>
       </Column>
 
-      {/* Contact Details */}
-      <Column gap="xl" paddingX="l" align="center">
-        <Row gap="xl" horizontal="center" vertical="center" wrap>
-          {/* WhatsApp */}
-          <SmartLink href="https://wa.me/233264741689">
-            <div 
-              style={{ 
-                cursor: "pointer",
-                padding: "24px",
-                background: "var(--neutral-alpha-weak)",
-                borderRadius: "16px",
-                transition: "all 0.3s ease",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "80px",
-                height: "80px",
-                boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
-                e.currentTarget.style.background = "var(--brand-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 12px 40px rgba(0, 0, 0, 0.2)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0) scale(1)";
-                e.currentTarget.style.background = "var(--neutral-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.1)";
-              }}
-            >
-              {iconLibrary.whatsapp({ size: 40, color: "var(--brand-medium)" })}
-            </div>
-          </SmartLink>
-
-          {/* Phone */}
-          <SmartLink href="tel:+233540304620">
-            <div 
-              style={{ 
-                cursor: "pointer",
-                padding: "24px",
-                background: "var(--neutral-alpha-weak)",
-                borderRadius: "16px",
-                transition: "all 0.3s ease",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "80px",
-                height: "80px",
-                boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
-                e.currentTarget.style.background = "var(--brand-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 12px 40px rgba(0, 0, 0, 0.2)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0) scale(1)";
-                e.currentTarget.style.background = "var(--neutral-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.1)";
-              }}
-            >
-              {iconLibrary.phone({ size: 40, color: "var(--brand-medium)" })}
-            </div>
-          </SmartLink>
-
-          {/* Work Email */}
-          <SmartLink href="mailto:obed.babington@ashesi.edu.gh">
-            <div 
-              style={{ 
-                cursor: "pointer",
-                padding: "24px",
-                background: "var(--neutral-alpha-weak)",
-                borderRadius: "16px",
-                transition: "all 0.3s ease",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "80px",
-                height: "80px",
-                boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
-                e.currentTarget.style.background = "var(--brand-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 12px 40px rgba(0, 0, 0, 0.2)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0) scale(1)";
-                e.currentTarget.style.background = "var(--neutral-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.1)";
-              }}
-            >
-              {iconLibrary.email({ size: 40, color: "var(--brand-medium)" })}
-            </div>
-          </SmartLink>
-
-          {/* Personal Email */}
-          <SmartLink href="mailto:obedalloteyb@gmail.com">
-            <div 
-              style={{ 
-                cursor: "pointer",
-                padding: "24px",
-                background: "var(--neutral-alpha-weak)",
-                borderRadius: "16px",
-                transition: "all 0.3s ease",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "80px",
-                height: "80px",
-                boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-8px) scale(1.05)";
-                e.currentTarget.style.background = "var(--brand-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 12px 40px rgba(0, 0, 0, 0.2)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0) scale(1)";
-                e.currentTarget.style.background = "var(--neutral-alpha-weak)";
-                e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.1)";
-              }}
-            >
-              {iconLibrary.gmail({ size: 40, color: "var(--brand-medium)" })}
-            </div>
-          </SmartLink>
-        </Row>
-      </Column>
 
       {/* Business Card Style Contact Info */}
       <Column 
@@ -191,90 +63,186 @@ export default function Contact() {
           Contact Information
         </Text>
         
-        <Column gap="m" align="center" style={{ position: "relative", zIndex: 1 }}>
-          <Row gap="m" align="center" style={{ width: "100%" }}>
-            <div style={{ 
-              background: "var(--brand-alpha-medium)", 
-              borderRadius: "8px", 
-              padding: "8px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center"
-            }}>
-              {iconLibrary.phone({ size: 20, color: "var(--brand-strong)" })}
-            </div>
-            <Column>
-              <Text variant="body-default-xs" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
-                Phone
-              </Text>
-              <Text variant="body-default-s" style={{ fontFamily: "monospace" }}>
-                +233 540 304 620
-              </Text>
-            </Column>
-          </Row>
+        <Column gap="l" align="center" style={{ position: "relative", zIndex: 1 }}>
+          {/* Phone */}
+          <SmartLink href="tel:+233540304620">
+            <Row gap="m" align="center" style={{ 
+              width: "100%", 
+              padding: "16px",
+              borderRadius: "12px",
+              background: "var(--neutral-alpha-weak)",
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+              border: "1px solid var(--neutral-alpha-medium)"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.background = "var(--brand-alpha-weak)";
+              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.1)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.background = "var(--neutral-alpha-weak)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+            >
+              <div style={{ 
+                background: "var(--brand-alpha-medium)", 
+                borderRadius: "10px", 
+                padding: "12px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minWidth: "48px",
+                height: "48px"
+              }}>
+                {iconLibrary.phone({ size: 24, color: "var(--brand-strong)" })}
+              </div>
+              <Column>
+                <Text variant="body-default-s" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
+                  Phone
+                </Text>
+                <Text variant="body-default-m">
+                  +233 540 304 620
+                </Text>
+              </Column>
+            </Row>
+          </SmartLink>
 
-          <Row gap="m" align="center" style={{ width: "100%" }}>
-            <div style={{ 
-              background: "var(--brand-alpha-medium)", 
-              borderRadius: "8px", 
-              padding: "8px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center"
-            }}>
-              {iconLibrary.whatsapp({ size: 20, color: "var(--brand-strong)" })}
-            </div>
-            <Column>
-              <Text variant="body-default-xs" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
-                WhatsApp
-              </Text>
-              <Text variant="body-default-s" style={{ fontFamily: "monospace" }}>
-                +233 264 741 689
-              </Text>
-            </Column>
-          </Row>
+          {/* WhatsApp */}
+          <SmartLink href="https://wa.me/233264741689">
+            <Row gap="m" align="center" style={{ 
+              width: "100%", 
+              padding: "16px",
+              borderRadius: "12px",
+              background: "var(--neutral-alpha-weak)",
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+              border: "1px solid var(--neutral-alpha-medium)"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.background = "var(--brand-alpha-weak)";
+              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.1)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.background = "var(--neutral-alpha-weak)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+            >
+              <div style={{ 
+                background: "var(--brand-alpha-medium)", 
+                borderRadius: "10px", 
+                padding: "12px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minWidth: "48px",
+                height: "48px"
+              }}>
+                {iconLibrary.whatsapp({ size: 24, color: "var(--brand-strong)" })}
+              </div>
+              <Column>
+                <Text variant="body-default-s" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
+                  WhatsApp
+                </Text>
+                <Text variant="body-default-m">
+                  +233 264 741 689
+                </Text>
+              </Column>
+            </Row>
+          </SmartLink>
 
-          <Row gap="m" align="center" style={{ width: "100%" }}>
-            <div style={{ 
-              background: "var(--brand-alpha-medium)", 
-              borderRadius: "8px", 
-              padding: "8px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center"
-            }}>
-              {iconLibrary.email({ size: 20, color: "var(--brand-strong)" })}
-            </div>
-            <Column>
-              <Text variant="body-default-xs" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
-                Work Email
-              </Text>
-              <Text variant="body-default-s" style={{ fontFamily: "monospace", wordBreak: "break-all" }}>
-                obed.babington@ashesi.edu.gh
-              </Text>
-            </Column>
-          </Row>
+          {/* Work Email */}
+          <SmartLink href="mailto:obed.babington@ashesi.edu.gh">
+            <Row gap="m" align="center" style={{ 
+              width: "100%", 
+              padding: "16px",
+              borderRadius: "12px",
+              background: "var(--neutral-alpha-weak)",
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+              border: "1px solid var(--neutral-alpha-medium)"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.background = "var(--brand-alpha-weak)";
+              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.1)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.background = "var(--neutral-alpha-weak)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+            >
+              <div style={{ 
+                background: "var(--brand-alpha-medium)", 
+                borderRadius: "10px", 
+                padding: "12px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minWidth: "48px",
+                height: "48px"
+              }}>
+                {iconLibrary.email({ size: 24, color: "var(--brand-strong)" })}
+              </div>
+              <Column>
+                <Text variant="body-default-s" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
+                  Work Email
+                </Text>
+                <Text variant="body-default-m" style={{ wordBreak: "break-all" }}>
+                  obed.babington@ashesi.edu.gh
+                </Text>
+              </Column>
+            </Row>
+          </SmartLink>
 
-          <Row gap="m" align="center" style={{ width: "100%" }}>
-            <div style={{ 
-              background: "var(--brand-alpha-medium)", 
-              borderRadius: "8px", 
-              padding: "8px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center"
-            }}>
-              {iconLibrary.gmail({ size: 20, color: "var(--brand-strong)" })}
-            </div>
-            <Column>
-              <Text variant="body-default-xs" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
-                Personal Email
-              </Text>
-              <Text variant="body-default-s" style={{ fontFamily: "monospace", wordBreak: "break-all" }}>
-                obedalloteyb@gmail.com
-              </Text>
-            </Column>
-          </Row>
+          {/* Personal Email */}
+          <SmartLink href="mailto:obedalloteyb@gmail.com">
+            <Row gap="m" align="center" style={{ 
+              width: "100%", 
+              padding: "16px",
+              borderRadius: "12px",
+              background: "var(--neutral-alpha-weak)",
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+              border: "1px solid var(--neutral-alpha-medium)"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.background = "var(--brand-alpha-weak)";
+              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.1)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.background = "var(--neutral-alpha-weak)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+            >
+              <div style={{ 
+                background: "var(--brand-alpha-medium)", 
+                borderRadius: "10px", 
+                padding: "12px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minWidth: "48px",
+                height: "48px"
+              }}>
+                {iconLibrary.gmail({ size: 24, color: "var(--brand-strong)" })}
+              </div>
+              <Column>
+                <Text variant="body-default-s" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
+                  Personal Email
+                </Text>
+                <Text variant="body-default-m" style={{ wordBreak: "break-all" }}>
+                  obedalloteyb@gmail.com
+                </Text>
+              </Column>
+            </Row>
+          </SmartLink>
         </Column>
       </Column>
 
