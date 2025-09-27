@@ -1,6 +1,6 @@
 "use client";
 
-import { Column, Heading, Text, Row, SmartLink } from "@once-ui-system/core";
+import { Column, Heading, Text, Row } from "@once-ui-system/core";
 import { baseURL, about, person, contact, iconLibrary } from "@/resources";
 import { BackButton } from "@/components";
 
@@ -34,33 +34,16 @@ export default function Contact() {
           alignItems: "stretch"
         }}>
           {/* Phone */}
-          <SmartLink href="tel:+233540304620">
-            <Row gap="m" align="center" style={{ 
-              width: "100%", 
-              height: "100px",
-              padding: "20px",
-              borderRadius: "12px",
-              background: "var(--neutral-alpha-weak)",
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-              border: "1px solid var(--neutral-alpha-medium)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-2px)";
-              e.currentTarget.style.background = "var(--brand-alpha-weak)";
-              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.1)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.background = "var(--neutral-alpha-weak)";
-              e.currentTarget.style.boxShadow = "none";
-            }}
-            >
+          <Row gap="m" align="center" style={{ 
+            width: "100%", 
+            height: "100px",
+            padding: "20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start"
+          }}>
               <div style={{ 
-                background: "var(--brand-alpha-medium)", 
+                background: "var(--neutral-alpha-weak)", 
                 borderRadius: "10px", 
                 padding: "12px",
                 display: "flex",
@@ -69,7 +52,7 @@ export default function Contact() {
                 width: "48px",
                 height: "48px"
               }}>
-                {iconLibrary.phone({ size: 24, color: "var(--brand-strong)" })}
+                {iconLibrary.phone({ size: 24, color: "var(--neutral-medium)" })}
               </div>
               <Column>
                 <Text variant="body-default-s" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
@@ -79,37 +62,19 @@ export default function Contact() {
                   +233 540 304 620
                 </Text>
               </Column>
-            </Row>
-          </SmartLink>
+          </Row>
 
           {/* WhatsApp */}
-          <SmartLink href="https://wa.me/233264741689">
-            <Row gap="m" align="center" style={{ 
-              width: "100%", 
-              height: "100px",
-              padding: "20px",
-              borderRadius: "12px",
-              background: "var(--neutral-alpha-weak)",
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-              border: "1px solid var(--neutral-alpha-medium)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-2px)";
-              e.currentTarget.style.background = "var(--brand-alpha-weak)";
-              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.1)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.background = "var(--neutral-alpha-weak)";
-              e.currentTarget.style.boxShadow = "none";
-            }}
-            >
+          <Row gap="m" align="center" style={{ 
+            width: "100%", 
+            height: "100px",
+            padding: "20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start"
+          }}>
               <div style={{ 
-                background: "var(--brand-alpha-medium)", 
+                background: "var(--neutral-alpha-weak)", 
                 borderRadius: "10px", 
                 padding: "12px",
                 display: "flex",
@@ -118,7 +83,7 @@ export default function Contact() {
                 width: "48px",
                 height: "48px"
               }}>
-                {iconLibrary.whatsapp({ size: 24, color: "var(--brand-strong)" })}
+                {iconLibrary.whatsapp({ size: 24, color: "var(--neutral-medium)" })}
               </div>
               <Column>
                 <Text variant="body-default-s" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
@@ -128,37 +93,19 @@ export default function Contact() {
                   +233 264 741 689
                 </Text>
               </Column>
-            </Row>
-          </SmartLink>
+          </Row>
 
           {/* Work Email */}
-          <SmartLink href="mailto:obed.babington@ashesi.edu.gh">
-            <Row gap="m" align="center" style={{ 
-              width: "100%", 
-              height: "100px",
-              padding: "20px",
-              borderRadius: "12px",
-              background: "var(--neutral-alpha-weak)",
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-              border: "1px solid var(--neutral-alpha-medium)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-2px)";
-              e.currentTarget.style.background = "var(--brand-alpha-weak)";
-              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.1)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.background = "var(--neutral-alpha-weak)";
-              e.currentTarget.style.boxShadow = "none";
-            }}
-            >
+          <Row gap="m" align="center" style={{ 
+            width: "100%", 
+            height: "100px",
+            padding: "20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start"
+          }}>
               <div style={{ 
-                background: "var(--brand-alpha-medium)", 
+                background: "var(--neutral-alpha-weak)", 
                 borderRadius: "10px", 
                 padding: "12px",
                 display: "flex",
@@ -167,7 +114,7 @@ export default function Contact() {
                 width: "48px",
                 height: "48px"
               }}>
-                {iconLibrary.email({ size: 24, color: "var(--brand-strong)" })}
+                {iconLibrary.email({ size: 24, color: "var(--neutral-medium)" })}
               </div>
               <Column>
                 <Text variant="body-default-s" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
@@ -177,37 +124,19 @@ export default function Contact() {
                   obed.babington@ashesi.edu.gh
                 </Text>
               </Column>
-            </Row>
-          </SmartLink>
+          </Row>
 
           {/* Personal Email */}
-          <SmartLink href="mailto:obedalloteyb@gmail.com">
-            <Row gap="m" align="center" style={{ 
-              width: "100%", 
-              height: "100px",
-              padding: "20px",
-              borderRadius: "12px",
-              background: "var(--neutral-alpha-weak)",
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-              border: "1px solid var(--neutral-alpha-medium)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-2px)";
-              e.currentTarget.style.background = "var(--brand-alpha-weak)";
-              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.1)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.background = "var(--neutral-alpha-weak)";
-              e.currentTarget.style.boxShadow = "none";
-            }}
-            >
+          <Row gap="m" align="center" style={{ 
+            width: "100%", 
+            height: "100px",
+            padding: "20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start"
+          }}>
               <div style={{ 
-                background: "var(--brand-alpha-medium)", 
+                background: "var(--neutral-alpha-weak)", 
                 borderRadius: "10px", 
                 padding: "12px",
                 display: "flex",
@@ -216,7 +145,7 @@ export default function Contact() {
                 width: "48px",
                 height: "48px"
               }}>
-                {iconLibrary.gmail({ size: 24, color: "var(--brand-strong)" })}
+                {iconLibrary.gmail({ size: 24, color: "var(--neutral-medium)" })}
               </div>
               <Column>
                 <Text variant="body-default-s" onBackground="neutral-weak" style={{ fontWeight: 600 }}>
@@ -226,8 +155,7 @@ export default function Contact() {
                   obedalloteyb@gmail.com
                 </Text>
               </Column>
-            </Row>
-          </SmartLink>
+          </Row>
         </div>
       </Column>
 
