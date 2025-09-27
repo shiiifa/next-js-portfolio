@@ -13,7 +13,7 @@ export async function generateMetadata() {
 
 export default function SixteenBitCPU() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" style={{ position: "relative" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}

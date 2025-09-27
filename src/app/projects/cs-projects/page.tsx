@@ -71,7 +71,7 @@ export default function CSProjects() {
   ];
 
   return (
-    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out" }}>
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out", position: "relative" }}>
       <style dangerouslySetInnerHTML={{
         __html: `
           @keyframes fadeIn {
