@@ -93,6 +93,72 @@ export default function BeyondTheLab() {
         "Facilitated interactive teaching sessions emphasizing curiosity, creativity, and problem-solving",
         "Strengthened skills in curriculum design, research, and facilitation while deepening commitment to STEM education as a tool for empowerment"
       ]
+    },
+    {
+      id: "assistive-technology-makerspace",
+      title: "Assistive Technology Makerspace Fellowship",
+      date: "Aug - Sep 2019",
+      category: "Fellowship",
+      summary: "As a Fellow at the Assistive Technology Makerspace, contributed to advancing accessible, low-cost assistive technologies for persons with disabilities in Ghana through hands-on training and team-based design challenges.",
+      description: "As a Fellow at the Assistive Technology (AT) Makerspace, a program launched by Tech Era in partnership with Dextra (Canada) and the Ashesi D-Lab, I contributed to advancing accessible, low-cost assistive technologies for persons with disabilities in Ghana. Over an intensive two-week fellowship, I gained hands-on training in 3D modeling and printing, Arduino programming, electronics, and lean research methods, and applied these skills in a team-based design challenge.",
+      achievements: [
+        "Co-designed and prototyped a Braille scientific calculator aimed at empowering visually impaired students to independently access STEM education",
+        "Gained hands-on training in 3D modeling and printing, Arduino programming, electronics, and lean research methods",
+        "Strengthened abilities in human-centered design, rapid prototyping, and cross-disciplinary collaboration",
+        "Reinforced commitment to leveraging technology for social impact and accessibility"
+      ]
+    },
+    {
+      id: "flir-c5-video-manual",
+      title: "A Video Manual of the Flir C5 Camera",
+      date: "Mar 2024",
+      category: "Videography",
+      summary: "Co-curated a comprehensive video manual demonstrating how the Flir C5 thermal imaging camera works, including theoretical background and practical features.",
+      description: "It's fun to use technology – until you have to explain how it works. I had the pleasure of working with a friend to curate a video manual of how Flir C5, a compact thermal imaging camera, works including the theoretical background of thermal imaging and the very cool features of the camera!",
+      achievements: [
+        "Co-created a comprehensive video manual explaining the Flir C5 thermal imaging camera functionality",
+        "Included theoretical background of thermal imaging technology in the educational content",
+        "Demonstrated practical features and applications of the thermal imaging camera",
+        "Developed skills in technical video production and educational content creation"
+      ]
+    },
+    {
+      id: "pan-africanism-skit",
+      title: "Starring in a Skit on Pan-Africanism",
+      date: "May 2025",
+      category: "Performance",
+      summary: "Acted as Dr. Kwame Nkrumah, Ghana's first prime minister and president, in a skit exploring the evolution of Pan-Africanism and his role in political unification.",
+      description: "To answer the question: \"How did Pan-Africanism evolve from a response to racialised exclusion to an opposition to colonial domination, and what roles had Blyden, Du Bois, Williams and Nkrumah play in reinterpreting it to meet the political and cultural needs of their time?\" I act as Dr. Kwame Nkrumah, Ghana's first prime minister and president, to represent his work on political unification.",
+      achievements: [
+        "Portrayed Dr. Kwame Nkrumah in an educational skit about Pan-Africanism's historical evolution",
+        "Explored the transition from racial exclusion response to colonial domination opposition",
+        "Represented Nkrumah's contributions to political unification and Pan-African thought",
+        "Enhanced understanding of historical political movements and their contemporary relevance"
+      ]
+    },
+    {
+      id: "7ma-show-podcast",
+      title: "7MA Show Podcast Appearances",
+      date: "March 2023",
+      category: "Podcast",
+      summary: "Co-hosted a season of the 7MA Show podcast exploring career preparedness and growth through the lens of Ashesi University, offering insights relevant to broader audiences.",
+      description: "Co-hosted a season of the 7MA Show podcast alongside three colleagues, exploring themes of career preparedness and growth through the lens of Ashesi while offering insights relevant to broader audiences. I also hosted another episode with one of Ashesi University's Career Service staff to enlighten students about an upcoming career fair. I enjoyed the process of on-the-spot articulation of thoughts, alongside the camaraderie I experienced in the friendly exchange of insights and experiences.",
+      achievements: [
+        "Co-hosted multiple episodes of the 7MA Show podcast focusing on career development themes",
+        "Collaborated with Ashesi University's Career Service staff to create educational content about career opportunities",
+        "Developed skills in on-the-spot articulation and public speaking through podcast hosting",
+        "Fostered meaningful discussions about career preparedness relevant to university students and broader audiences"
+      ],
+      links: [
+        {
+          title: "Episode 1",
+          url: "https://open.spotify.com/episode/0s19Uf3kNIK9MBHI4NnwCg?si=30ad94e0279d4d7c"
+        },
+        {
+          title: "Episode 2", 
+          url: "https://open.spotify.com/episode/2U26EjP7Xmm7J41r2fYO21"
+        }
+      ]
     }
   ];
 
@@ -214,7 +280,7 @@ export default function BeyondTheLab() {
                   style={{ objectFit: "cover" }}
                 />
               )}
-              {!["tedx-ashesi-speaker", "army-students-club-curator", "aftgonosia-service-learning", "msmiles-stem-curriculum"].includes(item.id) && (
+              {!["tedx-ashesi-speaker", "army-students-club-curator", "aftgonosia-service-learning", "msmiles-stem-curriculum", "assistive-technology-makerspace", "flir-c5-video-manual", "pan-africanism-skit", "7ma-show-podcast"].includes(item.id) && (
                 <Image
                   src="/images/beyond-the-lab/default.jpg"
                   alt={item.title}
