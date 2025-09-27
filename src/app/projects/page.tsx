@@ -182,51 +182,6 @@ export default function Projects() {
         `
       }} />
 
-      {/* Project Images */}
-      <Column paddingX="l" gap="l" marginBottom="xl" align="center">
-        <Row gap="l" vertical="center" align="center" maxWidth="l">
-          <div
-            style={{
-              position: "relative",
-              animation: "fadeIn 2s ease-out forwards",
-              opacity: 0,
-              flex: 1
-            }}
-          >
-            <Image
-              src="/images/projects/projects1.png"
-              alt="Projects Overview 1"
-              width={400}
-              height={300}
-              style={{ 
-                objectFit: "cover",
-                borderRadius: "8px",
-                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
-              }}
-            />
-          </div>
-          <div
-            style={{
-              position: "relative",
-              animation: "fadeIn 2s ease-out 0.3s forwards",
-              opacity: 0,
-              flex: 1
-            }}
-          >
-            <Image
-              src="/images/projects/projects2.png"
-              alt="Projects Overview 2"
-              width={400}
-              height={300}
-              style={{ 
-                objectFit: "cover",
-                borderRadius: "8px",
-                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
-              }}
-            />
-          </div>
-        </Row>
-      </Column>
 
       {/* Project Categories - Grid Layout */}
       <div className="grid-container mobile-grid" style={{
@@ -254,7 +209,7 @@ export default function Projects() {
         >
           <div style={{ position: "relative", width: "100%", height: "250px" }}>
             <Image
-              src="/images/projects/project-01/cover-01.jpg"
+              src="/images/projects/projects1.png"
               alt="Engineering Projects"
               fill
               style={{ objectFit: "cover" }}
@@ -289,7 +244,7 @@ export default function Projects() {
         >
           <div style={{ position: "relative", width: "100%", height: "250px" }}>
             <Image
-              src="/images/projects/project-01/cover-02.jpg"
+              src="/images/projects/projects2.png"
               alt="CS Projects"
               fill
               style={{ objectFit: "cover" }}

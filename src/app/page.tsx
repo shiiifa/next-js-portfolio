@@ -67,7 +67,7 @@ export default function Home() {
                 color: "#eafff5",
               }}
             >
-              <Row gap="8" vertical="center" paddingRight="4">
+              <Row gap="8" vertical="center" horizontal="center" paddingRight="4">
                 {about.avatar.display && (
                   <Avatar
                     marginRight="8"
