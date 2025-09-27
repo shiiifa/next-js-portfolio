@@ -24,8 +24,7 @@ export default function Contact() {
         marginTop="xl" 
         paddingX="l" 
         align="center"
-        maxWidth="600px"
-        width="100%"
+        style={{ maxWidth: "600px", width: "100%" }}
       >
         <Text variant="heading-strong-m" align="center" marginBottom="l">
           Contact Information
