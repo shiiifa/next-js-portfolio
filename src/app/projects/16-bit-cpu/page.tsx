@@ -1,5 +1,6 @@
 import { Column, Heading, Meta, Schema, Text, Card, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
+import { BackButton } from "@/components";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -26,6 +27,9 @@ export default function SixteenBitCPU() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+
+      {/* Back Button */}
+      <BackButton href="/projects" label="Back to Projects" />
 
       <Column marginBottom="xl" paddingX="l" align="center">
         <Heading marginBottom="l" variant="heading-strong-xl" align="center">
