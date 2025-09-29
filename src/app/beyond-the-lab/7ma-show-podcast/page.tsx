@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card, SmartLink } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Card, SmartLink, Media } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 import { BackButton } from "@/components";
 
@@ -41,6 +41,16 @@ export default function SevenMAShowPodcast() {
         <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
           Podcast • March 2023
         </Text>
+      </Column>
+
+      {/* Cover Image */}
+      <Column paddingX="l" marginBottom="l">
+        <Media
+          aspectRatio="16 / 9"
+          radius="m"
+          alt="7MA Show podcast cover"
+          src="/images/beyond-the-lab/7MA.jpg"
+        />
       </Column>
 
       {/* Content */}

@@ -46,6 +46,22 @@ export default function FPGAAccelerationComparison() {
         <Text variant="body-default-l" align="center">
           Conducted systematic comparison of on-chip vs off-chip FPGA acceleration strategies for embedded machine learning. Benchmarked four distinct hardware configurations to isolate the impact of communication overhead on inference latency.
         </Text>
+        
+        {/* Video Link */}
+        <Text variant="body-default-m" align="center" marginTop="m">
+          <a 
+            href="https://youtu.be/J5wRpPMIeQA" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ 
+              color: "var(--primary-medium)", 
+              textDecoration: "underline",
+              fontWeight: "500"
+            }}
+          >
+            Watch the project demonstration video on YouTube
+          </a>
+        </Text>
       </Column>
 
       {/* Project Images */}
