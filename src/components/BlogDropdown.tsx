@@ -57,25 +57,6 @@ export const BlogDropdown = () => {
           onMouseLeave={handleMouseLeave}
         >
           <Column padding="s" gap="xs">
-            <SmartLink href="/blog">
-              <div
-                style={{
-                  padding: "8px",
-                  borderRadius: "4px",
-                  cursor: "pointer",
-                  transition: "background-color 0.2s ease",
-                  textAlign: "center",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "var(--neutral-alpha-weak)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                }}
-              >
-                <Text variant="body-default-s">Blog Posts</Text>
-              </div>
-            </SmartLink>
             <SmartLink href="/blog/news">
               <div
                 style={{
@@ -93,6 +74,25 @@ export const BlogDropdown = () => {
                 }}
               >
                 <Text variant="body-default-s">News & Achievements</Text>
+              </div>
+            </SmartLink>
+            <SmartLink href="/blog">
+              <div
+                style={{
+                  padding: "8px",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                  transition: "background-color 0.2s ease",
+                  textAlign: "center",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "var(--neutral-alpha-weak)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                }}
+              >
+                <Text variant="body-default-s">Blog Posts</Text>
               </div>
             </SmartLink>
           </Column>
