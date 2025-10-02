@@ -22,30 +22,6 @@ export default function News() {
       category: "Award",
       summary: "Honored to receive the prestigious Technical Excellence Award in Computer Engineering for my capstone project on 'Hardware Accelerated Machine Learning with a Softcore Processor'.",
       image: "/images/research/capstone_award.png"
-    },
-    {
-      id: "fpga-research-publication",
-      title: "FPGA Neural Network Research Published",
-      date: "March 2025",
-      category: "Publication",
-      summary: "Our research on FPGA-based neural network acceleration has been published in IEEE Transactions, representing a significant milestone in embedded machine learning.",
-      image: "/images/research/fpga-acceleration-comparison_cover.png"
-    },
-    {
-      id: "stanford-phd-admission",
-      title: "Stanford University PhD Admission",
-      date: "April 2025",
-      category: "Academic",
-      summary: "Thrilled to be accepted to Stanford University's Computer Science PhD program with full funding, focusing on embedded machine learning and hardware acceleration research.",
-      image: "/images/research/fpga-neural-networks_cover.png"
-    },
-    {
-      id: "ieee-conference-presentation",
-      title: "IEEE Embedded Systems Conference Presentation",
-      date: "June 2025",
-      category: "Conference",
-      summary: "Presented research findings at the IEEE Embedded Systems Conference on hardware acceleration strategies for embedded AI systems.",
-      image: "/images/research/fpga-acceleration-comparison_cover.png"
     }
   ];
 
