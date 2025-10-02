@@ -51,49 +51,19 @@ export default function PanAfricanismSkit() {
 
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
-            <Heading variant="heading-strong-l">Performance Overview</Heading>
+            <Heading variant="heading-strong-l">Performance Video</Heading>
             <Text variant="body-default-m">
-              This educational skit explored the historical evolution of Pan-Africanism, tracing its transformation from a response to racial exclusion to a movement opposing colonial domination.
+              Watch the Pan-Africanism skit performance:
             </Text>
-            <Text variant="body-default-m">
-              Through dramatic performance, I portrayed Dr. Kwame Nkrumah's significant contributions to political unification and his reinterpretation of Pan-African ideals to meet the political and cultural needs of his time.
-            </Text>
-          </Column>
-        </Card>
-
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Historical Context Explored</Heading>
-            <Text variant="body-default-m">
-              • The evolution from racial exclusion response to colonial domination opposition
-            </Text>
-            <Text variant="body-default-m">
-              • Contributions of key figures: Blyden, Du Bois, Williams, and Nkrumah
-            </Text>
-            <Text variant="body-default-m">
-              • Nkrumah's role in political unification and Pan-African thought
-            </Text>
-            <Text variant="body-default-m">
-              • The adaptation of Pan-Africanism to contemporary political and cultural needs
-            </Text>
-          </Column>
-        </Card>
-
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Skills Developed</Heading>
-            <Text variant="body-default-m">
-              • Historical research and character study
-            </Text>
-            <Text variant="body-default-m">
-              • Dramatic performance and public speaking
-            </Text>
-            <Text variant="body-default-m">
-              • Understanding of political movements and their historical significance
-            </Text>
-            <Text variant="body-default-m">
-              • Educational theater and historical storytelling
-            </Text>
+            <video
+              width="100%"
+              height="400"
+              controls
+              style={{ borderRadius: "8px" }}
+            >
+              <source src="/videos/pan-africanism.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </Column>
         </Card>
       </Column>

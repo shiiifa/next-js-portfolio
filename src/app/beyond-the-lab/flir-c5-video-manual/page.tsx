@@ -51,48 +51,19 @@ export default function FlirC5VideoManual() {
 
         <Card padding="l" radius="m" shadow="m">
           <Column gap="m">
-            <Heading variant="heading-strong-l">Project Overview</Heading>
+            <Heading variant="heading-strong-l">Video Manual</Heading>
             <Text variant="body-default-m">
-              This project involved creating comprehensive educational content about thermal imaging technology, specifically focusing on the Flir C5 camera's capabilities and applications.
+              Watch the complete video manual demonstrating the Flir C5 thermal imaging camera:
             </Text>
-            <Text variant="body-default-m">
-              The video manual covers both theoretical concepts and practical demonstrations, making complex thermal imaging technology accessible to a broader audience.
-            </Text>
-          </Column>
-        </Card>
-
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Key Features Covered</Heading>
-            <Text variant="body-default-m">
-              • Theoretical background of thermal imaging technology
-            </Text>
-            <Text variant="body-default-m">
-              • Practical demonstration of Flir C5 camera features
-            </Text>
-            <Text variant="body-default-m">
-              • Real-world applications and use cases
-            </Text>
-            <Text variant="body-default-m">
-              • Step-by-step operation guide
-            </Text>
-          </Column>
-        </Card>
-
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Skills Developed</Heading>
-            <Text variant="body-default-m">
-              • Technical video production and editing
-            </Text>
-            <Text variant="body-default-m">
-              • Educational content creation and scripting
-            </Text>
-            <Text variant="body-default-m">
-              • Technical communication and explanation
-            </Text>
-            <Text variant="body-default-m">
-              • Collaboration in multimedia production
+            <iframe
+              src="https://drive.google.com/file/d/1B2jBoYRdme02Js2oXHmmM4BrYcoeYgH_/preview"
+              width="100%"
+              height="400"
+              style={{ border: "none", borderRadius: "8px" }}
+              allow="autoplay"
+            />
+            <Text variant="body-default-s" onBackground="neutral-weak" style={{ fontStyle: "italic" }}>
+              If the video doesn't load, you can access it directly: <a href="https://drive.google.com/file/d/1B2jBoYRdme02Js2oXHmmM4BrYcoeYgH_/view?usp=sharing" target="_blank" rel="noopener noreferrer">Flir C5 Video Manual</a>
             </Text>
           </Column>
         </Card>
