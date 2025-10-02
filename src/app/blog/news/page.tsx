@@ -1,6 +1,6 @@
-import { Column, Heading, Meta, Schema, Card, Text, Row, Line, Media, SmartLink } from "@once-ui-system/core";
-import { Mailchimp, BackButton } from "@/components";
-import { Posts } from "@/components/blog/Posts";
+import { Column, Heading, Meta, Schema, Card, Text } from "@once-ui-system/core";
+import Image from "next/image";
+import { BackButton } from "@/components";
 import { baseURL, blog, person } from "@/resources";
 
 export async function generateMetadata() {
@@ -14,17 +14,49 @@ export async function generateMetadata() {
 }
 
 export default function News() {
+  const newsList = [
+    {
+      id: "technical-excellence-award",
+      title: "Technical Excellence Award in Computer Engineering",
+      date: "May 2025",
+      category: "Award",
+      summary: "Honored to receive the prestigious Technical Excellence Award in Computer Engineering for my capstone project on 'Hardware Accelerated Machine Learning with a Softcore Processor'.",
+      image: "/images/research/capstone_award.png"
+    },
+    {
+      id: "fpga-research-publication",
+      title: "FPGA Neural Network Research Published",
+      date: "March 2025",
+      category: "Publication",
+      summary: "Our research on FPGA-based neural network acceleration has been published in IEEE Transactions, representing a significant milestone in embedded machine learning.",
+      image: "/images/research/fpga-acceleration-comparison_cover.png"
+    },
+    {
+      id: "stanford-phd-admission",
+      title: "Stanford University PhD Admission",
+      date: "April 2025",
+      category: "Academic",
+      summary: "Thrilled to be accepted to Stanford University's Computer Science PhD program with full funding, focusing on embedded machine learning and hardware acceleration research.",
+      image: "/images/research/fpga-neural-networks_cover.png"
+    },
+    {
+      id: "ieee-conference-presentation",
+      title: "IEEE Embedded Systems Conference Presentation",
+      date: "June 2025",
+      category: "Conference",
+      summary: "Presented research findings at the IEEE Embedded Systems Conference on hardware acceleration strategies for embedded AI systems.",
+      image: "/images/research/fpga-acceleration-comparison_cover.png"
+    }
+  ];
+
   return (
-    <Column maxWidth="m" paddingTop="24" style={{ position: "relative" }}>
-      {/* Back Button */}
-      <BackButton href="/blog" label="Back to Blog" />
-      
+    <Column maxWidth="m" paddingTop="24" style={{ animation: "fadeIn 1s ease-out", position: "relative" }}>
       <Schema
         as="webPage"
         baseURL={baseURL}
+        path="/blog/news"
         title="News & Achievements"
         description="Latest news, achievements, and milestones in my academic and professional journey"
-        path="/blog/news"
         image={`/api/og/generate?title=${encodeURIComponent("News & Achievements")}`}
         author={{
           name: person.name,
@@ -32,42 +64,99 @@ export default function News() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Column paddingX="l" gap="l" marginBottom="xl">
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">I won the Technical Excellence Award in Computer Engineering!</Heading>
-            <Media
-              aspectRatio="16 / 9"
-              radius="m"
-              alt="Technical Excellence Award announcement"
-              src="/images/research/capstone_award.png"
-            />
-            <Row gap="m">
-              <Media
-                aspectRatio="3 / 4"
-                radius="m"
-                alt="With mom after awards announcement"
-                src="/images/research/obed_mom.jpg"
-              />
-              <Media
-                aspectRatio="3 / 4"
-                radius="m"
-                alt="Profile at Ashesi awards display"
-                src="/images/research/obed_profile.jpg"
-              />
-            </Row>
-            <Text variant="body-default-m">
-              Every year at Ashesi University, one student who demonstrates exceptional technical skills and contributions within the field of Computer Engineering, evidenced through their final capstone project, is awarded the prestigious Technical Excellence Award in Computer Engineering.
-            </Text>
-            <Text variant="body-default-m">
-              I remember seeing students receive this award annually and never particularly thinking I would do something markedly spectacular in my capstone to be 2025’s recipient. But as fate would have it, about a month after completing a public <SmartLink href="https://www.linkedin.com/posts/obed-babington_day100-100dayschallenge-ashesi-activity-7319614240070250496-0VPJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC0KYZMBSFS8Iay7cDvZn7p4eDGn5yD5oFo" target="_blank" rel="noopener noreferrer">100 days challenge</SmartLink> on my undergraduate thesis, “Hardware Accelerated Machine Learning with a Softcore Processor,” I received an email from the Provost office that my work had been adjudged the best by my department.
-            </Text>
-            <Text variant="body-default-m">
-              While I missed the awards night ceremony to be in the USA for an internship, I am immensely honored to have received this award! You can check out the event coverage <SmartLink href="https://ashesi.edu.gh/celebrating-excellence-student-research-and-innovation/" target="_blank" rel="noopener noreferrer">here</SmartLink>, and watch my thesis defense <SmartLink href="https://youtu.be/J5wRpPMIeQA" target="_blank" rel="noopener noreferrer">here</SmartLink>.
-            </Text>
-          </Column>
-        </Card>
+
+      {/* Back Button */}
+      <BackButton href="/blog" label="Back to Blog" />
+
+      {/* Page Header */}
+      <Column marginBottom="l" paddingX="l" align="center">
+        <Text variant="body-default-l" align="center" marginTop="m">
+          Latest news, achievements, and milestones in my academic and professional journey.
+        </Text>
       </Column>
+
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+          
+          @media (max-width: 768px) {
+            .grid-container {
+              grid-template-columns: 1fr !important;
+              gap: 1rem !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .grid-container {
+              padding: 0 1rem !important;
+            }
+          }
+        `
+      }} />
+
+      {/* News & Achievements - Grid Layout */}
+      <div className="grid-container mobile-grid" style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gap: "1.5rem",
+        padding: "0 1.5rem"
+      }}>
+        {newsList.map((item, index) => (
+          <Card
+            key={index}
+            as="a"
+            href={`/blog/news/${item.id}`}
+            padding="0" 
+            radius="m" 
+            shadow="m"
+            style={{ 
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              textDecoration: "none",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column"
+            }}
+          >
+            {/* Square Image */}
+            <div style={{ 
+              position: "relative",
+              width: "100%",
+              height: "250px",
+              backgroundColor: "#f5f5f5"
+            }}>
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            
+            {/* Content below image */}
+            <Column gap="s" padding="l">
+              <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
+                {item.category}
+              </Text>
+              <Heading variant="heading-strong-m">{item.title}</Heading>
+              <Text variant="body-default-s" onBackground="neutral-weak">
+                <strong>Date:</strong> {item.date}
+              </Text>
+              <Text variant="body-default-s" marginTop="s">{item.summary}</Text>
+              <Text variant="body-default-xs" onBackground="neutral-weak" marginTop="s" style={{ fontStyle: "italic" }}>
+                Click to read more →
+              </Text>
+            </Column>
+          </Card>
+        ))}
+      </div>
     </Column>
   );
 }
