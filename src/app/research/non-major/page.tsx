@@ -46,6 +46,14 @@ export default function NonMajorResearch() {
       location: "Differential Equations and Numerical Methods Course",
       summary: "Collaborated on a project exploring stage-structured predator–prey systems using mathematical modeling techniques.",
       image: "Image 25-08-2025 at 10.33 PM.jpeg"
+    },
+    {
+      id: "betterhiring-ai-hiring-management",
+      title: "BetterHiring: Automating Your Hiring Management",
+      date: "2024",
+      location: "Ashesi University CSIS Department",
+      summary: "Designed and evaluated an AI-driven hiring management solution for Ashesi University's Computer Science and Information Systems (CSIS) department, specifically targeting the recruitment of National Service Personnel (NSP).",
+      image: "betterhiring-cover.png"
     }
   ];
 
@@ -160,6 +168,8 @@ export default function NonMajorResearch() {
                 return '/images/research/hydrogel-irrigation-study_cover.png';
               case 'prey-predator-mathematical-model':
                 return '/images/research/prey-predator-mathematical-model_cover.png';
+              case 'betterhiring-ai-hiring-management':
+                return '/images/research/betterhiring-cover.png';
               default:
                 return `/images/research/${projectId}_cover.png`;
             }
