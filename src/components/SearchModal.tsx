@@ -371,7 +371,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
       <Card className="w-full max-w-2xl max-h-[80vh] overflow-hidden">
         <Column gap="l" padding="l">
           {/* Header */}
-          <Row justify="space-between" align="center">
+          <Row horizontal="space-between" vertical="center">
             <Heading variant="heading-strong-l">Search Portfolio</Heading>
             <Button
               variant="tertiary"
@@ -384,7 +384,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           </Row>
 
           {/* Search Input */}
-          <Row gap="s" align="center">
+          <Row gap="s" vertical="center">
             <Icon name="search" size="m" />
             <Input
               ref={inputRef}
@@ -447,7 +447,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   onClick={() => handleResultClick(item.href)}
                 >
                   <Column gap="xs">
-                    <Row justify="space-between" align="center">
+                    <Row horizontal="space-between" vertical="center">
                       <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
                         {item.category}
                       </Text>
