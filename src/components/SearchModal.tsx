@@ -387,6 +387,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           <Row gap="s" vertical="center">
             <Icon name="search" size="m" />
             <Input
+              id="search-input"
               ref={inputRef}
               placeholder="Search projects, research, achievements..."
               value={searchTerm}
