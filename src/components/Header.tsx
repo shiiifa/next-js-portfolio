@@ -1,18 +1,21 @@
 "use client";
 
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-import { Row, ToggleButton } from "@once-ui-system/core";
+import { Row, ToggleButton, Button, Icon } from "@once-ui-system/core";
 
 import { routes, display, about, blog, research, projects, beyondTheLab, contact } from "@/resources";
 import { ResearchDropdown } from "./ResearchDropdown";
 import { BlogDropdown } from "./BlogDropdown";
 import { ProjectsDropdown } from "./ProjectsDropdown";
 import { MobileHeader } from "./MobileHeader";
+import { SearchModal } from "./SearchModal";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <>
@@ -90,10 +93,22 @@ export const Header = () => {
             )}
           </Row>
 
-          {/* Right side - Empty for balance */}
-          <Row style={{ width: "120px" }} />
+          {/* Right side - Search */}
+          <Row gap="8" vertical="center" style={{ width: "120px", justifyContent: "flex-end" }}>
+            <Button
+              variant="tertiary"
+              size="s"
+              onClick={() => setIsSearchOpen(true)}
+              style={{ padding: "8px" }}
+            >
+              <Icon name="search" size="m" />
+            </Button>
+          </Row>
         </Row>
       </div>
+
+      {/* Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
   );
 };

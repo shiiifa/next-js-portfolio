@@ -15,6 +15,8 @@ import {
   HiArrowDownTray,
   HiPhone,
   HiBriefcase,
+  HiMagnifyingGlass,
+  HiXMark,
 } from "react-icons/hi2";
 
 import {
@@ -71,6 +73,8 @@ export const iconLibrary: Record<string, IconType> = {
   phone: HiPhone,
   gmail: SiGmail,
   briefcase: HiBriefcase,
+  search: HiMagnifyingGlass,
+  close: HiXMark,
 };
 
 export type IconLibrary = typeof iconLibrary;
