@@ -1,4 +1,4 @@
-import { Column, Heading, Meta, Schema, Text, Card } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text } from "@once-ui-system/core";
 import { baseURL, about, person } from "@/resources";
 import { BackButton } from "@/components";
 
@@ -49,23 +49,21 @@ export default function PanAfricanismSkit() {
           To answer the question: "How did Pan-Africanism evolve from a response to racialised exclusion to an opposition to colonial domination, and what roles had Blyden, Du Bois, Williams and Nkrumah play in reinterpreting it to meet the political and cultural needs of their time?" I act as Dr. Kwame Nkrumah, Ghana's first prime minister and president, to represent his work on political unification.
         </Text>
 
-        <Card padding="l" radius="m" shadow="m">
-          <Column gap="m">
-            <Heading variant="heading-strong-l">Performance Video</Heading>
-            <Text variant="body-default-m">
-              Watch the Pan-Africanism skit performance:
-            </Text>
-            <video
-              width="100%"
-              height="400"
-              controls
-              style={{ borderRadius: "8px" }}
-            >
-              <source src="/videos/pan-africanism.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </Column>
-        </Card>
+        <Column gap="m" align="center">
+          <Heading variant="heading-strong-l">Performance Video</Heading>
+          <Text variant="body-default-m">
+            Watch the Pan-Africanism skit performance:
+          </Text>
+          <video
+            width="100%"
+            height="400"
+            controls
+            style={{ borderRadius: "8px" }}
+          >
+            <source src="/videos/pan-africanism.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </Column>
       </Column>
 
       <style dangerouslySetInnerHTML={{
