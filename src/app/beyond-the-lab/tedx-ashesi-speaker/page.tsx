@@ -81,6 +81,38 @@ export default function TedxAshesiSpeaker() {
         </div>
       </Row>
 
+      {/* YouTube Video Embed */}
+      <Column gap="m" marginBottom="xl" paddingX="l">
+        <Heading variant="heading-strong-l">Watch the Talk</Heading>
+        <div style={{ 
+          position: "relative", 
+          width: "100%", 
+          height: "0", 
+          paddingBottom: "56.25%", // 16:9 aspect ratio
+          borderRadius: "12px",
+          overflow: "hidden",
+          boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
+        }}>
+          <iframe
+            src="https://www.youtube.com/embed/l7cPJzOKZcE?start=54"
+            title="TEDx Ashesi University - The Role of Wandering in the Realm of the Unknown"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              border: "none"
+            }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+        <Text variant="body-default-s" onBackground="neutral-weak" align="center" marginTop="s">
+          This talk was given at a TEDx event using the TED conference format but independently organized by a local community.
+        </Text>
+      </Column>
+
       {/* Content */}
       <Column paddingX="l" gap="l">
         <Text variant="body-default-l">
@@ -90,40 +122,6 @@ export default function TedxAshesiSpeaker() {
         <Text variant="body-default-l">
           I believe that the suppression of the willful expression of the self leads to the degradation of society. Thus, I love to use every opportunity I can get to create meaning.
         </Text>
-
-
-        {/* YouTube Video Embed */}
-        <Column gap="m" marginTop="xl">
-          <Heading variant="heading-strong-l">Watch the Talk</Heading>
-          <div style={{ 
-            position: "relative", 
-            width: "100%", 
-            height: "0", 
-            paddingBottom: "56.25%", // 16:9 aspect ratio
-            borderRadius: "12px",
-            overflow: "hidden",
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)"
-          }}>
-            <iframe
-              src="https://www.youtube.com/embed/l7cPJzOKZcE?start=54"
-              title="TEDx Ashesi University - The Role of Wandering in the Realm of the Unknown"
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                border: "none"
-              }}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-          <Text variant="body-default-s" onBackground="neutral-weak" align="center" marginTop="s">
-            This talk was given at a TEDx event using the TED conference format but independently organized by a local community.
-          </Text>
-        </Column>
-
       </Column>
 
       <style dangerouslySetInnerHTML={{
