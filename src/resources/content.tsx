@@ -111,10 +111,10 @@ const about: About = {
         role: "Research Consultant (Intern)",
         achievements: [
           <>
-            Through the AMRE Program at the College of Wooster, collaborated with a research team to design and prototype an Energy Management Co-Pilot using large language models (LLMs) and autonomous agent architectures, implementing the Model Context Protocol (MCP) in both single-client/server and multi-client/server architectures.
+            Through the AMRE Program at the College of Wooster, collaborated with a research team to design and prototype an Energy Management Co-Pilot using large language models (LLMs) and autonomous agent architectures.
           </>,
           <>
-            Developed an evaluation pipeline leveraging LlamaIndex's CorrectnessEvaluator to assess agent responses against ground-truth datasets across multiple query categories. This allowed benchmarking single-agent vs multi-agent system performance, analyzing trade-offs in accuracy, execution time, error rates, and orchestration overhead.
+            Developed an evaluation pipeline leveraging LlamaIndex's CorrectnessEvaluator to assess agent responses against ground-truth datasets across multiple query categories.
           </>,
           <>
             Delivered a 35-minute final presentation to Schneider Electric's Sustainability Business team and co-authored a 66-page technical report documenting research findings, methodologies, and recommendations.
