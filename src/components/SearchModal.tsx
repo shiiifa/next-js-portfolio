@@ -440,7 +440,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 <Button
                   key={section}
                   variant={selectedSection === section ? "primary" : "secondary"}
-                  size="xs"
+                  size="s"
                   onClick={() => setSelectedSection(section)}
                 >
                   {section}
