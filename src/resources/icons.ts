@@ -17,6 +17,7 @@ import {
   HiBriefcase,
   HiMagnifyingGlass,
   HiXMark,
+  HiBars3,
 } from "react-icons/hi2";
 
 import {
@@ -75,6 +76,7 @@ export const iconLibrary: Record<string, IconType> = {
   briefcase: HiBriefcase,
   search: HiMagnifyingGlass,
   close: HiXMark,
+  menu: HiBars3,
 };
 
 export type IconLibrary = typeof iconLibrary;
