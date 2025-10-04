@@ -36,7 +36,14 @@ export const Footer = () => {
           background: "transparent",
         }}
       >
-        <Text variant="body-default-s" onBackground="neutral-strong" align="center">
+        <Text 
+          variant="body-default-s" 
+          align="center"
+          style={{
+            color: "rgba(255, 255, 255, 0.8)",
+            textShadow: "0 1px 2px rgba(0, 0, 0, 0.5)",
+          }}
+        >
           © {currentYear} | Obed Allotey Babington
         </Text>
         <Row gap="16">
@@ -50,6 +57,10 @@ export const Footer = () => {
                   tooltip={item.name}
                   size="s"
                   variant="ghost"
+                  style={{
+                    color: "rgba(255, 255, 255, 0.8)",
+                    filter: "drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5))",
+                  }}
                 />
               ),
           )}
