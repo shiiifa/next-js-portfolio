@@ -331,12 +331,30 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [selectedSection, setSelectedSection] = useState("");
   const [filteredResults, setFilteredResults] = useState<SearchItem[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isOpen]);
+
+  // Handle click outside to close modal
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, onClose]);
 
   useEffect(() => {
     // Only show results if user has entered a search term OR selected a specific section
@@ -377,18 +395,25 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <Card className="w-full max-w-2xl max-h-[80vh] overflow-hidden">
-        <Column gap="l" padding="l">
+      <Card 
+        ref={modalRef}
+        className="w-full max-w-lg max-h-[60vh] overflow-hidden"
+        style={{ 
+          borderRadius: "12px",
+          boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+        }}
+      >
+        <Column gap="m" padding="l">
           {/* Header */}
           <Row horizontal="between" vertical="center">
-            <Heading variant="heading-strong-l">Search Portfolio</Heading>
+            <Heading variant="heading-strong-m">Search</Heading>
             <Button
               variant="tertiary"
               size="s"
               onClick={onClose}
-              style={{ padding: "8px" }}
+              style={{ padding: "6px" }}
             >
-              <Icon name="close" size="m" />
+              <Icon name="close" size="s" />
             </Button>
           </Row>
 
@@ -406,16 +431,16 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           </Row>
 
           {/* Section Filter */}
-          <Column gap="s">
-            <Text variant="body-default-s" onBackground="neutral-weak">
-              Filter by section:
+          <Column gap="xs">
+            <Text variant="body-default-xs" onBackground="neutral-weak">
+              Filter:
             </Text>
-            <Row gap="s" wrap>
+            <Row gap="xs" wrap>
               {sections.map((section) => (
                 <Button
                   key={section}
                   variant={selectedSection === section ? "primary" : "secondary"}
-                  size="s"
+                  size="xs"
                   onClick={() => setSelectedSection(section)}
                 >
                   {section}
@@ -425,8 +450,8 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           </Column>
 
           {/* Results */}
-          <Column gap="m" style={{ maxHeight: "400px", overflowY: "auto" }}>
-             <Text variant="body-default-s" onBackground="neutral-weak">
+          <Column gap="s" style={{ maxHeight: "300px", overflowY: "auto" }}>
+             <Text variant="body-default-xs" onBackground="neutral-weak">
                {searchTerm.trim() || selectedSection.trim() 
                  ? `${filteredResults.length} result${filteredResults.length !== 1 ? 's' : ''} found`
                  : "Search your portfolio"
@@ -434,7 +459,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
              </Text>
             
             {filteredResults.length === 0 ? (
-               <Text variant="body-default-m" align="center" style={{ padding: "2rem 0" }}>
+               <Text variant="body-default-s" align="center" style={{ padding: "1.5rem 0" }}>
                  {searchTerm.trim() || selectedSection.trim() 
                    ? "No results found. Try adjusting your search terms or section filter."
                    : "Enter a search term or select a section to see results."
@@ -444,18 +469,18 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               filteredResults.map((item) => (
                 <Card
                   key={item.id}
-                  padding="l"
-                  radius="m"
+                  padding="m"
+                  radius="s"
                   shadow="s"
                   style={{ 
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     border: "1px solid transparent",
-                    marginBottom: "8px"
+                    marginBottom: "6px"
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.borderColor = "#10b981";
-                    e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.transform = "translateY(-1px)";
                     e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
                   }}
                   onMouseLeave={(e) => {
@@ -465,7 +490,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   }}
                   onClick={() => handleResultClick(item.href)}
                 >
-                  <Column gap="s">
+                  <Column gap="xs">
                     <Row horizontal="between" vertical="center">
                       <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600", letterSpacing: "0.5px" }}>
                         {item.category}
@@ -476,10 +501,10 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                         </Text>
                       )}
                     </Row>
-                    <Heading variant="heading-strong-s" style={{ marginBottom: "4px", lineHeight: "1.3" }}>
+                    <Heading variant="heading-strong-xs" style={{ marginBottom: "2px", lineHeight: "1.3" }}>
                       {item.title}
                     </Heading>
-                    <Text variant="body-default-s" onBackground="neutral-weak" style={{ lineHeight: "1.5" }}>
+                    <Text variant="body-default-xs" onBackground="neutral-weak" style={{ lineHeight: "1.4" }}>
                       {item.description}
                     </Text>
                   </Column>
