@@ -349,10 +349,17 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Restore body scroll when modal is closed
+      document.body.style.overflow = 'unset';
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      // Always restore body scroll on cleanup
+      document.body.style.overflow = 'unset';
     };
   }, [isOpen, onClose]);
 
@@ -394,7 +401,10 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div 
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4"
+      style={{ zIndex: 9999 }}
+    >
       <Card 
         ref={modalRef}
         className="w-full max-w-lg max-h-[60vh] overflow-hidden"

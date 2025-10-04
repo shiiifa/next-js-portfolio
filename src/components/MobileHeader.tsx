@@ -49,14 +49,12 @@ export const MobileHeader = () => {
         <Row fillWidth />
 
         {/* Search Button */}
-        <Button
-          variant="tertiary"
-          size="s"
-          onClick={() => setIsSearchOpen(true)}
-          style={{ padding: "8px", marginRight: "8px" }}
+        <div
+          onMouseEnter={() => setIsSearchOpen(true)}
+          style={{ padding: "8px", marginRight: "8px", cursor: "pointer" }}
         >
           <Icon name="search" size="m" />
-        </Button>
+        </div>
 
         {/* Hamburger Menu Button */}
         <Button

@@ -95,14 +95,12 @@ export const Header = () => {
 
           {/* Right side - Search */}
           <Row gap="8" vertical="center" style={{ width: "120px", justifyContent: "flex-end" }}>
-            <Button
-              variant="tertiary"
-              size="s"
-              onClick={() => setIsSearchOpen(true)}
-              style={{ padding: "8px" }}
+            <div
+              onMouseEnter={() => setIsSearchOpen(true)}
+              style={{ padding: "8px", cursor: "pointer" }}
             >
               <Icon name="search" size="m" />
-            </Button>
+            </div>
           </Row>
         </Row>
       </div>
