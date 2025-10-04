@@ -445,7 +445,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           </Row>
 
           {/* Search Input */}
-          <Row gap="s" vertical="center">
+          <Row gap="s" vertical="center" horizontal="start">
             <Icon name="search" size="m" />
             <Input
               id="search-input"
@@ -453,7 +453,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               placeholder="Search projects, research, achievements..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              style={{ flex: 1 }}
+              style={{ width: "120px" }}
             />
           </Row>
 
