@@ -324,7 +324,7 @@ const searchData: SearchItem[] = [
   }
 ];
 
-const sections = ["Research", "Beyond The Lab", "Projects", "News"];
+const sections = ["All", "Research", "Beyond The Lab", "Projects", "News"];
 
 export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -376,7 +376,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
     let results = searchData;
 
     // Filter by section
-    if (selectedSection.trim()) {
+    if (selectedSection.trim() && selectedSection !== "All") {
       results = results.filter(item => item.section === selectedSection);
     }
 
@@ -402,7 +402,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   return (
     <div 
-      className="fixed inset-0 flex items-center justify-center p-4"
+      className="fixed inset-0 flex justify-center p-4"
       style={{ 
         zIndex: 9999,
         backgroundColor: "rgba(0, 0, 0, 0.6)",
@@ -415,13 +415,14 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
         width: "100vw",
         height: "100vh",
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center"
+        alignItems: "flex-start",
+        justifyContent: "center",
+        paddingTop: "80px"
       }}
     >
       <Card 
         ref={modalRef}
-        className="w-full max-w-lg max-h-[60vh] overflow-hidden"
+        className="w-full max-w-lg overflow-hidden"
         style={{ 
           borderRadius: "12px",
           boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05)",
@@ -432,7 +433,10 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           transform: "scale(1)",
           opacity: 1,
           margin: "auto",
-          position: "relative"
+          position: "relative",
+          height: "400px",
+          display: "flex",
+          flexDirection: "column"
         }}
       >
         <Column gap="m" padding="l">
@@ -450,7 +454,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           </Row>
 
           {/* Search Input */}
-          <Row gap="s" vertical="center" horizontal="start">
+          <Row gap="s" vertical="center">
             <Icon name="search" size="m" />
             <Input
               id="search-input"
@@ -458,7 +462,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               placeholder="Search projects, research, achievements..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              style={{ width: "120px" }}
+              style={{ flex: 1 }}
             />
           </Row>
 
@@ -482,7 +486,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           </Column>
 
           {/* Results */}
-          <Column gap="s" style={{ maxHeight: "300px", overflowY: "auto" }}>
+          <Column gap="s" style={{ flex: 1, overflowY: "auto" }}>
              <Text variant="body-default-xs" onBackground="neutral-weak">
                {searchTerm.trim() || selectedSection.trim() 
                  ? `${filteredResults.length} result${filteredResults.length !== 1 ? 's' : ''} found`
