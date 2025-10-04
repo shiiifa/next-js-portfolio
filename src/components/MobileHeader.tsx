@@ -30,11 +30,11 @@ export const MobileHeader = () => {
         zIndex={10}
         fillWidth
         padding="12"
-        background="page"
-        border="neutral-alpha-weak"
         style={{
-          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-          backdropFilter: "blur(8px)",
+          background: "transparent",
+          borderBottom: "none",
+          boxShadow: "none",
+          backdropFilter: "none",
           minHeight: "60px",
         }}
       >
