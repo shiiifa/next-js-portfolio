@@ -324,11 +324,11 @@ const searchData: SearchItem[] = [
   }
 ];
 
-const sections = ["All", "Research", "Beyond The Lab", "Projects", "News"];
+const sections = ["Research", "Beyond The Lab", "Projects", "News"];
 
 export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedSection, setSelectedSection] = useState("All");
+  const [selectedSection, setSelectedSection] = useState("");
   const [filteredResults, setFilteredResults] = useState<SearchItem[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -339,9 +339,9 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   }, [isOpen]);
 
   useEffect(() => {
-    // Only show results if user has entered a search term OR selected a specific section (not "All")
+    // Only show results if user has entered a search term OR selected a specific section
     const hasSearchTerm = searchTerm.trim().length > 0;
-    const hasSpecificSection = selectedSection !== "All";
+    const hasSpecificSection = selectedSection.trim().length > 0;
     
     if (!hasSearchTerm && !hasSpecificSection) {
       setFilteredResults([]);
@@ -351,7 +351,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
     let results = searchData;
 
     // Filter by section
-    if (selectedSection !== "All") {
+    if (selectedSection.trim()) {
       results = results.filter(item => item.section === selectedSection);
     }
 
@@ -425,56 +425,61 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           </Column>
 
           {/* Results */}
-          <Column gap="s" style={{ maxHeight: "400px", overflowY: "auto" }}>
-            <Text variant="body-default-s" onBackground="neutral-weak">
-              {searchTerm.trim() || selectedSection !== "All" 
-                ? `${filteredResults.length} result${filteredResults.length !== 1 ? 's' : ''} found`
-                : "Search your portfolio"
-              }
-            </Text>
+          <Column gap="m" style={{ maxHeight: "400px", overflowY: "auto" }}>
+             <Text variant="body-default-s" onBackground="neutral-weak">
+               {searchTerm.trim() || selectedSection.trim() 
+                 ? `${filteredResults.length} result${filteredResults.length !== 1 ? 's' : ''} found`
+                 : "Search your portfolio"
+               }
+             </Text>
             
             {filteredResults.length === 0 ? (
-              <Text variant="body-default-m" align="center" style={{ padding: "2rem 0" }}>
-                {searchTerm.trim() || selectedSection !== "All" 
-                  ? "No results found. Try adjusting your search terms or section filter."
-                  : "Enter a search term or select a section to see results."
-                }
-              </Text>
+               <Text variant="body-default-m" align="center" style={{ padding: "2rem 0" }}>
+                 {searchTerm.trim() || selectedSection.trim() 
+                   ? "No results found. Try adjusting your search terms or section filter."
+                   : "Enter a search term or select a section to see results."
+                 }
+               </Text>
             ) : (
               filteredResults.map((item) => (
                 <Card
                   key={item.id}
-                  padding="m"
-                  radius="s"
+                  padding="l"
+                  radius="m"
                   shadow="s"
                   style={{ 
                     cursor: "pointer",
                     transition: "all 0.2s ease",
-                    border: "1px solid transparent"
+                    border: "1px solid transparent",
+                    marginBottom: "8px"
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.borderColor = "#10b981";
                     e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.borderColor = "transparent";
                     e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.1)";
                   }}
                   onClick={() => handleResultClick(item.href)}
                 >
-                  <Column gap="xs">
+                  <Column gap="s">
                     <Row horizontal="between" vertical="center">
-                      <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600" }}>
+                      <Text variant="body-default-xs" onBackground="neutral-weak" style={{ textTransform: "uppercase", fontWeight: "600", letterSpacing: "0.5px" }}>
                         {item.category}
                       </Text>
                       {item.date && (
-                        <Text variant="body-default-xs" onBackground="neutral-weak">
+                        <Text variant="body-default-xs" onBackground="neutral-weak" style={{ fontWeight: "500" }}>
                           {item.date}
                         </Text>
                       )}
                     </Row>
-                    <Heading variant="heading-strong-s">{item.title}</Heading>
-                    <Text variant="body-default-s" onBackground="neutral-weak">
+                    <Heading variant="heading-strong-s" style={{ marginBottom: "4px", lineHeight: "1.3" }}>
+                      {item.title}
+                    </Heading>
+                    <Text variant="body-default-s" onBackground="neutral-weak" style={{ lineHeight: "1.5" }}>
                       {item.description}
                     </Text>
                   </Column>
