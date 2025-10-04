@@ -2,14 +2,16 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Column, Row, ToggleButton, Icon, Fade } from "@once-ui-system/core";
+import { Column, Row, ToggleButton, Icon, Fade, Button } from "@once-ui-system/core";
 import { routes, about, research, projects, beyondTheLab, blog, contact } from "@/resources";
 import { ResearchDropdown } from "./ResearchDropdown";
 import { BlogDropdown } from "./BlogDropdown";
 import { ProjectsDropdown } from "./ProjectsDropdown";
+import { SearchModal } from "./SearchModal";
 
 export const MobileHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname() ?? "";
 
   const toggleMenu = () => {
@@ -25,7 +27,7 @@ export const MobileHeader = () => {
         left="0"
         right="0"
         as="header"
-        zIndex={10}
+        zIndex={20}
         fillWidth
         padding="12"
         background="page"
@@ -33,6 +35,7 @@ export const MobileHeader = () => {
         style={{
           boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
           backdropFilter: "blur(8px)",
+          minHeight: "60px",
         }}
       >
         {/* Logo/Home Button */}
@@ -45,35 +48,28 @@ export const MobileHeader = () => {
         {/* Spacer */}
         <Row fillWidth />
 
-        {/* Theme toggle removed for dark-only mode */}
+        {/* Search Button */}
+        <Button
+          variant="tertiary"
+          size="s"
+          onClick={() => setIsSearchOpen(true)}
+          style={{ padding: "8px", marginRight: "8px" }}
+        >
+          <Icon name="search" size="m" />
+        </Button>
 
         {/* Hamburger Menu Button */}
-        <button
+        <Button
+          variant="tertiary"
+          size="s"
           onClick={toggleMenu}
-          style={{
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            padding: "8px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: "8px",
-            transition: "background-color 0.2s ease",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = "var(--neutral-alpha-weak)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "transparent";
-          }}
+          style={{ padding: "8px" }}
         >
           <Icon 
             name={isMenuOpen ? "close" : "menu"} 
-            size="l"
-            color="var(--text-on-page)"
+            size="m"
           />
-        </button>
+        </Button>
       </Row>
 
       {/* Mobile Menu Overlay */}
@@ -175,6 +171,9 @@ export const MobileHeader = () => {
           }
         `
       }} />
+
+      {/* Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
   );
 };
