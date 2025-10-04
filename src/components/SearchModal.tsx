@@ -413,7 +413,10 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
         right: 0,
         bottom: 0,
         width: "100vw",
-        height: "100vh"
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
       }}
     >
       <Card 
@@ -427,7 +430,9 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           backgroundColor: "rgba(0, 0, 0, 0.8)",
           animation: "modalSlideIn 0.2s ease-out",
           transform: "scale(1)",
-          opacity: 1
+          opacity: 1,
+          margin: "auto",
+          position: "relative"
         }}
       >
         <Column gap="m" padding="l">
