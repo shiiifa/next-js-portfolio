@@ -436,10 +436,11 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           position: "relative",
           height: "400px",
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
+          padding: "0"
         }}
       >
-        <Column gap="m" padding="l">
+        <div style={{ padding: "16px", display: "flex", flexDirection: "column", height: "100%", gap: "16px" }}>
           {/* Header */}
           <Row horizontal="between" vertical="center">
             <Heading variant="heading-strong-m">Search</Heading>
@@ -486,7 +487,8 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           </Column>
 
           {/* Results */}
-          <Column gap="s" style={{ flex: 1, overflowY: "auto" }}>
+          <div style={{ flex: 1, overflowY: "auto", minHeight: 0 }}>
+            <Column gap="s">
              <Text variant="body-default-xs" onBackground="neutral-weak">
                {searchTerm.trim() || selectedSection.trim() 
                  ? `${filteredResults.length} result${filteredResults.length !== 1 ? 's' : ''} found`
@@ -547,8 +549,9 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 </Card>
               ))
             )}
-          </Column>
-        </Column>
+            </Column>
+          </div>
+        </div>
       </Card>
       
       <style dangerouslySetInnerHTML={{
