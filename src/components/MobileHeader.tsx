@@ -27,7 +27,7 @@ export const MobileHeader = () => {
         left="0"
         right="0"
         as="header"
-        zIndex={20}
+        zIndex={10}
         fillWidth
         padding="12"
         background="page"
