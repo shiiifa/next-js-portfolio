@@ -339,6 +339,15 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   }, [isOpen]);
 
   useEffect(() => {
+    // Only show results if user has entered a search term OR selected a specific section (not "All")
+    const hasSearchTerm = searchTerm.trim().length > 0;
+    const hasSpecificSection = selectedSection !== "All";
+    
+    if (!hasSearchTerm && !hasSpecificSection) {
+      setFilteredResults([]);
+      return;
+    }
+
     let results = searchData;
 
     // Filter by section
@@ -418,12 +427,18 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           {/* Results */}
           <Column gap="s" style={{ maxHeight: "400px", overflowY: "auto" }}>
             <Text variant="body-default-s" onBackground="neutral-weak">
-              {filteredResults.length} result{filteredResults.length !== 1 ? 's' : ''} found
+              {searchTerm.trim() || selectedSection !== "All" 
+                ? `${filteredResults.length} result${filteredResults.length !== 1 ? 's' : ''} found`
+                : "Search your portfolio"
+              }
             </Text>
             
             {filteredResults.length === 0 ? (
               <Text variant="body-default-m" align="center" style={{ padding: "2rem 0" }}>
-                No results found. Try adjusting your search terms or section filter.
+                {searchTerm.trim() || selectedSection !== "All" 
+                  ? "No results found. Try adjusting your search terms or section filter."
+                  : "Enter a search term or select a section to see results."
+                }
               </Text>
             ) : (
               filteredResults.map((item) => (
