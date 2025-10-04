@@ -6,7 +6,19 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Row as="footer" fillWidth padding="8" horizontal="center" s={{ direction: "column" }}>
+    <Row 
+      as="footer" 
+      fillWidth 
+      padding="8" 
+      horizontal="center" 
+      s={{ direction: "column" }}
+      style={{
+        background: "transparent",
+        borderTop: "none",
+        boxShadow: "none",
+        backdropFilter: "none",
+      }}
+    >
       <Row
         className={styles.mobile}
         maxWidth="m"
@@ -19,6 +31,9 @@ export const Footer = () => {
           direction: "column",
           horizontal: "center",
           align: "center",
+        }}
+        style={{
+          background: "transparent",
         }}
       >
         <Text variant="body-default-s" onBackground="neutral-strong" align="center">
