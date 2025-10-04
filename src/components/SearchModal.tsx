@@ -402,15 +402,32 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   return (
     <div 
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4"
-      style={{ zIndex: 9999 }}
+      className="fixed inset-0 flex items-center justify-center p-4"
+      style={{ 
+        zIndex: 9999,
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        backdropFilter: "blur(4px)",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        width: "100vw",
+        height: "100vh"
+      }}
     >
       <Card 
         ref={modalRef}
         className="w-full max-w-lg max-h-[60vh] overflow-hidden"
         style={{ 
           borderRadius: "12px",
-          boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+          boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05)",
+          border: "1px solid rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(10px)",
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
+          animation: "modalSlideIn 0.2s ease-out",
+          transform: "scale(1)",
+          opacity: 1
         }}
       >
         <Column gap="m" padding="l">
@@ -524,6 +541,21 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           </Column>
         </Column>
       </Card>
+      
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes modalSlideIn {
+            0% {
+              opacity: 0;
+              transform: scale(0.95) translateY(-10px);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1) translateY(0);
+            }
+          }
+        `
+      }} />
     </div>
   );
 }
